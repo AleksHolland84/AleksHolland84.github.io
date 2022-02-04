@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WiFi Hacking</title>
+    <title>Statistisk Analyse</title>
     
     <!-- Link to google font--> 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <!-- link to style.css --> 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
 
 </head>
 <body>
   
   <header>
     <div class="nav">
-      <a href="index.html" title="Home directory">
+      <a href="index.html" title="Home Directory">
         /home
       </a>
-      <a href="quiz.html" title="quiz">
-        /quiz
+      <a href="excel.html" title="Excel Ark">
+        /excel
+      </a>
+      <a href="vejledning.html" title="Lærer Vejledning">
+        /vejledning
       </a>
       <a target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
         /contact
       </a>
-    
     </div>
     
      <a class="svglink" target="_blank" href="https://facebook.com" title="Facebook">
@@ -51,10 +53,10 @@
   
   
   <div class="whoami">
-    <h1>WiFi Hacking - Sådan hacker du et Access Point</h1>
+    <h1>Statistisk analyse af skræmtid på telefonen</h1>
     
     <div class="contact"> 
-      <p>Forfatter: A. H. Johansen</p>
+      <p>Forfatter: A. H. Johansen og Marianne Skaanning</p>
       
       <a class="svglink" target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
         <svg viewBox="71 71 370 370">
@@ -74,9 +76,9 @@
       </div>
       
       <div class="item value">
-        <li>Teknologiforståelse.</li>
-        <li>7.kl - 9.kl.</li>
-        <li>Ca. 2 lektioner.</li>
+        <li>Matematik.</li>
+        <li>7.kl - 8.kl.</li>
+        <li>Ca. 5 lektioner.</li>
       </div>      
     </ul>
   </div>
@@ -84,220 +86,125 @@
   
   <div class="content">
     <h2>Indhold</h2>
-    <p>Dette forløb indeholder en kort præsentation og gennemgang af enkelte værktøjer i aircrack-ng suit og hvordan disse benyttes til at fange og knække en nøgle til et Access Point (router). </p>
-    <img src="wireless-routers-stacked-one-another.jpg" alt="Router" width=100%>
+    <p>Dette forløb omhandler statistisk analyse ved hjælp af Excel. I dette forløb skal I arbejde med dataanalyse ved at indsamle statestik over personlig forbrug af forskellige sociale medier. Datasættet som eleverne skal arbejde med, indsamles i ugen op til. </p>
+    <img src="images/screentime.png" alt="header billede" width=100%>
   </div>
   
   <div class="content">
-    <h4>Når du er færdig med forløbet:</h4>
-    <ul>
-      <li>kan du definere WPA2 beskyttet netværk</li>
-      <li>kan du beskrive, hvordan du kan fange en nøgle </li>
-      <li>kan du anvende aircrack-ng suit til at fange og knække en nøgle </li>
-    </ul>
+    <h4>Vejledning til indsamling af data:</h4>
+
+ 
   </div>
+
   
   
   <div class="content">
     <h2>Kapitel 1</h2>
-    <h3>Basis - En intro til WPA</h3>
-    
-    <h4 style="margin-bottom: 2px;">Ordliste</h4>
-    <div class="codeblock" style="background-color: #f2f2f2;">
-      <ul>
-        <li> SSID: The network "name" that you see when you try and connect</li>
-        <li> ESSID: An SSID that *may* apply to multiple access points, eg a company office, normally forming a bigger network. For Aircrack they normally refer to the network you're attacking.</li>
-        <li> BSSID: An access point MAC (hardware) address</li>
-        <li> WPA2-PSK: Wifi networks that you connect to by providing a password that's the same for everyone</li>
-        <li> WPA2-EAP: Wifi networks that you authenticate to by providing a username and password, which is sent to a RADIUS server.</li>
-        <li> RADIUS: A server for authenticating clients, not just for wifi.</li>
-      </ul>
-    </div>
-    
-    <p>Kernen af WPA(2) (Wi-Fi Protected Access) sikkerhedsprotokollen for trådløs internet er "the 4 way handshake" - som groft oversat betyder "det 4-vejs håndtrykket". </p>
-    <p>De fleste WiFi netværk i private hjem bruge WPA(2), hvor WPE (Wired Equivalent Privacy) tidligere blev brugt. Ved 4-vejs håndtrykket kan en klient og en router erkende overfor hinanden, at de kender "nøglen" uden egentlig at opgive en decideret nøgle.</p>
-    <br>
-    <p>Nøglen til WPA bliver udledet af både ESSID (navnet på netværket) og kodeordet til netværket. Dette gør det svære at gennemføre et standard "dictionary attack" - for hver password, vil nøglen stadig varierer for hver access point.</p>
-    <br>
-    <p>For først at opfange den nødvendige data (4 way handshake) kan bruge en samling programmer, som samlet kaldes for "<span class="program">Aircrack-ng suit</span>", til at analysere og angribe et netværk. Man skal dog bruge et WiFi NIC (Network Interface Controller) der kan sættes i "moitor mode" - normalt vil ens netværk interface controller være i det der hedder "managed mode".</p>
-    <p>På Linux kan vi benytte <span class="cmd">iwconfig</span> eller <span class="cmd">airmon-ng</span> til at se status og navn for tilgængelige trådløse netværk interfaces. </p>
-  
-    <div class="codeblock">
-      <p class="cmd">iwconfig</p>
-    </div>
-    
-    <figure>
-      <img src="iwconfig.png" alt="iwconfig output" style="max-width:100%;">
-      <figcaption>output fra iwconfig</figcaption>
-    </figure>
+    <h3>Eget Skræmforbrug</h3>
+    <p>Ovenfor er vist 2 eksempler på hvordan data kan sammenlignes.</p>
+    <p>I navigationsbare i toppen af denne side kan I se et link (<span style="color:green;">/excelark</span>). Herinde kan I downloade et forberede elevark til indtastning af jeres daga.</p>
 
-      
-
-    <br>
-    
-    <div class="codeblock alert">
-      <p>🚧 </p>
-      <p><span style="text-decoration: underline;">Det er vigtigt at fortælle, at dette angreb ikke er lovligt at udføre såfremt man ikke har tilladelse fra ejeren af netværket eller selv ejer netværket. </span><br><br> Derfor forslår jeg, at man deler et netværk gennem et hotspot på sin mobil/tablet. Det kan ligeledes være en idé, at vælge et nemt password, så man ikke skal vente i timevis for at knække nøglen.  </p>
-    </div>
-    
-    <p>Ud fra outputtet fra <span class="cmd">iwconfig</span> kan vi se, at jeg har to wireless interface; <span class="cmd">wlan0</span> og <span class="cmd">wlan1</span></p>
-  
-  
-    <div class="codeblock alert">
-      <p>📌 </p>
-      <p>Vær opmærksom på at jeres interface sagtens kan hedde noget andet, da det afhænger af hvilken Linux variant I benytter - jeg benytter Kali Linux.</p>
+    <div class="content">
+      <h4>Indsammel eget data:</h4>
+      <div class="codeblock task">
+        <p>✏️</p>
+        <div>
+            <div style="display:inline-flex; align-items:flex-start;">
+                <input id="krav1" type="checkbox">
+                <label for="krav1">Udvælg noget data og konstruerer et diagram over eget skærmforbrug i forhold til de forskellige dage. </label>
+            </div>
+            <div style="display:inline-flex; align-items:flex-start;">
+                <input id = "krav2" type="checkbox">
+                <label for="krav2" >Hvilke statistiske deskriptorer kan man beregne/finde i det datasæt I har valgt?</label>
+            </div>
+            <div style="display:inline-flex; align-items:flex-start;">
+                <input id = "krav3" type="checkbox">
+                <label for="krav3" >Hvad kan du konkludere ud fra din undersøgelse?</label>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
   
   <div class="content">
     <h2>Kapitel 2</h2>
-    <h3>Generer en ordliste</h3>
+    <h3>Klassens Skærmforbrug</h3>
     
-    <p>Vi kan starte med at genere vores egen ordliste. Dette kan vi gøre ud fra  <a target="_blank" href="https://github.com/danielmiessler/SecLists/blob/master/Passwords/Leaked-Databases/rockyou-20.txt" title="Link til wordlist">rockyou.txt</a> ordlisten. </p>
-  
-    <p>or at genere 5 tilfældige passwords fra <span class="cmd">rockyou</span>, kan vi bruge denne Linux kommando</p>
-    
-     <div class="codeblock">
-       <p class="cmd">head /usr/share/wordlists/rockyou.txt -n 10000 | shuf -n 5 - > mywordlist.txt </p>
-    </div>
-    
-  
-    <figure>
-      <img src="wordlist.png" alt="wordlist output" style="max-width:100%;">
-      <figcaption>Lav en ordliste på 5 tilfældige ord fra roxkyou wordlisten</figcaption>
-    </figure>
-    
-    <p>Da WPA2 kræver mindst 8 tegn, tilføjer jeg også det password, som jeg benytter til mit delte netværk. Dette kan evt. gøres ved denne kommando</p>  
-    
-    <div class="codeblock">
-       <p class="cmd">echo -n "password1234" >> mywordlist.txt</p>
-    </div>
+    <div class="content">
+      <div class="codeblock task">
+        <p>✏️</p>
+        <div>
+            <div style="display:inline-flex; align-items:flex-start;">
+                <input id="krav4" type="checkbox">
+                <label for="krav4">Udvælge noget data, som du vil undersøge ud fra det i har indsamlet på hele klassen. OBS I skal ikke forholde jer til alt den indsamlede data. Udvælg det I synes vil være mest spændende at arbejde med.</label>
+            </div>
+            <div style="display:inline-flex; align-items:flex-start;">
+                <input id = "krav5" type="checkbox">
+                <label for="krav5">Lav et undersøgelsesspørgsmål, som du vil lave en grafisk fremstilling af. 
+                                <br>Fx Er der forskel på klassens gennemsnitlige skærmtid i hverdagene og i weekenden? 
+                                <br>Hvor lang tid bruger klassen dagligt på Snapchat? 
+                                <br>Hvilke tre apps benyttes mest i klassen?  </label>
 
-    <figure>
-      <img src="passwordadd.png" alt="Password add" style="max-width:100%;">
-      <figcaption>Tilføj valgte kodeord til ordlisten</figcaption>
-    </figure>
-    
-    <p>Vi har nu en ordliste klar til brug (mywordlist.txt). Nu skal vi sætte vores NIC i "monitor mode" for at fange "the 4 way handshake". </p>
-
-    
+            </div>
+            <div style="display:inline-flex; align-items:flex-start;">
+                <input id = "krav6" type="checkbox">
+                <label for="krav6" >Hvilke statistiske deskriptorer kan man beregne/finde i det datasæt I har valgt?</label>
+            </div>
+            <div style="display:inline-flex; align-items:flex-start;">
+                <input id = "krav7" type="checkbox">
+                <label for="krav7" >Hvad kan du konkludere ud fra din undersøgelse? </label>
+            </div>
+            <div style="display:inline-flex; align-items:flex-start;">
+                <input id = "krav8" type="checkbox">
+                <label for="krav8" >Hvordan er dit eget skærmforbrug i forhold til det du har undersøgt</label>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
-
+      
   <div class="content">
     <h2>Kapitel 3</h2>
-    <h3>Airmon-ng</h3>
-    
-    <p>Brug <span class="cmd">airmon-ng check kill</span>  kommandoen til at "dræbe" tjenester der evt. kan forsøge at sætte vores netværks interface i "managed mode" igen.</p>
-        
-        
-    <div class="codeblock">
-       <p class="cmd">sudo airmon-ng check kill</p>
+    <h3>Statistisk Undersøgelse</h3>
+      
+    <div class="content">
+      <div class="codeblock task">
+        <p>✏️</p>
+        <div>
+          <div style="display:inline-flex; align-items:flex-start;">
+            <input id="krav9" type="checkbox">
+            <label for="krav9">Udvælg noget data, som du vil undersøge på tværs af enten køn, klasse eller stjernetegn. Dataet du udvælger skal kunne sammenlignes i enten et histogram eller et boksplot. OBS I skal ikke forholde jer til alt den indsamlede data. Udvælg det I synes vil være mest spændende at arbejde med.</label>
+          </div>
+          <div style="display:inline-flex; align-items:flex-start;">
+            <input id = "krav10" type="checkbox">
+            <label for="krav10">Lav en påstand, som du vil undersøge i forhold til din inddeling. 
+                            <br>Fx drengene bruger meget mere tid på Snapchat i forhold til pigerne. 
+                            <br>8.y bruger gennemsnitligt mere tid på deres telefoner end 8.x.
+                            <br>Løver brugere mere tid på TikTok end de øvrige stjernetegn.</label>
+          </div>
+          <div style="display:inline-flex; align-items:flex-start;">
+            <input id = "krav11" type="checkbox">
+            <label for="krav11" >Hvilke statistiske deskriptorer kan man beregne/finde i det datasæt I har valgt?</label>
+          </div>
+          <div style="display:inline-flex; align-items:flex-start;">
+            <input id = "krav12" type="checkbox">
+            <label for="krav12" >Hvad kan du konkludere ud fra din undersøgelse? </label>
+          </div>
+          <div style="display:inline-flex; align-items:flex-start;">
+            <input id = "krav13" type="checkbox">
+            <label for="krav13" >Hvordan er dit eget skærmforbrug i forhold til det du har undersøgt? </label>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <figure>
-      <img src="check_kill.png" alt="Check kill command" style="max-width:100%;">
-      <figcaption></figcaption>
-    </figure>
-    
-    <p>Sæt efterfølgende vores netværks interface i "monitor mode"</p>
-    
-    <div class="codeblock">
-       <p class="cmd">sudo airmon-ng start wlan1l</p>
-    </div>    
-
-    <figure>
-      <img src="start_monitor.png" alt="Start monitor" style="max-width:100%;">
-      <figcaption></figcaption>
-    </figure>    
-    
-    <p>Vi kan nu begynde at fange date til at gennemføre vores attack. Mit delte netværk hedder AndroidAP2, som er det netværk jeg vil angribe</p>
-    
-    <div class="codeblock">
-       <p class="cmd">sudo airodump-ng wlan1mon</p>
-    </div> 
-    
-    <figure>
-      <img src="wifidata.png" alt="wifidata" style="max-width:100%;">
-      <figcaption></figcaption>
-    </figure> 
-    
-    <p>Lig mærke til BSSID og CH på den enhed vi vil angribe. <br>
-        Tryk <span class="cmd">ctrl-c</span> for at afbryde angrebet. Kopier BSSID for vores AP</p>
-        
-    <p>Vi vil nu lave et specefikt angreb på vores AP (AndropdAP2). Når en anden enhed kobler sig på AndroidAP2, kan vi fange "the 4 way handshake" og vi kan derefter knække nøglen. <span style="font-style:italic;">Reelt kan vi også "smide" en enhed af netværket, men det vælger jeg ikke at vise jer - DNS attack.</span></p>
-    
-    <div class="codeblock">
-       <p class="cmd">sudo airodump-ng wlan1mon --bssid F2:C9:B0:E7:81:BB --chanel 6 -w AndroidAP2</p>
-    </div>   
+  </div>
     
     
-    <figure>
-      <img src="capture.png" alt="Capture handshake" style="max-width:100%;">
-      <figcaption></figcaption>
-    </figure> 
-    
-    
-    <p>VI har nu fanget vores handshake (AndroidAP2.cap) og kan stoppe vores program <span class="cmd">ctrl+c</span>.
-      <br>Til sidst, stop airmon-ng ved at skrive kommandoen </p>
-
-  
-    <div class="codeblock">
-       <p class="cmd">sudo airmon-ng stop wlan1mon
-          <br>service NetworkManager start
-          <br>service wpa_supplicant start</p>
-    </div>   
-  
-    <figure>
-      <img src="airmon_stop.png" alt="airmon stop" style="max-width:100%;">
-      <figcaption></figcaption>
-    </figure> 
-  </div>      
-  
   <div class="content">
     <h2>Kapitel 4</h2>
-    <h3>Knæk nøglen</h3>
-    
-    <p>Nu hvor vi har det vi skal bruge for at kunne knække nøglen til vores WiFi, kan vi se om vi kan knække den ved at benytte vores ordliste.</p>
-    
-    <div class="codeblock">
-       <p class="cmd">sudo aircrack-ng -b A2:C9:A0:E7:11:BB -w mywordlist.txt AndroidAP2-2.cap</p>
-    </div>  
-    
-    <figure>
-      <img src="cracked.png" alt="aircrack-ng" style="max-width:100%;">
-      <figcaption></figcaption>
-    </figure> 
-    
-    <p>Vi har nu knækket nøglen og har fundet vores WiFi password (password1234)</p>
-
+    <h3>Præsentation for Årgangen</h3>
+    <p>Fredag mødes vi på læringstrappen i 5 lektion og udvælger nogle grupper, som skal vise enten deres svar på opgave 2 eller 3. </p>
   </div>
-
-<div class="content">
-    <h3>Alternativt: Knæk nøglen med John</h3>
-    
-    <p>Med <span class="cmd">aircrack-ng -j</span> kan vi generere en <span class="cmd">HCCAPX</span> fil, som kan brute forces af <span class="cmd">hashcat</span>.</p>
-    
-    <div class="codeblock">
-       <p class="cmd">aircrack-ng AndroidAP2-2.capNinjaJc01-01.cap -j hashcat_output</p>
-    </div>  
-    
-    <p>Denne fil kan vi også anvende med <span class="cmd">John the Ripper</span>.</p>
-    <p>Først skal vi dog genere et john-readable hash. Dette kan vi gøre med <span class="cmd">hccapx2john.py</span> til.</p>
-    <p style="font-style: italic; color:grey">(hccapx2john.py findesi jumbo udgaven af John the Ripper)</p>
- 
- 
-    <div class="codeblock">
-     <p class="cmd">hccapx2john.py hashcat_output.hccapx > hash.txt</p>
-    </div>  
-    
-    <p>Knæk nu hashet med john:</p>
-    
-    <div class="codeblock">
-     <p class="cmd">john --format=wpapsk --wordlist=/usr/share/wordlists/rockyou.txt hash.txt</p>
-    </div> 
-
-  </div>
-  
   
   
   <!-- FOOTER START --> 
