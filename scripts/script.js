@@ -30,7 +30,7 @@ document.addEventListener('keydown', function(event){
   const key = event.key;
   if (key == "ArrowRight"){
     plusSlides(1)
-  }else if (ke == "ArrowLeft"){
+  }else if (key == "ArrowLeft"){
     plusSlides(-1)
   }
 })
