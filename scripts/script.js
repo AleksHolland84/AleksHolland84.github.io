@@ -24,3 +24,13 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+// Listen for arrow left and right to change image
+document.addEventListener('keydown', function(event){
+  const key = event.key;
+  if (key == "ArrowRight"){
+    plusSlides(1)
+  }else if (ke == "ArrowLeft"){
+    plusSlides(-1)
+  }
+})
