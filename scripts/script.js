@@ -29,8 +29,8 @@ function showSlides(n) {
 document.addEventListener('keydown', function(event){
   const key = event.key;
   if (key == "ArrowRight"){
-    plusSlides(1);
+    plusSlides(1)
   }else if (key == "ArrowLeft"){
-    plusSlides(-1);
+    plusSlides(-1)
   }
 })

@@ -25,6 +25,10 @@ header a:hover{
  stroke: #ff3399;
 }
 
+#xls:hover{
+  color: green;
+}
+
 .nav {
  flex: 1;
 }
