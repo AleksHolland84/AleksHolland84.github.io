@@ -1,0 +1,191 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.owner{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(100, 99, 99);
+}
+h1 {
+    font-size: 42px;
+    color: #413c42;
+}
+
+.main-headder-container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    top:0px;
+    left:0px;
+    z-index: 999;
+    position: fixed;        
+    background: rgb(255, 255, 255);
+    margin: 0px;
+    color: #4b0168;
+
+}
+.main-content-wrapper{
+    margin-top:-8px;
+
+}
+.main-content-container{
+    margin-left:45px;
+}
+.main-content-menu{
+    display: flex;
+}
+
+.wallpaper-container{
+    flex:1;
+    display: flex;
+    align-items: stretch;
+    height: 1200px;
+    min-width: 500px;
+    object-fit: cover;
+    min-height:100%;
+    max-width:  50%;
+    background-position: center center;
+    position: relative;
+    overflow-x:hidden;
+}
+
+.image-container {
+    display: none;
+    margin:0px;
+    padding: 0px;
+}
+
+.copyright-image{
+    display: inline-flex;
+    padding: .625rem .9375rem;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(0,0,0,.5);;
+    color: #fff;
+}
+
+.left-menu{
+    position: fixed;
+    z-index: 100;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px -10px 0px -10px;
+    min-width: 58px;
+    background-color: #4b0168;
+}
+
+.left-menu a{
+    text-align: center;
+    color:aliceblue;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.left-menu a:hover{
+    background-color: #370246;
+}
+
+
+.main-content-right-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width:  800px;
+    margin-right: auto;
+}
+
+.main-content-right{
+    padding: 10px 40px  10px;
+}
+
+.menu-chapter-info p{
+    margin: 0px;
+    font-size: 14px;
+    color:rgb(128, 126, 126);
+}
+
+.menu-chapter-info h4{
+    color: #4b0168;
+}
+
+.chapter-container{
+    margin: 20px;
+}
+
+.no-bullets-container { 
+    display: flex;
+    align-content:  center;
+    gap: 70px 70px;
+    color: grey;  
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+.argument{
+    font-weight: 900;
+}
+
+@media (max-width: 1050px) {
+    .main-content-menu {
+        flex-direction: column
+    }
+    .image-container{
+        display: block;
+    }
+    .wallpaper-container {
+        display: block;
+        height: 40vh;
+        background-position: center 30%;
+        min-width: 100%;
+        background-size: cover;
+    }
+}
+
+
+/* Code By Webdevtrick ( https://webdevtrick.com/header-underline-active-item/) */
+.top{
+    display: flex;
+    border-bottom: 0.125rem solid grey;
+    margin-bottom:  30px;
+}
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  ul li {
+    position: relative;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    color:grey;
+  }
+  ul li::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #3c006d;
+    transform: scaleX(0);
+  }
+  ul li.active::after {
+    transform: scaleX(1);
+  }
+  li.active{
+      color:black;
+  }
+  ul li:hover{
+      color: black;
+  }
