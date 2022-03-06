@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sci Fi</title>
-  <link rel="stylesheet" type="text/css" href="style/scifi.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <style>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!-- HEADER
-  <div class="main-headder-container">
+  <div class="main-header-container">
     TEST
   </div>
   -->
@@ -35,7 +35,9 @@
 
         <div class="wallpaper-container" data-type="cover" style="background-image:url('images/scifi2_header.jpg'); height: 100vh;">
             <!-- WALLPAPER CONTAINER-->
-            <div class="wallpaper-container image-container"></div>
+            <div class="wallpaper-container image-container">
+              <!-- This container is to make room for the wallpaper image-->
+            </div>
 
             <span class="copyright-image">© Foto: Unsplash</span>
         </div>
@@ -86,7 +88,9 @@
               </div>
 
               <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-                <img src="images/Hitchhikers.png" height="140px">
+                <a href="#Chapter_2">
+                  <img src="images/Hitchhikers.png" height="140px">
+                </a>
                 <div class="menu-chapter-info">
                   <h4 style="margin: 0px">Kapitel 2</h4> 
                   <h2 class="menu-chapter-title">The Hitchhicker's Guide to the Galaxy</h2>      
@@ -98,7 +102,9 @@
               </div>
 
               <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-                <img src="images/bladerunner.png" height="140px">
+                <a href="#Chapter_3">
+                  <img src="images/bladerunner.png" height="140px">  
+                </a>
                 <div class="menu-chapter-info">
                   <h4 style="margin: 0px">Kapitel 3</h4>
                   <h2 class="menu-chapter-title">Blade Runner</h2>
@@ -110,7 +116,9 @@
               </div>
 
               <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-                <img src="images/matrix.png" height="140px">
+                <a href="#Chapter_4">
+                  <img src="images/matrix.png" height="140px">
+                </a>
                 <div class="menu-chapter-info">
                   <h4 style="margin: 0px">Kapitel 4</h4>
                   <h2 class="menu-chapter-title">The Matrix</h2>
@@ -160,56 +168,83 @@
         </div>
       </div>
   
-    <div id="Chapter_1" class="chapter-container">
-      <div>
-        <div>
-          <H1 class="chapter-title">Chapter 1</H1>
-          <p>Pengeuge sætter fokus på den finansielle forståelse hos grundskolens ældste klasser (7.-9. klasse) gennem undervisning i privatøkonomi, og hvor ansatte fra den finansielle sektor kommer ud på skolerne som gæsteundervisere. </p>
-          <p>Finans Danmark står bag initiativet og koordinerer undervisningen på skolerne, mens Forlaget Alinea og Danmarks Matematiklærerforening har udarbejdet det officielle undervisningsmateriale.</p>
-          <p>I dette forløb lærer du en masse om penge, både dem, man får, tjener og kan låne. Når du er færdig med forløbet, har du hørt om budgetter, opsparing, lån, renter, valuta, inflation og meget mere. </p>
-          <p>Du lærer også at styre din egen økonomi, så du kan få råd til det, du ønsker dig. </p>
+      <!-- CHAPTER WRAPPER-->
+      <div  id="Chapter_1" class="chapter-wrapper">
+        <H1 class="chapter-title">Chapter 1</H1>
+        <div class="half">
+        <div class="chapter-content-wrapper">
+          <div class="chapter-image-container">
+            <img src="images/Ghost-In-The-Shell-cover.webp" width="100%">
+          </div>
+          <div class="chapter-container">
+            <p>Pengeuge sætter fokus på den finansielle forståelse hos grundskolens ældste klasser (7.-9. klasse) gennem undervisning i privatøkonomi, og hvor ansatte fra den finansielle sektor kommer ud på skolerne som gæsteundervisere. </p>
+            <p>Finans Danmark står bag initiativet og koordinerer undervisningen på skolerne, mens Forlaget Alinea og Danmarks Matematiklærerforening har udarbejdet det officielle undervisningsmateriale.</p>
+            <p>I dette forløb lærer du en masse om penge, både dem, man får, tjener og kan låne. Når du er færdig med forløbet, har du hørt om budgetter, opsparing, lån, renter, valuta, inflation og meget mere. </p>
+            <p>Du lærer også at styre din egen økonomi, så du kan få råd til det, du ønsker dig. </p>
+          </div>
+        </div>
+        <div class="chapter-content-wrapper">
+          <div class="chapter-image-container">
+            <img src="images/Ghost-In-The-Shell-cover.webp" width="100%">
+          </div>
+          <div class="chapter-container">
+            <p>Pengeuge sætter fokus på den finansielle forståelse hos grundskolens ældste klasser (7.-9. klasse) gennem undervisning i privatøkonomi, og hvor ansatte fra den finansielle sektor kommer ud på skolerne som gæsteundervisere. </p>
+            <p>Finans Danmark står bag initiativet og koordinerer undervisningen på skolerne, mens Forlaget Alinea og Danmarks Matematiklærerforening har udarbejdet det officielle undervisningsmateriale.</p>
+            <p>I dette forløb lærer du en masse om penge, både dem, man får, tjener og kan låne. Når du er færdig med forløbet, har du hørt om budgetter, opsparing, lån, renter, valuta, inflation og meget mere. </p>
+            <p>Du lærer også at styre din egen økonomi, så du kan få råd til det, du ønsker dig. </p>
+          </div>
+        </div>
+
+
+        </div>
+
+      </div>
+
+      <div id="Chapter_2" class="chapter-wrapper">
+        <H1 class="chapter-title">Chapter 2</H1>
+        <div class="chapter-content-wrapper">
+          <div class="chapter-image-container">
+            <img src="images/Ghost-In-The-Shell-cover.webp" width="100%">
+          </div>
+          <div class="chapter-container">
+            <p>Pengeuge sætter fokus på den finansielle forståelse hos grundskolens ældste klasser (7.-9. klasse) gennem undervisning i privatøkonomi, og hvor ansatte fra den finansielle sektor kommer ud på skolerne som gæsteundervisere. </p>
+            <p>Finans Danmark står bag initiativet og koordinerer undervisningen på skolerne, mens Forlaget Alinea og Danmarks Matematiklærerforening har udarbejdet det officielle undervisningsmateriale.</p>
+            <p>I dette forløb lærer du en masse om penge, både dem, man får, tjener og kan låne. Når du er færdig med forløbet, har du hørt om budgetter, opsparing, lån, renter, valuta, inflation og meget mere. </p>
+            <p>Du lærer også at styre din egen økonomi, så du kan få råd til det, du ønsker dig. </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="Chapter_3" class="chapter-wrapper">
+        <H1 class="chapter-title">Chapter 3</H1>
+        <div class="chapter-content-wrapper">
+          <div class="chapter-image-container">
+            <img src="images/Ghost-In-The-Shell-cover.webp" width="100%">
+          </div>
+          <div class="chapter-container">
+            <p>Pengeuge sætter fokus på den finansielle forståelse hos grundskolens ældste klasser (7.-9. klasse) gennem undervisning i privatøkonomi, og hvor ansatte fra den finansielle sektor kommer ud på skolerne som gæsteundervisere. </p>
+            <p>Finans Danmark står bag initiativet og koordinerer undervisningen på skolerne, mens Forlaget Alinea og Danmarks Matematiklærerforening har udarbejdet det officielle undervisningsmateriale.</p>
+            <p>I dette forløb lærer du en masse om penge, både dem, man får, tjener og kan låne. Når du er færdig med forløbet, har du hørt om budgetter, opsparing, lån, renter, valuta, inflation og meget mere. </p>
+            <p>Du lærer også at styre din egen økonomi, så du kan få råd til det, du ønsker dig. </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="Chapter_4" class="chapter-wrapper">
+        <H1 class="chapter-title">Chapter 4</H1>
+        <div class="chapter-content-wrapper">
+          <div class="chapter-image-container">
+            <img src="images/Ghost-In-The-Shell-cover.webp" width="100%">
+          </div>
+          <div class="chapter-container">
+            <p>Pengeuge sætter fokus på den finansielle forståelse hos grundskolens ældste klasser (7.-9. klasse) gennem undervisning i privatøkonomi, og hvor ansatte fra den finansielle sektor kommer ud på skolerne som gæsteundervisere. </p>
+            <p>Finans Danmark står bag initiativet og koordinerer undervisningen på skolerne, mens Forlaget Alinea og Danmarks Matematiklærerforening har udarbejdet det officielle undervisningsmateriale.</p>
+            <p>I dette forløb lærer du en masse om penge, både dem, man får, tjener og kan låne. Når du er færdig med forløbet, har du hørt om budgetter, opsparing, lån, renter, valuta, inflation og meget mere. </p>
+            <p>Du lærer også at styre din egen økonomi, så du kan få råd til det, du ønsker dig. </p>
+          </div>
         </div>
       </div>
     </div>
-
-    <div id="Chapter_2" class="chapter-container">
-      <div>
-        <div>
-          <H1 class="chapter-title">Chapter 1</H1>
-          <p>Pengeuge sætter fokus på den finansielle forståelse hos grundskolens ældste klasser (7.-9. klasse) gennem undervisning i privatøkonomi, og hvor ansatte fra den finansielle sektor kommer ud på skolerne som gæsteundervisere. </p>
-          <p>Finans Danmark står bag initiativet og koordinerer undervisningen på skolerne, mens Forlaget Alinea og Danmarks Matematiklærerforening har udarbejdet det officielle undervisningsmateriale.</p>
-          <p>I dette forløb lærer du en masse om penge, både dem, man får, tjener og kan låne. Når du er færdig med forløbet, har du hørt om budgetter, opsparing, lån, renter, valuta, inflation og meget mere. </p>
-          <p>Du lærer også at styre din egen økonomi, så du kan få råd til det, du ønsker dig. </p>
-        </div>
-      </div>
-    </div>
-
-    <div id="Chapter_3" class="chapter-container">
-      <div>
-        <div>
-          <H1 class="chapter-title">Chapter 1</H1>
-          <p>Pengeuge sætter fokus på den finansielle forståelse hos grundskolens ældste klasser (7.-9. klasse) gennem undervisning i privatøkonomi, og hvor ansatte fra den finansielle sektor kommer ud på skolerne som gæsteundervisere. </p>
-          <p>Finans Danmark står bag initiativet og koordinerer undervisningen på skolerne, mens Forlaget Alinea og Danmarks Matematiklærerforening har udarbejdet det officielle undervisningsmateriale.</p>
-          <p>I dette forløb lærer du en masse om penge, både dem, man får, tjener og kan låne. Når du er færdig med forløbet, har du hørt om budgetter, opsparing, lån, renter, valuta, inflation og meget mere. </p>
-          <p>Du lærer også at styre din egen økonomi, så du kan få råd til det, du ønsker dig. </p>
-        </div>
-      </div>
-    </div>
-
-    <div id="Chapter_4" class="chapter-container">
-      <div>
-        <div>
-          <H1 class="chapter-title">Chapter 1</H1>
-          <p>Pengeuge sætter fokus på den finansielle forståelse hos grundskolens ældste klasser (7.-9. klasse) gennem undervisning i privatøkonomi, og hvor ansatte fra den finansielle sektor kommer ud på skolerne som gæsteundervisere. </p>
-          <p>Finans Danmark står bag initiativet og koordinerer undervisningen på skolerne, mens Forlaget Alinea og Danmarks Matematiklærerforening har udarbejdet det officielle undervisningsmateriale.</p>
-          <p>I dette forløb lærer du en masse om penge, både dem, man får, tjener og kan låne. Når du er færdig med forløbet, har du hørt om budgetter, opsparing, lån, renter, valuta, inflation og meget mere. </p>
-          <p>Du lærer også at styre din egen økonomi, så du kan få råd til det, du ønsker dig. </p>
-        </div>
-      </div>
-    </div>
-
-    </div>
-  </div>
   <!-- main-content-wrapper end-->
 
 
