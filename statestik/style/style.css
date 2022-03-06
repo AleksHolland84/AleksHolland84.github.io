@@ -1,226 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Sora:wght@100;200;300;400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); 
+ 
 body {
-  font-family: Verdana, sans-serif;
+ margin: 0 auto;
+ padding: 10px;
+ max-width: 800px;
+ font-family: 'Oxygen', sans-serif;
+  
 }
 
-.owner{
-  font-size: 14px;
-  font-weight: 500;
-  color: rgb(100, 99, 99);
-}
-h1 {
-  font-size: 42px;
-  color: #413c42;
+header {
+ display: flex;
+ justify-content: flex-end;
+ align-items: baseline;
 }
 
-.main-header-container {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-  top:0px;
-  left:0px;
-  z-index: 999;
-  position: fixed;        
-  background: rgb(255, 255, 255);
-  margin: 0px;
-  color: #4b0168;
+header a {
+ width: 25px;
+ height:25px;
+ fill: black;
+ margin-left: 2px;
+}
+header a:hover{
+ fill: #ff3399;
+ stroke: #ff3399;
 }
 
-.main-content-wrapper{
-  margin-top:-8px;
-
-}
-.main-content-container{
-  margin-left:45px;
-}
-.main-content-menu{
-  display: flex;
+#xls:hover{
+  color: green;
 }
 
-.wallpaper-container{
-  flex:1;
-  display: flex;
-  align-items: stretch;
-  height: 1200px;
-  min-width: 500px;
-  object-fit: cover;
-  min-height:100%;
-  max-width:  50%;
-  background-position: center center;
-  position: relative;
-  overflow-x:hidden;
+.nav {
+ flex: 1;
 }
 
-.image-container {
-  display: none;
-  margin:0px;
-  padding: 0px;
+.nav a{
+ color: black;
+ text-decoration: none;
+ font-family: 'IBM Plex Mono', monospace;
+ font-weight: 400;
 }
 
-.copyright-image{
-  display: inline-flex;
-  padding: .625rem .9375rem;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  background-color: rgba(0,0,0,.5);;
-  color: #fff;
+.whoami {
+ align-items: baseline;
 }
 
-.left-menu{
-  position: fixed;
-  z-index: 100;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  margin: 0px -10px 0px -10px;
-  min-width: 58px;
-  background-color: #4b0168;
+h1{
+ font-size: 38px;
 }
 
-.left-menu a{
-  text-align: center;
-  color:aliceblue;
-  font-size: 18px;
-  font-weight: 800;
-  text-decoration: none;
-  padding: 10px;
+.whoami h1 {
+ margin-top: 120px;
+ margin-bottom: 0px;
 }
 
-.left-menu a:hover{
-  background-color: #370246;
+.contact {
+ display: flex;
+
 }
 
-
-.main-content-right-wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  max-width:  800px;
-  margin-right: auto;
+.whoami p {
+ font-family: "Courier New";
+ margin-top: 0px;
+ flex:16;
 }
 
-.main-content-right{
-  padding: 10px 40px  10px;
+.whoami a {
+ width: 25px;
+ height:25px;
+ fill: black;
 }
 
-.menu-chapter-info p{
-  margin: 0px;
-  font-size: 14px;
-  color:rgb(128, 126, 126);
+.whoami a:hover{
+ fill: #ff3399;
+ stroke: #ff3399;
 }
 
-.menu-chapter-info h4{
-  color: #4b0168;
+.content {
+ text-align: justify;
+ margin-top: 50px;
 }
 
-.menu-chapter-title {
-  margin: 0px;
+.content a {
+ color: grey;
 }
 
-.chapter-wrapper{
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-  margin-left: 20px;
-}
-.half{
-  display:flex;
-  flex: 1;
-  margin-left: 20px;
-  gap:20px;
-}
-.chapter-content-wrapper{
-  display:flex;
-  align-items: flex-start;
+.content a:hover{
+ color: #ff3399;
 }
 
-.chapter-image-container{
-  flex:1;
-  max-width:  200px;
-}
-
-.chapter-container{
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  margin-right: auto;
-  margin-left: 20px;
-  margin-top: 0px;
-  max-width: 80%;
-  margin-right: auto;
-}
-
-.no-bullets-container { 
-  display: flex;
-  align-content:  center;
-  gap: 70px 70px;
-  color: grey;  
-  list-style-type: none;
-  margin-top: 40px;
+.vejledning {
+ font-family: "Courier New";
+ color: grey;
 }
 
 .argument{
-  font-weight: 900;
+ font-weight: 900;
 }
 
-@media (max-width: 1100px) {
-  .main-content-menu {
-      flex-direction: column
+.no-bullets-container {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ gap: 40px;
+}
+
+.codeblock {
+ font-family: "Courier New";
+ background-color: #f2f2f2;
+ margin-top: 2px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ padding-right: 10px;
+
+}
+.codeblock p{
+ padding-left: 20px;
+}
+
+.program {
+ font-family: "Courier New";
+ color: #a300cc;
+ font-weight: bold;
+}
+
+.cmd {
+ font-family: "Courier New";
+ background-color: #f2f2f2;
+ padding-left:3px;
+ padding-right: 3px;
+ color: #e60000;
+}
+
+figure {
+ font-family: "Courier New";
+ color: grey;
+}
+
+
+.alert {
+ display: flex;
+}
+
+
+
+footer {
+   color: black;
+   font-size: 12px;
+   padding-top:10rem;
+   padding-bottom: 8rem;
+   text-align: center;
+}
+
+footer a {
+ color: black;
+ text-decoration: none;
+}
+
+footer a:hover{
+ color: #ff3399;
+}
+
+footer svg {
+   fill: black;
+   width: 20px;
+}
+
+footer svg:hover {
+ fill: #ff3399;
+ stroke: #ff3399;
+}
+
+
+.task {
+display: flex;
+justify-content: flex-start;
+align-items: baseline;
+}
+
+.task button {
+ flex: 2;
+ display: inline-block;
+ background-color: white;
+ border: 2px solid #4CAF50;
+ border-radius: 4px;
+ margin-left: 10px;
+ color: #4CAF50;
+ padding: 5px 8px;
+ text-align: center;
+ text-decoration: none;
+ font-size: 14px;
+ transition-duration: 0.4s;
+ cursor: pointer;
+}
+
+
+#hint0, #hint1, #hint2, #hint3, #hint4, #hint5  {
+ flex:2;
+ background-color: white;
+ border: 2px solid #ff8000;
+ color: #ff8000;
+}
+
+.button-spacer {
+ margin-left:auto; 
+}
+
+.task input {
+ flex: 10;
+ display: block;
+ padding: 4px;
+ margin-left: 10px;
+ font-weight: 400;
+ font-size:14px;
+ line-height: 1.5;
+ color: #495057;
+ background-color: #fff;
+ border: 1px solid #ced4da;
+ border-radius: 4px;
+}
+
+
+.downloadbutton-container {
+ display: flex;
+ justify-content:space-between;
+ align-items: flex-end;
+
+ margin-bottom: 10px;
+}
+
+.downloadbutton-container button{
+ background-color: #008dd8;
+ border: none;
+ border: 2px solid #008dd8;
+ border-radius: 4px;
+ color: white;
+ padding: 5px 8px;
+ text-align: center;
+ text-decoration: none;
+ font-size: 14px;
+ transition-duration: 0.4s;
+ cursor: pointer;
+}
+
+.downloadbutton-container button:hover{
+   background-color: #00a6ff;
+   border: 2px solid #00a6ff;
+   color: white;
+}
+
+.points-class {
+ display: flex;
+ justify-content: space-between;
+ align-self: flex-end;
+}
+
+#points-id {
+ color: #02c53a;
+ font-size: 22px;
+ font-weight: 700;
+}
+
+label {
+ margin-bottom:12px;
+}
+
+
+/* Slideshow */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
   }
-  .image-container{
-      display: block;
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 6px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
   }
-  .wallpaper-container {
-      display: block;
-      height: 40vh;
-      background-position: center 30%;
-      min-width: 100%;
-      width: 100%;
-      background-size: cover;
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .slideshow-container a:hover{
+    color:#f2f2f2;
+  }
+  
+  /* Caption text */
+  .caption-text {
+    color: #2e2d2d;
+    font-size: 15px;
+    position: absolute;
+    margin-top:30px;
+    top: 105%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #3f3f3f;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2 px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
   }
 
-}
 
+#slide{
+  animation-delay: 1000ms;
+  animation: slideInFromLeft 1.2s ease-in;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-200%);
+  }
 
-/* Code By Webdevtrick ( https://webdevtrick.com/header-underline-active-item/) */
-.top{
-  display: flex;
-  border-bottom: 0.125rem solid grey;
-  margin-bottom:  30px;
-}
-ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-ul li {
-  position: relative;
-  padding: 10px 20px 10px 20px;
-  cursor: pointer;
-  color:grey;
-}
-ul li::after {
-  position: absolute;
-  content: "";
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: #3c006d;
-  transform: scaleX(0);
-}
-ul li.active::after {
-  transform: scaleX(1);
-}
-li.active{
-    color:black;
-}
-ul li:hover{
-    color: black;
+  100% {
+    transform: translateX(0);
+  }
 }
