@@ -27,3 +27,19 @@ underlineMenuItems.forEach(function (item) {
         showMenuContent()
     });
 });
+
+
+// Function to get chapter title from menu and putting it as the header for each chapter.
+function getChapterTitle(chapterNum) {
+var chapters = document.getElementsByClassName("menu-chapter-title");
+return chapters[chapterNum].innerHTML
+}
+
+function writeChapterTitle(){
+    var chapterTitle = document.getElementsByClassName("chapter-title");
+    for (i = 0; i <chapterTitle.length; i++) {
+        chapterTitle[i].innerHTML = getChapterTitle(i);
+    }
+}
+
+writeChapterTitle()
