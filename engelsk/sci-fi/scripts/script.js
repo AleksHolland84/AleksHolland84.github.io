@@ -32,13 +32,20 @@ underlineMenuItems.forEach(function (item) {
 // Function to get chapter title from menu and putting it as the header for each chapter.
 function getChapterTitle(chapterNum) {
 var chapters = document.getElementsByClassName("menu-chapter-title");
-return chapters[chapterNum].innerHTML
+return chapters[chapterNum].innerHTML;
+}
+
+function getChapterNumber(chapter) {
+    var chapterNum = document.getElementsByClassName("menu-chapter-number");
+    return chapterNum[chapter].innerHTML;
 }
 
 function writeChapterTitle(){
     var chapterTitle = document.getElementsByClassName("chapter-title");
+    var chapterNumber = document.getElementsByClassName("chapter-number");
     for (i = 0; i <chapterTitle.length; i++) {
         chapterTitle[i].innerHTML = getChapterTitle(i);
+        chapterNumber[i].innerHTML = getChapterNumber(i);
     }
 }
 

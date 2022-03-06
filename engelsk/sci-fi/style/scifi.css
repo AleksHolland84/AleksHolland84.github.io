@@ -12,6 +12,10 @@ h1 {
     color: #413c42;
 }
 
+p {
+    margin-top: 0px;
+}
+
 .main-header-container {
     display: flex;
     justify-items: center;
@@ -113,7 +117,8 @@ h1 {
     color:rgb(128, 126, 126);
 }
 
-.menu-chapter-info h4{
+.menu-chapter-number{
+    margin: 0px;
     color: #4b0168;
 }
 
@@ -121,18 +126,39 @@ h1 {
     margin: 0px;
 }
 
+.spacer{
+    margin: 200px auto 200px auto;
+    max-width: 600px;;
+    text-align: center;
+    font-style: italic;
+    color:#6a676b
+}
+
+.chapter-title{
+    margin-top : 10px;
+    margin-left: 20px;
+    margin-bottom: -9px;
+}
+
+.chapter-number{
+    margin-top : 100px;
+    color:#4b0168;
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
 .chapter-wrapper{
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
-    margin-left: 20px;
+    margin: 20px;
+    margin-top: 0px;
+    border: 1px;
+    padding: 20px;
+    border-style: solid;
+    border-color: #370246;
+    max-width: calc(50% + 750px);
 }
-.half{
-    display:flex;
-    flex: 1;
-    margin-left: 20px;
-    gap:20px;
-}
+
 .chapter-content-wrapper{
     display:flex;
     align-items: flex-start;
@@ -141,16 +167,31 @@ h1 {
 .chapter-image-container{
     flex:1;
     max-width:  200px;
+    margin-right: 20px;
 }
+
+.chapter-header-image-container{
+    display: block;
+    height: 30vh;
+    background-position: center 30%;
+    width: calc(100% + 40px);
+    background-size: cover;
+    display: flex;
+    position: relative;
+    left: -20px;
+    top: -20px;
+    z-index: -1;
+    margin-bottom:  20px;;
+}
+
 
 .chapter-container{
     display: flex;
     flex: 1;
     flex-direction: column;
     margin-right: auto;
-    margin-left: 20px;
+    margin-left: 0px;
     margin-top: 0px;
-    max-width: 80%;
     margin-right: auto;
 }
 
@@ -181,6 +222,10 @@ h1 {
         min-width: 100%;
         width: 100%;
         background-size: cover;
+    }
+
+    .chapter-content-wrapper{
+        flex-direction: column;
     }
 
 }
