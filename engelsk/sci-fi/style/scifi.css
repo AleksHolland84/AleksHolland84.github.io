@@ -12,7 +12,7 @@ h1 {
     color: #413c42;
 }
 
-.main-headder-container {
+.main-header-container {
     display: flex;
     justify-items: center;
     align-items: center;
@@ -25,8 +25,8 @@ h1 {
     background: rgb(255, 255, 255);
     margin: 0px;
     color: #4b0168;
-
 }
+
 .main-content-wrapper{
     margin-top:-8px;
 
@@ -117,8 +117,41 @@ h1 {
     color: #4b0168;
 }
 
+.menu-chapter-title {
+    margin: 0px;
+}
+
+.chapter-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.half{
+    display:flex;
+    flex: 1;
+    margin-left: 20px;
+    gap:20px;
+}
+.chapter-content-wrapper{
+    display:flex;
+    align-items: flex-start;
+}
+
+.chapter-image-container{
+    flex:1;
+    max-width:  200px;
+}
+
 .chapter-container{
-    margin: 20px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 20px;
+    margin-top: 0px;
+    max-width: 80%;
+    margin-right: auto;
 }
 
 .no-bullets-container { 
@@ -134,7 +167,7 @@ h1 {
     font-weight: 900;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
     .main-content-menu {
         flex-direction: column
     }
@@ -146,8 +179,10 @@ h1 {
         height: 40vh;
         background-position: center 30%;
         min-width: 100%;
+        width: 100%;
         background-size: cover;
     }
+
 }
 
 
