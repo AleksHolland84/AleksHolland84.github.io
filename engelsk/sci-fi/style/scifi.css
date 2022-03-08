@@ -1,15 +1,19 @@
 @import "menu.css";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
 body {
-    font-family: Verdana, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
 }
 
 .owner{
-    font-size: 14px;
+    font-size: 0.9em;
     font-weight: 500;
     color: rgb(100, 99, 99);
 }
 h1 {
-    font-size: 42px;
+    font-size: 2.5em;
     color: #413c42;
 }
 
@@ -75,11 +79,11 @@ p {
 }
 
 .left-menu{
+    display: flex;
+    flex-direction: column;
     position: fixed;
     z-index: 100;
     height: 100%;
-    display: flex;
-    flex-direction: column;
     padding: 0px;
     margin: 0px -10px 0px -10px;
     min-width: 58px;
@@ -89,8 +93,8 @@ p {
 .left-menu a{
     text-align: center;
     color:aliceblue;
-    font-size: 18px;
-    font-weight: 800;
+    font-size: 0.9em;
+    font-weight: 600;
     text-decoration: none;
     padding: 10px;
 }
@@ -115,10 +119,9 @@ p {
 
 .menu-chapter-info p{
     margin: 0px;
-    font-size: 14px;
+    font-size: 0.85em;
     color:rgb(128, 126, 126);
 }
-
 
 .menu-chapter-number-style{
     margin: 0px;
@@ -201,11 +204,11 @@ p {
 .no-bullets-container { 
     display: flex;
     align-content:  center;
-    gap: 70px 90px;
+    gap: 10px 60px;
     color: grey;  
     list-style-type: none;
     margin-top: 40px;
-    font-size:  14px;
+    font-size:  0.85em;
 }
 
 .argument{
