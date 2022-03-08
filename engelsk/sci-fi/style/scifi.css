@@ -17,6 +17,10 @@ h1 {
     color: #413c42;
 }
 
+h2 {
+    font-size: 1.4em;
+}
+
 p {
     margin-top: 0px;
 }
@@ -75,6 +79,7 @@ p {
     bottom: 0px;
     right: 0px;
     background-color: rgba(0,0,0,.5);;
+    font-size: 0.75em;;
     color: #fff;
 }
 
@@ -215,7 +220,7 @@ p {
     font-weight: 900;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     body {
         min-width: 800px;
     }
@@ -247,8 +252,11 @@ p {
 /* Code By Webdevtrick ( https://webdevtrick.com/header-underline-active-item/) */
 .top{
     display: flex;
+    min-width: 530px;
     border-bottom: 0.125rem solid grey;
     margin-bottom:  30px;
+    overflow: hidden;
+    overflow-x: auto;
 }
   ul {
     display: flex;
@@ -262,6 +270,7 @@ p {
     padding: 10px 20px 10px 20px;
     cursor: pointer;
     color:grey;
+    font-size: 0.85em;
   }
   ul li::after {
     position: absolute;
