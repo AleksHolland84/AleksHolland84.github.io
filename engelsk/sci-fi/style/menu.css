@@ -88,3 +88,39 @@
   font-weight: 100;
 
 }
+
+
+/* DOWNLOAD FILE*/
+.download-file {
+  background-color:  rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 2px;
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.85em;
+}
+
+.download-chapter-container{
+margin-bottom: 30px;
+}
+
+.download-file:hover {
+  padding-left: 5px;
+}
+
+.download-file p{
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  color:rgb(160, 160, 160);
+}
+
+.fa{
+margin-top: 15px;
+float: right;
+}
+

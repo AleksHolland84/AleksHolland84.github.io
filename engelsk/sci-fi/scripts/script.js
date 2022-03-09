@@ -13,7 +13,6 @@ function showMenuContent() {
     }
 
 }
- showMenuContent()
 
 
 // Code By Webdevtrick ( https://webdevtrick.com )
@@ -49,4 +48,22 @@ function writeChapterTitle(){
     }
 }
 
-writeChapterTitle()
+
+
+// FUNCTION TO GET FILENAME
+function getFileName() {
+    var fileName = document.getElementsByClassName("file");
+    var putfilename = document.getElementsByClassName("put-file-name");
+    for (i = 0; i < fileName.length; i++) {
+        var url = fileName[i].getAttribute("href");
+        var filename = url.substring(url.lastIndexOf('/')+1);
+        putfilename[i].innerHTML = filename;
+    }
+}
+
+
+  function runOnLoad(){
+    showMenuContent();
+    getFileName();
+    writeChapterTitle();
+}
