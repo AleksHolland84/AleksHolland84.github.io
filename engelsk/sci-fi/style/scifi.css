@@ -49,7 +49,7 @@ p {
     position: fixed;        
     background: rgb(255, 255, 255);
     margin: 0px;
-    color: #4b0168;
+    color: var(--main-color);
 }
 
 .main-content-container{
@@ -81,56 +81,8 @@ p {
     overflow-x:hidden;
 }
 
-.poster-container{
-    flex:1;
-    object-fit: cover;
-    min-height:100%;
-    position: fixed;
-    overflow-x:hidden;
-    background-position: center 30%;
-    min-width:40vw;
-    background-size: cover;
-}
-
-.ghost-poster-container{
-    flex:1;
-    object-fit: cover;
-    min-height:100%;
-    position: fixed;
-    overflow-x:hidden;
-    background-position: center 30%;
-    min-width:40vw;
-    background-size: cover;
-}
-
-.bladerunner-poster-container{
-    flex:1;
-    object-fit: cover;
-    min-height:100%;
-    position: fixed;
-    overflow-x:hidden;
-    background-position: center 30%;
-    min-width: 40vw;
-    background-size: cover;
-}
-
-.matrix-poster-container{
-    flex:1;
-    object-fit: cover;
-    min-height:100%;
-    position: fixed;
-    overflow-x:hidden;
-    background-position: center 30%;
-    min-width:40vw;
-    background-size: cover;
-}
-
-.poster-box{
-    min-width: 40vw;
-    object-fit: cover;
-    background-position: center center;
-    position: relative;
-    overflow-x:hidden;
+.poster{
+    width: 100%;
 }
 
 .image-container {
@@ -185,8 +137,33 @@ p {
     margin-right: auto;
 }
 
+.chapter-content-right-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width:  1400px;
+    margin-right: auto;
+}
+
+
 .main-content-right{
     padding: 10px 60px  10px;
+}
+
+.chapter-content-container{
+    display: flex;
+    gap: 40px;
+
+}
+
+.chapter-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items:  center;
+    
 }
 
 .menu-chapter-wrapper{
@@ -332,44 +309,18 @@ p {
         min-width: 100%;
         background-size: cover;
     }
-    .poster-container {
-        display: block;
-        position: relative;
-        height: 40vh;
-        background-position: center 50%;
-        min-width: 100%;
-        background-size: cover;
-    }
-    .ghost-poster-container {
-        display: block;
-        position: relative;
-        height: 40vh;
-        background-position: center 50%;
-        min-width: 100%;
-        background-size: cover;
-    }
-    .bladerunner-poster-container {
-        display: block;
-        position: relative;
-        height: 40vh;
-        background-position: center 80%;
-        min-width: 100%;
-        background-size: cover;
-    }
-    .matrix-poster-container {
-        display: block;
-        position: relative;
-        height: 40vh;
-        background-position: center 90%;
-        min-width: 100%;
-        background-size: cover;
-    }
 
     .chapter-content-wrapper{
         flex-direction: column;
     }
     .menu-chapter-wrapper{
         flex-direction:row;
+    }
+    .chapter-content-container {
+        flex-direction: column;
+    }
+    .poster{
+        width: 78%;
     }
 }
 
