@@ -1,7 +1,14 @@
 @import "menu.css";
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+:root{
+--main-color: #4b0168;
+}
+
 body {
+    margin: 0px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     font-size: 1.2em;
@@ -45,12 +52,10 @@ p {
     color: #4b0168;
 }
 
-.main-content-wrapper{
-    margin-top:-8px;
-
-}
 .main-content-container{
     margin-left:45px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .main-content-menu{
@@ -59,13 +64,70 @@ p {
 
 .wallpaper-container{
     flex:1;
-    display: flex;
-    align-items: stretch;
-    height: 1200px;
-    min-width: 500px;
     object-fit: cover;
     min-height:100%;
-    max-width:  50%;
+    position: fixed;
+    overflow-x:hidden;
+    background-position: center 30%;
+    min-width: 50vw;
+    background-size: cover;
+}
+
+.wallpaper-box{
+    min-width: 50vw;
+    object-fit: cover;
+    background-position: center center;
+    position: relative;
+    overflow-x:hidden;
+}
+
+.poster-container{
+    flex:1;
+    object-fit: cover;
+    min-height:100%;
+    position: fixed;
+    overflow-x:hidden;
+    background-position: center 30%;
+    min-width:40vw;
+    background-size: cover;
+}
+
+.ghost-poster-container{
+    flex:1;
+    object-fit: cover;
+    min-height:100%;
+    position: fixed;
+    overflow-x:hidden;
+    background-position: center 30%;
+    min-width:40vw;
+    background-size: cover;
+}
+
+.bladerunner-poster-container{
+    flex:1;
+    object-fit: cover;
+    min-height:100%;
+    position: fixed;
+    overflow-x:hidden;
+    background-position: center 30%;
+    min-width: 40vw;
+    background-size: cover;
+}
+
+.matrix-poster-container{
+    flex:1;
+    object-fit: cover;
+    min-height:100%;
+    position: fixed;
+    overflow-x:hidden;
+    background-position: center 30%;
+    min-width:40vw;
+    background-size: cover;
+}
+
+.poster-box{
+    min-width: 40vw;
+    object-fit: cover;
     background-position: center center;
     position: relative;
     overflow-x:hidden;
@@ -95,9 +157,9 @@ p {
     z-index: 100;
     height: 100%;
     padding: 0px;
-    margin: 0px -10px 0px -10px;
-    min-width: 58px;
-    background-color: #4b0168;
+    margin: 0px;
+    min-width: 46px;
+    background-color: var(--main-color);
 }
 
 .left-menu a{
@@ -110,7 +172,7 @@ p {
 }
 
 .left-menu a:hover{
-    background-color: #370246;
+    background-color: rgba(0,0,0,0.5);
 }
 
 
@@ -119,12 +181,19 @@ p {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    max-width:  800px;
+    max-width:  900px;
     margin-right: auto;
 }
 
 .main-content-right{
-    padding: 10px 40px  10px;
+    padding: 10px 60px  10px;
+}
+
+.menu-chapter-wrapper{
+    display: flex; 
+    align-content: flex-start; 
+    gap: 10px; 
+    margin-bottom: 20px;
 }
 
 .menu-chapter-info p{
@@ -157,13 +226,13 @@ p {
 }
 
 .chapter-number{
-    background-color: #4b0168; 
+    background-color: var(--main-color); 
     color:aliceblue; 
     padding:2px 4px 2px 4px;
-
-    margin: 100px 20px 0px 20px;
+    margin: 0px 00px 0px 00px;
     font-size: 16px;
 }
+
 .chapter-wrapper{
     display: flex;
     flex-direction: column;
@@ -234,11 +303,16 @@ p {
 }
 
 
+@media (max-width: 1200px) {
+    .menu-chapter-wrapper{
+        flex-direction: column;
+    }
+}
 
 
 @media (max-width: 1000px) {
     body {
-        min-width: 800px;
+        min-width: 700px;
     }
     .main-content-menu {
         flex-direction: column
@@ -252,8 +326,41 @@ p {
     }
     .wallpaper-container {
         display: block;
+        position: relative;
         height: 40vh;
         background-position: center 30%;
+        min-width: 100%;
+        background-size: cover;
+    }
+    .poster-container {
+        display: block;
+        position: relative;
+        height: 40vh;
+        background-position: center 50%;
+        min-width: 100%;
+        background-size: cover;
+    }
+    .ghost-poster-container {
+        display: block;
+        position: relative;
+        height: 40vh;
+        background-position: center 50%;
+        min-width: 100%;
+        background-size: cover;
+    }
+    .bladerunner-poster-container {
+        display: block;
+        position: relative;
+        height: 40vh;
+        background-position: center 80%;
+        min-width: 100%;
+        background-size: cover;
+    }
+    .matrix-poster-container {
+        display: block;
+        position: relative;
+        height: 40vh;
+        background-position: center 90%;
         min-width: 100%;
         background-size: cover;
     }
@@ -261,15 +368,26 @@ p {
     .chapter-content-wrapper{
         flex-direction: column;
     }
+    .menu-chapter-wrapper{
+        flex-direction:row;
+    }
 }
 
+@media (max-width: 600px) {
+    .menu-chapter-wrapper{
+        flex-direction: column;
+    }
+}
 
 /* Code By Webdevtrick ( https://webdevtrick.com/header-underline-active-item/) */
 .top{
     display: flex;
-    min-width: 530px;
+    width: 520px;
+    min-width: 520px;
  /*   border-bottom: 0.125rem solid grey; */
     margin-bottom:  30px;
+
+ 
 }
 
   ul {
