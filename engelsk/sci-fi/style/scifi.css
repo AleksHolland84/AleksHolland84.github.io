@@ -5,6 +5,8 @@
 
 :root{
 --main-color: #4b0168;
+--font-color: rgb(63, 63, 63);
+--task-container-color: rgba(179, 179, 179, 0.2);
 }
 
 body {
@@ -56,6 +58,54 @@ p {
     margin-left:45px;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+.chapter-overview-flex{
+    display:flex;
+}
+
+.overview-info-container *{
+    margin: 0px;
+}
+
+.chapter-overview-container{
+    
+    border-color: var(--main-color);
+   /* border-width: 1px;;
+    border-style: solid; */
+    font-size: 0.8em;
+}
+
+.overview-info-container a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.overview-info-container a:hover{
+    color:black;
+    font-size: larger;
+}
+
+.overview-info-container li{
+    list-style-position: inside;
+    list-style-image: url('../images/icons/check.svg');
+    margin: 10px 20px  0px 10px;
+    color: rgb(68, 68, 68);
+    font-weight: 300;
+}
+
+.overview-info-container{
+    display:flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.kilde {
+    font-style: italic;
+    font-size:  0.8em;
+    color: #8d8c8d;
 }
 
 .main-content-menu{
@@ -110,7 +160,7 @@ p {
     height: 100%;
     padding: 0px;
     margin: 0px;
-    min-width: 46px;
+    width: 46px;
     background-color: var(--main-color);
 }
 
@@ -126,7 +176,6 @@ p {
 .left-menu a:hover{
     background-color: rgba(0,0,0,0.5);
 }
-
 
 .main-content-right-wrapper {
     flex: 1;
@@ -176,7 +225,29 @@ p {
 .menu-chapter-info p{
     margin: 0px;
     font-size: 0.85em;
-    color:rgb(128, 126, 126);
+    color: var(--font-color);
+}
+
+.chapter-text p{
+    margin: 0px;
+    font-size: 1em;
+    color: var(--font-color);
+}
+
+.chapter-text .indent li{
+    list-style-position: inside;
+    font-size: 1em;
+    color: var(--font-color);
+}
+
+.task-container{
+    height: 100px;
+    margin-top: 40px;
+    background-color: var(--task-container-color);
+    border-color: var(--main-color);
+    border: solid;
+    border-width: 1px;
+    padding:10px;
 }
 
 .menu-chapter-number-style{
@@ -322,6 +393,9 @@ p {
     .poster{
         width: 78%;
     }
+    .chapter-overview-container{
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
@@ -337,8 +411,6 @@ p {
     min-width: 520px;
  /*   border-bottom: 0.125rem solid grey; */
     margin-bottom:  30px;
-
- 
 }
 
   ul {
