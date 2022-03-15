@@ -28,15 +28,12 @@
   <div class="main-content-container chapter-overview-flex">
   
       <div class="chapter-overview-container">
-        <div style="display:flex; align-items: flex-start; flex-direction: column;">
-          <h4 id="Chapter_1" class="chapter-number">Kapitel 1</h4>
-        </div>
 
         <div class="overview-info-container">
           <h4 class="menu-chapter-number-style">Kapitel 1</h4>
-          <h3 style="margin-bottom: 10px;">Ghost in the shell</h3>
           <a href="#sub-one">Ghost in the shell</a>
           <a href="#sub-two">Sceince Fiction</a>
+          <a href="#sub-tasks">Tasks</a>
           <a href="#task-one"> <li>Task one</li></a>
           <a href="#task-two"> <li>Task two</li></a>
           <a href="#task-three"> <li>Task three</li></a>
@@ -46,16 +43,27 @@
     <div class="chapter-content-right-wrapper">
     
     
-      <div class="main-content-right">
+      <div class="main-content-right  chapter-content-left-margen">
         <h1>Ghost in The Shell</h1>
       <div class="chapter-content-container">
-        <div style="flex:1; max-width: 400px;">
-         
-          <img class="poster" src="images/posters/ghostintheshell_medium.png" alt="Ghost in the Shell Poster">
+        <div>
+          <div class="poster-wrapper">
+            <img class="poster" src="images/posters/ghostintheshell_medium.png" alt="Ghost in the Shell Poster">
+            <div class="poster-fakta">
+              <div class="poster-fakta-name">
+                <li>Release date:</li>
+                <li>Director:</li>
+              </div>
+              <div class="poster-fakta-value">
+                <li>March 30, 2017 (Denmark)</li>
+                <li>Rupert Sanders</li>
+              </div>   
+            </div>
+          </div>
         </div>
       
 
-        <div class="chapter-text" style="flex:1">
+        <div class="chapter-text">
           <h4 class="menu-chapter-number menu-chapter-number-style">Kapitel 1</h4>
           <div  id="sub-one">
             <h3 class="menu-chapter-title">Ghost in the Shell</h3>
@@ -106,19 +114,19 @@
             <div class="kilde">Source: https://www.twinkl.com/teaching-wiki/science-fiction</div>
           </div>
 
-          <div id="task-one" class="task-container">
-            <p> this is the container for task one</p>
+          <div id="sub-tasks">
+            <h3>Tasks</h3>
+            <div id="task-one" class="task-container">
+              <p> this is the container for task one</p>
+            </div>
 
-          </div>
+            <div id="task-two" class="task-container">
+              <p> this is the container for task two</p>
+            </div>
 
-          <div id="task-two" class="task-container">
-            <p> this is the container for task two</p>
-
-
-          </div>
-
-          <div id="task-three" class="task-container">
-            <p> this is the container for task three</p>
+            <div id="task-three" class="task-container">
+              <p> this is the container for task three</p>
+            </div>
 
 
           </div>
