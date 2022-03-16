@@ -265,13 +265,16 @@ p {
 }
 
 .task-container{
-    height: 100px;
     margin-top: 40px;
     background-color: var(--task-container-color);
-    border-color: var(--main-color);
-    border: solid;
-    border-width: 1px;
-    padding:10px;
+
+    padding:20px;
+    
+}
+
+.task-container li{
+    margin-left: 20px;
+    color: var(--font-color)
 }
 
 .menu-chapter-number-style{
