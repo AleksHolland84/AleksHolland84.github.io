@@ -265,7 +265,7 @@ p {
 }
 
 .task-container{
-    margin-top: 40px;
+    margin-bottom: 40px;
     background-color: var(--task-container-color);
 
     padding:20px;
@@ -276,6 +276,11 @@ p {
     margin-left: 20px;
     color: var(--font-color)
 }
+
+.sub-tasks h3{
+    margin: 40px 0px 5px;
+}
+
 
 .menu-chapter-number-style{
     margin: 0px;
