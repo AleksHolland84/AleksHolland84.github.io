@@ -217,7 +217,8 @@ p {
 }
 
 .chapter-content-left-margen{
-    margin-left: 200px;
+    /* margin-left: 200px; */
+    margin-left:20px;
 }
 
 .chapter-content-container{
