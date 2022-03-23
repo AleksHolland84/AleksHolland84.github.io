@@ -387,6 +387,20 @@ p {
     color:#afafaf;
 }
 
+.movie-column{
+    display: flex;
+    gap: 20px;
+}
+
+.quote{
+    margin: 20px;
+    padding: 10px;
+    font-style: italic;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--main-color);
+    font-size: 0.9em;
+}
 
 @media (max-width: 1200px) {
     .menu-chapter-wrapper{
@@ -441,6 +455,10 @@ p {
         max-width: 70vw;
         gap: 20px;
     }
+    .movie-column{
+        flex-direction: column;
+    }
+
     
 }
 
@@ -448,6 +466,8 @@ p {
     .menu-chapter-wrapper{
         flex-direction: column;
     }
+
+
 }
 
 /* Code By Webdevtrick ( https://webdevtrick.com/header-underline-active-item/) */
