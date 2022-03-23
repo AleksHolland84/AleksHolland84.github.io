@@ -243,6 +243,10 @@ p {
     margin-bottom: 20px;
 }
 
+.menu-chapter-wrapper img{
+    height: 240px;
+}
+
 .menu-chapter-info p{
     margin: 0px;
     font-size: 0.85em;
