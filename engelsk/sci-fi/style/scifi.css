@@ -6,7 +6,8 @@
 :root{
 --main-color: #4b0168;
 --font-color: rgb(63, 63, 63);
---task-container-color: rgba(179, 179, 179, 0.2);
+--font-h4-color: rgb(80, 80, 80);
+--task-container-color: rgb(235, 230, 230);
 }
 
 body {
@@ -33,6 +34,11 @@ h2 {
 
 h3 {
     font-size: 1.4em;
+}
+
+h4 {
+    margin-bottom: 5px;
+    color: var(--font-h4-color)
 }
 
 p {
@@ -272,14 +278,17 @@ p {
 .task-container{
     margin-bottom: 40px;
     background-color: var(--task-container-color);
-
-    padding:20px;
-    
+    padding:20px;   
 }
 
 .task-container li{
     margin-left: 20px;
     color: var(--font-color)
+}
+
+.task-container p{
+    font-size: 1.1em;
+    font-weight: 400;
 }
 
 .sub-tasks h3{
@@ -400,6 +409,8 @@ p {
     border-style: solid;
     border-color: var(--main-color);
     font-size: 0.9em;
+    font-weight: 300;
+    color: #413c42;
 }
 
 @media (max-width: 1200px) {
