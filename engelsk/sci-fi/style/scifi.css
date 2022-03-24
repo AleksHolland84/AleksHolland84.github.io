@@ -275,6 +275,10 @@ p {
     color: var(--font-color);
 }
 
+.chapter-text ol li {
+    margin-top: 20px;
+}
+
 .task-container{
     margin-bottom: 40px;
     background-color: var(--task-container-color);
