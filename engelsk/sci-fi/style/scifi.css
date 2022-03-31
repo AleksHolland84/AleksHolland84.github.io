@@ -170,8 +170,18 @@ p {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    background-color: rgba(0,0,0,.5);;
+    background-color: rgba(0,0,0,.5);
     font-size: 0.75em;;
+    color: #fff;
+}
+.hint-image{
+    display: inline-flex;
+    padding: .625rem .9375rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /*background-color: rgba(0,0,0,.5); */
+    font-size: 0.38em;;
     color: #fff;
 }
 
