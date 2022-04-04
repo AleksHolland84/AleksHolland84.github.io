@@ -268,11 +268,13 @@ label {
 
 /* Slideshow */
 /* Slideshow container */
+/*
 .slideshow-container {
     max-width: 800px;
     position: relative;
     margin: auto;
   }
+'/
 
   /* Next & previous buttons */
   .prev, .next {
