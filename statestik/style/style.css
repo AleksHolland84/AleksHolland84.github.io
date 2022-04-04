@@ -268,13 +268,12 @@ label {
 
 /* Slideshow */
 /* Slideshow container */
-/*
 .slideshow-container {
     max-width: 800px;
     position: relative;
     margin: auto;
   }
-'/
+
 
   /* Next & previous buttons */
   .prev, .next {
@@ -367,10 +366,13 @@ label {
   }
 
 
+/* slide in from the left
 #slide{
   animation-delay: 1000ms;
   animation: slideInFromLeft 1.2s ease-in;
 }
+
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-200%);
@@ -380,3 +382,5 @@ label {
     transform: translateX(0);
   }
 }
+
+*/
