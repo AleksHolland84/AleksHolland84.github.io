@@ -1,5 +1,4 @@
 
-
 function showMenuContent() {
     var menues = document.getElementsByClassName("menu_text");
     var side = document.getElementsByClassName("menu_side");
@@ -26,7 +25,6 @@ underlineMenuItems.forEach(function (item) {
         showMenuContent()
     });
 });
-
 
 // Function to get chapter title from menu and putting it as the header for each chapter.
 function getChapterTitle(chapterNum) {
