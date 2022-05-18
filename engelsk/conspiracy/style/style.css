@@ -370,12 +370,17 @@ p {
 }
 
 .quote{
-    margin: 20px;
+    margin-bottom: 0px;
     font-style: italic;
     border-color: var(--main-color);
     font-size: em;
     font-weight: 300;
     color: #413c42;
+}
+
+
+blockquote figcaption{
+    padding-left: 10px;
 }
 
 @media (max-width: 1200px) {
