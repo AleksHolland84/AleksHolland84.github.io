@@ -399,7 +399,9 @@ blockquote figcaption{
     }
     .main-content-right-wrapper{
         min-width: 100%;
-        
+    }
+    .menu-chapter-wrapper{
+        flex-direction:row;
     }
     .image-container{
         display: block;
