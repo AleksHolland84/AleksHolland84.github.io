@@ -46,17 +46,6 @@
   transition: max-height 0.2s ease-out;
   background-color: none;
 }
-/*
-.menu_text{
-  max-height: calc(100vh - 300px);
-  min-height: 1000px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  padding-right:10px;
-  scrollbar-color: rgb(155, 155, 155) rgb(255, 255, 255);
-}
-'/
 
 /* Next & previous buttons */
 .prev, .next {
