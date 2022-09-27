@@ -16,7 +16,7 @@ function showMenuContent() {
 
 // Code By Webdevtrick ( https://webdevtrick.com )
 "use strict";
-var underlineMenuItems = document.querySelectorAll("ul li");
+var underlineMenuItems = document.querySelectorAll("ul.top li");
 underlineMenuItems[0].classList.add("active");
 underlineMenuItems.forEach(function (item) {
     item.addEventListener("click", function () {

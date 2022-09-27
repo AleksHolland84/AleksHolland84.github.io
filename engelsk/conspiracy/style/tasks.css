@@ -38,6 +38,10 @@
     list-style-position: inside;
 }
 
+.task-container ul>li {
+    margin-left: 20px;
+}
+
 .task-description{
     font-weight: 500; 
     font-size: 1.2em;
