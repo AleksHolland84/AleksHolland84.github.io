@@ -61,13 +61,28 @@ function getFileName() {
     }
 }
 
-function hideButton() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
+// function for ID to hide a single iobject
+//function hideButton() {
+//    var x = document.getElementById("myDIV");
+ //   if (x.style.display === "none") {
+ //     x.style.display = "block";
+ //   } else {
+ //     x.style.display = "none";
+ //   }
+ // } 
+
+// function to hide class 
+  function hideButton() {
+    var x = document.getElementsByClassName("hide");
+    for (i =0; i < x.length; i++) {
+        if (x[i].style.display === "none") {
+        x[i].style.display = "block";
+        } else {
+        x[i].style.display = "none";
+        }
+
     }
+
   } 
 
 
