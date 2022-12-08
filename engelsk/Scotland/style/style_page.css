@@ -1,0 +1,117 @@
+@import "menu.css";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+@import "menu.css";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+:root{
+    --figur-color: #383838;
+}
+
+.wallpaper-container{
+    flex:1;
+    object-fit: cover;
+    min-height:100%;
+    position: fixed;
+    overflow-x:hidden;
+    background-position: center 30%;
+    min-width: 40vw;
+    background-size: cover;
+}
+
+.wallpaper-box{
+    min-width: 40vw;
+    object-fit: cover;
+    background-position: center center;
+    position: relative;
+    overflow-x:hidden;
+}
+
+.frame-container-center{
+    margin: auto;
+    width:fit-content;
+}
+
+.secret-document{
+    margin:0 auto;
+    max-width: 1000px;
+}
+
+figcaption{
+    width:0;
+    min-width:100%;
+    font-size: 0.9em;
+    font-weight: 200;
+    color: var(--figur-color)
+}
+
+@media (max-width: 1200px) {
+    .menu-chapter-wrapper{
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    body {
+        min-width: 700px;
+    }
+    .main-content-menu {
+        flex-direction: column
+    }
+    .main-content-right-wrapper{
+        min-width: 100%;
+        
+    }
+    .image-container{
+        display: block;
+    }
+    .wallpaper-container {
+        display: block;
+        position: relative;
+        height: 40vh;
+        background-position: center 30%;
+        min-width: 100%;
+        background-size: cover;
+    }
+
+    .chapter-content-wrapper{
+        flex-direction: column;
+    }
+    .menu-chapter-wrapper{
+        flex-direction:row;
+    }
+    .chapter-content-container {
+        flex-direction: column;
+    }
+    .poster{
+        width: 15em;
+    }
+    .chapter-overview-container{
+        display: none;
+    }
+    .chapter-content-left-margen{
+        margin-left: 0px;
+    }
+    .poster-wrapper{
+        display: flex;
+        max-width: 70vw;
+        gap: 20px;
+    }
+    .movie-column{
+        flex-direction: column;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+    .menu-chapter-wrapper{
+        flex-direction: column;
+    }
+
+
+}
