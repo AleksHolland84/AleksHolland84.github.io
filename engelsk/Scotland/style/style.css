@@ -427,21 +427,22 @@ blockquote figcaption{
     margin-bottom:  30px;
 }
 
-  ul {
+  .top {
     display: flex;
     padding: 0;
     margin: 0;
     list-style-type: none;
+    margin-bottom: 30px;
   }
 
-  ul li {
+  .top li {
     position: relative;
     padding: 10px 20px 10px 20px;
     cursor: pointer;
     color:grey;
     font-size: 0.85em;
   }
-  ul li::after {
+  .top li::after {
     position: absolute;
     content: "";
     top: 100%;
@@ -451,12 +452,12 @@ blockquote figcaption{
     background: var(--menu-underline-color);
     transform: scaleX(0);
   }
-  ul li.active::after {
+  .top li.active::after {
     transform: scaleX(1);
   }
-  li.active{
+  .top li.active{
       color: var(--menu-color);
   }
-  ul li:hover{
+  .top li:hover{
       color: var(--menu-hover-color);
   }
