@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Sora:wght@100;200;300;400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+ margin: 0 auto;
+ padding: 10px;
+ max-width: 800px;
+ font-family: 'Oxygen', sans-serif;
+
+}
+
+header {
+ display: flex;
+ justify-content: flex-end;
+ align-items: baseline;
+}
+
+header a {
+ width: 25px;
+ height:25px;
+ fill: black;
+ margin-left: 2px;
+}
+header a:hover{
+ fill: #ff3399;
+ stroke: #ff3399;
+}
+
+.nav {
+ flex: 1;
+}
+
+.nav a{
+ color: black;
+ text-decoration: none;
+ font-family: 'IBM Plex Mono', monospace;
+ font-weight: 400;
+}
+
+.intro-header {
+ align-items: baseline;
+}
+
+h1{
+ font-size: 38px;
+}
+
+.intro-header h1 {
+ margin-top: 120px;
+ margin-bottom: 0px;
+}
+
+.contact {
+ display: flex;
+}
+
+.intro-header p {
+ font-family: "Courier New";
+ margin-top: 0px;
+ flex:16;
+}
+
+.intro-header a {
+ width: 25px;
+ height:25px;
+ fill: black;
+}
+
+.intro-header a:hover{
+ fill: #ff3399;
+ stroke: #ff3399;
+}
+
+.content {
+ text-align: justify;
+ margin-top: 50px;
+}
+
+.content a {
+ color: grey;
+}
+
+.content a:hover{
+ color: #ff3399;
+}
+
+.new-chapter{
+    margin-top: 80px;
+}
+
+.vejledning {
+ font-family: "Courier New";
+ color: grey;
+}
+
+.argument{
+ font-weight: 900;
+}
+
+.no-bullets-container {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ gap: 40px;
+}
+
+.codeblock {
+ font-family: "Courier New";
+ background-color: #f2f2f2;
+ margin-top: 5px;
+ margin-bottom: 5px;
+ padding-top: 10px;
+ padding-bottom: 20px;
+ padding-right: 20px;
+}
+
+.codeblock p{
+ padding-left: 20px;
+}
+
+.program {
+ font-family: "Courier New";
+ color: #a300cc;
+ font-weight: bold;
+}
+
+.cmd {
+ font-family: "Courier New";
+ background-color: #f2f2f2;
+ padding-left:3px;
+ padding-right: 3px;
+ color: #e60000;
+}
+
+figure {
+ /*display: flex;
+ margin: auto;
+ flex-direction: column; */
+ font-family: "Courier New";
+ color: grey;
+ /*display: block; */
+}
+
+
+.task {
+ display: flex;
+ justify-content: flex-start;
+ align-items: baseline;
+}
+
+
+
+
+
+footer {
+   color: black;
+   font-size: 12px;
+   padding-top:2rem;
+   padding-bottom: 8rem;
+   text-align: center;
+}
+
+footer a {
+ color: black;
+ text-decoration: none;
+}
+
+footer a:hover{
+ color: #ff3399;
+}
+
+footer svg {
+   fill: black;
+   width: 20px;
+}
+
+footer svg:hover {
+ fill: #ff3399;
+ stroke: #ff3399;
+}
+
+input {
+    margin: .4rem;
+}
+
+.ressourcer a {
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 20px;
+}
+#xls:hover{
+    color: green;
+}
+
+table{
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  
+button {
+    border: none;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.task button {
+    padding-left: 20px;
+    padding-top: 15px;
+}
