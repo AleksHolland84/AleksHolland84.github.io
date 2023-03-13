@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
-<body>
+<body onload="runOnLoad(); showChapterHeaders();">
   
   <header>
     <div class="nav">
@@ -45,39 +45,178 @@
   </header>
   
   
-  
-  
-  <div class="intro-header">
-    <h1>Studietur</h1>
-    
-    <div class="contact"> 
-      <p>Forfatter: A. H. Johansen</p>
-      
-      <a class="svglink" target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
-        <svg viewBox="71 71 370 370">
-          <path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/>
-        </svg>
-      </a>
+  <div class="main-content-container">
+    <div class="intro-header">
+      <div id="__chapter" class="__chapter_menu_container">
+        <h1 id="studietur">Studietur</h1 >
+      </div>
+     
+        
+      <div class="contact"> 
+        <p>Forfatter: A. H. Johansen</p>
+        
+        <a class="svglink" target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
+          <svg viewBox="71 71 370 370">
+            <path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/>
+          </svg>
+        </a>
+      </div>
     </div>
-  </div>
+      <div class="main-content-menu">
+        <div class="main-content-right-wrapper">
+          <div id="nav" class="main-content-right">
+            <ul class="top">
+                <li class="menu_side active">Indhold</li>
+                <li class="menu_side">Kapitler</li>
+                <li class="menu_side">Resourcer</li>
+                <li class="menu_side">Til læreren</li>
+                <li class="menu_side">Fælles Mål</li>
+            </ul>
+
+
+            <!-- #### MENU INDHOLD -->
+            <div id="indhold" class="menu_text main-menu-content-text">
+              
+              
+            </div>
+    
+
+            <!-- #### MENU KAPITEL -->
+            <div class="menu_text main-menu-content-text" style="display: flex; flex-direction: column" alt="Kapiteler">
+              <div id="chapter-headers-container">
+                <!-- gets content from script: showChapterHeaders() which is loaded onload of the body-->
+
+              </div>
+            </div>      
+
+
+            <!-- #### MENU RESOURCER -->
+            <div id="download" class="menu_text main-menu-content-text"><h2>Downloads</h2>
+              <div class="download-wrapper">
+                
+
+               
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="uploads/Budget_studierejsen.xls" download>
+                    <button class="download-file">
+                      <img src="images/excel.svg" style="width:22px;">
+                      <span class="file-name">Budget studierejsen.xls</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+              
+
+            <!-- #### TIL LÆREREN ####-->
+            <div id="til-læreren" class="menu_text main-menu-content-text">
+              <h2>Til læreren</h2>
+              <h4 style="margin-bottom:5px;">Om forløbet</h4>
+              <p>Dette forløb handler om budgetlægnig. Eleverne skal arbejde med emnet; Studietur, hvor de skal træffe nogle valg. Valgene danner grundlag for indholdet i budgettet, som senere skal præsenteres.</p>              
+              <div class="content vejledning">
+                <ul class="no-bullets-container">
+                  <div class="item argument">
+                    <li>Fag:</li>
+                    <li>Klassetrin:</li>
+                    <li>Varighed:</li>
+                  </div>
+                  
+                  <div class="item value">
+                    <li>Matematik.</li>
+                    <li>7.kl - 8.kl.</li>
+                    <li>Ca. 5 lektioner.</li>
+                  </div>      
+                </ul>
+              </div>
+              <h4>Lærervejledning til kapitler</h4>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
+                <div class="collapsible-content">
+                  <p>Let's create two classes: one for boring paragraphs and one for exciting ones. We can use these classes to add pseudo-elements to the end of paragraphs.</p>
+                </div>
+              </div>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 2 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
+                <div class="collapsible-content">
+                  <p>Let's create two classes: one for boring paragraphs and one for exciting ones. We can use these classes to add pseudo-elements to the end of paragraphs.</p>
+                </div>
+              </div>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 3 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
+                <div class="collapsible-content">
+                  <p>Let's create two classes: one for boring paragraphs and one for exciting ones. We can use these classes to add pseudo-elements to the end of paragraphs.</p>
+                </div>
+              </div>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 4 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
+                <div class="collapsible-content">
+                  <p>Let's create two classes: one for boring paragraphs and one for exciting ones. We can use these classes to add pseudo-elements to the end of paragraphs.</p>
+                </div>
+              </div>             
+            </div>
+
+            <div id="fælles-mål" class="menu_text main-menu-content-text" ><h2>Fælles Mål</h2>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
+                <div class="collapsible-content">
+                  <div class="faelles-maal-container">
+                    <div class="faelles-mael-niveau">Engelsk 8. - 9. klasse</div>
+                    <h3>Færdigheds- og vidensmål</h3>
+                    <div class="vidensmaal">
+                      <p>Kultur og samfund, Tekst og medier (fase 1)</p>
+                      <p>Eleven kan producere multimodale teksttyper på engelsk. / Eleven har viden om struktur og funktion i multimodale medier.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 2 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
+                <div class="collapsible-content">
+                  <div class="faelles-maal-container">
+                    <div class="faelles-mael-niveau">Engelsk 8. - 9. klasse</div>
+                    <h3>Færdigheds- og vidensmål</h3>
+                    <div class="vidensmaal">
+                      <p>Mundtlig kommunikation (fase 1)</p>
+                      <p>Eleven kan indgå i spontane samtaler om forskellige emner i et sprog, der passer til situationen.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 3 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
+                <div class="collapsible-content">
+                  <div class="faelles-maal-container">
+                    <div class="faelles-mael-niveau">Engelsk 8. - 9. klasse</div>
+                    <h3>Færdigheds- og vidensmål</h3>
+                    <div class="vidensmaal">
+                      <p>Mundtlig kommunikation (fase 1)</p>
+                      <p>Eleven kan indgå i spontane samtaler om forskellige emner i et sprog, der passer til situationen.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 4 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
+                <div class="collapsible-content">
+                  <div class="faelles-maal-container">
+                    <div class="faelles-mael-niveau">Engelsk 8. - 9. klasse</div>
+                    <h3>Færdigheds- og vidensmål</h3>
+                    <div class="vidensmaal">
+                      <p>Mundtlig kommunikation (fase 1)</p>
+                      <p>Eleven kan indgå i spontane samtaler om forskellige emner i et sprog, der passer til situationen.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
   
 
-  <div class="content vejledning">
-    <ul class="no-bullets-container">
-      <div class="item argument">
-        <li>Fag:</li>
-        <li>Klassetrin:</li>
-        <li>Varighed:</li>
-      </div>
-      
-      <div class="item value">
-        <li>Matematik.</li>
-        <li>7.kl - 8.kl.</li>
-        <li>Ca. 5 lektioner.</li>
-      </div>      
-    </ul>
-  </div>
-  
+<!-- ########################MAIN CONTENT###################################-->
+
+
   
   <div class="content">
     <img src="images/header_long.jpg" alt="Rooter" width=100%>    
@@ -116,33 +255,33 @@
     </div>
     <div style="display:flex; align-items:baseline;">
         <input type="checkbox" id="krav3">
-        <label for="krav4">I skal vælge min. 3 sightseeingtur/aktiviteter pr. uge, I rejser</label>
+        <label for="krav3">I skal vælge min. 3 sightseeingtur/aktiviteter pr. uge, I rejser</label>
     </div>
     <div style="display:flex; align-items:baseline;">
         <input type="checkbox" id="krav4">
-        <label for="krav5">I skal lægge et realistisk budget, hvor I indtænker alle udgifter og lommepenge - Her skal I tænke budget for den enkelte elev.</label>
+        <label for="krav4">I skal lægge et realistisk budget, hvor I indtænker alle udgifter og lommepenge - Her skal I tænke budget for den enkelte elev.</label>
     </div>
     <br>
     <h3>Krav til præsentation af studierejse:</h3>
     <p>Afslutningsvis skal I præsentere jeres studietur for klassen. Her skal I komme ind på følgende elementer:</p>
     <div style="display:flex; align-items:baseline;">
-        <input type="checkbox" id="kra56">
+        <input type="checkbox" id="krav6">
         <label for="krav6">I skal præsentere jeres rejsedestination og tur/retur (opgave 1 & 4)</label>
     </div>
     <div style="display:flex; align-items:baseline;">
-        <input type="checkbox" id="krav6">
+        <input type="checkbox" id="krav7">
         <label for="krav7">Præsentation af de valgte aktiviteter i (opgave 1)</label>
     </div>
     <div style="display:flex; align-items:baseline;">
-        <input type="checkbox" id="krav7">
+        <input type="checkbox" id="krav8">
         <label for="krav8">Præsentation af finansering (opgave 2)</label>
     </div>
     <div style="display:flex; align-items:baseline;">
-        <input type="checkbox" id="krav8">
+        <input type="checkbox" id="krav9">
         <label for="krav9">Fremvise regneeksempel for leveomkostninger og forbrug/lommepenge (opgave 3)</label>
     </div>
     <div style="display:flex; align-items:baseline;">
-        <input type="checkbox" id="krav9">
+        <input type="checkbox" id="krav10">
         <label for="krav10">Præsentation af budget </label>
     </div>
 
@@ -167,7 +306,10 @@
   </div>
 
   <div class="content">
-    <h2>1. Arbejd med din rejse</h2>
+    <div id="arbejd_med_din_rejse" class="__chapter_menu_container">
+      <h2>1. Arbejd med din rejse</h2>      
+    </div>
+    
     <p>En god rejse kræver god planlægning. I skal nu finde jeres ønskede 
         studierejse, og opstille et budget for rejsens omkostninger.
          I kan vælge at bruge regnearket **Budget Studierejsen** (vedhæftet herunder), 
@@ -295,7 +437,9 @@
   </div>
 
   <div class="content new-chapter">
-    <h2>2. Arbejd med finansering</h2>
+    <div id="arbejd_med_finansering" class="__chapter_menu_container">
+      <h2>2. Arbejd med finansering</h2>
+    </div>
     <p>En nødvendig del af at gennemføre en rejse, er at finde pengene til at finansiere den. Det kan være nødvendigt at spare penge op i en periode for at få råd til at rejse - både til klassekassen og til private lommepenge.</p>
     <img src="images/paris.jpg" alt="Paris" width=100%>   
     <div class="codeblock task">
@@ -391,7 +535,9 @@
 
 
   <div class="content new-chapter">
-    <h2>3. Arbejd med lommepenge og valuta</h2>
+    <div id="arbejd_med_lommepenge_og_valuta" class="__chapter_menu_container">
+      <h2>3. Arbejd med lommepenge og valuta</h2>
+    </div>
     <p>Hver elev får også brug for lommepenge på rejse. Hvor mange penge hver elev har brug for, afhænger selvfølgelig af, hvad de har tænkt sig at bruge penge på, men også om, hvor højt eller lavt prisniveauet er, i det pågældende land I rejser til, i forhold til priserne i Danmark.</p>
         
     <h3>Opgave 3.1</h3>
@@ -422,7 +568,7 @@
       </div>
   </div>
 
-  <div class="content new-chapter">
+  <div class="content new-chapter ">
     <h3>Opgave 3.2</h3>
     <div class="codeblock task">
         <p>✏️</p>
@@ -446,7 +592,9 @@
 
 
   <div class="content new-chapter">
-    <h2>4. Tur/retur</h2>
+    <div id="tur_retur" class="__chapter_menu_container">
+      <h2>4. Tur/retur</h2>    
+    </div>
     <img src="images/turretur.png" alt="map" width=100%>     
     <p>Denne del af opgaven skal I beskrive rejsen med data! </p>
   
@@ -488,6 +636,9 @@
   </footer>
   <!-- FOOTER END --> 
   
-  <script src='scripts/script.js'></script>
+
+</div><!-- main-content-wrapper end-->
+<script src='scripts/script.js'></script>
+<script src='scripts/menu.js'></script>
 </body>
 </html>
