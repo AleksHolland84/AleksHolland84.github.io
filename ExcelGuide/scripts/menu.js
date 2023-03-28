@@ -24,12 +24,14 @@ function showChapterHeaders() {
 
   // Loop through each header element and extract the text
   for (let i = 0; i < chapters.length; i++) {
+    chapters[i].classList.add("anchor"); // add anchor class
     const headerText = chapters[i].textContent;
     const headerId = chapters[i].id;
     headerData.push({ text: headerText, id: headerId, number: i +1 });
   }
 
   for (let i = 0; i < subChapters.length; i++) {
+    subChapters[i].classList.add("anchor"); // add anchor class 
     const subHeaderText = subChapters[i].textContent;
     const subHeaderId = subChapters[i].id;
     subHeaderData.push({ text: subHeaderText, id: subHeaderId, number: i +1 });
