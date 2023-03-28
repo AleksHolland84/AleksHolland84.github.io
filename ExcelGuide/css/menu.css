@@ -24,7 +24,7 @@ opacity: 67%;
 
 #chapter-headers-container a:hover {
   text-decoration: none;
-  color: #ff3399;
+  color: var(--link-hover-color);
   font-weight: 700;
 }
 

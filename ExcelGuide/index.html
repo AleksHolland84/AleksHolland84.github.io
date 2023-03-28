@@ -17,7 +17,7 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
  
 </head>
-<body id="body" onload="runOnLoad(); showChapterHeaders(); setChecked();">
+<body id="body" onload="runOnLoad(); showChapterHeaders();">
   
   <header>
     <div class="nav">
@@ -95,7 +95,7 @@
 
                
             <div class="download-chapter-container">
-              <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+              <h4 class="menu-chapter-number-style" style="font-size:0.9em;"></h4>
               <a class="file" href="uploads/ExcelGuide.xlsx" download>
                 <button class="download-file">
                   <img src="images/excel.svg" style="width:22px;">
@@ -108,7 +108,7 @@
           </div>
           <div class="download-wrapper">
             <div class="download-chapter-container">
-              <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+              <h4 class="menu-chapter-number-style" style="font-size:0.9em;"></h4>
               <a class="file" href="uploads/data.xlsx" download>
                 <button class="download-file">
                   <img src="images/excel.svg" style="width:22px;">
@@ -119,6 +119,31 @@
               </a>
             </div>
           </div>
+          <div class="download-wrapper">
+            <div class="download-chapter-container">
+              <h4 class="menu-chapter-number-style" style="font-size:0.9em;"></h4>
+              <a class="file" href="uploads/Brug AFRUND.FLOOR.xlsx" download>
+                <button class="download-file">
+                  <img src="images/excel.svg" style="width:22px;">
+                  <span class="file-name">AFRUND.FLOOR</span>
+                  <i class="fa fa-download"></i>
+                  <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="download-wrapper">
+            <div class="download-chapter-container">
+              <h4 class="menu-chapter-number-style" style="font-size:0.9em;"></h4>
+              <a class="file" href="uploads/geogebra_floor.ggb" download>
+                <button class="download-file">
+                  <img src="images/geogebra.svg" style="width:22px;">
+                  <span class="file-name">Geogebra_floor.ggb</span>
+                  <i class="fa fa-download"></i>
+                  <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                </button>
+              </a>
+            </div>
         </div>        
       </div>
     </div>
@@ -132,7 +157,7 @@
     <div class="content">
       <img src="images/excelheader.jpg" alt="Rooter" width=100%>  
       <div id="rentesregning" class="__chapter_menu_header_1">
-        <h1>TÆL.HVIS guide</h1 >
+        <h1>TÆL.HVIS Guide</h1 >
       </div>  
       <p>I input feltet skal man være opmærksom på hvilken type data man indsætter. Data-typen kan eks være</p>
   
@@ -241,6 +266,31 @@
         </div>
       </div>
 
+    </div>
+
+
+ 
+    <div class="content">
+      <div id="FLOOR" class="__chapter_menu_header_1">
+        <h1>FLOOR() / LOFT() Guide</h1 >
+      </div>  
+    </div>
+
+    <div class="content">
+      <div id="FLOOR_2" class="__chapter_menu_subheader_1">
+        <h3>Eksempel på floor i Excel</h3>
+      </div> 
+      <p>Eksempel på brugen af FLOOR funktionen, som på DK hedder AFRUND.GULV</p>
+      <p>Løsningseksempel på opgave 3.4 i FSA Dec 2018</p>
+      <div class="frame-container-center">
+        <figure>
+          <div>
+            <a href="uploads/Brug AFRUND.FLOOR.xlsx" download><img width="560" src="images/Excel_floor.png" alt="your alt description here"></a>
+          </div>
+          <figcaption style="text-align:justify">Eksempel på AFRUND.GULV() i Excel</figcaption>
+        </figure>
+      </div> 
+
       <div class="exceleks">
         <p>Rund ned til nærmeste multiplum af et tal</p>
         <div class="math">
@@ -250,7 +300,6 @@
           $$ { \text{=AFRUND.GULV(A14;F14)} } $$
         </div>
       </div>
-
 
       <div class="exceleks">
         <p>Rund op til nærmeste multiplum af et tal</p>
@@ -262,14 +311,36 @@
         </div>
       </div>
 
+
+      <div id="rentesregning_floor_geogebra" class="__chapter_menu_subheader_1">
+        <h3>Eksempel på AFRUND.GULV i Geogebra</h3>
+      </div> 
+      <p>Download .ggb filen med eksemplet under Resourcer menuen</p>
+
+
+      <div class="frame-container-center">
+        <figure>
+          <div>
+            <img width="560" src="images/GeoGebra_floor.png" alt="your alt description here">
+          </div>
+          <figcaption style="text-align:justify">Eksempel på floor() i Geogebra</figcaption>
+        </figure>
+      </div> 
       <div class="exceleks">
-        <p></p>
+        <p>Rund ned til nærmeste multiplum af et tal i geogebra</p>
         <div class="math">
-          $$ { \text{} } $$
+          $$ { \text{g(x)=Hvis(0≤x≤220, floor((x)/(40)+1)*(39.5+18.5))} } $$
         </div>
       </div>
 
     </div>
+    
+    <div class="content">
+      <div id="FLOOR_3" class="__chapter_menu_subheader_1">
+        <h3>Eksempel på floor i Geogebra</h3>
+      </div> 
+    </div>  
+    
 
   
     <!-- FOOTER START --> 

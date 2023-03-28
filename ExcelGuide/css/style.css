@@ -215,7 +215,7 @@ footer a {
 }
 
 footer a:hover{
- color: #ff3399;
+ color: var(--link-hover-color);
 }
 
 footer svg {
@@ -224,8 +224,8 @@ footer svg {
 }
 
 footer svg:hover {
- fill: #ff3399;
- stroke: #ff3399;
+ fill: var(--link-hover-color);
+ stroke: var(--link-hover-color);
 }
 
 input {
@@ -345,3 +345,8 @@ button {
   .exceleks{
     margin-bottom: 100px;
   }
+
+  .frame-container-center{
+    margin: auto;
+    width:fit-content;
+}
