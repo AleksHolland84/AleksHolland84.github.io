@@ -186,7 +186,7 @@
           </tr>
           <tr>
             <td>&</td>
-            <td>Henviser til data i en celle eller data retuneret af en funktion (concatenation)</td>
+            <td>Sammentrækker data i en celle eller data retuneret af en funktion</td>
           </tr>
           <tr>
             <td>" "</td>
@@ -234,11 +234,11 @@
         <h3>Ekempler på TÆL.HVIS</h3>
       </div> 
       <div class="exceleks">
-        <p>Tæl hvis år er større eller lig med 2023:</p>
+        <p>Tæl hvis år (tal) er større eller lig med 2023:</p>
         <div class="math">
           $$ { \text{=TÆL.HVIS($A$2:$A$17;">=2023")} } $$
         </div>  
-        <p>Eller</p>
+        <p>Eller med reference til tal i celle F2</p>
         <div class="math">
           $$ { \text{=TÆL.HVIS($A$2:$A$17;">="&F2)} } $$
         </div>        
@@ -252,14 +252,18 @@
       </div>
 
       <div class="exceleks">
-        <p>Tæl hvis navn indeholder "n" til sidst med reference til celle F4</p>
+        <p>Tæl hvis navn indeholder "n" til sidst med reference til celle F4, der indeholder n</p>
         <div class="math">
           $$ { \text{=TÆL.HVIS($B$2:$B$17;"*"&F4)} } $$
         </div>
       </div>
 
       <div class="exceleks">
-        <p>Tæl hvis dato er større end, med reference til en celle</p>
+        <p>Tæl hvis dato er større end dato</p>
+        <div class="math">
+          $$ { \text{=TÆL.HVIS($D$2:$D$17;">12/12/2022")} } $$
+        </div>
+        <p>Eller tæl hvis dato er større end dato i celle F6</p>
         <div class="math">
           $$ { \text{=TÆL.HVIS($D$2:$D$17;">"&F6)} } $$
         </div>
