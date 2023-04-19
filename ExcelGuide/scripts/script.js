@@ -37,6 +37,7 @@ underlineMenuItems.forEach(function (item) {
       showMenuContent()
   });
 });
+
 // This part closes the submenue (with the class of menu_text) when the mouse leves the area.
 var menuSides = document.getElementsByClassName("menu_text");
 for (var i = 0; i < menuSides.length; i++) {

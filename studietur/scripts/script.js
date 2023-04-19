@@ -39,6 +39,15 @@ underlineMenuItems.forEach(function (item) {
   });
 });
 
+// This part closes the submenue (with the class of menu_text) when the mouse leves the area.
+var menuSides = document.getElementsByClassName("menu_text");
+for (var i = 0; i < menuSides.length; i++) {
+  menuSides[i].addEventListener("mouseleave", function () {
+      underlineMenuItems.forEach(function (item) { return item.classList.remove("active"); });
+      showMenuContent();
+  });
+}
+
 // Function to get chapter title from menu and putting it as the header for each chapter.
 function getChapterTitle(chapterNum) {
 var chapters = document.getElementsByClassName("menu-chapter-title");
@@ -50,7 +59,6 @@ function getChapterNumber(chapter) {
   var chapterNum = document.getElementsByClassName("menu-chapter-number");
   return chapterNum[chapter].innerHTML;
 }
-
 
 function writeChapterTitle(){
   var chapterTitle = document.getElementsByClassName("chapter-title");
@@ -103,7 +111,6 @@ function setChecked(){
     document.getElementById(checkboxId).checked = checkboxAnswer;
   }
 }
-
 
 function runOnLoad(){
   showMenuContent();
