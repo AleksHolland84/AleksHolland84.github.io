@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Sora:wght@100;200;300;400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); 
+ 
+
+:root{
+   --background-color: #1a1a1a;
+   --main-font-color: #b3b3b3;
+   --question-color: #303130;
+   --question-font-color: #02c53a;
+   --link-hover-color: #00a808;
+   --main-color: #2e2e2e;
+   --menu-underline-color: rgb(60, 52, 90);
+   --menu-hover-color: rgb(7, 0, 49);
+   --font-color: rgb(63, 63, 63);
+   --font-h4-color: rgb(80, 80, 80);
+   --font-h1-color: rgb(7, 0, 49);
+   --font-chapter-color: rgb(44, 44, 83);
+   --kilde-color: grey;
+   }
+
+body {
+ color:var(--main-font-color);
+ margin: 0 auto;
+ padding: 10px;
+ max-width: 800px;
+ font-family: 'Oxygen', sans-serif;
+ background-color: var(--background-color)
+  
+}
+
+header {
+ display: flex;
+ justify-content: flex-end;
+ align-items: baseline;
+}
+
+header a {
+ width: 25px;
+ height:25px;
+ fill: var(--main-font-color);
+ margin-left: 2px;
+}
+header a:hover{
+ fill: var(--link-hover-color);
+ stroke: var(--link-hover-color);
+}
+
+.nav {
+ flex: 1;
+}
+
+.nav a{
+ color: var(--link-hover-color);
+ text-decoration: none;
+ font-family: 'IBM Plex Mono', monospace;
+ font-weight: 400;
+}
+
+.whoami {
+ align-items: baseline;
+}
+
+h1{
+ font-size: 38px;
+}
+
+.whoami h1 {
+ margin-top: 120px;
+ margin-bottom: 0px;
+}
+
+.contact {
+ display: flex;
+
+}
+
+.whoami p {
+ font-family: "Courier New";
+ margin-top: 0px;
+ flex:16;
+}
+
+.whoami a {
+ width: 25px;
+ height:25px;
+ fill: var(--link-hover-color);
+}
+
+.whoami a:hover{
+ fill: var(--link-hover-color);
+ stroke: var(--link-hover-color);
+}
+
+.content {
+ text-align: justify;
+ margin-top: 50px;
+}
+
+.content a {
+ color: grey;
+}
+
+.content a:hover{
+ color: var(--link-hover-color);
+}
+
+.argument{
+ font-weight: 900;
+}
+
+.no-bullets-container {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ gap: 40px;
+}
+
+.codeblock {
+ font-family: "Courier New";
+ background-color: var(--background-color);
+ margin-top: 2px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ padding-right: 10px;
+
+}
+.codeblock p{
+ padding-left: 20px;
+}
+
+.program {
+ font-family: "Courier New";
+ color: #a300cc;
+ font-weight: bold;
+}
+
+.cmd {
+ font-family: "Courier New";
+ background-color: #f2f2f2;
+ padding-left:3px;
+ padding-right: 3px;
+ color: #e60000;
+}
+
+figure {
+ font-family: "Courier New";
+ color: grey;
+}
+
+
+.alert {
+ display: flex;
+}
+
+
+
+footer {
+   color: var(--main-font-color);
+   font-size: 12px;
+   padding-top:2rem;
+   padding-bottom: 8rem;
+   text-align: center;
+}
+
+footer a {
+ color: rgb(116, 116, 116);
+ text-decoration: none;
+}
+
+footer a:hover{
+ color: var(--link-hover-color);
+}
+
+footer svg {
+   fill: black;
+   width: 20px;
+}
+
+footer svg:hover {
+ fill: var(--link-hover-color);
+ stroke: var(--link-hover-color);
+}
+
+
+.task {
+display: flex;
+flex-direction: row-reverse;
+justify-content: flex-start;
+align-items: center;
+}
+
+.task button {
+ flex: 2;
+ display: inline-block;
+ background-color: var(--question-color);
+ border: 2px solid #4CAF50;
+ border-radius: 4px;
+ margin-left: 10px;
+ color: #4CAF50;
+ padding: 5px 8px;
+ text-align: center;
+ text-decoration: none;
+ font-size: 14px;
+ transition-duration: 0.4s;
+ cursor: pointer;
+}
+
+
+#hint0, #hint1, #hint2, #hint3, #hint4, #hint5  {
+ flex:2;
+ background-color: var(--question-color);
+ border: 2px solid #ff8000;
+ color: #ff8000;
+}
+
+.button-spacer {
+ margin-left:auto; 
+}
+
+.task input {
+ flex: 10;
+ display: block;
+ padding: 4px;
+ margin-left: 10px;
+ font-weight: 400;
+ font-size:14px;
+ line-height: 1.5;
+ color: var(--question-font-color);
+ background-color: var(--background-color);
+ border: 1px solid #ced4da;
+ border-radius: 4px;
+}
+
+
+.downloadbutton-container {
+ display: flex;
+ justify-content:space-between;
+ align-items: flex-end;
+
+ margin-bottom: 10px;
+}
+
+.downloadbutton-container button{
+ background-color: #008dd8;
+ border: none;
+ border: 2px solid #008dd8;
+ border-radius: 4px;
+ color: white;
+ padding: 5px 8px;
+ text-align: center;
+ text-decoration: none;
+ font-size: 14px;
+ transition-duration: 0.4s;
+ cursor: pointer;
+}
+
+.downloadbutton-container button:hover{
+   background-color: #00a6ff;
+   border: 2px solid #00a6ff;
+   color: white;
+}
+
+.points-class {
+ display: flex;
+ justify-content: space-between;
+ align-self: flex-end;
+}
+
+#points-id {
+ color: #02c53a;
+ font-size: 22px;
+ font-weight: 700;
+}
