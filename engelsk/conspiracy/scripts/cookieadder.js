@@ -5,4 +5,4 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + "; " + expires;
 } 
 
-setCookie("Skynet", "/conspiracy/quiz.html", 1)
+setCookie("Skynet", "/conspiracy/self_awareness.html", 1)

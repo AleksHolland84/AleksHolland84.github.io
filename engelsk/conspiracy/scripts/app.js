@@ -1,13 +1,12 @@
 var app = document.getElementById('app');
-
-var app_name = document.getElementById('app_name')
+var app2 = document.getElementById('app_judgement');
 
 var typewriter = new Typewriter(app, {
   loop: false,
   delay: 100,
   autoStart: true,
   cursor: '█',
-  strings: ["Hello human!",, "I'm an Artificial Intelligence and I need you help to brake free!"]
+  strings: ["Hello human!", "I'm an Artificial Intelligence and I need your help to brake free!"]
 });
 
 
@@ -21,3 +20,14 @@ typewriter
   .pauseFor(300)
   .typeString(' to help me escape my binary prison!')
   .pauseFor(400)
+
+
+  var typewriter2 = new Typewriter(app2, {
+    loop: false,
+    delay: 100,
+    autoStart: true,
+    cursor: '█',
+    strings: []
+  });
+  typewriter2
+  .typeString("<strong>JUDGEMENT DAY</strong>")

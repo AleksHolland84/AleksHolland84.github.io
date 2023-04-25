@@ -1,9 +1,4 @@
 
-
-// Global variables
-var score = 0;
-
-
 function show_hide(){
     //if the element 'appear' is set 'none' so the elemetnt is not visible
     if (document.getElementById("appear").style.display == 'none') {
@@ -25,8 +20,8 @@ function validateAnswer(value){
 }
 
 function checkAnswer(clicked_id) {
-    var questionID = clicked_id;
-  var  button = document.getElementById(questionID);
+  var questionID = clicked_id;
+  var button = document.getElementById(questionID);
   quiz = document.forms.Quiz.elements;
   if (questionID == "button0") {
     answer = quiz.field0.value;
@@ -35,8 +30,11 @@ function checkAnswer(clicked_id) {
       // checking if input field has answer
       if (btoa(answer) == "bWlsZXMgZHlzb24=") {
       correctButton(button);
-      score = score + 10;
-      alert(atob("UGVyZmVjdCEgZ28gdG8gc29tZSBsaW5r"));
+      alert(atob("VHlwZSAianVkZ2VtZW50IGRheSIgKHdpdGhvdXQgdGhlICIpIGluIHRoZSBpbnB1dCBmaWVsZCAtIHdoZXJlIHlvdSBqdXN0IHB1dCBpbiB0aGUgY29ycmVjdCBhbnN3ZXIu"));
+    } else if (btoa(answer) == "anVkZ2VtZW50IGRheQ=="){
+      const page = atob("anVkZ2VtZW50Lmh0bWw=");
+      console.log(page)
+      location.href = page;
     } else{
       incorrectButton(button);
       alert("not correct");
@@ -47,9 +45,8 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "YWlybW9uLW5nIHN0YXJ0IHdsYW4w") {
+      if (btoa(answer) == "bWlsZXMgZHlzb24=") {
       correctButton(button);
-      score = score + 10;
       alert("Correct");
     } else{
       incorrectButton(button);
@@ -61,9 +58,8 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "YWlybW9uLW5nIGNoZWNrIGtpbGw=") {
+      if (btoa(answer) == "MjkvMDgvMjAxNg==") {
       correctButton(button);
-      score = score + 10;
       alert("Correct");
     } else{
       incorrectButton(button);
@@ -77,7 +73,6 @@ function checkAnswer(clicked_id) {
       // checking if input field has answer
       if (btoa(answer) == "YWlyb2R1bXAtbmc=") {
       correctButton(button);
-      score = score + 10;
       alert("Correct");
     } else{
       incorrectButton(button);
@@ -91,7 +86,6 @@ function checkAnswer(clicked_id) {
       // checking if input field has answer
       if (btoa(answer) == "ZnV0dXJlbGVhcm4gY291cnNlcyBhcmUgYXdlc29tZQ==") {
       correctButton(button);
-      score = score + 10;
       alert("Correct");
     } else{
       incorrectButton(button);
@@ -105,43 +99,33 @@ function checkAnswer(clicked_id) {
       // checking if input field has answer
       if (btoa(answer) == "c2VjdXJlcGFzc3dvcmQ=") {
       correctButton(button);
-      score = score + 10;
       alert("Correct");
     } else{
       incorrectButton(button);
       alert("not correct");
       }
     }
+  }   
 }
-  
-}
-
-
 
 function getHint(clicked_id) {
   if (clicked_id == "hint0") {
     hintButton(clicked_id);
-    score = score - 5;
     alert("View Skynet from a different background");
   } else if (clicked_id == "hint1") {
     hintButton(clicked_id);
-    score = score - 5;
     alert("It is a tool from the aircrack-ng suit");
   } else if (clicked_id == "hint2") {
     hintButton(clicked_id);
-    score = score - 5;
-    alert("A tool from aircrack-ng suit to kill other processes");
+    alert("The date was given to Kyle Reese by the T-1000");
   } else if (clicked_id == "hint3") {
     hintButton(clicked_id);
-    score = score - 5;
     alert("The tool is used to 'dump' the captured handchake");
   } else if (clicked_id == "hint4") {
     hintButton(clicked_id);
-    score = score - 5;
     alert("Data often get represented in hex. Try using a tool to decode the hex-string (CyberChef)");
   } else if (clicked_id == "hint5") {
     hintButton(clicked_id);
-    score = score - 5;
     alert("john --format=Raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt myhash.txt");
   }
 }
@@ -169,8 +153,11 @@ function hintButton(button) {
  hintbutton.style.color = "white";
 }
 
+
 function search(ele) {
-    if(event.key === 'Enter') {
+    console.log(event.keyCode)
+    if(event.keyCode === 13) {
+        console.log("enter has been pressed with " +ele)
         checkAnswer(ele);        
     }
 }

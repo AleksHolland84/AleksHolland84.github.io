@@ -107,7 +107,7 @@ footer svg:hover {
 
 .task {
 display: flex;
-flex-direction: row-reverse;
+flex-direction: row;
 justify-content: flex-start;
 align-items: center;
 }
@@ -195,6 +195,8 @@ align-items: center;
 
 .frame-container-center{
    margin: auto;
+   margin-top: 100px;
+   margin-bottom: 100px;
    width:fit-content;
 }
 
