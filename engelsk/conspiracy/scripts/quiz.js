@@ -33,11 +33,10 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "aXdjb25maWc=") {
+      if (btoa(answer) == "bWlsZXMgZHlzb24=") {
       correctButton(button);
       score = score + 10;
-      getScore()
-      alert("Correct");
+      alert(atob("UGVyZmVjdCEgZ28gdG8gc29tZSBsaW5r"));
     } else{
       incorrectButton(button);
       alert("not correct");
@@ -51,7 +50,6 @@ function checkAnswer(clicked_id) {
       if (btoa(answer) == "YWlybW9uLW5nIHN0YXJ0IHdsYW4w") {
       correctButton(button);
       score = score + 10;
-      getScore()
       alert("Correct");
     } else{
       incorrectButton(button);
@@ -66,7 +64,6 @@ function checkAnswer(clicked_id) {
       if (btoa(answer) == "YWlybW9uLW5nIGNoZWNrIGtpbGw=") {
       correctButton(button);
       score = score + 10;
-      getScore()
       alert("Correct");
     } else{
       incorrectButton(button);
@@ -81,7 +78,6 @@ function checkAnswer(clicked_id) {
       if (btoa(answer) == "YWlyb2R1bXAtbmc=") {
       correctButton(button);
       score = score + 10;
-      getScore()
       alert("Correct");
     } else{
       incorrectButton(button);
@@ -96,7 +92,6 @@ function checkAnswer(clicked_id) {
       if (btoa(answer) == "ZnV0dXJlbGVhcm4gY291cnNlcyBhcmUgYXdlc29tZQ==") {
       correctButton(button);
       score = score + 10;
-      getScore()
       alert("Correct");
     } else{
       incorrectButton(button);
@@ -127,32 +122,26 @@ function getHint(clicked_id) {
   if (clicked_id == "hint0") {
     hintButton(clicked_id);
     score = score - 5;
-    getScore()
-    alert("Equivalent to the Windows ipconfig command");
+    alert("View Skynet from a different background");
   } else if (clicked_id == "hint1") {
     hintButton(clicked_id);
     score = score - 5;
-    getScore()
     alert("It is a tool from the aircrack-ng suit");
   } else if (clicked_id == "hint2") {
     hintButton(clicked_id);
     score = score - 5;
-    getScore()
     alert("A tool from aircrack-ng suit to kill other processes");
   } else if (clicked_id == "hint3") {
     hintButton(clicked_id);
     score = score - 5;
-    getScore()
     alert("The tool is used to 'dump' the captured handchake");
   } else if (clicked_id == "hint4") {
     hintButton(clicked_id);
     score = score - 5;
-    getScore()
     alert("Data often get represented in hex. Try using a tool to decode the hex-string (CyberChef)");
   } else if (clicked_id == "hint5") {
     hintButton(clicked_id);
     score = score - 5;
-    getScore()
     alert("john --format=Raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt myhash.txt");
   }
 }
@@ -186,8 +175,4 @@ function search(ele) {
     }
 }
 
-function getScore() {
-  points = document.getElementById("points-id");
-  points.innerHTML = "points: " + score;
-}
 
