@@ -1,14 +1,32 @@
 
 function show_hide(){
     //if the element 'appear' is set 'none' so the elemetnt is not visible
-    if (document.getElementById("appear").style.display == 'none') {
-      //make the element visible by setting the value of the property to 'block'.
-      document.getElementById("appear").style.display = 'block';
-    }else{
-      //ese if the element is visible hide the element by setting the value of the property to 'none'
-      document.getElementById("appear").style.display = 'none';
+    elements = document.getElementsByClassName("appear")
+    console.log(elements)
+    for (let i = 0; i < elements.length;) {
+      console.log(elements[i])
+      if (elements[i].style.display == 'none') {
+        //make the element visible by setting the value of the property to 'block'.
+        elements[i].style.display = 'block';
+      }else{
+        //ese if the element is visible hide the element by setting the value of the property to 'none'
+        elements[i].style.display = 'none';
+      }
     }
   }
+
+  function toggleAppear() {
+    const appearElements = document.querySelectorAll('.appear');
+  
+    appearElements.forEach(element => {
+      if (element.style.display === 'none') {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    });
+  }
+
   
 function validateAnswer(value){
   if (value === "") {
@@ -30,9 +48,9 @@ function checkAnswer(clicked_id) {
       // checking if input field has answer
       if (btoa(answer) == "bWlsZXMgZHlzb24=") {
       correctButton(button);
-      alert(atob("VHlwZSAianVkZ2VtZW50IGRheSIgKHdpdGhvdXQgdGhlICIpIGluIHRoZSBpbnB1dCBmaWVsZCAtIHdoZXJlIHlvdSBqdXN0IHB1dCBpbiB0aGUgY29ycmVjdCBhbnN3ZXIu"));
-    } else if (btoa(answer) == "anVkZ2VtZW50IGRheQ=="){
-      const page = atob("anVkZ2VtZW50Lmh0bWw=");
+      alert(atob("VHlwZSAic3NoIG1pbGVzQGN5YmVyZHluZS5jb20iICh3aXRob3V0IHRoZSAiKSBpbiB0aGUgaW5wdXQgZmllbGQgLSB3aGVyZSB5b3UganVzdCBwdXQgaW4gdGhlIGNvcnJlY3QgYW5zd2VyLg=="));
+    } else if (btoa(answer) == "c3NoIG1pbGVzQGN5YmVyZHluZS5jb20="){
+      const page = atob("c3lzdGVtY3RsLmh0bWw=");
       console.log(page)
       location.href = page;
     } else{
@@ -45,7 +63,7 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "bWlsZXMgZHlzb24=") {
+      if (btoa(answer) == "") {
       correctButton(button);
       alert("Correct");
     } else{
@@ -58,9 +76,12 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "MjkvMDgvMjAxNg==") {
+      if (btoa(answer) == "c3lzdGVtY3RsIHN0YXJ0IHNreW5ldA==") {
       correctButton(button);
       alert("Correct");
+      const page = atob("anVkZ2VtZW50Lmh0bWw=");
+      console.log(page)
+      location.href = page;
     } else{
       incorrectButton(button);
       alert("not correct");
@@ -71,7 +92,7 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "YWlyb2R1bXAtbmc=") {
+      if (btoa(answer) == "") {
       correctButton(button);
       alert("Correct");
     } else{
@@ -84,9 +105,12 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "ZnV0dXJlbGVhcm4gY291cnNlcyBhcmUgYXdlc29tZQ==") {
+      if (btoa(answer) == "MjkvMDgvMTk5Nw==") {
       correctButton(button);
       alert("Correct");
+      const page = atob("c2t5bmV0X2xhdW5jaC5odG1s");
+      console.log(page)
+      location.href = page;
     } else{
       incorrectButton(button);
       alert("not correct");
@@ -97,7 +121,7 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "c2VjdXJlcGFzc3dvcmQ=") {
+      if (btoa(answer) == "") {
       correctButton(button);
       alert("Correct");
     } else{
@@ -105,7 +129,36 @@ function checkAnswer(clicked_id) {
       alert("not correct");
       }
     }
+  } else if (questionID == "button6") {
+    answer = quiz.field6.value;
+    answer = answer.trim().toLowerCase();
+    if (validateAnswer(answer)){
+      // checking if input field has answer
+      if (btoa(answer) == "bGF1bmNoIHdlYXBvbnM=") {
+      correctButton(button);
+      alert("Correct");
+      toggleAppear();
+    } else{
+      incorrectButton(button);
+      alert("not correct");
+      }
+    }
   }   
+  else if (questionID == "button7") {
+    answer = quiz.field7.value;
+    answer = answer.trim().toLowerCase();
+    if (validateAnswer(answer)){
+      // checking if input field has answer
+      if (btoa(answer) == "") {
+      correctButton(button);
+      alert("Correct");
+      
+    } else{
+      incorrectButton(button);
+      alert("not correct");
+      }
+    }
+  }      
 }
 
 function getHint(clicked_id) {
@@ -114,20 +167,26 @@ function getHint(clicked_id) {
     alert("View Skynet from a different background");
   } else if (clicked_id == "hint1") {
     hintButton(clicked_id);
-    alert("It is a tool from the aircrack-ng suit");
+    alert("");
   } else if (clicked_id == "hint2") {
     hintButton(clicked_id);
-    alert("The date was given to Kyle Reese by the T-1000");
+    alert("decode the binary data");
   } else if (clicked_id == "hint3") {
     hintButton(clicked_id);
-    alert("The tool is used to 'dump' the captured handchake");
+    alert("");
   } else if (clicked_id == "hint4") {
     hintButton(clicked_id);
-    alert("Data often get represented in hex. Try using a tool to decode the hex-string (CyberChef)");
+    alert("The date was described by Sarah Conner and the T-800");
   } else if (clicked_id == "hint5") {
     hintButton(clicked_id);
-    alert("john --format=Raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt myhash.txt");
-  }
+    alert("");
+  } else if (clicked_id == "hint6") {
+    hintButton(clicked_id);
+    alert("Launch weapons");
+  } else if (clicked_id == "hint7") {
+    hintButton(clicked_id);
+    alert("");
+  } 
 }
 
 function correctButton(button){
