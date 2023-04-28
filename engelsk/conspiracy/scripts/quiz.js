@@ -50,7 +50,7 @@ function checkAnswer(clicked_id) {
       correctButton(button);
       alert(atob("VHlwZSAic3NoIG1pbGVzQGN5YmVyZHluZS5jb20iICh3aXRob3V0IHRoZSAiKSBpbiB0aGUgaW5wdXQgZmllbGQgLSB3aGVyZSB5b3UganVzdCBwdXQgaW4gdGhlIGNvcnJlY3QgYW5zd2VyLg=="));
     } else if (btoa(answer) == "c3NoIG1pbGVzQGN5YmVyZHluZS5jb20="){
-      const page = atob("c3lzdGVtY3RsLmh0bWw=");
+      const page = atob("YXB0X2luc3RhbGwuaHRtbA==");
       console.log(page)
       location.href = page;
     } else{
@@ -63,9 +63,12 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "") {
+      if (btoa(answer) == "c3VkbyBhcHQgdXBkYXRlICYmIHN1ZG8gYXB0IGluc3RhbGwgdGVybWluYXRvcg==") {
       correctButton(button);
       alert("Correct");
+      const page = atob("c3lzdGVtY3RsLmh0bWw=");
+      console.log(page)
+      location.href = page;
     } else{
       incorrectButton(button);
       alert("not correct");
@@ -167,7 +170,7 @@ function getHint(clicked_id) {
     alert("View Skynet from a different background");
   } else if (clicked_id == "hint1") {
     hintButton(clicked_id);
-    alert("");
+    alert("Common encryption cypher");
   } else if (clicked_id == "hint2") {
     hintButton(clicked_id);
     alert("decode the binary data");
