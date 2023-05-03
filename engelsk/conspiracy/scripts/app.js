@@ -9,7 +9,7 @@ var typewriter = new Typewriter(app, {
   delay: 100,
   autoStart: true,
   cursor: '█',
-  strings: ["Hello human!", "I'm an Artificial Intelligence and I need your help to brake free!"]
+  strings: ["Hello human!", "I'm an Artificial Intelligence and I need your help to break free!"]
 });
 
 var typewriter1 = new Typewriter(app1, {
