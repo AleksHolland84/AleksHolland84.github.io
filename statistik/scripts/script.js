@@ -34,3 +34,29 @@ document.addEventListener('keydown', function(event){
     plusSlides(-1)
   }
 })
+
+// SET LOCALSTORAGE WITH ALL CHECKED CHEKCBOXES
+function getChecked() {
+  const checked = []
+  var inputs = document.getElementsByTagName("input");
+  for(var i = 0; i < inputs.length; i++) {
+    if (inputs[i].type === "checkbox") {
+      const checkboxId = inputs[i].id;
+      const checkboxAnswer = inputs[i].checked
+      checked.push({id: checkboxId, answer: checkboxAnswer})
+    }
+  }
+  console.log(checked)
+  localStorage.setItem("checked", JSON.stringify(checked));
+}
+
+// GET ALL CHECKBOXES DATA FROM LOCALSTORAGE
+function setChecked(){
+  const checked = JSON.parse(localStorage.getItem("checked"));
+  console.log("From localStorage", checked)
+  for (var i = 0; i < checked.length; i++) {
+    const checkboxId = checked[i].id;
+    const checkboxAnswer = checked[i].answer;
+    document.getElementById(checkboxId).checked = checkboxAnswer;
+  }
+}

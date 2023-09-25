@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
 
 </head>
-<body>
+<body onload="setChecked();">
   
   <header>
     <div class="nav">
@@ -155,15 +155,15 @@
         <p>✏️</p>
         <div>
             <div style="display:inline-flex; align-items:flex-start;">
-                <input id="krav1" type="checkbox">
+                <input id="krav1" type="checkbox" onclick="getChecked()">
                 <label for="krav1">Udvælg noget data og konstruerer et diagram over eget skærmforbrug i forhold til de forskellige dage. </label>
             </div>
             <div style="display:inline-flex; align-items:flex-start;">
-                <input id = "krav2" type="checkbox">
+                <input id = "krav2" type="checkbox" onclick="getChecked()">
                 <label for="krav2" >Hvilke statistiske deskriptorer kan man beregne/finde i det datasæt I har valgt?</label>
             </div>
             <div style="display:inline-flex; align-items:flex-start;">
-                <input id = "krav3" type="checkbox">
+                <input id = "krav3" type="checkbox" onclick="getChecked()">
                 <label for="krav3" >Hvad kan du konkludere ud fra din undersøgelse?</label>
             </div>
         </div>
@@ -180,11 +180,11 @@
         <p>✏️</p>
         <div>
             <div style="display:inline-flex; align-items:flex-start;">
-                <input id="krav4" type="checkbox">
+                <input id="krav4" type="checkbox" onclick="getChecked()">
                 <label for="krav4">Udvælge noget data, som du vil undersøge ud fra det i har indsamlet på hele klassen. OBS I skal ikke forholde jer til alt den indsamlede data. Udvælg det I synes vil være mest spændende at arbejde med.</label>
             </div>
             <div style="display:inline-flex; align-items:flex-start;">
-                <input id = "krav5" type="checkbox">
+                <input id = "krav5" type="checkbox" onclick="getChecked()">
                 <label for="krav5">Lav et undersøgelsesspørgsmål, som du vil lave en grafisk fremstilling af. 
                                 <br>Fx Er der forskel på klassens gennemsnitlige skærmtid i hverdagene og i weekenden? 
                                 <br>Hvor lang tid bruger klassen dagligt på Snapchat? 
@@ -192,15 +192,15 @@
 
             </div>
             <div style="display:inline-flex; align-items:flex-start;">
-                <input id = "krav6" type="checkbox">
+                <input id = "krav6" type="checkbox" onclick="getChecked()">
                 <label for="krav6" >Hvilke statistiske deskriptorer kan man beregne/finde i det datasæt I har valgt?</label>
             </div>
             <div style="display:inline-flex; align-items:flex-start;">
-                <input id = "krav7" type="checkbox">
+                <input id = "krav7" type="checkbox" onclick="getChecked()">
                 <label for="krav7" >Hvad kan du konkludere ud fra din undersøgelse? </label>
             </div>
             <div style="display:inline-flex; align-items:flex-start;">
-                <input id = "krav8" type="checkbox">
+                <input id = "krav8" type="checkbox" onclick="getChecked()">
                 <label for="krav8" >Hvordan er dit eget skærmforbrug i forhold til det du har undersøgt</label>
             </div>
         </div>
@@ -218,26 +218,26 @@
         <p>✏️</p>
         <div>
           <div style="display:inline-flex; align-items:flex-start;">
-            <input id="krav9" type="checkbox">
+            <input id="krav9" type="checkbox" onclick="getChecked()">
             <label for="krav9">Udvælg noget data, som du vil undersøge på tværs af enten køn, klasse eller stjernetegn. Dataet du udvælger skal kunne sammenlignes i enten et histogram eller et boksplot. OBS I skal ikke forholde jer til alt den indsamlede data. Udvælg det I synes vil være mest spændende at arbejde med.</label>
           </div>
           <div style="display:inline-flex; align-items:flex-start;">
-            <input id = "krav10" type="checkbox">
+            <input id = "krav10" type="checkbox" onclick="getChecked()">
             <label for="krav10">Lav en påstand, som du vil undersøge i forhold til din inddeling. 
                             <br>Fx drengene bruger meget mere tid på Snapchat i forhold til pigerne. 
                             <br>8.y bruger gennemsnitligt mere tid på deres telefoner end 8.x.
                             <br>Løver brugere mere tid på TikTok end de øvrige stjernetegn.</label>
           </div>
           <div style="display:inline-flex; align-items:flex-start;">
-            <input id = "krav11" type="checkbox">
+            <input id = "krav11" type="checkbox" onclick="getChecked()">
             <label for="krav11" >Hvilke statistiske deskriptorer kan man beregne/finde i det datasæt I har valgt?</label>
           </div>
           <div style="display:inline-flex; align-items:flex-start;">
-            <input id = "krav12" type="checkbox">
+            <input id = "krav12" type="checkbox" onclick="getChecked()">
             <label for="krav12" >Hvad kan du konkludere ud fra din undersøgelse? </label>
           </div>
           <div style="display:inline-flex; align-items:flex-start;">
-            <input id = "krav13" type="checkbox">
+            <input id = "krav13" type="checkbox" onclick="getChecked()">
             <label for="krav13" >Hvordan er dit eget skærmforbrug i forhold til det du har undersøgt? </label>
           </div>
         </div>
@@ -249,7 +249,7 @@
       <p>✏️</p>
       <div>
         <div style="display:inline-flex; align-items:flex-start;">
-          <input id="krav9" type="checkbox">
+          <input id="krav9" type="checkbox" onclick="getChecked()">
           <label for="krav9">Forbered fremlæggelse af jeres data og dataanalyse</label>
         </div>
     </div>
