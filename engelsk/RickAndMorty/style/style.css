@@ -236,3 +236,91 @@ align-items: center;
  font-size: 22px;
  font-weight: 700;
 }
+
+.dialog {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   margin-bottom:  5px;;
+   }
+
+.dialog p {
+   margin: 0; /* Remove default margin for the paragraph */
+   display: inline; /* Make the paragraph inline to be next to the image */
+   word-wrap: break-word; /* Break long words onto the next line */
+   overflow-wrap: break-word; /* Control word breaks in case of overflow */
+ } 
+ .RICK {
+   background-color: #006685;
+   padding:10px;
+   border-radius: 10px;
+ }
+
+.RICK::before{
+   content: "";
+   background:url('../images/RICK.png'); /* with class ModalCarrot ??*/
+   background-size: cover; /* Scale the image to cover the entire space */
+   min-width: 50px;
+   width: 50px; /* Set the desired width */
+   height: 50px; /* Set the desired height */
+   display: inline-block; /* Make the pseudo-element inline */
+   margin-right: 10px; /* Add some spacing between the image and text */
+   vertical-align: middle; /
+}
+
+.MORTY {
+   background-color: #db8400;
+   padding:10px;
+   border-radius: 10px;
+ }
+
+.MORTY::before{
+   content: "";
+   background:url('../images/MORTY.png'); /* with class ModalCarrot ??*/
+   background-size: cover; /* Scale the image to cover the entire space */
+   min-width: 40px;
+   width: 40px; /* Set the desired width */
+   height: 40px; /* Set the desired height */
+   display: inline-block; /* Make the pseudo-element inline */
+   margin-right: 14px; /* Add some spacing between the image and text */
+   margin-left: 6px;
+   vertical-align: middle; /
+}
+
+.BETH {
+   background-color: #42033a;
+   padding:10px;
+   border-radius: 10px;
+ }
+.BETH::before{
+   content: "";
+   background:url('../images/BETH.png'); /* with class ModalCarrot ??*/
+   background-size: cover; /* Scale the image to cover the entire space */
+   min-width: 45px;
+   width: 45px; /* Set the desired width */
+   height: 45px; /* Set the desired height */
+   display: inline-block; /* Make the pseudo-element inline */
+   margin-right: 10px; /* Add some spacing between the image and text */
+   margin-left: 5px;
+   vertical-align: middle; /
+}
+
+.SUMMER {
+   background-color: #99056d;
+   padding:10px;
+   border-radius: 10px;
+ }
+
+.SUMMER::before{
+   content: "";
+   background:url('../images/SUMMER.png'); /* with class ModalCarrot ??*/
+   background-size: cover; /* Scale the image to cover the entire space */
+   min-width: 45px;
+   width: 45px; /* Set the desired width */
+   height: 45px; /* Set the desired height */
+   display: inline-block; /* Make the pseudo-element inline */
+   margin-right: 10px; /* Add some spacing between the image and text */
+   margin-left: 5px;
+   vertical-align: middle; /
+}
