@@ -3,7 +3,6 @@
 // Global variables
 var score = 0;
 
-
 function show_hide(){
     //if the element 'appear' is set 'none' so the elemetnt is not visible
     if (document.getElementById("appear").style.display == 'none') {
@@ -33,7 +32,7 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "aXdjb25maWc=") {
+      if (btoa(answer) == "bW9ydHk=") {
       correctButton(button);
       score = score + 10;
       getScore()
@@ -48,7 +47,7 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "YWlybW9uLW5nIHN0YXJ0IHdsYW4w") {
+      if (btoa(answer) == "cGlja2xl") {
       correctButton(button);
       score = score + 10;
       getScore()
@@ -63,7 +62,7 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "YWlybW9uLW5nIGNoZWNrIGtpbGw=") {
+      if (btoa(answer) == "YWR1bHQgc3dpbQ==") {
       correctButton(button);
       score = score + 10;
       getScore()
@@ -78,7 +77,7 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "YWlyb2R1bXAtbmc=") {
+      if (btoa(answer) == "ZGVjZW1iZXIgMiwgMjAxMw==") {
       correctButton(button);
       score = score + 10;
       getScore()
@@ -93,7 +92,7 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "ZnV0dXJlbGVhcm4gY291cnNlcyBhcmUgYXdlc29tZQ==") {
+      if (btoa(answer) == "aSBhbSBpbiBncmVhdCBwYWluLCBwbGVhc2UgaGVscCBtZQ==") {
       correctButton(button);
       score = score + 10;
       getScore()
@@ -128,27 +127,27 @@ function getHint(clicked_id) {
     hintButton(clicked_id);
     score = score - 5;
     getScore()
-    alert("Equivalent to the Windows ipconfig command");
+    alert("It's one of the main characters");
   } else if (clicked_id == "hint1") {
     hintButton(clicked_id);
     score = score - 5;
     getScore()
-    alert("It is a tool from the aircrack-ng suit");
+    alert("It's in the title...");
   } else if (clicked_id == "hint2") {
     hintButton(clicked_id);
     score = score - 5;
     getScore()
-    alert("A tool from aircrack-ng suit to kill other processes");
+    alert("Look at the fanpage https://rickandmorty.fandom.com/wiki/Rick_and_Morty_(TV_series)");
   } else if (clicked_id == "hint3") {
     hintButton(clicked_id);
     score = score - 5;
     getScore()
-    alert("The tool is used to 'dump' the captured handchake");
+    alert("Look at the fanpage https://rickandmorty.fandom.com/wiki/Rick_and_Morty_(TV_series)");
   } else if (clicked_id == "hint4") {
     hintButton(clicked_id);
     score = score - 5;
     getScore()
-    alert("Data often get represented in hex. Try using a tool to decode the hex-string (CyberChef)");
+    alert("In the 2014 episode “Ricksy Business” (Season 1, Episode 11), the character Birdperson reveals that in his language, wubba lubba dub dub means ....");
   } else if (clicked_id == "hint5") {
     hintButton(clicked_id);
     score = score - 5;
