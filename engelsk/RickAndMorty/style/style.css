@@ -4,13 +4,13 @@
 :root {
    --link-color-hover: #ff3399;
    --link-color: #03db03;
+   --nav-color: #9ccf23;
 }
 
 body {
  margin: 0 auto;
  padding: 10px;
  max-width: 800px;
- min-width: 550px;
  font-family: 'Concert One', cursive;
  background-image: url("../images/rick-and-morty.jpg");
  background-repeat: no-repeat;
@@ -44,10 +44,15 @@ header a:hover{
 }
 
 .nav a{
- color: var(--link-color);
+ color: var(--nav-color);
  text-decoration: none;
  font-family: 'Concert One', cursive;
+ font-size: 1.5em;
  font-weight: 400;
+}
+
+.nav a:hover{
+   color: var(--link-color-hover)
 }
 
 .whoami {

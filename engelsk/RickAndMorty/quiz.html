@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rick and Morty</title>
+    <title>The Quiz</title>
     
     <!-- Link to google font--> 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -51,9 +51,7 @@
   
   
   <div class="whoami">
-    <img src="images/Rick_and_Morty.png" style="max-width: 100%;">
-
-    <h1 style="margin-top: 5px;">The ESL Course</h1>
+    <h1>The Quiz</h1>
     
     <div class="contact"> 
       <p>Forfatter: A. H. Johansen</p>
@@ -72,47 +70,75 @@
 <!-- FORM START -->
 <form name="Quiz" id="quiz-content">  
  
-  <div class="points-class">
-    <h2></h2>
+    <div class="points-class">
+      <h2>Answer the questions below</h2>
+      <p id="points-id">points: 0 </p>
+    </div>
+    <div class="content">
+    <p style="margin-bottom:0px;">What is the name of Rick's grandson?</p>
+    <div class="codeblock task">
+      <button id="hint0" type="button" onclick="getHint(this.id)">Hint</button>
+      <button id="button0" type="button"  onclick="checkAnswer(this.id)">Check Answer</button>
+      <input name="field0" type="text" class="search" onkeydown="search('button0')" placeholder="Answer format: *****">     
+    </div>
   </div>
+  
   <div class="content">
-    <h1>Pickle Rick: An Absurd Adventure in Science</h1
-      ><p>"Everyday is a new adventure." - Any science fiction fan on the planet. There's no arguing Rick and Morty's iconic animated show takes this phrase to an entirely new level.</p>
-      <h2>Meet the Pickle</h2>
-      <screenshot src="https://cdn.videotap.com/LiVxX89Nwqlx1e3cGsBx-19.38.png"></screenshot>
-      <p>From afar, this story may sound like your average day, having a conversation with an inanimate object.</p>
-      <p>Or maybe not.</p><p>The conversation begins with Rick beckoning Morty to the garage, where he has seemingly transformed himself into a pickle, lying on the workbench. "Flip the pickle over," Rick mutters revealing, a surprise that would flabbergast any saneperson – Rick has indeed transformed himself into a pickle.</p>
-      <blockquote>
-          <p>"I turned myself into a pickle Morty. Boom. Big reveal. I’m a pickle. What do you think about that?"</p>
-      </blockquote>
-      <p>Exactly, what does one think about a close figure transforming himself into a vegetable? Not every day's kitchen conversation.</p>
-      <p>Well, an interesting phenomenon indeed. Morty, and later Beth and Summer, question the "pickled" scientist. Is it a magic trick? Is he going to live forever in that form? Can he fly?</p>
-      <p>In typical Rick fashion, all questions are met with snide remarks and conceited responses.</p>
-      <blockquote>
-          <p>"I don’t do magic, Morty. I do science. One takes brains, the other takes dark eyeliner."</p>
-      </blockquote>
-      <h2>An Ambition... Too Far?</h2>
-      <screenshot src="https://cdn.videotap.com/PbzfX9Z8DsuBSVHOQDW4-116.27.png"></screenshot>
-      <p>Beth and Summer, get swept up in the absurdity of the situation and leave Rick in his pickle form for their pre-scheduled family counseling appointment. Morty, however, expresses suspicion, suggesting that the transformation into a pickle is an elaborate plan by Rick to escape family therapy.</p>
-      <p>Rick does very little to refute Morty’s accusation, rather he amuses his family (and the audience) with sarcastic statements and well-timed jests.</p>
-      <blockquote>
-          <p>"Can’t you just turn yourself back into a human?"<br>"Great question, Summer. The unfortunate answer is I did this to challenge myself. It could take hours or even days before I’m able to figure out how to return to human form."</p>
-      </blockquote>
-      <p>As the family leaves, Morty spots a syringe dripping with a mysterious fluid hanging directly over pickle Rick, attached to a timer set for ten minutes from then. Rick's response? Classic denial and dismissal.</p>
-      <blockquote>
-          <p>"Well, Morty, if you must know, the syringe is completely unrelated to this discussion and therefore does not warrant further explanation."</p>
-      </blockquote>
-      <h2>A Pickle's Tale</h2>
-      <screenshot src="https://cdn.videotap.com/5pfbH7he1xPZUEZ9o71E-193.78.png"></screenshot>
-      <p>While the family debates over therapies, Rick –the pickle– has his encounter with the household cat. The cat mistakes Rick for a cucumber, playing into the popular YouTube trend showing cats being scared of cucumbers due to their resemblance to snakes. Through a series of exasperated cries, reminding the cat - and the viewer - of his “pickly" state.</p>
-      <blockquote>
-          <p>"Whoa whoa whoa, Izzy. I’m not a snake! I’m a pickle. I’m a pickle!"</p>
-      </blockquote><p>Science, absurdity, and a pickle. Rick and Morty consistently weave together tales that not only stretch the mind but keep you rolling with laughter. A man turning himself into a pickle may seem ludicrous but under the spotlight of an interdimensional mad scientist, it's a distinct possibility. No matter the absurdity, one thing's for sure - you will always be entertained.</p>
-      <p>Stay tuned, something tells us more outlandish Rick and Morty antics are coming your way!</p>
-
+    <p style="margin-bottom:0px;">In the episode "Pickle Rick," what does Rick turn himself into?</p>
+    <div class="codeblock task">
+      <button id="hint1" type="button" onclick="getHint(this.id)">Hint</button>
+      <button id="button1" type="button" onclick="checkAnswer(this.id)">Check Answer</button>
+      <input name="field1" type="text" class="search" onkeydown="search('button1')" placeholder="Answer format: P*****">     
+    </div>
   </div>
   
+  <div class="content">
+    <p style="margin-bottom:0px;">On what network is the show orginaly broadcasted on?</p>
+    <div class="codeblock task">
+      <button id="hint2" type="button" onclick="getHint(this.id)">Hint</button>
+      <button id="button2" type="button" onclick="checkAnswer(this.id)">Check Answer</button>
+      <input name="field2" type="text" class="search" onkeydown="search('button2')" placeholder="Answer format: A**** ****">     
+    </div>
+  </div>
+
+  <div class="content">
+    <p style="margin-bottom:0px;">When was Rick and Morty first aired?</p>
+    <div class="codeblock task">
+      <button id="hint3" type="button" onclick="getHint(this.id)">Hint</button>
+      <button id="button3" type="button" onclick="checkAnswer(this.id)">Check Answer</button>
+      <input name="field3" type="text" class="search" onkeydown="search('button3')" placeholder="Answer format: D******* *, ****">     
+    </div>
+  </div>
+
+  <div class="content">
+    <p style="margin-bottom:0px;">What does "Wubalubadubdub" translate to in Birdperson's language?</p>
+    <div class="codeblock task">
+      <button id="hint4" type="button" onclick="getHint(this.id)">Hint</button>
+      <button id="button4" type="button" onclick="checkAnswer(this.id)">Check Answer</button>
+      <input name="field4" type="text" class="search" onkeydown="search('button4')" placeholder="Answer format: I ** ** ***** ****, ****** **** **">     
+    </div>
+  </div>
   
+  <div class="content">
+    <div class="downloadbutton-container">
+      <p style="margin-bottom:0px;">Download the file. Can you brute-force the md5 hash?</p>
+      <a href="myhash.txt" download> <button id="Download" type="button">Download</button></a></div>
+    <div class="codeblock task">
+      <button id="hint5" type="button" onclick="getHint(this.id)">Hint</button>
+      <button id="button5" type="button" onclick="checkAnswer(this.id)">Check Answer</button>
+      <input name="field5" type="text" class="search" onkeydown="search('button5')" placeholder="Answer format: s*************">     
+    </div>
+  </div>
+
+
+</form>
+<!-- FORM END -->
+
+<!-- Button to get score - disabled 
+<div>
+  <button id="getscore" type="button" onclick="getScore()" >Get Score</button>
+</div>  
+-->
 
   <!-- FOOTER START --> 
   <footer>
