@@ -92,7 +92,7 @@ h1{
 }
 
 .content {
- text-align: justify;
+ /* text-align: justify; */
  margin-top: 50px;
  border-radius: 5px;
  background-color: #8e1492c5;
@@ -101,11 +101,28 @@ h1{
 }
 
 .content a {
- color: grey;
+ color: rgb(197, 247, 192);
+ text-decoration: none;
+
 }
 
 .content a:hover{
  color: #ff3399;
+}
+
+.characters {
+   display: flex;
+   flex-direction: row;
+}
+
+.characters img {
+   height: 200px;
+   margin: 20px 10px 20px 0px;
+}
+
+.characters span {
+   color:#42bdd3;
+   font-size: 1.2em;
 }
 
 .codeblock {
@@ -251,6 +268,7 @@ align-items: center;
    word-wrap: break-word; /* Break long words onto the next line */
    overflow-wrap: break-word; /* Control word breaks in case of overflow */
  } 
+
  .RICK {
    background-color: #006685;
    padding:10px;
