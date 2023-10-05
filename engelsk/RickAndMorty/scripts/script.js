@@ -107,7 +107,7 @@ function checkAnswer(clicked_id) {
     answer = answer.trim().toLowerCase();
     if (validateAnswer(answer)){
       // checking if input field has answer
-      if (btoa(answer) == "c2VjdXJlcGFzc3dvcmQ=") {
+      if (btoa(answer) == "bXIuIG5pbWJ1cw==") {
       correctButton(button);
       score = score + 10;
       alert("Correct");
@@ -152,7 +152,7 @@ function getHint(clicked_id) {
     hintButton(clicked_id);
     score = score - 5;
     getScore()
-    alert("john --format=Raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt myhash.txt");
+    alert("Try the using Deep Thought - the most powerful computer ever built... or google it!");
   }
 }
 

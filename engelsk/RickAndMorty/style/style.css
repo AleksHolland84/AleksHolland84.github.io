@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Sora:wght@100;200;300;400;500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap'); 
 
 :root {
    --link-color-hover: #ff3399;
    --link-color: #03db03;
-   --nav-color: #9ccf23;
+   --nav-color-stroke: #a2d825;
+   --nav-color: #5ad2e2;
 }
 
 body {
@@ -31,12 +31,12 @@ header {
 header a {
  width: 25px;
  height:25px;
- fill: var(--link-color);
+ fill: var(--nav-color);
  margin-left: 2px;
 }
 header a:hover{
- fill: var(--link-color-hover);
- stroke: #ff3399;
+ fill: var(--nav-color-stroke);
+ stroke: var(--nav-color-stroke);
 }
 
 .nav {
@@ -49,6 +49,7 @@ header a:hover{
  font-family: 'Concert One', cursive;
  font-size: 1.5em;
  font-weight: 400;
+ -webkit-text-stroke: 1px var(--nav-color-stroke);
 }
 
 .nav a:hover{
@@ -83,12 +84,12 @@ h1{
 .whoami a {
  width: 25px;
  height:25px;
- fill: var(--link-color);
+ fill: var(--nav-color);
 }
 
 .whoami a:hover{
- fill: #ff3399;
- stroke: #ff3399;
+ fill: var(--nav-color-stroke);
+ stroke: var(--nav-color-stroke);
 }
 
 .content {
@@ -103,11 +104,16 @@ h1{
 .content a {
  color: rgb(197, 247, 192);
  text-decoration: none;
+ 
 
 }
 
 .content a:hover{
  color: #ff3399;
+}
+
+.add_padding {
+   padding-bottom: 10px;
 }
 
 .characters {
@@ -118,6 +124,7 @@ h1{
 .characters img {
    height: 200px;
    margin: 20px 10px 20px 0px;
+   border-radius: 5px;
 }
 
 .characters span {
@@ -250,7 +257,7 @@ align-items: center;
 
 #points-id {
  color: #14ff56;
- font-size: 22px;
+ font-size: 2em;
  font-weight: 700;
 }
 
