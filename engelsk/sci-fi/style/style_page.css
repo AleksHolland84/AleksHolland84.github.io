@@ -48,14 +48,6 @@ figcaption{
     color: var(--figur-color)
 }
 
-@media (max-width: 1200px) {
-    .menu-chapter-wrapper{
-        flex-direction: column;
-    }
-}
-
-
-
 
 @media (max-width: 1200px) {
     .menu-chapter-wrapper{
