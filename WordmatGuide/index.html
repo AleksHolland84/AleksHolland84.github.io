@@ -178,7 +178,7 @@
         $$ { \text{Definer: x = 5} } $$
       </div>
     </div>
- 
+
     <div class="content">
       <div id="lister" class="__chapter_menu_header_1">
         <h1>Lister</h1 >
@@ -188,19 +188,42 @@
 
     <div class="content">
       <div id="lister_eksempler1" class="__chapter_menu_subheader_1">
-        <h3>Definer en liste or sorterer</h3>
+        <h3>Definer en liste eller Makelist</h3>
       </div> 
       <div class="exceleks">
         <p>I WordMat kan man bl.a. arbejde med lister</p>
+        <p>Vi kan selv definere en liste</p>
         <div class="math">
           $$ { \text{eksList := [ 8 ; 9 ; 5 ; 3 ; 2 ; 3 ] } } $$
         </div>  
+        <p>Men vi kan også skrive et udtryk som generere en liste</p>
+        <p>Udtrykket vil være formuleret således:</p>
+        <div class="math">
+          $$ { \text{listeNavn := makelist(ligning; variabel navn; antal) } } $$
+        </div>  
+        <p>Dette kunne ekempelt være:</p>
+        <div class="math">
+          $$ { \text{listeNavn := makelist(4x+3; x; 10) } } $$
+        </div>  
+        <p>Hvis vi efterfølgende <i>beregner</i> listen, vil vi få indholdet af listen:</p>
+        <div class="math">
+          $$ { \text{listeNavn=[7;11;15;19;23;27;31;35;39;43] } } $$
+        </div>     
+
         <p>Efterfølgende kan man hente et element i listen. Dette gør man ved hjælp af indeksering. 
           Maxima (og WordMat) bruger 1-baseret indeksering, hvilket betyder, at den første position er 1.</p>
         <div class="math">
           $$ { \text{eksList[2]} } $$
         </div> 
-        <p>Dette vil retunerer værdien 9.</p>      
+        <p>Dette vil retunerer værdien 9.</p>
+        
+        <p>Andre eksempler som kan afprøves</p>
+        <div class="math">
+          $$ { \text{makelist(random(100),10)=[4;91;29;85;98;3;35;65;40;26] } } $$
+        </div> 
+        <div class="math">
+          $$ { \text{makelist(concat(x;i),i,6)=[x1;x2;x3;x4;x5;x6] } } $$
+        </div> 
       </div>
 
       <div id="lister_eksempler2" class="__chapter_menu_subheader_1">
@@ -260,6 +283,26 @@
         </div>
       </div>
 
+      <div id="andet_eksempler1" class="__chapter_menu_subheader_1">
+        <h3>Andre muligheder med lister</h3>
+      </div> 
+      <div class="exceleks">
+        <p>Delete indhold fra en liste</p>
+        <p>Når vi deleter et indhold fra en liste, er vi nød til at deffinere en ny liste med resultatet.
+          Dette er vi nød til pga. måden Maxima (WordMat) refererer til en liste.
+        </p>
+        <div class="math">
+          $$ { \text{eksList := [ 8 ; 9 ; 5 ; 3 ; 2 ; 3 ] } } $$
+        </div>  
+        <div class="math">
+          $$ { \text{newListTwo := delete(3;eksList) } } $$
+        </div> 
+        <p>Dette fjerner alle eksempler på 3 i listen</p>
+        <div class="math">
+          $$ { \text{newListTwo=[8;9;5;2] } } $$
+        </div>
+      </div>
+
     </div>
 
     <div class="content">
@@ -292,7 +335,7 @@
  
     <div class="content">
       <div id="afrund" class="__chapter_menu_header_1">
-        <h1>Floor, Cealing og round</h1 >
+        <h1>Floor, Ceiling og Round</h1 >
       </div>  
     </div>
 
@@ -310,8 +353,8 @@
         <p>Dette vil runde ned til 48</p>
       </div>
 
-      <div id="afrund_eksempler_geogebra" class="__chapter_menu_subheader_1">
-        <h3>Løsningseksempel på opgave 1 i FSA maj 2011</h3>
+      <div>
+        <h4>Løsningseksempel på opgave 1 i FSA maj 2011</h4>
       </div> 
 
       <div class="exceleks">
@@ -327,9 +370,64 @@
         </div>
         <p>Liva sover i 8 timer og 15 min</p>
       </div>
+    </div>
 
+
+    <div class="content">
+      <div id="afrund_eksempler_ceiling" class="__chapter_menu_subheader_1">
+        <h3>Ceiling funktionen</h3>
+      </div> 
+      <p><i>ceiling(x)</i> bruges til at afrunde opad til det nærmeste heltal.</p>
+      <p>Dette returnerer det største heltal, der er større end eller lig med x.</p>
+
+      <div class="exceleks">
+        <div class="math">
+          $$ { \text{ceiling(48,9)} } $$
+        </div>
+        <p>Dette vil runde ned til 49</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <div id="afrund_eksempler_round" class="__chapter_menu_subheader_1">
+        <h3>Round funktionen</h3>
+      </div> 
+      <p><i>roud(x)</i> bruges til at afrunde til det nærmeste heltal.</p>
+      <p>Dette returnerer det heltal, hvis der afrundes matematisk korrekt.</p>
+
+      <div class="exceleks">
+        <div class="math">
+          $$ { \text{round(628,9)} } $$
+        </div>
+        <p>Dette vil runde ned til 629</p>
+      </div>
+
+      <div>
+        <h4>Løsningseksempel på opgave 1 i FSA maj 2011</h4>
+      </div> 
+    </div>
+
+    <div class="content">
+      <div id="std" class="__chapter_menu_header_1">
+        <h1>Nice to know</h1 >
+      </div>  
     </div>
     
+    <div class="content">
+      <div id="std_eksempler" class="__chapter_menu_subheader_1">
+        <h3>Ekempler på brugen af <i>sqrt()</i></h3>
+      </div> 
+      <p>I WordMat kan man bl.a. beregne kvardratroden af et tal med <i>sqrt()</i></p>
+
+      <div class="math">
+        $$ { \text{sqrt(9)} } $$
+      </div>
+
+      <p>Definer med <i>Definer</i></p>
+      <div class="math">
+        $$ { \text{Definer: x = 5} } $$
+      </div>
+    </div>
   
   
     <!-- FOOTER START --> 
