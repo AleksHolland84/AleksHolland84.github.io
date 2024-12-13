@@ -224,11 +224,16 @@
     <p>Lig mærke til BSSID og CH på den enhed vi vil angribe. <br>
         Tryk <span class="cmd">ctrl-c</span> for at afbryde angrebet. Kopier BSSID for vores AP</p>
         
-    <p>Vi vil nu lave et specefikt angreb på vores AP (AndropdAP2). Når en anden enhed kobler sig på AndroidAP2, kan vi fange "the 4 way handshake" og vi kan derefter knække nøglen. <span style="font-style:italic;">Reelt kan vi også "smide" en enhed af netværket, men det vælger jeg ikke at vise jer - DoS attack.</span></p>
+    <p>Vi vil nu lave et specefikt angreb på vores AP (AndropdAP2). Når en anden enhed kobler sig på AndroidAP2, kan vi fange "the 4 way handshake" og vi kan derefter knække nøglen. <span style="font-style:italic;">Reelt kan vi også "smide" en enhed af netværket - Deauthentication, en form for DoS attack.</span></p>
     
     <div class="codeblock">
        <p class="cmd">sudo airodump-ng wlan1mon --bssid F2:C9:B0:E7:81:BB --chanel 6 -w AndroidAP2</p>
     </div>   
+
+    <p>Hvis der er enheder forbundet AP'en, kan vi vælge at deauthe den enhed, som efterfølgende automatisk vil genoprette forbindelsen. Herved kan vi også fange "the 4 way handshake"</p>
+    <div class="codeblock">
+      <p class="cmd">aircrack-ng -j AndroidAP2.cap AndroidAP2.hccapx</p>
+   </div>
     
     
     <figure>
@@ -278,12 +283,12 @@
     <p>Med <span class="cmd">aircrack-ng -j</span> kan vi generere en <span class="cmd">HCCAPX</span> fil, som kan brute forces af <span class="cmd">hashcat</span>.</p>
     
     <div class="codeblock">
-       <p class="cmd">aircrack-ng AndroidAP2-2.capNinjaJc01-01.cap -j hashcat_output</p>
+       <p class="cmd">aircrack-ng -j AndroidAP2.cap AndroidAP2.hccapx</p>
     </div>  
     
     <p>Denne fil kan vi også anvende med <span class="cmd">John the Ripper</span>.</p>
     <p>Først skal vi dog genere et john-readable hash. Dette kan vi gøre med <span class="cmd">hccapx2john.py</span> til.</p>
-    <p style="font-style: italic; color:grey">(hccapx2john.py findesi jumbo udgaven af John the Ripper)</p>
+    <p style="font-style: italic; color:grey">(hccapx2john.py findes i jumbo udgaven af John the Ripper)</p>
  
  
     <div class="codeblock">
