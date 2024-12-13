@@ -202,7 +202,7 @@
     <p>Sæt efterfølgende vores netværks interface i "monitor mode"</p>
     
     <div class="codeblock">
-       <p class="cmd">sudo airmon-ng start wlan1l</p>
+       <p class="cmd">sudo airmon-ng start wlan1</p>
     </div>    
 
     <figure>
@@ -224,7 +224,7 @@
     <p>Lig mærke til BSSID og CH på den enhed vi vil angribe. <br>
         Tryk <span class="cmd">ctrl-c</span> for at afbryde angrebet. Kopier BSSID for vores AP</p>
         
-    <p>Vi vil nu lave et specefikt angreb på vores AP (AndropdAP2). Når en anden enhed kobler sig på AndroidAP2, kan vi fange "the 4 way handshake" og vi kan derefter knække nøglen. <span style="font-style:italic;">Reelt kan vi også "smide" en enhed af netværket, men det vælger jeg ikke at vise jer - DNS attack.</span></p>
+    <p>Vi vil nu lave et specefikt angreb på vores AP (AndropdAP2). Når en anden enhed kobler sig på AndroidAP2, kan vi fange "the 4 way handshake" og vi kan derefter knække nøglen. <span style="font-style:italic;">Reelt kan vi også "smide" en enhed af netværket, men det vælger jeg ikke at vise jer - DoS attack.</span></p>
     
     <div class="codeblock">
        <p class="cmd">sudo airodump-ng wlan1mon --bssid F2:C9:B0:E7:81:BB --chanel 6 -w AndroidAP2</p>
