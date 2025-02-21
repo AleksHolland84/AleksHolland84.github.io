@@ -36,8 +36,8 @@ header a:hover{
 .nav a{
  color: black;
  text-decoration: none;
- font-family: 'IBM Plex Mono', monospace;
- font-weight: 400;
+ font-family: system-ui;
+ font-weight: 600;
 }
 
 .whoami {
@@ -59,7 +59,7 @@ h1{
 }
 
 .whoami p {
- font-family: "Courier New";
+ font-family: system-ui;
  margin-top: 0px;
  flex:16;
 }
@@ -80,6 +80,7 @@ h1{
  margin-top: 50px;
 }
 
+
 .content a {
  color: grey;
 }
@@ -89,12 +90,12 @@ h1{
 }
 
 .vejledning {
- font-family: "Courier New";
+ font-family: system-ui;
  color: grey;
 }
 
 .argument{
- font-weight: 900;
+ font-weight: 700;
 }
 
 .no-bullets-container {
@@ -106,26 +107,27 @@ h1{
 }
 
 .codeblock {
- font-family: "Courier New";
+ font-family: system-ui;
  background-color: #f2f2f2;
  margin-top: 2px;
+ border-radius: 10px;
  padding-top: 10px;
  padding-bottom: 10px;
  padding-right: 10px;
-
 }
+
 .codeblock p{
  padding-left: 20px;
 }
 
 .program {
- font-family: "Courier New";
+ font-family: system-ui;
  color: #a300cc;
  font-weight: bold;
 }
 
 .cmd {
- font-family: "Courier New";
+ font-family: system-ui;
  background-color: #f2f2f2;
  padding-left:3px;
  padding-right: 3px;
@@ -133,7 +135,7 @@ h1{
 }
 
 figure {
- font-family: "Courier New";
+ font-family: system-ui;
  color: grey;
 }
 
