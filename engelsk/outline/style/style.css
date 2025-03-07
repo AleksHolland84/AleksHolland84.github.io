@@ -4,7 +4,7 @@ body {
  margin: 0 auto;
  padding: 10px;
  max-width: 800px;
- font-family: 'Oxygen', sans-serif;
+ font-family: system-ui;
   
 }
 
@@ -36,7 +36,7 @@ h4 {
 .nav a{
  color: black;
  text-decoration: none;
- font-family: 'IBM Plex Mono', monospace;
+ font-family: system-ui;
  font-weight: 400;
 }
 
@@ -60,7 +60,7 @@ h1{
 }
 
 .whoami p {
- font-family: "Courier New";
+ font-family: system-ui;
  margin-top: 0px;
  flex:16;
 }
@@ -99,7 +99,7 @@ h1{
 }
 
 .codeblock {
- font-family: "Courier New";
+ font-family: system-ui;
  background-color: #f2f2f2;
  padding: 10px;
 
