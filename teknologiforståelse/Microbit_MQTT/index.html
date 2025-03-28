@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro:bit</title>
+    
+    <!-- Link to google font--> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <!-- link to style.css --> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/terminal.css">
+
+</head>
+<body onload="runOnLoad(); showChapterHeaders(); setChecked();">
+  <div class="content-wrapper">
+
+  <header>
+    <div class="nav">
+      <a href="index.html" title="Home directory">
+        /home
+      </a>
+      <a target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
+        /contact
+      </a>  
+    </div>
+    
+     <a class="svglink" target="_blank" href="https://facebook.com" title="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.258,4.458c0-0.144,0.02-0.455,0.06-0.931c0.043-0.477,0.223-0.976,0.546-1.5c0.32-0.522,0.839-0.991,1.561-1.406 C11.144,0.208,12.183,0,13.539,0h3.82v4.163h-2.797c-0.277,0-0.535,0.104-0.768,0.309c-0.231,0.205-0.35,0.4-0.35,0.581v2.59h3.914 c-0.041,0.507-0.086,1-0.138,1.476l-0.155,1.258c-0.062,0.425-0.125,0.819-0.187,1.182h-3.462v11.542H8.258V11.558H5.742V7.643 h2.516V4.458z"/>
+        </svg>
+      </a>
+      
+    <a class="svglink" target="_blank" href="https://Github.com" title="Github">
+      <svg viewBox="71 71 370 370">
+        <path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/>
+      </svg>
+    </a>
+    
+    <a class="svglink" target="_blank" href="https://linkedin.com" title="LinkedIn">
+      <svg viewBox="71 71 370 370">
+        <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/>
+      </svg>
+    </a>
+  </header>
+  
+  
+  <div class="main-content-container">
+    <div class="intro-header">
+      <div id="__chapter" class="__chapter_menu_container">
+      </div>
+     
+        
+      <div class="contact"> 
+        <p>Forfatter: A. H. Johansen</p>
+        
+        <a class="svglink" target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
+          <svg viewBox="71 71 370 370">
+            <path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ########################MAIN CONTENT###################################-->
+    <!-- ########################MAIN CONTENT###################################-->
+    <!-- ########################MAIN CONTENT###################################-->
+
+    <div class="main-content-menu">
+        <div class="main-content-right-wrapper">
+            <div id="nav" class="main-content-right">
+            <ul class="top">
+                <li class="menu_side active">Indhold</li>
+                <li class="menu_side">Resourcer</li>
+                <li class="menu_side">Til læreren</li>
+                <li class="menu_side">Fælles Mål</li>
+            </ul>
+
+
+            <div class="menu_text main-menu-content-text" style="display: flex; flex-direction: column" alt="Kapiteler">
+                <div id="chapter-headers-container">
+                <!-- gets content from script: showChapterHeaders() which is loaded onload of the body-->
+
+                </div>
+            </div>      
+
+
+            <!-- #### MENU RESOURCER -->
+            <div id="download" class="menu_text main-menu-content-text">
+                <h2>Downloads</h2>
+                <div class="download-wrapper">
+              
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="uploads/plant_irrigation_system_v1.hex" download>
+                    <button class="download-file">
+                      <img src="images/icon_makecode.png" style="width:22px;">
+                      <span class="file-name">Plant Irrigation System V1</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="uploads/plant_irrigation_system_v2.hex" download>
+                    <button class="download-file">
+                      <img src="images/icon_makecode.png" style="width:22px;">
+                      <span class="file-name">Plant Irrigation System V2</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="uploads/plant_irrigation_system_v4.hex" download>
+                    <button class="download-file">
+                      <img src="images/icon_makecode.png" style="width:22px;">
+                      <span class="file-name">Plant Irrigation System V4</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="livestream.html" download>
+                  <button class="download-file">
+                      <img src="images/icon_html.png" style="width:22px;">
+                      <span class="file-name">Livestream webpage</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+                
+
+            <!-- #### TIL LÆREREN ####-->
+            <div id="til-læreren" class="menu_text main-menu-content-text">
+              <h2>Til læreren</h2>
+              <h4 style="margin-bottom:5px;">Om forløbet</h4>
+              <p>I dette forløb skal I bruge Micro:bit til at måle fugtigheden i plantejord og sende data trådløst ved hjælp af MQTT-protokollen. Fugtighedsdataene bliver sendt til en MQTT Broker og vist live i en webbrowser via en WebSocket-forbindelse. I vil arbejde med både hardware og software, eksperimentere med sensorer og netværksteknologier og opleve, hvordan IoT (Internet of Things) kan bruges til at overvåge og optimere pleje af planter.</p>              
+              <h4>Lærervejledning til kapitler</h4>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
+                <div class="collapsible-content">
+                    <h3>Teknologier</h3>
+                    <section>
+                      <h4>Hardware</h4>
+                      <ul>
+                        <li>Micro:bit</li>
+                        <li>WiFi modul til Micro:bit<br>
+                          Dette kunne f.eks. være et kit fra ELECFREAKS eller REKA:BIT med Micro:bit v2 (med Wifi) eller Micro:bit v1 sammen med Grove WiFi 8266.
+                          </li>
+                        <li>ELECFREAKS IOT:bit (Internet WiFi Extension Board for micro:bit) eller lignende.</li>
+                        <li>Fugtighedssensorer til Micro:bit.<br>
+                          Eks: Analog Capacitive
+                        </li>
+                      </ul>
+
+                      <h4>Software</h4>
+                      <ul>
+                        <li>MQTT (Message Queue Telemetry Transport)</li>
+                        <li>Websockets (Webbrowser)</li>
+                        <li>Makecode.microbit.org (<a href="https://makecode.microbit.org/" target="_blank">link</a>)</li>
+                        <li>Mulighed for at tilkoble til et WiFi (det er ikke nødvendigt med internetadgang, enhederne skal blot have WiFi forbindelse mellem hinanden)</li>
+                        
+                      </ul>
+                    </section>
+                </div>
+              </div>          
+            </div>
+
+            <div id="fælles-mål" class="menu_text main-menu-content-text" ><h2>Fælles Mål</h2>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
+                <div class="collapsible-content">
+                  <div class="faelles-maal-container">
+                    <div class="faelles-mael-niveau">Engelsk 8. - 9. klasse</div>
+                    <h3>Færdigheds- og vidensmål</h3>
+                    <div class="vidensmaal">
+                      <p>Kultur og samfund, Tekst og medier (fase 1)</p>
+                      <p>Eleven kan producere multimodale teksttyper på engelsk. / Eleven har viden om struktur og funktion i multimodale medier.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+
+  <article>
+    <section class="content borderline">
+      <h1 id="studietur">Micro:bit & MQTT</h1 >
+      <p>Mål fugtigheden i jorden, send data trådløst og lav et program, der viser målingerne live på en skærm.</p>
+    
+      <div class="hBvBcu">
+        <div data-testid="lesson_duration" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>CLOCK</title><path d="M24.5 24.5H35v3H21.5V11h3v13.5zm18-.5c0-10.217-8.282-18.5-18.5-18.5S5.5 13.783 5.5 24 13.782 42.5 24 42.5 42.5 34.217 42.5 24zm3 0c0 11.874-9.626 21.5-21.5 21.5S2.5 35.874 2.5 24 12.126 2.5 24 2.5 45.5 12.126 45.5 24z"></path></svg>
+          ca. 6 lek.</div> 
+        <div data-testid="lesson_level" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>BRICK</title><path d="M15.575 10.229l-4.22 1.738 12.481 5.14 12.482-5.14-4.22-1.738v.359c0 2.581-3.732 3.914-8.262 3.914s-8.261-1.333-8.261-3.914v-.36zm16.522-3.96v.715l9.66 3.979v27.605l-17.92 7.38-17.921-7.38V10.963l9.659-3.979v-.743c0-2.582 3.73-3.915 8.261-3.915 4.53 0 8.262 1.333 8.262 3.915v.028zm-3 3.122c-1.433.507-3.27.765-5.26.765-1.992 0-3.829-.258-5.262-.766v.992c.186.157.525.336.985.5 1.087.388 2.622.62 4.276.62 1.655 0 3.19-.232 4.276-.62.46-.164.799-.343.985-.5V9.39zm-3.76 32.694l13.42-5.526V14.207l-13.42 5.526v22.352zm-3 0V19.733L8.915 14.207V36.56l13.42 5.525zm5.776-36.139c-1.087-.388-2.622-.62-4.277-.62-1.655 0-3.19.232-4.276.62a4.732 4.732 0 0 0-.674.295c.18.098.406.2.674.295 1.086.388 2.621.62 4.276.62 1.655 0 3.19-.232 4.277-.62.267-.096.494-.197.674-.295-.18-.099-.407-.2-.674-.295z"></path></svg>
+          Ekspert</div>
+        <div data-testid="lesson_grade" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>GRADUATE</title><path d="M9.917 22.292l-6.715-4.666c-.977-.621-.937-2.107.135-2.64l20.48-10.548.687.354 19.742 10.17c1.122.51 1.178 2.033.236 2.63l-1.805 1.255v11.278h-3V20.93l-1.96 1.362v14.332l-.3.4c-.571.762-1.675 1.821-3.359 2.857-2.75 1.693-6.16 2.703-10.241 2.703-4.082 0-7.491-1.01-10.241-2.703-1.684-1.036-2.788-2.095-3.36-2.857l-.3-.4V22.292zm3 2.085v11.186c.073.076.158.161.255.255.531.51 1.188 1.025 1.976 1.51 2.288 1.407 5.156 2.257 8.669 2.257 3.513 0 6.381-.85 8.669-2.258.788-.484 1.445-1 1.976-1.51.097-.093.183-.178.256-.254V24.378l-10.9 7.574-.856-.595-10.045-6.98zm10.9 3.921L40.75 16.534 23.817 7.812 6.885 16.534l16.932 11.764zM42.94 17.661a1.42 1.42 0 0 1-.13-.066l.13.066zm-.118-2.565l-.102.07c.033-.024.067-.048.102-.07z"></path></svg>
+          7.-9. klasse</div>
+      </div>
+    </section>   
+    
+    <section class="content">
+      <img src="images/microbit_mqtt_setup.png" alt="Rooter" width=100%>
+      <h2>Design, programmere og skab.</h2>
+      <p>I dette forløb skal I bruge Micro:bit til at måle fugtigheden i plantejord og sende data trådløst ved hjælp af MQTT-protokollen. Fugtighedsdataene bliver sendt til en MQTT Broker og vist live i en webbrowser via en WebSocket-forbindelse. I vil arbejde med både hardware og software, eksperimentere med sensorer og netværksteknologier og opleve, hvordan IoT (Internet of Things) kan bruges til at overvåge og optimere pleje af planter.</p>    
+    </section>
+  </article>
+
+  <section class="content">
+    <div id="Introduktion" class="__chapter_menu_container">
+      <h2>1. Introduktion</h2>      
+    </div>
+
+  </section>
+
+  <section class="content new-chapter">
+    <div id="Opsætning" class="__chapter_menu_container">
+      <h2>2. Opsætning</h2>
+    </div>
+    <section>
+      <div id="Opsætning_mqtt" class="__chapter_menu_subheader_1">
+        <h3>Opsætningaf MQTT Broker</h3>
+      </div>
+      <p>MQTT (<i>Message Queuing Telemetry Transport</i>) er en letvægts-protocol der benyttes af ”Internet of Things” (IoT).</p>
+      <p>En MQTT broker fungerer som mellemmand, der forbinder MQTT clients og giver dem mulighed for at kommunikerer. Dette gør de ved at publicerer (publish) eller abonnerer (subscribe) på et <i>topic</i>.</p>
+      <p>Der findes en del forskellige broker-software, både online i skyen og lokalt. For at minimere det data vi sender ud på internettet, og gøre det muligt at arbejde med ”ikke internet forbundet netværk”, opsætter vi en lokal MQTT broker (Mosquitto). </p>
+    </section> 
+
+    <section>
+      <div id="Opsætning_mosquitto" class="__chapter_menu_subheader_1">
+        <h3>Installation af Mosquitto på en Raspberry Pi</h3>
+      </div>
+      <p>Efter opsætningen og klargøreingen af Raspberry Pi’en, skal vi installere og opsætte vores MQTT Broker software.</p>
+      <p>Log ind på RPi’en - enten med SSH eller tilslut skræm, tastatur og mus. Jeg vælger at bruge SSH til at logge ind og arbejde med RPi’en igennem en terminal.</p>
+
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">C:\Users\user></span>
+          <span class="title"></span>
+        </div>
+        <pre><code>ssh pi@192.168.0.79</raspberry_ip></code></pre>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">Output</span>
+          <span class="title"></span>
+        </div>
+        <pre><code>ssh pi@192.168.0.79
+The authenticity of host '192.168.0.79 (192.168.0.79)' can't be established.
+ED25519 key fingerprint is SHA256:Y/chRQ2iJ5N1zoMdlNenKnwLL1FvOq3aCMgTVZrhHak.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.0.79' (ED25519) to the list of known hosts.
+pi@192.168.0.79's password:
+Linux raspberry 5.10.0-15-amd64 #1 SMP Debian 5.10.120-1 (2022-06-09) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue Mar 25 20:20:58 2025
+<span class=rpi>
+
+</code></pre>
+      </div>
+
+
+      <p>Herefter bliver jeg promptet for loginkoden for <i>pi</i> brugeren.</p>
+      <p>Indtast koden og tryk på <i>Enter:</i></p>
+      <p>Opdater RPi'en og installerer Mosquitto</p>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">sudo apt update && sudo apt install mosquitto -y</code></pre>
+      </div>
+
+      <p>Vi har nu installeret Mosquitto, som skal fungere som vores MQTT Broker.</p>
+      <p>Som standard opsætter RPi’en mosquitto som en service. Det betyder at den vil starte mosquitto automatisk når RPi’en startes. Vi kan kontroller, at vores opsætning har virket ved at skrive følgende kommando:</p>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">systemctl status mosquitto</code></pre>
+      </div>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="terminal-title-output">Output</span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">systemctl status mosquitto
+  ● mosquitto.service - Mosquitto MQTT Broker
+        Loaded: loaded (/lib/systemd/system/mosquitto.service; enabled; vendor preset: enabled)
+        Active: active (running) since Tue 2025-03-25 21:19:02 CET; 19s ago
+          Docs: man:mosquitto.conf(5)
+                man:mosquitto(8)
+      Process: 2367 ExecStartPre=/bin/mkdir -m 740 -p /var/log/mosquitto (code=exited, status=0/SUCCESS)
+      Process: 2368 ExecStartPre=/bin/chown mosquitto /var/log/mosquitto (code=exited, status=0/SUCCESS)
+      Process: 2369 ExecStartPre=/bin/mkdir -m 740 -p /run/mosquitto (code=exited, status=0/SUCCESS)
+      Process: 2370 ExecStartPre=/bin/chown mosquitto /run/mosquitto (code=exited, status=0/SUCCESS)
+      Main PID: 2371 (mosquitto)
+        Tasks: 1 (limit: 4609)
+        Memory: 1.0M
+          CPU: 21ms
+        CGroup: /system.slice/mosquitto.service
+                └─2371 /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
+  
+  Mar 25 21:19:01 raspberry systemd[1]: Starting Mosquitto MQTT Broker...
+  Mar 25 21:19:02 raspberry systemd[1]: Started Mosquitto MQTT Broker.
+<span class=rpi>
+
+</code></pre>
+      </div>
+
+      <p>Her kan vi bl.a. se, at den loader konfigurationer fra følgende mappe:</p>
+      <div class="terminal-display">
+        <pre><code>/etc/mosquitto/conf.d</code></pre>
+      </div>
+
+      <p>Vi opretter en <i>.conf</i> fil som Mosquitto vil indlæse og opsætte de korrekte porte og adgang til vores Broker. 
+        Vi vil både benytte os af en standard mqtt protokol, men vi vil også gøre brug af mqtt sammen med en browser. 
+        For at gøre det, kan vi benytte os af en websocket, så vi kan læse live data på vores web browser.</p>
+
+        <p>I skriver vores <i>.conf</i> fil således:</p>
+
+        <div class="terminal linux">
+          <div class="terminal-header-linux">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title"></span>
+            <span class="title">ssh</span>
+          </div>
+          <pre><code class="rpi">sudo nano /etc/mosquitto/conf.d/websock.conf</code></pre>
+        </div>
+        
+        <div class="info">
+          <p>OBS: Det er vigtigt, at vi gemmer .conf filen i den rigtige lokation, da det er denne lokation som Mosquitto benytter. </p>
+        </div>
+        
+        <div class="nano-terminal">
+          <div class="nano-header">
+              <span>GNU nano 6.2</span> <span class="file-path">conf.d/websock.conf</span> <span> </span> <span></span>
+          </div>
+          <div class="nano-content">
+listener 1883 0.0.0.0
+listener 9001 0.0.0.0
+protocol websockets
+allow_anonymous true
+          </div>
+          <div class="nano-footer">
+            <div class="nano-status"><p>[ Read 4 lines ]</p></div>
+              <div class="nano-help">
+                  <span>^G Help</span> <span>^O Write Out</span> <span>^W Where Is</span> 
+                  <span>^K Cut</span> <span>^T Execute</span> <span>^C Location</span> <span>M-U Undo</span>
+              </div>
+              <div class="nano-help">
+                  <span>^X Exit</span> <span>^R Read File</span> <span>^\ Replace</span> 
+                  <span>^U Paste</span> <span>^J Justify</span> <span>^/ Go To Line</span> <span>M-E Redo</span>
+              </div>
+            </div>
+          </div>
+
+      <p>Gem med CTRL+O herefter Enter.</p>
+      <p>Exit nano med CTRL+X</p>
+      <p>Nu er vores konfigurationsfil skrevet. Vi genstarte nu Mosquitto og efterfølgende kan vi se om vores config fil bliver indlæst korrekt.</p>
+      
+
+      <p>Genstart mosquitto servicen:</p>
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">sudo systemctl restart mosquitto</code></pre>
+      </div>
+
+      <p>Kontrollerer status for mosquitto servicen:</p>
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">systemctl status mosquitto</code></pre>
+      </div>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="terminal-title-output">Output</span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">systemctl status mosquitto
+  ● mosquitto.service - Mosquitto MQTT Broker
+          Loaded: loaded (/lib/systemd/system/mosquitto.service; enabled; vendor preset: enabled)
+          Active: <span style="color:rgb(11, 128, 0);">active (running)</span> since Tue 2025-03-25 23:49:26 CET; 7min ago
+            Docs: man:mosquitto.conf(5)
+                  man:mosquitto(8)
+         Process: 933 ExecStartPre=/bin/mkdir -m 740 -p /var/log/mosquitto (code=exited, status=0/SUCCESS)
+         Process: 934 ExecStartPre=/bin/chown mosquitto /var/log/mosquitto (code=exited, status=0/SUCCESS)
+         Process: 935 ExecStartPre=/bin/mkdir -m 740 -p /run/mosquitto (code=exited, status=0/SUCCESS)
+         Process: 936 ExecStartPre=/bin/chown mosquitto /run/mosquitto (code=exited, status=0/SUCCESS)
+        Main PID: 937 (mosquitto)
+           Tasks: 1 (limit: 9108)
+          Memory: 1.9M
+          CGroup: /system.slice/mosquitto.service
+                  └─937 /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
+     
+     Mar 25 23:49:26 raspberry systemd[1]: Starting Mosquitto MQTT Broker...
+     <span style="background-color: rgba(255, 0, 0, 0.815);">Mar 25 23:49:26 raspberry mosquitto[937]: 1742942966: Loading config file /etc/mosquitto/conf.d/websock.conf</span>
+     Mar 25 23:49:26 raspberry systemd[1]: Started Mosquitto MQTT Broker.
+    
+<span class=rpi>
+
+</code></pre>
+      </div>
+      <p>På anden sidste linje kan vi se, at vores <i>websock.conf</i> fil bliver loaded korrekt.</p>
+    </section> 
+  </section>
+
+  <section>
+    <section>
+      <div id="Opsætning_find_ip" class="__chapter_menu_subheader_1">
+        <h3>Find IP addressen på MQTT Brokeren</h3>
+      </div>
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">hostname -i</code></pre>
+      </div>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="terminal-title-output">Output</span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">hostname -i
+192.168.0.79
+<span class=rpi>
+
+</code></pre>
+      </div>
+    </section> 
+    <p>IP addressen skal I notere jer, da I skal bruge den til at oprette forbindelse til MQTT Brokeren.</p>
+  </section>
+
+
+  <section>
+    <div id="Opsætning_mqttPUB" class="__chapter_menu_subheader_1">
+      <h3>MQTT publish & MQTT subscribe</h3>
+    </div> 
+    <section>
+      <p>Vi kan også benytte os af Mosquitto til at sende og modtage data fra en MQTT Broker.</p>
+      <p>Først skal vi dog installere Mosquitto clients:</p>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">sudo apt install mosquitto-clients -y</code></pre>
+      </div>
+
+      <p>Efterfølgende kan vi sende (publish) data med et <i>topic</i> og en meddelelse:</p>
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">mosquitto_pub -h 192.168.0.79 -t "topic/1" -m "Hello World"</code></pre>
+      </div>
+
+      <p>Vi kan også lytte (subscribe) til data på et <i>topic</i>:</p>
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code class="rpi">mosquitto_sub -h 192.168.0.79 -t "topic/1" </code></pre>
+      </div>
+    </section>
+  </section>
+
+
+  <section class="content new-chapter">
+    <div id="Micro_bit" class="__chapter_menu_container">
+      <h2>3. Micro:bit</h2>
+    </div>
+
+    <section class="content">
+      <img class="center-image" src="images/Elecf_iot_board.png" alt="Micro:bit Elecfreaks IoT image" width=50%>
+      <p>Vi skal nu arbejde med vores Micro:bit. Vores første opgave er at tilslutte Micro:bit’en et WiFi og derefter teste forbindelsen til MQTT Brokeren. </p>
+      <p>I denne guide har jeg valgt at benytte <a href="https://shop.elecfreaks.com/products/elecfreaks-micro-bit-smart-science-iot-kit-without-micro-bit-board" target="_blank">Elecfreaks IoT board</a>, som giver vores Micro:bit adgang til et esp8266 WiFi modul.</p>
+      <p>Vi benytter os a blok programmeringen på <a href="https://makecode.microbit.org/" target="_blank">makecode.microbit.org</a>.<br>
+      Hvis I ikke allerede har gjort det, så opret en bruger på makecode.microbit.org.</p>
+
+      <img src="images/makecode_main.png" alt="Makecode create image" width=100%>
+      <p>Tryk på <i>New Project</i> <img class="icon small" src="images/add_project.png">og giv dit projekt et navn. Eks. Plant irrigation system:</p>
+      <img class="center-image" src="images/makecode_create.png" alt="Makecode create" width=50%>
+    </section>
+
+    <section>
+      <div id="Micro_bit_mqtt" class="__chapter_menu_subheader_1">
+        <h3>Micro:bit Programmering</h3>
+      </div> 
+      
+      <p>Vi er nu i gang med vores projekt i Makeocode.</p>
+      <p>Først skal vi importere det bibliotek vi vil bruge til at arbejde med vores WiFi modul. Hvis vi bruger ELECFREAKS IoT kit, kan Ifølge guiden her:</p>
+      <img class="center-image" src="images/makecode_import.png" alt="Makecode import extentions image" width=26%>
+      <p>I søgefeltet, søg efter <i>iot</i>. Efterfølgende kan Vi vælge <i>iot-environment-kit</i></p>
+      <img class="center-image" src="images/makecode_search.png" alt="Makecode søg efter extentions image" width=100%>
+      <p>Importerer biblioteket ved at trykke på iot-environment-kit.</p>
+      <p>Vi vil nu have mulighed for at arbejde med ESP8266_IoT modulet, samt MQTT</p>
+      <img class="center-image" src="images/makecode_esp8266.png" alt="Makecode søg efter extentions image" width=80%>
+    </section>
+  </section>
+
+  <section class="content new-chapter">
+    <div id="Programmering_Microbit" class="__chapter_menu_container">
+      <h2>4. Programmering Version 1.0</h2>
+    </div>
+    <section>
+      <p>I denne version skal vi programmere vores Micro:bit og teste forbindelsen til vores MQTT broker.</p>
+    </section>
+
+    <section>
+      <div id="Programmering_Microbit_version1" class="__chapter_menu_subheader_1">
+        <h3>Programmering: Version1 - <span>MQTT tilslutning</span></h3>
+      </div>
+      <section>
+        <p>Micro:bits skal altid have en <i>on start</i> funktion og en <i>forever</i> funktion.<br>
+          Her bliver <i>on start”</i> kørt først, én enkelt gang, efterfulgt af <i>forever</i>, som bliver kørt gentagende gange indtil lykken brydes.</p>
+      </section>
+      <section>
+        <p>Vi er nu klar til at programmere vores Micro:bit.</p>
+        <p>Det første vi skal gøre er at sørge for, at vores micro:bit kan snakke sammen med vores esp8266 (WiFi modul). 
+          Det ger micro:bit’en (hvis vi bruger IoT boarded fra Elecfreaks) ved at sende data på P8 og modtage på P12. 
+          Omvendt modtager esp8266’en data på P8 og sender data på P12. Dette skal sættes til en baud rate på 115200 (hastigheden data sendes og læses med).</p>
+        <p>Under ESP8266_IoT modulet <img class="icon" src="images/icon_esp8266_iot.png" width=100px;> finder vi blokken hvor vi kan sætte vores RX til <i>P8</i>, TX til <i>P12</i> og Baud rate til <i>115200</i>:</p>
+
+        <img class="center-image" src="images/makecode_esp8266_RX_TX.png" alt="Makecode esp8266 RX TX" width=55%>
+        <p>Derefter skal vi tilslutte vores Micro:bit WiFi.<br>Benyt ESP8266_IoT modulet og udfyld <i>SSID</i> og <i>KEY</i> med navnet på WiFi og koden.</p>
+        <p>Nedenfor er et eksemple på en simpel <i>on start</i> der forbinder Micro:bit'en til WiFi med visuel feedback.</p>
+        <img class="center-image" src="images/makecode_wifi_v1.png" alt="Makecode esp8266 wifi connect image" width=80%>
+      </section>
+      <section>
+        <p>Hvis vores Micro:bit tilslutter sig WiFi uden fejl, kan vi nu forsøge at publicerer noget data på et <i>topic</i>.</p>
+        <p>Dette gør vi når vi trykker på <i>Button A</i>.</p>
+        <p><i>publish</i> funktionen findes under <img class="icon" src="images/icon_esp8266_iot.png" width=100px;> -> <img class="icon" src="images/icon_mqtt.png" width=100px;></p>
+        <img class="center-image" src="images/makecode_mqtt_pub_v1.png" alt="Makecode mqtt pub connect image" width=65%>
+
+        <p>Koden skulle gerne ligne følgende nu:</p>
+        <img class="center-image" src="images/microbit_mqtt_v1.png" alt="Micro:bit v1 image" width=100%>
+        <p>Overfør programmet til Micro:bit'en og test om den tilslutter sig WiFi.</p>
+        <p class="info">Husk at udfylde: 'your_ssid', 'your_pwd' og ændre broaker host til den noterede IP tidligere (Til MQTT Brokeren)</p>
+
+      </section>
+
+      <section>
+        <p>Som nævnt tidligere kan vi lytte (subscribe) på et <i>topic</i>.</p>
+      
+        <p>Vi kan benytte <i>Mosquitto Clients</i> til at lytte. Foreksempel kan vi lytte på det <i>topic</i> som vores Micro:bit sender på:</p>
+        <div class="terminal linux">
+          <div class="terminal-header-linux">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title"></span>
+            <span class="title">ssh</span>
+          </div>
+          <pre><code class="rpi">mosquitto_sub -h 192.168.0.79 -t "topic/1" </code></pre>
+        </div>
+      </section>
+    </section>
+
+
+    
+    <section>
+      <div id="Programmering_Microbit" class="__chapter_menu_container">
+        <h2>5. Programmering Version 2.0</h2>
+      </div>
+      <p>I version 2 skal forbinde vores sensor til vores Micro:bit og sende dataen til andre enheder.</p>
+      <div id="Programmering_Microbit_version2" class="__chapter_menu_subheader_1">
+        <h3>Programmering: Version2 - <span>Sensorinput</span></h3>
+      </div>
+      <p>Vi skal i denne del benytte os af en moisture sensoren og sende data til MQTT brokeren, som efterfølgende kan læses live på en Webbrowser. </p>
+      <img class="center-image" src="images/ElecfreaksIotBit.png" alt="Rooter" width=80%>
+      <p>Tilslut sensoren til <i>P1</i> som vist ovenfor.</p>
+      <p>Vi vil nu skrive en funktion til at måle fugtigheden. Funktionen kalder vi <i>get_moisture</i>. Da det er en analog sensor, skal vi bruge <i>analg read pin</i> til at læse sensores indput.</p>
+
+      <section>
+        <h3>Opret en funktion</h3>
+        <p>Design din egen funktion ved at trykke på <img class="icon" src="images/makecode_advanced.png" width=100px;> -> <img class="icon" src="images/makecode_functions.png" width=100px;></p>
+        <p>Tryk derefter på <i>Make a Function...</i></p>
+        <img class="center-image" src="images/makecode_get_moisture.png" alt="Makecode get_moisture() image" width=66%>
+        <p>Opret nu en variabel og kald den <i>moisture</i>. Dette gør du under <img class="icon" src="images/makecode_variables.png" width=100px;></p> 
+        <p>Tryk derefter <i>Make Variable</i> og kald variablen <i>moisture</i>.</p>
+        <img class="center-image" src="images/makecode_create_variable.png" alt="Makecode get_moisture() image" width=66%>
+
+        <p>Vi har nu en funktion og en variabel.</p>
+        <p>Lad <i>get_moisture()</i> gøre følgende:</p>
+        <ul>
+          <li>læs værdien fra P1 og gem i variablen <i>moisture</i></li>
+          <li>vent 100 ms</li>
+          <li>læs igen værdien fra P1 og adderer det med værdien i variablen </li>
+          <li>vent 100 ms</li>
+          <li>gentag, læs igen værdien fra P1 og adderer det med værdien i variablen</li>
+          <li>vi finder nu gennemsnittet af de læste værdier ved at dividere med 3 og gemmer gennemsnittet i variablen (overskriver variablen med gennemsnittet)</li>
+          <li>mapper den læste værdi (finder procent) af fugtigheden</li>
+          <li>afrund variablen</li>
+          <li>returnere variablen</li>
+        </ul>
+
+        <p>Forsøg selv at finde de korrekte blokke. Du skal bla. benytte modulerne:</p>
+        <p><img class="icon" src="images/icon_pins.png"><br>
+          <img class="icon" src="images/makecode_variables.png"><br>
+          <img class="icon" src="images/icon_math.png"><br>
+          <img class="icon" src="images/icon_basic.png"></p>
+
+
+        <p>Du skulle nu gerne have en funktion magen til den nedenfor:</p>
+        <img class="center-image" src="images/makecode_get_moisture_v2.png" alt="Makecode get_moisture() image" width=66%>
+        <p>Funktionen opdaterer variablen (<i>moisture</i>) men returnerer også <i>moisture</i>.</p>
+        <p>Den returnerede variabel kan vi nu bruge som det stykke data som vi sender til MQTT brokeren.</p>      
+
+        <p>Benyt nu funktionen til at sende den læste værdi til MQTT brokeren. Inden vi sender dataen er vi dog nød til at konvaterer det til <i>text</i>:</p>
+        <img class="center-image" src="images/makecode_button_a_v2.png" alt="Micro:bit v1 image" width=75%>
+
+        <p>Her skal du bla. benytte modulerne:</p>
+        <p><img class="icon" src="images/icon_text.png"><br>
+          <img class="icon" src="images/makecode_functions.png"><br>
+          <img class="icon" src="images/icon_esp8266_iot.png"></p>
+
+        <p>Koden skulle gerne ligne følgende nu:</p>
+        <img class="center-image" src="images/microbit_mqtt_v2.png" alt="Micro:bit v1 image" width=100%>
+
+      </section>
+
+      <section>
+        <div id="Programmering_Microbit_livestream" class="__chapter_menu_subheader_1">
+          <h3>Livestream - <span>MQTT over Websockets</span></h3>
+        </div>
+        <p>I kan nu prøve om I kan livestream data fra Micro:bit'en.</p>
+        <p>Under Resourser kan I finde <i>Livestream webpage</i>. Åben/download siden og tast IP'en til MQTT brokeren ind.<br>
+        Under <i>Test Field</i> skulle I gerne kunne se hilke <i>topic</i> og beskeder der bliver sendt til brokeren:</p>
+        <img class="center-image" src="images/livestream_hello_world.png" alt="Makecode mqtt pub connect image" width=100%>
+      </section>
+
+    </section>
+
+
+  </section>
+
+  
+
+  
+  <!-- FOOTER START --> 
+  <footer>
+    <a class="svglink" target="_blank" href="https://github.com/AleksHolland84">
+      <svg arole="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+        </path>
+      </svg>
+    </a>
+    <br><br>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </footer>
+  <!-- FOOTER END --> 
+  
+
+</div><!-- main-content-wrapper end-->
+</div>
+<script src='scripts/script.js'></script>
+<script src='scripts/menu.js'></script>
+</body>
+</html>

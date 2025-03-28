@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moisture Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/mqtt/dist/mqtt.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .moisture { font-size: 1.5em; margin-top: 20px; }
+        .error { color: red; }
+        #deviceList { margin-top: 20px; text-align: left; display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1>Live Moisture Level</h1>
+    <div id="sensors">
+        <p id="status" class="error">Connecting to MQTT...</p>
+    </div>
+
+    <h2>Device Mappings</h2>
+    <ul id="deviceList"></ul>  <!-- Shows device_name → sensor_id mappings -->
+
+    <script>
+        //const broker = 'ws://10.80.208.255:9001'; // Change if needed
+        //const broker = 'ws://192.168.0.118:9001'; // Docker
+        const broker = 'ws://10.80.208.142:9001' //docker work
+        //const broker = 'ws://192.168.0.53:9001' // RPi home
+
+        const moistureTopic = 'sensors/moisture/plant/#';  
+        const removeTopic = 'sensors/remove/#';  
+
+        const deviceMapping = {}; // Maps device_name → sensor_id
+
+        // Connect to MQTT Broker via WebSockets
+        const client = mqtt.connect(broker);
+
+        client.on('connect', function () {
+            console.log('Connected to MQTT broker via WebSockets');
+            document.getElementById('status').innerText = "Waiting for data...";
+            document.getElementById('status').classList.remove("error");
+
+            // Subscribe to topics
+            client.subscribe(moistureTopic);
+            client.subscribe(removeTopic);
+        });
+
+        client.on('message', function (topic, message) {
+            const msg = message.toString();
+            console.log(`Received on ${topic}: ${msg}`);
+
+            if (topic.startsWith('sensors/moisture/plant/')) {
+                handleMoistureData(topic, msg);
+            } else if (topic.startsWith('sensors/remove/')) {
+                handleDeviceRemoval(topic);
+            }
+        });
+
+        function handleMoistureData(topic, data) {
+            const topicParts = topic.split('/');  
+            if (topicParts.length < 5) return; // Ensure the topic is valid
+
+            const deviceName = topicParts[3]; // Extract device_name
+            const sensorId = topicParts[4];   // Extract sensor_id
+
+            // Update mapping with the latest sensor_id
+            deviceMapping[deviceName] = sensorId;
+
+            updatePlantDisplay(deviceName, sensorId, data);
+            updateDeviceList();
+            console.log(`${Math.floor(Date.now() /1000)} posted from ${sensorId}`)
+        }
+
+        function handleDeviceRemoval(topic) {
+            const deviceName = topic.split('/').pop(); // Extract device_name
+
+            if (deviceMapping[deviceName]) {
+                const sensorId = deviceMapping[deviceName];
+
+                // Remove from UI and mapping
+                removePlantDisplay(deviceName);
+                delete deviceMapping[deviceName];
+
+                console.log(`Removed device ${deviceName} with sensor ID ${sensorId}`);
+                updateDeviceList();
+            }
+        }
+
+        function updatePlantDisplay(deviceName, sensorId, data) {
+            let plantElement = document.getElementById(deviceName);
+            if (!plantElement) {
+                plantElement = document.createElement('p');
+                plantElement.id = deviceName;
+                plantElement.className = "moisture";
+                document.getElementById('sensors').appendChild(plantElement);
+            }
+
+            // Get current date and time
+            const now = new Date();
+            const formattedTime = now.toLocaleTimeString('en-DK', { hour24: false }).replace(/:/g, '.'); // hh.mm.ss
+            const formattedDate = now.toLocaleDateString('en-DK').replace(/\//g, '.'); // dd.mm.yyyy
+            console.log( `${deviceName} (ID: ${sensorId}): ${data} | ${formattedTime} ${formattedDate}`)
+
+
+            plantElement.innerText = `${deviceName} (ID: ${sensorId}): ${data}`;
+        }
+
+        function removePlantDisplay(deviceName) {
+            const element = document.getElementById(deviceName);
+            if (element) {
+                element.remove();
+                console.log(`Removed sensor display for: ${deviceName}`);
+            }
+        }
+
+        function updateDeviceList() {
+            const deviceList = document.getElementById('deviceList');
+            deviceList.innerHTML = '';  // Clear list
+
+            Object.keys(deviceMapping).forEach(deviceName => {
+                const sensorId = deviceMapping[deviceName];
+                const listItem = document.createElement('li');
+                listItem.innerText = `${deviceName} → ${sensorId}`;
+                deviceList.appendChild(listItem);
+            });
+        }
+
+        client.on('error', function (error) {
+            console.error('MQTT Error:', error);
+            document.getElementById('status').innerText = "Error connecting!";
+            document.getElementById('status').classList.add("error");
+        });
+    </script>
+</body>
+</html>
