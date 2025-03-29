@@ -117,6 +117,18 @@
 
                 <div class="download-chapter-container">
                   <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="uploads/plant_irrigation_system_v3.hex" download>
+                    <button class="download-file">
+                      <img src="images/icon_makecode.png" style="width:22px;">
+                      <span class="file-name">Plant Irrigation System V3</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
                   <a class="file" href="uploads/plant_irrigation_system_v4.hex" download>
                     <button class="download-file">
                       <img src="images/icon_makecode.png" style="width:22px;">
@@ -569,7 +581,7 @@ allow_anonymous true
   </section>
 
   <section class="content new-chapter">
-    <div id="Programmering_Microbit" class="__chapter_menu_container">
+    <div id="Programmering_v1" class="__chapter_menu_container">
       <h2>4. Programmering Version 1.0</h2>
     </div>
     <section>
@@ -577,7 +589,7 @@ allow_anonymous true
     </section>
 
     <section>
-      <div id="Programmering_Microbit_version1" class="__chapter_menu_subheader_1">
+      <div id="Programmering_v1_version1" class="__chapter_menu_subheader_1">
         <h3>Programmering: Version1 - <span>MQTT tilslutning</span></h3>
       </div>
       <section>
@@ -593,12 +605,20 @@ allow_anonymous true
 
         <img class="center-image" src="images/makecode_esp8266_RX_TX.png" alt="Makecode esp8266 RX TX" width=55%>
         <p>Derefter skal vi tilslutte vores Micro:bit WiFi.<br>Benyt ESP8266_IoT modulet og udfyld <i>SSID</i> og <i>KEY</i> med navnet på WiFi og koden.</p>
+       
+        <p>Jeg benytter <i>device name</i> som <i>clientID</i> da det er unikt for alle Micro:bits.</p>
+        <p>I finder <i>Device name</i> under: <i>Advanced</i> -> <i>Control</i> -> <i>... more</i></p>
+        <p><img class="icon" src="images/icon_advanced.png"><br>
+          <img class="icon" src="images/icon_Control.png"><br>
+          <img class="icon" src="images/icon_Control_more.png"></p>
+
         <p>Nedenfor er et eksemple på en simpel <i>on start</i> der forbinder Micro:bit'en til WiFi med visuel feedback.</p>
         <img class="center-image" src="images/makecode_wifi_v1.png" alt="Makecode esp8266 wifi connect image" width=80%>
+
       </section>
       <section>
         <p>Hvis vores Micro:bit tilslutter sig WiFi uden fejl, kan vi nu forsøge at publicerer noget data på et <i>topic</i>.</p>
-        <p>Dette gør vi når vi trykker på <i>Button A</i>.</p>
+        <p>Dette gør vi når vi trykker på <i>button A</i>.</p>
         <p><i>publish</i> funktionen findes under <img class="icon" src="images/icon_esp8266_iot.png" width=100px;> -> <img class="icon" src="images/icon_mqtt.png" width=100px;></p>
         <img class="center-image" src="images/makecode_mqtt_pub_v1.png" alt="Makecode mqtt pub connect image" width=65%>
 
@@ -629,21 +649,23 @@ allow_anonymous true
 
     
     <section>
-      <div id="Programmering_Microbit" class="__chapter_menu_container">
+      <div id="Programmering_v2" class="__chapter_menu_container">
         <h2>5. Programmering Version 2.0</h2>
       </div>
-      <p>I version 2 skal forbinde vores sensor til vores Micro:bit og sende dataen til andre enheder.</p>
-      <div id="Programmering_Microbit_version2" class="__chapter_menu_subheader_1">
+      <p>I version 2 skal vi forbinde vores sensor til vores Micro:bit og publicerer dataen til MQTT brokeren.</p>
+      <div id="Programmering_v2_version2" class="__chapter_menu_subheader_1">
         <h3>Programmering: Version2 - <span>Sensorinput</span></h3>
       </div>
-      <p>Vi skal i denne del benytte os af en moisture sensoren og sende data til MQTT brokeren, som efterfølgende kan læses live på en Webbrowser. </p>
+      <p>Vi skal i denne del benytte os af en fugtighedssensoren og sende data til MQTT brokeren, som efterfølgende kan læses live på en Webbrowser. </p>
       <img class="center-image" src="images/ElecfreaksIotBit.png" alt="Rooter" width=80%>
       <p>Tilslut sensoren til <i>P1</i> som vist ovenfor.</p>
       <p>Vi vil nu skrive en funktion til at måle fugtigheden. Funktionen kalder vi <i>get_moisture</i>. Da det er en analog sensor, skal vi bruge <i>analg read pin</i> til at læse sensores indput.</p>
 
       <section>
         <h3>Opret en funktion</h3>
-        <p>Design din egen funktion ved at trykke på <img class="icon" src="images/makecode_advanced.png" width=100px;> -> <img class="icon" src="images/makecode_functions.png" width=100px;></p>
+        <p>Design din egen funktion ved at trykke på <i>Advanced</i> -> <i>Functions.</i><p>
+          <p><img class="icon" src="images/icon_advanced.png"><br>
+            <img class="icon" src="images/icon_functions.png"><br></p>
         <p>Tryk derefter på <i>Make a Function...</i></p>
         <img class="center-image" src="images/makecode_get_moisture.png" alt="Makecode get_moisture() image" width=66%>
         <p>Opret nu en variabel og kald den <i>moisture</i>. Dette gør du under <img class="icon" src="images/makecode_variables.png" width=100px;></p> 
@@ -659,7 +681,7 @@ allow_anonymous true
           <li>vent 100 ms</li>
           <li>gentag, læs igen værdien fra P1 og adderer det med værdien i variablen</li>
           <li>vi finder nu gennemsnittet af de læste værdier ved at dividere med 3 og gemmer gennemsnittet i variablen (overskriver variablen med gennemsnittet)</li>
-          <li>mapper den læste værdi (finder procent) af fugtigheden</li>
+          <li>mappe den læste værdi (finder procent) af fugtigheden</li>
           <li>afrund variablen</li>
           <li>returnere variablen</li>
         </ul>
@@ -681,7 +703,7 @@ allow_anonymous true
 
         <p>Her skal du bla. benytte modulerne:</p>
         <p><img class="icon" src="images/icon_text.png"><br>
-          <img class="icon" src="images/makecode_functions.png"><br>
+          <img class="icon" src="images/icon_functions.png"><br>
           <img class="icon" src="images/icon_esp8266_iot.png"></p>
 
         <p>Koden skulle gerne ligne følgende nu:</p>
@@ -704,9 +726,113 @@ allow_anonymous true
 
   </section>
 
+  <section>
+    <div id="Programmering_v3" class="__chapter_menu_container">
+      <h2>6. Programmering Version 3.0</h2>
+    </div>
+    <p>I version 3 skal vi nu gøre vores Micro:bit program mere sofistikeret. <br>
+      Vi vil bl.a. sende data til MQTT brokeren hver minut, benytte Micro:bit’ens led-matrix til at vise fugtighedsniveauet og publicerer data på et særskilt topic: <br>
+      <i>sensors/moisture/plant/&lt;device_name&gt;/&lt;sensor_id&gt;</i>.</p>
+    <div id="Programmering_v3_version3" class="__chapter_menu_subheader_1">
+      <h3>Programmering: Version3 - <span>Visuel feedback</span></h3>
+    </div>
+    <img class="center-image" src="images/ElecfreaksIotBit_led_matrix.png" alt="Rooter" width=80%>
+
+  </section>
+  <section>
+    <p>Vi skal gøre følgende:</p>
+    <ul>
+      <li>oprette to nye variabeler: <i>sensor_id</i> og <i>topic</i></li>
+      <li>opdater <i>on start</i></li>
+      <li>designe en ny funktion: <i>drawDisplay</i></li>
+      <li>sende data hver 60000 ms</li>
+      <li>opdater <i>button A</i></li>
+    </ul>
+  </section>
+  <section class="content">
+    <h3>Opret <i>sensor_id</i> og <i>topic</i> variabler.</h3>
+    <p>Opret endnu en variabel og kald den <i>sensor_id</i>. Dette gør du, som tidligere vist, under <img class="icon" src="images/makecode_variables.png" width=100px;></p> 
+    <p>Tryk derefter <i>Make Variable</i> og kald variablen <i>sensor_id</i>.</p>
+    <p>Opret også en variabel ved navn <i>topic</i> - den skal vi bruge når vi sender data til MQTT brokeren.</p>
+
+    <p>Ændre <i>on start</i> så den sætter <i>sensor_id</i> variablen til <i>device name</i></p>
+    <img class="center-image" src="images/makecode_onstart_v3.png" alt="Makecode loop image" width="90%">
+
+  </section>
+  <section class="content">
+    <h3>Design <i>drawDisplay</i> funktion.</h3>
+    <p>Design <i>drawDisplay</i> funktion ved at trykke på <i>Advanced</i> -> <i>Functions.</i>.</p>
+      <p><img class="icon" src="images/icon_advanced.png"><br>
+        <img class="icon" src="images/icon_functions.png"><br></p>
+        <p>Tryk derefter på <i>Make a Function...</i></p>
+        <p>Denne funktion skal tage et <i>argument</i>. Tryk på <i>Number</i> som tilføjer en parameter af typen tal. Argumentet kalder vi for <i>moisture</i>.</p>
+        <p>Vi skal bruge dette argument for at bestemme hvordan Micro:bit'ens led-matrix skal lyse.</p>
+        <img class="center-image" src="images/makecode_drawDisplay.png" alt="Makecode drawDisplay() image" width=66%>
+        <p>Vi skal bruge følgende blokke i vores funktion:</p>
+          <img class="icon" src="images/makecode_variables.png"><br>
+          <img class="icon" src="images/icon_basic.png"><br>
+          <img class="icon" src="images/icon_functions.png"><br>
+          <img class="icon" src="images/icon_logic.png"></p>
+
+        <p class="info">OBS: Når du designer funktionen <i>drawDisplay</i> skal du ikke bruge vores oprettede variabel; <i class="_red">moisture</i> fra tidligere, men vores parameter, som vi valgte da vi oprettede funktionen.</p> 
+        <p>Træk <i>moisture</i> argumentet ned og test om argumentet er større end 95. Hvis <i>moisture</i> er større end 95, skal led-matrixet lyse helt op. Ellers tjekke om argumentet er større end 90 osv.</p>
+        <p>Funktionen kunne eks. se ud som vist herunder:</p>
+        <img class="center-image" src="images/makecode_drawDisplay_full.png" alt="Makecode drawDisplay() image" width=66%>
+
+  </section>
+
+  <section class="content">
+    <h3>Publiserer sensor data hver 60000 ms.</h3>
+    <p>Design <i>lykken</i> ved at trykke: <i>loops</i>.</p>
+    <p><img class="icon" src="images/icon_loops.png"></p>
+    <p>Find derefter lykken der siger  <i>every 500 ms</i></p>
+    <p>Ændre intervallet til <i>1 min</i></p>
+    <img class="center-image" src="images/makecode_loop_60000.png" alt="Makecode loop image" >
+
+    <p>I loopen skal vi bruge følgende blokke:</p>
+    <img class="icon" src="images/makecode_variables.png"><br>
+    <img class="icon" src="images/icon_basic.png"><br>
+    <img class="icon" src="images/icon_functions.png"><br>
+    <img class="icon" src="images/icon_logic.png"></p>
+
+    <p>Du skulle nu gerne have en loop magen til den nedenfor:</p>
+    <img class="center-image" src="images/makecode_loop_60000_wcontent.png" alt="Makecode get_moisture() image" width=100%>
+  </section>
+
+  <section class="contents">
+    <h3>Opdater <i>button A</i>.</h3>
+    <p>Vi vil nu opdater <i>button A</i> så den benytter vores nye <i>drawDisplay</i> funktion, og giver visuel feedback når Micro:bit'en har publiceret data til MQTT brokeren.</p>
+    <p>Her skal vi sætte variablen: <i>moisture</i> til den returnerede værdi fra vores <i>get_moisture</i> funktion.<br>
+     Efterfølgende skal vi sætte topic til: <i>sensors/moisture/plant/&lt;device_name&gt;/&lt;sensor_id&gt;</i>.</p>
+     <p></p>
+    <img class="center-image" src="images/makecode_button_a_v3.png" alt="Makecode Button A V3 image" width=100%>
+
+  </section>
+
+  <section class="content">
+    <p>Vi har nu designet version 3 af vores Mocro:bit kode. Den skulle nu være klar til at publicerer fugtighed i % til vores <i>livestream webpage</i>.</p>
+    <p>Åben <i>livestream'en</i> under <i>Resourcer</i> og tast IP'en ind til jeres MQTT broker.</p>
+    <p>Vent til Micro:bit'en selv publicerer, eller tryk på <i>button A</i> for at få den til at publicerer den målte fugtighed.</p>
+    <img class="center-image" src="images/livestream_hello_world.png" alt="Makecode mqtt pub connect image" width=100%>
+
+  </section>
   
 
-  
+  <section class="contet">
+    <div id="Programmering_v4" class="__chapter_menu_container">
+      <h2>7. Programmering Version 4.0</h2>
+    </div>
+    <p>Vi har nu forbedret vores Micro:bit over 3 iterationer og ved hver iteration gradvist forbedret funktionaliteten.</p>
+    <p>Prøv nu selv at forbedre Micro:bit'en. I kan bl.a. kigge på følgende:</p>
+    <ul>
+      <li>sæt <i>topic</i> variablen i <i>on start</i> i stedet for at sætte den hver minut eller når <i>button a</i> trykkes</li>
+      <li>kan vi evt. skifte <i>sensor_id</i> når der bliver publiceret på et bestemt topic? (eks. <i>sensors/settings/&lt;device_name&gt;/&lt;sensor_id&gt;)</i></li>
+      <li>tjekke WiFi forbindelse når <i>button b</i> trykkes</li>
+      <li>vise <i>device name</i> når Micro:bit'en rystes</li>
+      <li>calibrere mindste- og største værdi for sensor input. (<i>Afhængig af sensor, så kan værdierne ændre sig for mindste mulig og størst mulig modstand.)</i></li>
+    </ul>
+    <p>Brug evt. Makecode til at kigge på min version 4 (under <i>Resourcer</i>).</p>
+  </section>
   <!-- FOOTER START --> 
   <footer>
     <a class="svglink" target="_blank" href="https://github.com/AleksHolland84">
