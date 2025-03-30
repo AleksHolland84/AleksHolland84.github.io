@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/terminal.css">
 
 </head>
-<body onload="runOnLoad(); showChapterHeaders(); setChecked();">
+<body onload="runOnLoad(); showChapterHeaders();">
   <div class="content-wrapper">
 
   <header>
@@ -71,12 +71,11 @@
         <div class="main-content-right-wrapper">
             <div id="nav" class="main-content-right">
             <ul class="top">
-                <li class="menu_side active">Indhold</li>
+                <li class="menu_side">Indhold</li>
                 <li class="menu_side">Resourcer</li>
                 <li class="menu_side">Til læreren</li>
                 <li class="menu_side">Fælles Mål</li>
             </ul>
-
 
             <div class="menu_text main-menu-content-text" style="display: flex; flex-direction: column" alt="Kapiteler">
                 <div id="chapter-headers-container">
@@ -159,7 +158,7 @@
               <h2>Til læreren</h2>
               <h4 style="margin-bottom:5px;">Om forløbet</h4>
               <p>I dette forløb skal I bruge Micro:bit til at måle fugtigheden i plantejord og sende data trådløst ved hjælp af MQTT-protokollen. Fugtighedsdataene bliver sendt til en MQTT Broker og vist live i en webbrowser via en WebSocket-forbindelse. I vil arbejde med både hardware og software, eksperimentere med sensorer og netværksteknologier og opleve, hvordan IoT (Internet of Things) kan bruges til at overvåge og optimere pleje af planter.</p>              
-              <h4>Lærervejledning til kapitler</h4>
+              <h4>Lærervejledning til forløbet</h4>
               <div>
                 <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
                 <div class="collapsible-content">
@@ -194,12 +193,23 @@
               <div>
                 <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
                 <div class="collapsible-content">
+                  <h2>Teknologiforståelse</h2>
                   <div class="faelles-maal-container">
-                    <div class="faelles-mael-niveau">Engelsk 8. - 9. klasse</div>
-                    <h3>Færdigheds- og vidensmål</h3>
+                    <h3>Digital design og designprocesser</h3>
+                    <h4 class="faelles-mael-niveau">Konstruktion</h4>
+
                     <div class="vidensmaal">
-                      <p>Kultur og samfund, Tekst og medier (fase 1)</p>
-                      <p>Eleven kan producere multimodale teksttyper på engelsk. / Eleven har viden om struktur og funktion i multimodale medier.</p>
+                      <p>Eleven kan med digitale teknologier konstruere digitale artefakter, der manifesterer en ide i digitalt materiale</p>
+                      <p>Eleven har viden om konstruktion med digitale teknologier og om formgivning i digitale materialer ift. en ide</p>
+                    </div>
+                  </div>
+
+                  <div class="faelles-maal-container">
+                    <h3>Teknologisk handleevne</h3>
+                    <h4 class="faelles-mael-niveau">Programmering</h4>
+                    <div class="vidensmaal">
+                      <p>Eleven kan læse og forstå programmer skrevet i et tekstbaseret programmeringssprog samt anvende et sådant til systematisk modifikation og konstruktion af programmer ud fra en problemspecifikation</p>
+                      <p>Eleven har viden om metoder til at analysere og forudsige programmers opførsel samt teknikker til systematisk og trinvis udvikling af programmer</p>
                     </div>
                   </div>
                 </div>
@@ -218,7 +228,7 @@
 
   <article>
     <section class="content borderline">
-      <h1 id="studietur">Micro:bit & MQTT</h1 >
+      <h1 id="microbit">Micro:bit & MQTT</h1 >
       <p>Mål fugtigheden i jorden, send data trådløst og lav et program, der viser målingerne live på en skærm.</p>
     
       <div class="hBvBcu">
@@ -240,14 +250,14 @@
 
   <section class="content">
     <div id="Introduktion" class="__chapter_menu_container">
-      <h2>1. Introduktion</h2>      
+      <h2 class="menu-chapter-title chapter-title">Introduktion</h2>      
     </div>
 
   </section>
 
   <section class="content new-chapter">
     <div id="Opsætning" class="__chapter_menu_container">
-      <h2>2. Opsætning</h2>
+      <h2 class="menu-chapter-title chapter-title">Opsætning</h2>
     </div>
     <section>
       <div id="Opsætning_mqtt" class="__chapter_menu_subheader_1">
@@ -549,7 +559,7 @@ allow_anonymous true
 
   <section class="content new-chapter">
     <div id="Micro_bit" class="__chapter_menu_container">
-      <h2>3. Micro:bit</h2>
+      <h2 class="menu-chapter-title chapter-title">Micro:bit</h2>
     </div>
 
     <section class="content">
@@ -582,7 +592,7 @@ allow_anonymous true
 
   <section class="content new-chapter">
     <div id="Programmering_v1" class="__chapter_menu_container">
-      <h2>4. Programmering Version 1.0</h2>
+      <h2 class="menu-chapter-title chapter-title">Programmering Version 1.0</h2>
     </div>
     <section>
       <p>I denne version skal vi programmere vores Micro:bit og teste forbindelsen til vores MQTT broker.</p>
@@ -650,7 +660,7 @@ allow_anonymous true
     
     <section>
       <div id="Programmering_v2" class="__chapter_menu_container">
-        <h2>5. Programmering Version 2.0</h2>
+        <h2 class="menu-chapter-title chapter-title">Programmering Version 2.0</h2>
       </div>
       <p>I version 2 skal vi forbinde vores sensor til vores Micro:bit og publicerer dataen til MQTT brokeren.</p>
       <div id="Programmering_v2_version2" class="__chapter_menu_subheader_1">
@@ -728,7 +738,7 @@ allow_anonymous true
 
   <section>
     <div id="Programmering_v3" class="__chapter_menu_container">
-      <h2>6. Programmering Version 3.0</h2>
+      <h2 class="menu-chapter-title chapter-title">Programmering Version 3.0</h2>
     </div>
     <p>I version 3 skal vi nu gøre vores Micro:bit program mere sofistikeret. <br>
       Vi vil bl.a. sende data til MQTT brokeren hver minut, benytte Micro:bit’ens led-matrix til at vise fugtighedsniveauet og publicerer data på et særskilt topic: <br>
@@ -820,7 +830,7 @@ allow_anonymous true
 
   <section class="contet">
     <div id="Programmering_v4" class="__chapter_menu_container">
-      <h2>7. Programmering Version 4.0</h2>
+      <h2 class="menu-chapter-title chapter-title">Programmering Version 4.0</h2>
     </div>
     <p>Vi har nu forbedret vores Micro:bit over 3 iterationer og ved hver iteration gradvist forbedret funktionaliteten.</p>
     <p>Prøv nu selv at forbedre Micro:bit'en. I kan bl.a. kigge på følgende:</p>
