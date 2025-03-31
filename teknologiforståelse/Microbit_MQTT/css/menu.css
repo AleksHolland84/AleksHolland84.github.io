@@ -8,6 +8,9 @@
   
   .menu_text{
     margin-left: 20px;
+    margin-right:20px;
+    max-height: 80vh; /* Adjust to fit within the viewport */
+    overflow-y: auto; /* Enables scrolling inside */
   }
   .menu-chapter-number-style{
     margin: 0px;
@@ -109,16 +112,11 @@
     color:rgb(160, 160, 160);
   }
   
-  .fa{
-  margin-top: 15px;
-  float: right;
-  }
-  
   .main-content-menu{
     position: sticky; top:0;
     background-color:var(--menu-background-color);
     /*width: 100%;*/
-    z-index: 10;
+    z-index: 1000; /* Make sure it's above other elements */
   }
   
   .anchor {
