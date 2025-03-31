@@ -4,6 +4,7 @@
 
 
 body {
+  background-color: var(--background-color);
 
 
 }
@@ -68,7 +69,7 @@ header a:hover{
 }
 
 .nav a{
- color: black;
+ color: var(--font-color);
  text-decoration: none;
  font-family: monospace;
  font-weight: 400;
@@ -271,3 +272,9 @@ button {
       color: var(--menu-hover-color);
       font-weight: 400;
   }
+
+
+  .frame-container-center{
+    margin: auto;
+    
+}

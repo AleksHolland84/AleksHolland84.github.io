@@ -33,14 +33,13 @@ function showMenuContent() {
 
 
 // This part closes the submenue (with the class of menu_text) when the mouse leves the area.
-/*
 var menuSides = document.getElementsByClassName("menu_text");
 for (var i = 0; i < menuSides.length; i++) {
   menuSides[i].addEventListener("mouseleave", function () {
       underlineMenuItems.forEach(function (item) { return item.classList.remove("active"); });
       showMenuContent();
   });
-}*/
+}
 
 // The two functions below (getChapterTitle() & writeChaptreTitle()) gets the h2 chapters in the index file,
 // and adds chapter number in front - for automating "sorting" of new chapters or added content. 
