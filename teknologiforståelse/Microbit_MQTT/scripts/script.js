@@ -1,29 +1,36 @@
- function showMenuContent() {
-  var menues = document.getElementsByClassName("menu_text");
-  var side = document.getElementsByClassName("menu_side");
-  for (i = 0; i < menues.length; i++) {
-      menues[i].style.display = "none";
-  }
-  for (i = 0; i < side.length; i++) {
-      if (side[i].classList.contains("active")) {
-          menues[i].style.display = "block"
-      }
-  }
-
-}
-
-
-// Code By Webdevtrick ( https://webdevtrick.com )
 "use strict";
 var underlineMenuItems = document.querySelectorAll("ul.top li");
-//underlineMenuItems[0].classList.add("active"); // add active to class on first menu item
+
 underlineMenuItems.forEach(function (item) {
   item.addEventListener("click", function () {
-      underlineMenuItems.forEach(function (item) { return item.classList.remove("active"); });
+    if (item.classList.contains("active")) {
+      // If the clicked item is already active, remove the active class
+      item.classList.remove("active");
+      showMenuContent();
+    } else {
+      // Otherwise, remove active class from all and set the clicked one as active
+      underlineMenuItems.forEach(function (el) { el.classList.remove("active"); });
       item.classList.add("active");
-      showMenuContent()
+      showMenuContent();
+    }
   });
 });
+
+function showMenuContent() {
+  var menues = document.getElementsByClassName("menu_text");
+  var side = document.getElementsByClassName("menu_side");
+
+  for (let i = 0; i < menues.length; i++) {
+    menues[i].style.display = "none";
+  }
+
+  for (let i = 0; i < side.length; i++) {
+    if (side[i].classList.contains("active")) {
+      menues[i].style.display = "block";
+    }
+  }
+}
+
 
 // This part closes the submenue (with the class of menu_text) when the mouse leves the area.
 var menuSides = document.getElementsByClassName("menu_text");

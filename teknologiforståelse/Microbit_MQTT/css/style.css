@@ -14,7 +14,7 @@ body {
   font-family: "Kanit", serif;
   font-weight: 300;
   font-style: normal;
-  color: var(--font-color)
+  color: var(--font-color);
 }
 
 h1{
@@ -240,7 +240,7 @@ button {
 .top{
     display: flex;
     width: 720px;
-    min-width: 720px;
+    
  /*   border-bottom: 0.125rem solid grey; */
     margin-bottom:  30px;
 }
