@@ -1,3 +1,4 @@
+@import "colors.css";
 
 #chapter-headers-container a {
     text-decoration: none;
@@ -20,7 +21,7 @@
   }
   
   .collapsible {
-    background-color:  rgb(255, 255, 255);
+    background-color:  var(--menu-background-color);
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -81,7 +82,7 @@
   
   /* DOWNLOAD FILE*/
   .download-file {
-    background-color:  rgb(255, 255, 255);
+    background-color: var(--menu-background-color);
     cursor: pointer;
     padding: 2px;
     width: 100%;
@@ -115,7 +116,7 @@
   
   .main-content-menu{
     position: sticky; top:0;
-    background-color:rgb(255, 255, 255);
+    background-color:var(--menu-background-color);
     width: 100%;
     z-index: 10;
   }

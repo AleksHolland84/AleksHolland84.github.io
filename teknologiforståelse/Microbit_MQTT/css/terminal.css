@@ -105,7 +105,8 @@
     background-color: black;
     color: white;
     font-family: "Courier New", monospace;
-    width: 700px;
+    width: 90%;
+    max-width: 900px;
     border: 2px solid gray;
     border-radius: 5px;
     margin: 20px auto;
