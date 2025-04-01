@@ -121,6 +121,8 @@ header a:hover{
 .content .center-image{
   display: block;
   margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .new-chapter{
@@ -276,5 +278,8 @@ button {
 
   .frame-container-center{
     margin: auto;
-    
 }
+  .frame-container-center iframe{
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  }

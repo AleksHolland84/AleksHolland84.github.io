@@ -17,13 +17,6 @@
   .terminal.linux {
     background-color: rgb(29, 4, 24);
     color: #ffffff;
-    font-family: "Courier New", monospace;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 90%;
-    max-width: 700px;
-    margin: 20px auto;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   }
   
   /* Terminal Header */

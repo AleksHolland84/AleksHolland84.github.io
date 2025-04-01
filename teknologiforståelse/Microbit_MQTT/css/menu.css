@@ -7,8 +7,8 @@
   }
   
   .menu_text{
-    margin-left: 20px;
-    margin-right:20px;
+    padding: 20px;
+    padding-right:20px;
     max-height: 80vh; /* Adjust to fit within the viewport */
     overflow-y: auto; /* Enables scrolling inside */
   }
