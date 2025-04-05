@@ -272,6 +272,7 @@
       <p>Den nemmeste måde at komme i gang med Linux, er at benytte en Raspberry Pi. <br>
         Følg evt. <a style="font-weight: 600"href="https://www.raspberrypi.com/documentation/computers/getting-started.html">linket</a> her, for at lære hvordan du sætter en Raspberry Pi SBC (Single-board computer) op.
         </p>
+    </div>
 
   </section>
 
@@ -795,7 +796,7 @@ allow_anonymous true
       <p><img class="icon" src="images/icon_advanced.png"><br>
         <img class="icon" src="images/icon_functions.png"><br></p>
         <p>Tryk derefter på <i>Make a Function...</i></p>
-        <p>Denne funktion skal tage et <i>argument</i>. Tryk på <i>Number</i> som tilføjer en parameter af typen tal. Argumentet kalder vi for <i>moisture</i>.</p>
+        <p>Denne funktion skal tage et <i>argument</i>. Tryk på <i>Number</i> for at tilføje en parameter af typen tal. Parameteren kalder vi for <i>moisture</i>.</p>
         <p>Vi skal bruge dette argument for at bestemme hvordan Micro:bit'ens led-matrix skal lyse.</p>
         <img class="center-image" src="images/makecode_drawDisplay.png" alt="Makecode drawDisplay() image" width=66%>
         <p>Vi skal bruge følgende blokke i vores funktion:</p>
@@ -805,7 +806,7 @@ allow_anonymous true
           <img class="icon" src="images/icon_logic.png"></p>
 
         <p class="info">OBS: Når du designer funktionen <i>drawDisplay</i> skal du ikke bruge vores oprettede variabel; <i class="_red">moisture</i> fra tidligere, men vores parameter, som vi valgte da vi oprettede funktionen.</p> 
-        <p>Træk <i>moisture</i> argumentet ned og test om argumentet er større end 95. Hvis <i>moisture</i> er større end 95, skal led-matrixet lyse helt op. Ellers tjekke om argumentet er større end 90 osv.</p>
+        <p>Træk <i>moisture</i> parameteren ned, for test om argumentet er større end 95. Hvis <i>moisture</i> er større end 95, skal led-matrixet lyse helt op. Ellers tjekke om argumentet er større end 90 osv.</p>
         <p>Funktionen kunne eks. se ud som vist herunder:</p>
         <img class="center-image" src="images/makecode_drawDisplay_full.png" alt="Makecode drawDisplay() image" width=66%>
 
@@ -820,16 +821,17 @@ allow_anonymous true
     <img class="center-image" src="images/makecode_loop_60000.png" alt="Makecode loop image" >
 
     <p>I loopen skal vi bruge følgende blokke:</p>
-    <img class="icon" src="images/makecode_variables.png"><br>
-    <img class="icon" src="images/icon_basic.png"><br>
-    <img class="icon" src="images/icon_functions.png"><br>
-    <img class="icon" src="images/icon_logic.png"></p>
+      <img class="icon" src="images/makecode_variables.png"><br>
+      <img class="icon" src="images/icon_text.png"><br>
+      <img class="icon" src="images/icon_esp8266_iot.png"><br>
+      <img class="icon" src="images/icon_basic.png"><br>
+      <img class="icon" src="images/icon_functions.png">
 
     <p>Du skulle nu gerne have en loop magen til den nedenfor:</p>
     <img class="center-image" src="images/makecode_loop_60000_wcontent.png" alt="Makecode get_moisture() image" width=100%>
   </section>
 
-  <section class="contents">
+  <section class="content">
     <h3>Opdater <i>button A</i>.</h3>
     <p>Vi vil nu opdater <i>button A</i> så den benytter vores nye <i>drawDisplay</i> funktion, og giver visuel feedback når Micro:bit'en har publiceret data til MQTT brokeren.</p>
     <p>Her skal vi sætte variablen: <i>moisture</i> til den returnerede værdi fra vores <i>get_moisture</i> funktion.<br>

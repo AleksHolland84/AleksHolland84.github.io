@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro:bit Lite</title>
+    
+    <!-- Link to google font--> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <!-- link to style.css --> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/terminal.css">
+
+</head>
+<body onload="runOnLoad(); showChapterHeaders();">
+  <div class="content-wrapper">
+
+    <header>
+      <div class="nav">
+        <a href="index.html" title="Home directory">
+          /home
+        </a>
+        <a target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
+          /contact
+        </a>  
+      </div>
+      
+      <a class="svglink" target="_blank" href="https://facebook.com" title="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.258,4.458c0-0.144,0.02-0.455,0.06-0.931c0.043-0.477,0.223-0.976,0.546-1.5c0.32-0.522,0.839-0.991,1.561-1.406 C11.144,0.208,12.183,0,13.539,0h3.82v4.163h-2.797c-0.277,0-0.535,0.104-0.768,0.309c-0.231,0.205-0.35,0.4-0.35,0.581v2.59h3.914 c-0.041,0.507-0.086,1-0.138,1.476l-0.155,1.258c-0.062,0.425-0.125,0.819-0.187,1.182h-3.462v11.542H8.258V11.558H5.742V7.643 h2.516V4.458z"/>
+          </svg>
+        </a>
+        
+      <a class="svglink" target="_blank" href="https://Github.com" title="Github">
+        <svg viewBox="71 71 370 370">
+          <path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/>
+        </svg>
+      </a>
+      
+      <a class="svglink" target="_blank" href="https://linkedin.com" title="LinkedIn">
+        <svg viewBox="71 71 370 370">
+          <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/>
+        </svg>
+      </a>
+    </header>
+  
+  
+    <div class="main-content-container">
+      <div class="intro-header">
+        <div id="__chapter" class="__chapter_menu_container">
+        </div>
+      
+          
+        <div class="contact"> 
+          <p>Forfatter: A. H. Johansen</p>
+          
+          <a class="svglink" target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
+            <svg viewBox="71 71 370 370">
+              <path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/>
+            </svg>
+          </a>
+        </div>
+        <p class="updated">03.04.2025</p>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- ########################MAIN CONTENT###################################-->
+    <!-- ########################MAIN CONTENT###################################-->
+    <!-- ########################MAIN CONTENT###################################-->
+  
+    <div class="main-content-menu">
+      <div class="content-wrapper">
+
+        <div class="main-content-right-wrapper">
+            <div id="nav" class="main-content-right">
+            <ul class="top">
+                <li class="menu_side">Indhold</li>
+                <li class="menu_side">Resourcer</li>
+                <li class="menu_side">Til læreren</li>
+                <li class="menu_side">Fælles Mål</li>
+            </ul>
+
+            <div class="menu_text main-menu-content-text" style="display: flex; flex-direction: column" alt="Kapiteler">
+                <div id="chapter-headers-container">
+                <!-- gets content from script: showChapterHeaders() which is loaded onload of the body-->
+
+                </div>
+            </div>      
+
+
+            <!-- #### MENU RESOURCER -->
+            <div id="download" class="menu_text main-menu-content-text">
+                <h2>Downloads</h2>
+                <div class="download-wrapper">
+                
+                <div class="download-chapter-container">
+                    <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                    <a class="file" href="uploads/plant_irrigation_system_lite.hex" download>
+                        <button class="download-file">
+                        <img src="images/icon_makecode.png" style="width:22px;">
+                        <span class="file-name">Plant Irrigation System Lite</span>
+                        <i class="fa fa-download"></i>
+                        <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                        </button>
+                    </a>
+                    </div>
+              
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="uploads/plant_irrigation_system_v1.hex" download>
+                    <button class="download-file">
+                      <img src="images/icon_makecode.png" style="width:22px;">
+                      <span class="file-name">Plant Irrigation System MQTT V1</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="uploads/plant_irrigation_system_v2.hex" download>
+                    <button class="download-file">
+                      <img src="images/icon_makecode.png" style="width:22px;">
+                      <span class="file-name">Plant Irrigation System MQTT V2</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="uploads/plant_irrigation_system_v3.hex" download>
+                    <button class="download-file">
+                      <img src="images/icon_makecode.png" style="width:22px;">
+                      <span class="file-name">Plant Irrigation System MQTT V3</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="uploads/plant_irrigation_system_v4.hex" download>
+                    <button class="download-file">
+                      <img src="images/icon_makecode.png" style="width:22px;">
+                      <span class="file-name">Plant Irrigation System V4</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="livestream.html" download>
+                  <button class="download-file">
+                      <img src="images/icon_html.png" style="width:22px;">
+                      <span class="file-name">Livestream webpage</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+                
+
+            <!-- #### TIL LÆREREN ####-->
+            <div id="til-læreren" class="menu_text main-menu-content-text">
+              <h2>Til læreren</h2>
+              <h4 style="margin-bottom:5px;">Om forløbet</h4>
+              <p>I dette forløb skal I bruge Micro:bit til at måle fugtigheden i plantejord og sende data trådløst ved hjælp af MQTT-protokollen. Fugtighedsdataene bliver sendt til en MQTT Broker og vist live i en webbrowser via en WebSocket-forbindelse. I vil arbejde med både hardware og software, eksperimentere med sensorer og netværksteknologier og opleve, hvordan IoT (Internet of Things) kan bruges til at overvåge og optimere pleje af planter.</p>              
+              <h4>Lærervejledning til forløbet</h4>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
+                <div class="collapsible-content">
+                    <h3>Teknologier</h3>
+                    <section>
+                      <h4>Hardware</h4>
+                      <ul>
+                        <li>Micro:bit</li>
+                        <li>WiFi modul til Micro:bit<br>
+                          Dette kunne f.eks. være et kit fra ELECFREAKS eller REKA:BIT med Micro:bit v2 (med Wifi) eller Micro:bit v1 sammen med Grove WiFi 8266.
+                          </li>
+                        <li>ELECFREAKS IOT:bit (Internet WiFi Extension Board for micro:bit) eller lignende.</li>
+                        <li>Fugtighedssensorer til Micro:bit.<br>
+                          Eks: Analog Capacitive
+                        </li>
+                      </ul>
+
+                      <h4>Software</h4>
+                      <ul>
+                        <li>MQTT (Message Queue Telemetry Transport)</li>
+                        <li>Websockets (Webbrowser)</li>
+                        <li>Makecode.microbit.org (<a href="https://makecode.microbit.org/" target="_blank">link</a>)</li>
+                        <li>Mulighed for at tilkoble til et WiFi (det er ikke nødvendigt med internetadgang, enhederne skal blot have WiFi forbindelse mellem hinanden)</li>
+                        
+                      </ul>
+                    </section>
+                </div>
+              </div>          
+            </div>
+
+            <div id="fælles-mål" class="menu_text main-menu-content-text" ><h2>Fælles Mål</h2>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
+                <div class="collapsible-content">
+                  <h2>Teknologiforståelse</h2>
+                  <div class="faelles-maal-container">
+                    <h3>Digital design og designprocesser</h3>
+                    <h4 class="faelles-mael-niveau">Konstruktion</h4>
+
+                    <div class="vidensmaal">
+                      <p>Eleven kan med digitale teknologier konstruere digitale artefakter, der manifesterer en ide i digitalt materiale</p>
+                      <p>Eleven har viden om konstruktion med digitale teknologier og om formgivning i digitale materialer ift. en ide</p>
+                    </div>
+                  </div>
+
+                  <div class="faelles-maal-container">
+                    <h3>Teknologisk handleevne</h3>
+                    <h4 class="faelles-mael-niveau">Programmering</h4>
+                    <div class="vidensmaal">
+                      <p>Eleven kan læse og forstå programmer skrevet i et tekstbaseret programmeringssprog samt anvende et sådant til systematisk modifikation og konstruktion af programmer ud fra en problemspecifikation</p>
+                      <p>Eleven har viden om metoder til at analysere og forudsige programmers opførsel samt teknikker til systematisk og trinvis udvikling af programmer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<div class="content-wrapper">
+
+  <article>
+    <section class="content borderline">
+      <h1 id="microbit">Micro:bit & Fugtighedssensor</h1 >
+      <p>Mål fugtigheden i jorden, vis fugtighedsniveauet og livestream dataen.</p>
+    
+      <div class="hBvBcu">
+        <div data-testid="lesson_duration" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>CLOCK</title><path d="M24.5 24.5H35v3H21.5V11h3v13.5zm18-.5c0-10.217-8.282-18.5-18.5-18.5S5.5 13.783 5.5 24 13.782 42.5 24 42.5 42.5 34.217 42.5 24zm3 0c0 11.874-9.626 21.5-21.5 21.5S2.5 35.874 2.5 24 12.126 2.5 24 2.5 45.5 12.126 45.5 24z"></path></svg>
+          ca. 3 - 4 lek.</div> 
+        <div data-testid="lesson_level" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>BRICK</title><path d="M15.575 10.229l-4.22 1.738 12.481 5.14 12.482-5.14-4.22-1.738v.359c0 2.581-3.732 3.914-8.262 3.914s-8.261-1.333-8.261-3.914v-.36zm16.522-3.96v.715l9.66 3.979v27.605l-17.92 7.38-17.921-7.38V10.963l9.659-3.979v-.743c0-2.582 3.73-3.915 8.261-3.915 4.53 0 8.262 1.333 8.262 3.915v.028zm-3 3.122c-1.433.507-3.27.765-5.26.765-1.992 0-3.829-.258-5.262-.766v.992c.186.157.525.336.985.5 1.087.388 2.622.62 4.276.62 1.655 0 3.19-.232 4.276-.62.46-.164.799-.343.985-.5V9.39zm-3.76 32.694l13.42-5.526V14.207l-13.42 5.526v22.352zm-3 0V19.733L8.915 14.207V36.56l13.42 5.525zm5.776-36.139c-1.087-.388-2.622-.62-4.277-.62-1.655 0-3.19.232-4.276.62a4.732 4.732 0 0 0-.674.295c.18.098.406.2.674.295 1.086.388 2.621.62 4.276.62 1.655 0 3.19-.232 4.277-.62.267-.096.494-.197.674-.295-.18-.099-.407-.2-.674-.295z"></path></svg>
+          Advanced / Øvet</div>
+        <div data-testid="lesson_grade" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>GRADUATE</title><path d="M9.917 22.292l-6.715-4.666c-.977-.621-.937-2.107.135-2.64l20.48-10.548.687.354 19.742 10.17c1.122.51 1.178 2.033.236 2.63l-1.805 1.255v11.278h-3V20.93l-1.96 1.362v14.332l-.3.4c-.571.762-1.675 1.821-3.359 2.857-2.75 1.693-6.16 2.703-10.241 2.703-4.082 0-7.491-1.01-10.241-2.703-1.684-1.036-2.788-2.095-3.36-2.857l-.3-.4V22.292zm3 2.085v11.186c.073.076.158.161.255.255.531.51 1.188 1.025 1.976 1.51 2.288 1.407 5.156 2.257 8.669 2.257 3.513 0 6.381-.85 8.669-2.258.788-.484 1.445-1 1.976-1.51.097-.093.183-.178.256-.254V24.378l-10.9 7.574-.856-.595-10.045-6.98zm10.9 3.921L40.75 16.534 23.817 7.812 6.885 16.534l16.932 11.764zM42.94 17.661a1.42 1.42 0 0 1-.13-.066l.13.066zm-.118-2.565l-.102.07c.033-.024.067-.048.102-.07z"></path></svg>
+          5.-7. klasse</div>
+      </div>
+    </section>   
+    
+    <section class="content">
+      <img src="images/microbit_mqtt_setup.png" alt="Rooter" width=100%>
+      <h2>Design, programmere og skab.</h2>
+      <p>I dette forløb skal I bruge Micro:bit til at måle fugtigheden i plantejord for derefter at vise målingen ved hjælp af Micro:bit’ens LED-matrix. Bagefter skal I forsøge at forbinde Micro:bit’en til WiFi, hvorefter I skal prøve at sende den målte fugtighed til en server ved hjælp af MQTT-protokollen. Fugtighedsdataene skal sendes til en MQTT Broker og derefter vises live i en webbrowser via en WebSocket-forbindelse (findes under Resourcer). 
+        Igennem forløbet skal I arbejde med både hardware og software, eksperimentere med sensorer og netværksteknologier og opleve, hvordan IoT (Internet of Things) kan bruges til at overvåge og optimere pleje af planter.
+        </p>    </section>
+  </article>
+
+  <section class="content">
+    <div id="Introduktion" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Introduktion</h2>      
+    </div>
+
+  </section>
+
+  <section class="content new-chapter">
+    <div id="Micro_bit" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Micro:bit</h2>
+    </div>
+
+    <section class="content">
+      <img class="center-image" src="images/Elecf_iot_board.png" alt="Micro:bit Elecfreaks IoT image" width=50%>
+      <p>Vi skal nu arbejde med vores Micro:bit og et <i>Expansion Board</i>. Jeg har valgt her at arbejde <a href="https://shop.elecfreaks.com/products/elecfreaks-micro-bit-smart-science-iot-kit-without-micro-bit-board" target="_blank">Elecfreaks IoT board</a>, som bl.a. giver vores Micro:bit adgang til et esp8266 WiFi modul.</p>
+      <p class="info">I denne udgave af forløbet, er det dog ikke nødvendigt med WiFi, derfor ville <a href="https://www.elecfreaks.com/learn-en/microbitKit/Tinker_Kit/index.html" target="_blank">Tinker Kit fra Elecfreaks</a>, eller tilsvarende, også være tilstrækelig.</p>
+      <p>Vi benytter os a blok programmeringen på <a href="https://makecode.microbit.org/" target="_blank">makecode.microbit.org</a>.<br>
+      Hvis I ikke allerede har gjort det, så opret en bruger på makecode.microbit.org.</p>
+
+      <img class="center-image" src="images/makecode_main.png" alt="Makecode create image" width=100%>
+      <p>Tryk på <i>New Project</i> <img class="icon small" src="images/add_project.png">og giv dit projekt et navn. Eks. Plant irrigation system:</p>
+      <img class="center-image" src="images/makecode_create.png" alt="Makecode create" width=50%>
+    </section>
+
+    <section>
+      <div id="Micro_bit_programmering" class="__chapter_menu_subheader_1">
+        <h3>Micro:bit Programmering - <span>get_moisture()</span></h3>
+      </div> 
+      
+      <p>Vi er nu i gang med vores projekt i Makeocode.</p>
+    </section>
+  </section>
+
+  <section class="content">
+    <p>Vi skal i denne del benytte os af en fugtighedssensoren og en Micro:bit og et udvidelseskort. Vi bruger her ELECFREAKS IOT:bit board (Internet WiFi Extension Board for micro:bit), som vist herunder:</p>
+    <img class="center-image" src="images/ElecfreaksIotBit.png" alt="Rooter" width=80%>
+    <p>Tilslut sensoren til <i>P1</i> som vist ovenfor.</p>
+    <p>Som det første, skriver vi en funktion til at måle fugtigheden. Funktionen kalder vi <i>get_moisture</i> da man anbefaler, at navngive funktioner logisk. Da det er en analog sensor, skal vi bruge <i>analg read pin</i> til at læse sensores indput.</p>
+
+    <section>
+      <h3>Design <i>get_moisture()</i></h3>
+      <p>Design din egen funktion ved at trykke på <i>Advanced</i> -> <i>Functions.</i><p>
+        <p><img class="icon" src="images/icon_advanced.png"><br>
+          <img class="icon" src="images/icon_functions.png"><br></p>
+      <p>Tryk derefter på <i>Make a Function...</i></p>
+      <img class="center-image" src="images/makecode_get_moisture.png" alt="Makecode get_moisture() image" width=66%>
+      <p>Vi har nu en funktion, som v skal "udfylde" med blokke.</p>
+      <p>Opret en variabel og kald den <i>moisture</i>. Dette gør du under <img class="icon" src="images/makecode_variables.png" width=100px;></p> 
+      <p>Tryk derefter <i>Make Variable</i> og kald variablen <i>moisture</i>.</p>
+      <img class="center-image" src="images/makecode_create_variable.png" alt="Makecode get_moisture() image" width=66%>
+
+      <p>Vi har nu en funktion og en variabel.</p>
+      <p>Lad <i>get_moisture()</i> gøre følgende:</p>
+      <ul>
+        <li>læs værdien fra P1 og gem i variablen <i>moisture</i></li>
+        <li>vent 100 ms</li>
+        <li>læs igen værdien fra P1 og adderer det med værdien i variablen </li>
+        <li>vent 100 ms</li>
+        <li>gentag, læs igen værdien fra P1 og adderer det med værdien i variablen</li>
+        <li>vi finder nu gennemsnittet af de læste værdier ved at dividere med 3 og gemmer gennemsnittet i variablen (overskriver variablen med gennemsnittet)</li>
+        <li>mappe den læste værdi (finder procent) af fugtigheden</li>
+        <li>afrund variablen</li>
+        <li>returnere variablen</li>
+      </ul>
+
+      <p>Forsøg selv at finde de korrekte blokke. Du skal bl.a. benytte modulerne:</p>
+      <p><img class="icon" src="images/icon_pins.png"><br>
+        <img class="icon" src="images/makecode_variables.png"><br>
+        <img class="icon" src="images/icon_math.png"><br>
+        <img class="icon" src="images/icon_basic.png"></p>
+
+
+      <p>Du skulle nu gerne have en funktion magen til den nedenfor:</p>
+      <img class="center-image" src="images/makecode_get_moisture_v2.png" alt="Makecode get_moisture() image" width=66%>
+      <p>Funktionen opdaterer variablen (<i>moisture</i>) men returnerer også <i>moisture</i>.</p>
+
+    </section>
+
+  </section>
+
+
+</section>
+
+<section>
+  <div id="Micro_bit_drawDisplay" class="__chapter_menu_subheader_1">
+    <h3>Micro:bit Programmering - <span>drawDisplay()</span></h3>
+  </div>
+  <p>Vi har nu en funktion der læser fugtigheden og returnerer værdien mellem 0 og 100. <br>
+    Vi skal nu designe endnu en funktion, der anvender <i>get_moisture()</i> funktionen og som derefter benytter Micro:bit’ens led-matrix til at illustrerer fugtighedsniveauet.</p>
+
+  <img class="center-image" src="images/ElecfreaksIotBit_led_matrix.png" alt="Rooter" width=80%>
+
+</section>
+<section>
+  <p>Vi skal gøre følgende:</p>
+  <ul>
+    <li>designe en ny funktion: <i>drawDisplay</i></li>
+    <li>sende data hver 60000 ms</li>
+    <li>design funktionen <i>button a</i></li>
+  </ul>
+</section>
+
+<section class="content">
+  <h3>Design <i>drawDisplay</i> funktion.</h3>
+  <p>Design <i>drawDisplay</i> funktion ved at trykke på <i>Advanced</i> -> <i>Functions.</i>.</p>
+    <p><img class="icon" src="images/icon_advanced.png"><br>
+      <img class="icon" src="images/icon_functions.png"><br></p>
+      <p>Tryk derefter på <i>Make a Function...</i></p>
+      <p>Denne funktion skal tage et <span class="info">argument</span>. Det betyder, at vi skal tilføje en <span class="info">parameter</span>, af en hvis <span Class="info">type</span> som vi kan anvende inde i selve funktionen. Tryk på <i>Number (type)</i> for at tilføje en parameter af typen tal. Parameteren kalder vi for <i>moisture</i>.</p>
+      <p>Vi skal bruge dette argument for at bestemme hvordan Micro:bit'ens led-matrix skal lyse.</p>
+      <img class="center-image" src="images/makecode_drawDisplay.png" alt="Makecode drawDisplay() image" width=66%>
+      <p>Vi skal bruge følgende blokke i vores funktion:</p>
+        <img class="icon" src="images/makecode_variables.png"><br>
+        <img class="icon" src="images/icon_basic.png"><br>
+        <img class="icon" src="images/icon_functions.png"><br>
+        <img class="icon" src="images/icon_logic.png"></p>
+
+      <p class="info">OBS: Når du designer funktionen <i>drawDisplay</i> skal du ikke bruge vores oprettede variabel; <i class="_red">moisture</i> fra tidligere, men vores parameter, som vi valgte da vi oprettede funktionen.</p> 
+      <p>Træk <i>moisture</i> parameteren ned, for at teste om argumentet er større end 95. Hvis <i>moisture</i> er større end 95, skal led-matrixet lyse helt op. Ellers tjekke om argumentet er større end 90 osv.</p>
+      <p>Funktionen kunne eks. se ud som vist herunder:</p>
+      <img class="center-image" src="images/makecode_drawDisplay_full.png" alt="Makecode drawDisplay() image" width=66%>
+
+</section>
+
+<section class="content">
+  <h3>Kald <i>drawDisplay()</i> og vis sensor data hver 60000 ms.</h3>
+  <p>Vi skal nu lave en loop/lykke der jævnligt kalder <i>get_moisture()</i> for at tjekke jordfugtigheden, for derefter at vise den procentvise fugtighed ved at kalde <i>drawDisplay()</i></p>
+  <p>Design <i>lykken</i> ved at trykke: <i>loops</i>.</p>
+  <p><img class="icon" src="images/icon_loops.png"></p>
+  <p>Find derefter lykken der siger  <i>every 500 ms</i></p>
+  <p>Ændre intervallet til <i>1 min</i></p>
+  <img class="center-image" src="images/makecode_loop_60000.png" alt="Makecode loop image" >
+
+  <p>I loopen skal vi bruge følgende blokke:</p>
+  <img class="icon" src="images/makecode_variables.png"><br>
+  <img class="icon" src="images/icon_basic.png"><br>
+  <img class="icon" src="images/icon_functions.png">
+
+  <p>Du skulle nu gerne have en loop magen til den nedenfor:</p>
+  <img class="center-image" src="images/makecode_loop_60000_lite.png" alt="Makecode get_moisture() image" >
+</section>
+
+<section class="content">
+  <h3>Design <i>button a</i>.</h3>
+  <p>Vi vil nu opdater <i>button A</i> så den benytter vores nye <i>drawDisplay</i> funktion, og giver visuel feedback når Micro:bit'en har læst sensorinput.</p>
+  <p>Her skal vi sætte variablen: <i>moisture</i> til den returnerede værdi fra vores <i>get_moisture</i> funktion.<br>
+  <img class="center-image" src="images/makecode_button_a_lite.png" alt="Makecode Button A V3 image">
+
+</section>
+
+
+  
+
+<section class="contet">
+    <div id="Programmering_forbedringer" class="__chapter_menu_container">
+        <h2 class="menu-chapter-title chapter-title">Programmerer forbedringer</h2>
+    </div>
+    <p>Vi har nu designet og programmeret en Micro:bit til at registrere jordfugtighed og give os et visuelt output.</p>
+    <p>Prøv nu selv at forbedre Micro:bit'en. I kan bl.a. kigge på følgende:</p>
+    <ul>
+        <li>calibrere mindste- og største værdi for sensor input. (<i>Afhængig af sensor, så kan værdierne ændre sig for mindste mulig og størst mulig modstand.)</i></li>
+    </ul>
+    <p>Brug evt. Makecode til at kigge på min version 1 - 4 (under <i>Resourcer</i>). Disse versioner benytter dog WiFi modulet til at sende live opdateringer af jordfugtigheden.</p>
+</section>
+
+
+  <!-- FOOTER START --> 
+  <footer>
+    <a class="svglink" target="_blank" href="https://github.com/AleksHolland84">
+      <svg arole="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+        </path>
+      </svg>
+    </a>
+    <br><br>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </footer>
+  <!-- FOOTER END --> 
+  
+
+</div><!-- main-content-wrapper end-->
+</div>
+<script src='scripts/script.js'></script>
+<script src='scripts/menu.js'></script>
+</body>
+</html>
