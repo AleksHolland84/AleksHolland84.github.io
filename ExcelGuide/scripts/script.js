@@ -29,12 +29,34 @@ function showMenuContent() {
 // Code By Webdevtrick ( https://webdevtrick.com )
 "use strict";
 var underlineMenuItems = document.querySelectorAll("ul.top li");
-underlineMenuItems[0].classList.add("active");
+
 underlineMenuItems.forEach(function (item) {
-  item.addEventListener("mouseover", function () {
-      underlineMenuItems.forEach(function (item) { return item.classList.remove("active"); });
+  item.addEventListener("click", function () {
+    if (item.classList.contains("active")) {
+      // If the clicked item is already active, remove the active class
+      item.classList.remove("active");
+      showMenuContent();
+    } else {
+      // Otherwise, remove active class from all and set the clicked one as active
+      underlineMenuItems.forEach(function (el) { el.classList.remove("active"); });
       item.classList.add("active");
-      showMenuContent()
+      showMenuContent();
+    }
+  });
+});
+
+underlineMenuItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    if (item.classList.contains("active")) {
+      // If the clicked item is already active, remove the active class
+      item.classList.remove("active");
+      showMenuContent();
+    } else {
+      // Otherwise, remove active class from all and set the clicked one as active
+      underlineMenuItems.forEach(function (el) { el.classList.remove("active"); });
+      item.classList.add("active");
+      showMenuContent();
+    }
   });
 });
 
