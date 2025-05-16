@@ -433,7 +433,7 @@
     </div>
     
     <div class="content">
-      <div id="std_eksempler" class="__chapter_menu_subheader_1">
+      <div id="std_eksempler_sqrt" class="__chapter_menu_subheader_1">
         <h3>Ekempler på brugen af <i>sqrt()</i></h3>
       </div> 
       <p>I WordMat kan man bl.a. beregne kvardratroden af et tal med <i>sqrt()</i></p>
@@ -442,10 +442,50 @@
         $$ { \text{sqrt(9)} } $$
       </div>
 
+      <div id="std_eksempler_definer" class="__chapter_menu_subheader_1">
+        <h3>Ekempler på brugen af <i>Definer</i></h3>
+      </div> 
+
       <p>Definer med <i>Definer</i></p>
       <div class="math">
         $$ { \text{Definer: x = 5} } $$
       </div>
+
+      <div id="std_eksempler_integral" class="__chapter_menu_subheader_1">
+        <h3>Ekempler på brugen af <i>intergral</i></h3>
+      </div> 
+
+      <p>Definer med <i>Definer</i></p>
+      <div class="math">
+        $$ { {f(x) :=-2x^2+2x+10} } $$
+        <p>Hvis vi beregner det ubestemte integral af <i>f(x)</i> (intergranden), får vi stamfunktionen: </p>
+        $$ { \int_{}^{}f(x)dx = - {2 \over 3} x^3 +x^2 + 10 x} $$
+      </div>
+
+      <div class="math">
+        <p>Vi kan også beregne arealet under graf ved bestemte integraler. Vores andengradsfunktion kunne se således ud:</p>
+        $$ { {f(x) :=-2x^2+2x+10} } $$
+        <p>Bestemte integraler bestemmer et tal mellem 2 punkter, fx a og b. Følgende formel finder det bestemte integral af funktionen <i>f(x)</i>:</p>
+        $$ { \int_{a}^{b}f(x)dx = [F(x)]_{a}^{b} = F(b) - F(a)} $$
+        <p>Vi kan fx finde arealet i <i>f(x)</i> mellem 2 og 5.</p>
+        $$ { \int_{2}^{5}f(x)dx = [F(x)]_{2}^{5} = F(5) - F(2)} $$
+        <p>Dette kunne vi lade WordMat regne ud ved at beregne:</p>
+        $$ { \int_{2}^{5}f(x)dx} $$
+        <p>Eks:</p>
+        $$ { \int_{2}^{5}f(x)dx = -27} $$
+        <p>Vi kan kontrollere og få en visuel repræsentation af vores resultat ved at bruge Geogebra:</p>
+
+
+
+      </div>
+      <div class="frame-container-center">
+        <figure>
+          <div>
+            <img width="100%" src="images/integral_1.png" alt="your alt description here">
+          </div>
+          <figcaption style="text-align:justify">Eksempel på intergral() i Geogebra</figcaption>
+        </figure>
+      </div> 
     </div>
   
   
