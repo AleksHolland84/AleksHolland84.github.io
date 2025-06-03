@@ -13,3 +13,14 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll(".left-menu a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage == currentPage) {
+            link.classList.add("active")
+        }
+    })
+})

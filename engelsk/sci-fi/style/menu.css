@@ -113,3 +113,8 @@ margin-top: 15px;
 float: right;
 }
 
+.left-menu a.active {
+  background-color: var(--menu-hover-color); /* darker background */
+  color: white;           /* optional: contrast text */
+}
+
