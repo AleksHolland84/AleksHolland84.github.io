@@ -1,130 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Satiretegninger</title>
-  <link rel="stylesheet" type="text/css" href="style/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satiretegninger</title>
+    
+    <!-- Link to google font--> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <!-- link to style.css --> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/image.css">
+    <link rel="stylesheet" type="text/css" href="css/task.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <style>
-    .material-icons {vertical-align:-14%}
-  </style>
+
 </head>
-<body onload="runOnLoad()">
-  <!-- HEADER
-  <div class="main-header-container">
-    TEST
-  </div>
-  -->
-  
+<body onload="runOnLoad(); showChapterHeaders();">
+  <div class="content-wrapper">
 
-  <div class="main-content-wrapper">
-    <div class="left-menu">
-      <a href="#index" class="w3-padding w3-xlarge w3-teal material-icons">home</a>
-      <a href="#del1">1</a>
-      <a href="#del2">2</a>
-      <a href="#del3">3</a>
-      <a href="#del4">4</a>
-    </div>
-    <div class="main-content-container">
+    <header>
+      <div class="nav">
+        <a href="index.html" title="Home directory">
+          /home
+        </a>
+        <a target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
+          /contact
+        </a>  
+      </div>
       
-      <div id="index" class="main-content-menu">
-
-
-        <div class="wallpaper-container" data-type="cover" style="background-image:url('images/satire.jpg');">
-            <!-- WALLPAPER CONTAINER-->
-            <div class="wallpaper-container image-container">
-              <!-- This container is to make room for the wallpaper image-->
-            </div>
-            <span class="copyright-image">© Foto: Unsplash</span>
+      <a class="svglink" target="_blank" href="https://facebook.com" title="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.258,4.458c0-0.144,0.02-0.455,0.06-0.931c0.043-0.477,0.223-0.976,0.546-1.5c0.32-0.522,0.839-0.991,1.561-1.406 C11.144,0.208,12.183,0,13.539,0h3.82v4.163h-2.797c-0.277,0-0.535,0.104-0.768,0.309c-0.231,0.205-0.35,0.4-0.35,0.581v2.59h3.914 c-0.041,0.507-0.086,1-0.138,1.476l-0.155,1.258c-0.062,0.425-0.125,0.819-0.187,1.182h-3.462v11.542H8.258V11.558H5.742V7.643 h2.516V4.458z"/>
+          </svg>
+        </a>
+        
+      <a class="svglink" target="_blank" href="https://Github.com" title="Github">
+        <svg viewBox="71 71 370 370">
+          <path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/>
+        </svg>
+      </a>
+      
+      <a class="svglink" target="_blank" href="https://linkedin.com" title="LinkedIn">
+        <svg viewBox="71 71 370 370">
+          <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/>
+        </svg>
+      </a>
+    </header>
+  
+  
+    <div class="main-content-container">
+      <div class="intro-header">
+        <div id="__chapter" class="__chapter_menu_container">
         </div>
+      
+          
+        <div class="contact"> 
+          <p>Forfatter: A. H. Johansen & R. P.</p>
+          
+          <a class="svglink" target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
+            <svg viewBox="71 71 370 370">
+              <path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/>
+            </svg>
+          </a>
+        </div>
+        <p class="updated">10.06.2025</p>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- ########################MAIN CONTENT###################################-->
+    <!-- ########################MAIN CONTENT###################################-->
+    <!-- ########################MAIN CONTENT###################################-->
+  
+    <div class="main-content-menu">
+      <div class="content-wrapper">
 
         <div class="main-content-right-wrapper">
-          <div id="nav" class="main-content-right">
-            <p class="owner">Forfatter: AH & RP</p>
-            <h1>Satiretegninger</h1>
-
+            <div id="nav" class="main-content-right">
             <ul class="top">
-                <li class="menu_side active">Indhold</li>
-                <li class="menu_side">Kapitler</li>
-                <li class="menu_side">Ressourcer</li>
+                <li class="menu_side">Indhold</li>
+                <li class="menu_side">Resourcer</li>
                 <li class="menu_side">Til læreren</li>
                 <li class="menu_side">Fælles Mål</li>
             </ul>
-    
-            <div id="indhold" class="menu_text main-menu-content-text">
-              <p>I dette forløb skal I arbejde med satiretegninger. Begrebet "satire" er en kunstnerisk genre, der gør grin med mennesker og særligt politiske begivenheder. 
-                Igennem forløbet bliver I præsenteret for forskellige satiretegninger, som har haft betydning for dansk politik og sikkerhed. 
-                Til sidst i forløbet skal I selv forsøge at tegne en satire tegning der passer til det valgte <a href="#satire-tema" class="kilde">tema</a>.
-              </p>
-              <div style="margin-top: 50px;">
-                <p style="font-weight: 400; font-size: 1em;">Efter detter forløb, vil I:</p>
-                <div style="margin-left: 20px">
-                  <li>vide hvad satire tegninger er</li>
-                  <li>have kenskab til Cartoon Awards</li>
-                  <li>kende til forskellige typer satire tegninger</li>
-                </div>
-              </div>                
-            </div>
-
-
 
             <div class="menu_text main-menu-content-text" style="display: flex; flex-direction: column" alt="Kapiteler">
-              <div class="menu-chapter-wrapper">
-                <a href="#del1">
-                  <img src="images/small_trump.jpg" height="140px">
-                </a>
-                <div class="menu-chapter-info">
-                  <h4 class="menu-chapter-number menu-chapter-number-style">Del 1</h4>
-                  <h3 class="menu-chapter-title">Hvad er satiretegninger</h3>
-                  <p></p>                  
-                </div>
-              </div>
-              
-              <div class="menu-chapter-wrapper">
-                <a href="#del2">
-                  <img src="images/small_winner.jpg" height="140px">
-                </a>
-                <div class="menu-chapter-info">
-                  <h4 class="menu-chapter-number menu-chapter-number-style">Del 2</h4>
-                  <h3 class="menu-chapter-title">Hvad er European Cartoon Award</h3>
-                  <p></p>                  
-                </div>
-              </div>
+                <div id="chapter-headers-container">
+                <!-- gets content from script: showChapterHeaders() which is loaded onload of the body-->
 
-              <div class="menu-chapter-wrapper">
-                <a href="#del3">
-                  <img src="images/Hitchhikers.png" height="140px">
-                </a>
-                <div class="menu-chapter-info">
-                  <h4 class="menu-chapter-number menu-chapter-number-style">Del 3</h4> 
-                  <h3 class="menu-chapter-title">Regler</h3>      
-                  <p></p>
                 </div>
-              </div>
-
-              <div class="menu-chapter-wrapper">
-                <a href="#del4">
-                  <img src="images/bladerunner.png" height="140px">  
-                </a>
-                <div class="menu-chapter-info">
-                  <h4 class="menu-chapter-number menu-chapter-number-style">Del 4</h4>
-                  <h3 class="menu-chapter-title">Tema</h3>
-                  <p></p>
-                </div>
-              </div>
-
-              
             </div>      
 
-            <div id="download" class="menu_text main-menu-content-text"><h2>Ressourcer</h2>
+
+            <!-- #### MENU RESOURCER -->
+            <div id="download" class="menu_text main-menu-content-text">
+              <h2>Downloads</h2>
               <div class="download-wrapper">
 
                 <div class="download-chapter-container">
                   <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Link</h4>
-                  <a class="file" href="https://jyllands-posten.dk/debat/tegning/" target="_blank">
+                  <a class="file" href="https://jyllands-posten.dk/debat/tegning" target="_blank">
                     <button class="download-file">
                       <svg width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 20 20" style="enable-background:new 0 0 56 54;" xml:space="preserve">
@@ -139,7 +115,7 @@
 
                 <div class="download-chapter-container">
                   <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Link</h4>
-                  <a class="file" href="https://europeancartoonaward.com/eca-2020/" target="_blank">
+                  <a class="file" href="https://europeancartoonaward.com/eca-2020" target="_blank">
                     <button class="download-file">
                       <svg width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 20 20" style="enable-background:new 0 0 56 54;" xml:space="preserve">
@@ -147,311 +123,323 @@
                         <path d="M16.469,8.924l-2.414,2.413c-0.156,0.156-0.408,0.156-0.564,0c-0.156-0.155-0.156-0.408,0-0.563l2.414-2.414c1.175-1.175,1.175-3.087,0-4.262c-0.57-0.569-1.326-0.883-2.132-0.883s-1.562,0.313-2.132,0.883L9.227,6.511c-1.175,1.175-1.175,3.087,0,4.263c0.288,0.288,0.624,0.511,0.997,0.662c0.204,0.083,0.303,0.315,0.22,0.52c-0.171,0.422-0.643,0.17-0.52,0.22c-0.473-0.191-0.898-0.474-1.262-0.838c-1.487-1.485-1.487-3.904,0-5.391l2.414-2.413c0.72-0.72,1.678-1.117,2.696-1.117s1.976,0.396,2.696,1.117C17.955,5.02,17.955,7.438,16.469,8.924 M10.076,7.825c-0.205-0.083-0.437,0.016-0.52,0.22c-0.083,0.205,0.016,0.437,0.22,0.52c0.374,0.151,0.709,0.374,0.997,0.662c1.176,1.176,1.176,3.088,0,4.263l-2.414,2.413c-0.569,0.569-1.326,0.883-2.131,0.883s-1.562-0.313-2.132-0.883c-1.175-1.175-1.175-3.087,0-4.262L6.51,9.227c0.156-0.155,0.156-0.408,0-0.564c-0.156-0.156-0.408-0.156-0.564,0l-2.414,2.414c-1.487,1.485-1.487,3.904,0,5.391c0.72,0.72,1.678,1.116,2.696,1.116s1.976-0.396,2.696-1.116l2.414-2.413c1.487-1.486,1.487-3.905,0-5.392C10.974,8.298,10.55,8.017,10.076,7.825"></path>
                       </svg>
                       <span class="file-name">European Cartoon Award</span>
+                      <i class="fa fa-download"></i>
                       <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
                     </button>
                   </a>
                 </div>
-                
+
               </div>
             </div>
-              
-            <div id="til-læreren" class="menu_text main-menu-content-text"><h2>Til læreren</h2>
-              <h4 style="margin-bottom:5px;">science fiction</h4>
-              <p>I dette forløb arbejder eleverne med science fiction-genren.</p>
-              <p>Forløbet tager udgangspunkt i et udvalg af klassiske materialer med henblik på at præsentere eleverne for sci fi genren igennem forskellige kulturteknikker.</p>
-              <p>Materialerne, der indgår i forløbet, er udvalgt med henblik på at inspirere og fastholde elevernes nysgerrighed, og har til hensigt at imødekomme både de verbalt, auditivt og visuelt orienterede elever.</p>
-              <p>Man kan med fordel arbejde med <i>etik</i> som sideløbende tematik i forløbet eller tværfagligt.</p>
+                
 
-              <h4>Lærervejledning til kapitler</h4>
+            <!-- #### TIL LÆREREN ####-->
+            <div id="til-læreren" class="menu_text main-menu-content-text">
+              <h2>Til læreren</h2>
+              <h4 style="margin-bottom:5px;">Om forløbet</h4>
+              <p>I dette forløb skal I bruge Micro:bit til at måle fugtigheden i plantejord og sende data trådløst ved hjælp af MQTT-protokollen. Fugtighedsdataene bliver sendt til en MQTT Broker og vist live i en webbrowser via en WebSocket-forbindelse. I vil arbejde med både hardware og software, eksperimentere med sensorer og netværksteknologier og opleve, hvordan IoT (Internet of Things) kan bruges til at overvåge og optimere pleje af planter.</p>              
+              <h4>Lærervejledning til forløbet</h4>
               <div>
                 <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
                 <div class="collapsible-content">
-                  <p>Let's create two classes: one for boring paragraphs and one for exciting ones. We can use these classes to add pseudo-elements to the end of paragraphs.</p>
+                    <h3>Teknologier</h3>
+                    <section>
+                      <h4>Hardware</h4>
+                      <ul>
+                        <li>Micro:bit</li>
+                        <li>WiFi modul til Micro:bit<br>
+                          Dette kunne f.eks. være et kit fra ELECFREAKS eller REKA:BIT med Micro:bit v2 (med Wifi) eller Micro:bit v1 sammen med Grove WiFi 8266.
+                          </li>
+                        <li>ELECFREAKS IOT:bit (Internet WiFi Extension Board for micro:bit) eller lignende.</li>
+                        <li>Fugtighedssensorer til Micro:bit.<br>
+                          Eks: Analog Capacitive
+                        </li>
+                      </ul>
+
+                      <h4>Software</h4>
+                      <ul>
+                        <li>MQTT (Message Queue Telemetry Transport)</li>
+                        <li>Websockets (Webbrowser)</li>
+                        <li>Makecode.microbit.org (<a href="https://makecode.microbit.org/" target="_blank">link</a>)</li>
+                        <li>Mulighed for at tilkoble til et WiFi (det er ikke nødvendigt med internetadgang, enhederne skal blot have WiFi forbindelse mellem hinanden)</li>
+                        
+                      </ul>
+                    </section>
                 </div>
-              </div>
-              <div>
-                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 2 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
-                <div class="collapsible-content">
-                  <p>Let's create two classes: one for boring paragraphs and one for exciting ones. We can use these classes to add pseudo-elements to the end of paragraphs.</p>
-                </div>
-              </div>
-              <div>
-                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 3 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
-                <div class="collapsible-content">
-                  <p>Let's create two classes: one for boring paragraphs and one for exciting ones. We can use these classes to add pseudo-elements to the end of paragraphs.</p>
-                </div>
-              </div>
+              </div>          
             </div>
 
-
-
-<!-- FÆLLES MÅL -->
             <div id="fælles-mål" class="menu_text main-menu-content-text" ><h2>Fælles Mål</h2>
               <div>
                 <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
                 <div class="collapsible-content">
+                  <h2>Teknologiforståelse</h2>
                   <div class="faelles-maal-container">
-                    <div class="faelles-mael-niveau">Engelsk 8. - 9. klasse</div>
-                    <h3>Færdigheds- og vidensmål</h3>
+                    <h3>Digital design og designprocesser</h3>
+                    <h4 class="faelles-mael-niveau">Konstruktion</h4>
+
                     <div class="vidensmaal">
-                      <p>Skriftlig kommunikation (fase 1)</p>
-                      <p>Eleven kan forstå hovedindhold af enkle, argumenterende tekster.</p>
+                      <p>Eleven kan med digitale teknologier konstruere digitale artefakter, der manifesterer en ide i digitalt materiale</p>
+                      <p>Eleven har viden om konstruktion med digitale teknologier og om formgivning i digitale materialer ift. en ide</p>
+                    </div>
+                  </div>
+
+                  <div class="faelles-maal-container">
+                    <h3>Teknologisk handleevne</h3>
+                    <h4 class="faelles-mael-niveau">Programmering</h4>
+                    <div class="vidensmaal">
+                      <p>Eleven kan læse og forstå programmer skrevet i et tekstbaseret programmeringssprog samt anvende et sådant til systematisk modifikation og konstruktion af programmer ud fra en problemspecifikation</p>
+                      <p>Eleven har viden om metoder til at analysere og forudsige programmers opførsel samt teknikker til systematisk og trinvis udvikling af programmer</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div>
-                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 2 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
-                <div class="collapsible-content">
-                  <div class="faelles-maal-container">
-                    <div class="faelles-mael-niveau">Engelsk 8. - 9. klasse</div>
-                    <h3>Færdigheds- og vidensmål</h3>
-                    <div class="vidensmaal">
-                      <p>Mundtlig kommunikation (fase 1)</p>
-                      <p>Eleven kan indgå i spontane samtaler om forskellige emner i et sprog, der passer til situationen.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 3 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
-                <div class="collapsible-content">
-                  <div class="faelles-maal-container">
-                    <div class="faelles-mael-niveau">Engelsk 8. - 9. klasse</div>
-                    <h3>Færdigheds- og vidensmål</h3>
-                    <div class="vidensmaal">
-                      <p>Skriftlig kommunikation (fase 2)</p>
-                      <p>Eleven har viden om hjælpemidler til læsning af tekster</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 4 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
-                <div class="collapsible-content">
-                  <div class="faelles-maal-container">
-                    <div class="faelles-mael-niveau">Engelsk 8. - 9. klasse</div>
-                    <h3>Færdigheds- og vidensmål</h3>
-                    <div class="vidensmaal">
-                      <p>Kultur og samfund, Tekst og medier (fase 1)</p>
-                      <p>Eleven kan producere multimodale teksttyper på engelsk. / Eleven har viden om struktur og funktion i multimodale medier.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+
             </div>
-<!-- SLUT FÆLLES MÅL-->
-
-            <div class="no-bullets-container">
-              <div>
-                <li class="item argument">Fag:</li>
-                <li class="item value">Samfundsfag</li>
-              </div>
-              <div>
-                <li class="item argument">Klassetrin:</li>
-                <li class="item value">8.kl - 9.kl.</li>
-              </div>
-              <div>
-                <li class="item argument">Varighed:</li>
-                <li class="item value">Ca. 6 lektioner.</li>                
-              </div>      
             </div>
-          </div>
-
-
-                <!-- SPACER -->
-      <div class="spacer"> 
-      </div>
-      <!-- SPACER -->
-
-
-
-
-
-  <!-- WRAPPER FOR "HOVEDDEL START-->
-        <div id="del1" class="main-content-right">
-          <h4 class="menu-chapter-number menu-chapter-number-style">Del 1</h4>
-
-
-          <h1>Hvad er satiretegninger</h1>
-  
-          <div id="indhold" class="main-menu-content-text chapter-text">
-            <p>In the near future, Major is the first of her kind: a human who is cyber-enhanced to be a perfect soldier devoted to stopping the world's most dangerous criminals. When terrorism reaches a new level that includes the ability to hack into people's minds and control them, Major is uniquely qualified to stop it.</p>  
-          </div>
-
-          <div class="task-wrapper"> <!-- START OF TASK WRAPPER-->
-            <div class="task-number-wrapper">
-              <h4 class="task-number"></h4>
-            </div>
-            <div class="task-container">
-              <p class="task-description">Satiretegningen sætter streg under friheden til at ytre sig</p>
-              <img src="images/trump.webp" width="100%">
-              <p>Det nemme offer</p>
-              <div class="normalsider"> 9.3</div>
-            </div>
-          </div> <!-- END OF TASK-WRAPPER -->
-
-
-          <div class="task-wrapper"> <!-- START OF TASK WRAPPER-->
-            <div class="task-number-wrapper">
-              <h4 class="task-number"></h4>
-            </div>
-            <div class="task-container">
-              <p class="task-description">Satiretegningen sætter streg under friheden til at ytre sig</p>
-              <a class="reference" href="https://www.information.dk/kultur/2014/11/satiretegningen-saetter-streg-friheden-ytre"></a>              
-              <img src="images/kanslergade.jpg" width="100%">
-              <p>En af de første vigtige</p>
-              <div class="normalsider"> 9.3</div>
-            </div>
-          </div> <!-- END OF TASK-WRAPPER -->
-
-
-          <div class="task-wrapper"> <!-- START OF TASK WRAPPER-->
-            <div class="task-number-wrapper">
-              <h4 class="task-number"></h4>
-            </div>
-            <div class="task-container">
-              <p class="task-description">Charlie Hebdo og "at gå over stregen"</p>
-              <div style="display:flex;">
-                <img src="images/charlie_hebdo.jpg" width="100%">
-                <img src="images/charlie_hebdo2.jpg" width="100%">
-              </div>
-              <p></p>
-              <div class="normalsider"> 9.3</div>
-            </div>
-          </div> <!-- END OF TASK-WRAPPER -->
-
-          <div class="spacer"> 
-            <!-- SPACER -->
-          </div> 
-            <div class="normalsider"> 1.6</div>
         </div>
+      </div>
+    </div>
+
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<div class="content-wrapper">
+
+  <article>
+    <section class="content borderline">
+      <h1 id="microbit">Satiretegninger</h1 >
+      <p>Arbejd med satiretegninger og bliv klogere på politisk satire.</p>
+    
+      <div class="hBvBcu">
+        <div data-testid="lesson_duration" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>CLOCK</title><path d="M24.5 24.5H35v3H21.5V11h3v13.5zm18-.5c0-10.217-8.282-18.5-18.5-18.5S5.5 13.783 5.5 24 13.782 42.5 24 42.5 42.5 34.217 42.5 24zm3 0c0 11.874-9.626 21.5-21.5 21.5S2.5 35.874 2.5 24 12.126 2.5 24 2.5 45.5 12.126 45.5 24z"></path></svg>
+          ca. 6 lek.</div> 
+        <div data-testid="lesson_level" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>BRICK</title><path d="M15.575 10.229l-4.22 1.738 12.481 5.14 12.482-5.14-4.22-1.738v.359c0 2.581-3.732 3.914-8.262 3.914s-8.261-1.333-8.261-3.914v-.36zm16.522-3.96v.715l9.66 3.979v27.605l-17.92 7.38-17.921-7.38V10.963l9.659-3.979v-.743c0-2.582 3.73-3.915 8.261-3.915 4.53 0 8.262 1.333 8.262 3.915v.028zm-3 3.122c-1.433.507-3.27.765-5.26.765-1.992 0-3.829-.258-5.262-.766v.992c.186.157.525.336.985.5 1.087.388 2.622.62 4.276.62 1.655 0 3.19-.232 4.276-.62.46-.164.799-.343.985-.5V9.39zm-3.76 32.694l13.42-5.526V14.207l-13.42 5.526v22.352zm-3 0V19.733L8.915 14.207V36.56l13.42 5.525zm5.776-36.139c-1.087-.388-2.622-.62-4.277-.62-1.655 0-3.19.232-4.276.62a4.732 4.732 0 0 0-.674.295c.18.098.406.2.674.295 1.086.388 2.621.62 4.276.62 1.655 0 3.19-.232 4.277-.62.267-.096.494-.197.674-.295-.18-.099-.407-.2-.674-.295z"></path></svg>
+          Samfundsfag</div>
+        <div data-testid="lesson_grade" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>GRADUATE</title><path d="M9.917 22.292l-6.715-4.666c-.977-.621-.937-2.107.135-2.64l20.48-10.548.687.354 19.742 10.17c1.122.51 1.178 2.033.236 2.63l-1.805 1.255v11.278h-3V20.93l-1.96 1.362v14.332l-.3.4c-.571.762-1.675 1.821-3.359 2.857-2.75 1.693-6.16 2.703-10.241 2.703-4.082 0-7.491-1.01-10.241-2.703-1.684-1.036-2.788-2.095-3.36-2.857l-.3-.4V22.292zm3 2.085v11.186c.073.076.158.161.255.255.531.51 1.188 1.025 1.976 1.51 2.288 1.407 5.156 2.257 8.669 2.257 3.513 0 6.381-.85 8.669-2.258.788-.484 1.445-1 1.976-1.51.097-.093.183-.178.256-.254V24.378l-10.9 7.574-.856-.595-10.045-6.98zm10.9 3.921L40.75 16.534 23.817 7.812 6.885 16.534l16.932 11.764zM42.94 17.661a1.42 1.42 0 0 1-.13-.066l.13.066zm-.118-2.565l-.102.07c.033-.024.067-.048.102-.07z"></path></svg>
+          7.-9. klasse</div>
+      </div>
+    </section>   
+    
+    <section class="content">
+      <div class="image-wrapper">
+        <img src="images/Our-Cartoon-President.webp" alt="Rooter" width=100%>
+        <span class="copyright-image">© Foto: Unsplash</span> 
+      </div>
+
+
+      <h2>Kort om forløbet</h2>
+      <p>I dette forløb skal I arbejde med satiretegninger. Begrebet "satire" er en kunstnerisk genre, der gør grin med mennesker og særligt politiske begivenheder. 
+                Igennem forløbet bliver I præsenteret for forskellige satiretegninger, som har haft betydning for dansk politik og sikkerhed. 
+                Til sidst i forløbet skal I selv forsøge at tegne en satire tegning der passer til det valgte <a href="#satire-tema" class="kilde">tema</a>.
+      </p>
+    </section>
+
+      <p>I dette forløb skal I arbejde med satiretegninger. Begrebet "satire" er en kunstnerisk genre, der gør grin med mennesker og særligt politiske begivenheder. 
+        Igennem forløbet bliver I præsenteret for forskellige satiretegninger, som har haft betydning for dansk politik og sikkerhed. 
+        Til sidst i forløbet skal I selv forsøge at tegne en satire tegning der passer til det valgte <a href="#satire-tema" class="kilde">tema</a>.
+      </p>
+      <div style="margin-top: 50px;">
+        <p style="font-weight: 400; font-size: 1em;">Efter detter forløb, vil I:</p>
+        <div style="margin-left: 20px">
+          <li>vide hvad satire tegninger er</li>
+          <li>have kenskab til Cartoon Awards</li>
+          <li>kende til forskellige typer satire tegninger</li>
+        </div>
+      </div>                
+  </article>
+
+
+
+   <!--   PART ONE  START  -->
+  <article>
+    <section class="content new-chapter">
+      <div id="satire" class="__chapter_menu_container">
+        <h2 class="menu-chapter-title chapter-title">Hvad er European Cartoon Award</h2>
+      </div>
+      <section class="content">
+        <img class="center-image no-frame" src="images/EPP-CartoonAward-logo.png" alt="Satire image" width=100%>
+
+        <p>Den Europæiske Tegneseriepris (European Cartoon Award, ECA) blev grundlagt i 2019 for at tydeliggøre tegnere hvor vigtige roller de har i den kritiske samfundsdebat og stimulere samtaler om Europa. 
+          European Cartoon Award uddeles årligt af <span style="font-style: italic;">Studio Europa Maastricht</span> og gives for at anerkende satiretegningers indflydelse på den samfundsmæssige dialog. 
+          I 2025 vil ECA samarbejde med <span style="font-style: italic;">Museum for Sound & Visions</span>. ECA’25 og ”Cartoons Day” støttes af Haag Kommune og <span style="font-style: italic;">Stimuleringsfonds voor de Journalistiek</span>.</p>
+
+        <blockquote cite="https://europeancartoonaward.com/about/">
+          <p>Editorial cartoons are the first rough laugh of history. They help us understand the world around us and keep the powerful in check. We need to support cartoonists and celebrate their precious talent.</p>
+          <cite>- Emanuele Del Rosso Organizer of the European Cartoon Award</cite>  
+        </blockquote>
+
+        <p>For at opmuntre tegnere til at fortsætte deres vigtige arbejde, har ECA lanceret Den Europæiske Tegneseriepris, med en samlet værdi af €10.000 (€7.000 til vinderen og €1.500 til to andenpladsmodtagere).</p>
+        
+        <blockquote cite="https://europeancartoonaward.com/">
+          <p>The European Cartoon Award was founded by the European Press Prize and Studio Europa Maastricht in 2019 – the year in which the New York Times decided to stop running editorial cartoons altogether. We award courage and quality in the field of cartooning and foster conversation on the topic of Europe.</p>
+          <cite>- europeancartoonaward.com</cite>
+        </blockquate>
+      </section>
+      
+    </section>
+  </article>
+<!--   PART ONE END   -->
+
+
+<!-- PART TWO START -->
+<article>
+    <section class="content new-chapter">
+      <div id="ECA" class="__chapter_menu_container">
+        <h2 class="menu-chapter-title chapter-title">Hvad er satiretegning</h2>
+      </div>
+
+      <section class="content">
+        <div id="ECA_0" class="__chapter_menu_subheader_1">
+          <h3>Undersøg hvad satiretegninger er og hvem/hvad de retter sig imod</h3>
+        </div> 
+
+
+        <div class="task linux">
+          <div class="task-header">
+            <span class="task-title"></span>
+            <span class="title">OPGAVE</span>
+          </div>
+
+          <div class="task-text">
+            <p>Lav en brainstorm over følgende:</p>
+            <ul>
+              <li>Hvad er en satiretegning?</li>
+              <li>Hvad skal en satiretegning kunne?</li>
+              <li>Hvem må en satiretegning gøre grin med?</li>
+              <li>Er der grænser - hvilke?</li>
+            </ul>
+            <p>Kopierer evt. denne <a href="https://padlet.com/real_AH/satiretegning-v6x0megzlyxy7uar" target="_blank">padlet</a> og del med holdet.</p>
+            <p>Del jeres overvejelser med klassen.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div id="ECA_1" class="__chapter_menu_subheader_1">
+          <h3>Hvad er en god satiretegning?</h3>
+        </div> 
+        <p>DR Kunstklub har i forbindelse med deres egen konkurrence: ”<span style="font-style: italic;">Lav en satiretegning og vind Storm P. bog</span>”, adspurgt en håndfuld af tidens mest populære tegnere:</p>
+
+        <blockquote cite="https://www.dr.dk/nyheder/kultur/kulturklubber/konkurrence-lav-en-satiretegning-og-vind-storm-p-bog">
+          <p>HuskMitNavn: - En satiretegnings fornemmeste opgave er at gøre grin med magthaverne. Magthavere er tit forfængelige og gør man grin med dem, rammer man deres ømme punkt og får dem ned på jorden</p>
+          <p>Erik Petri: - En satiretegning skal kunne bide magthaverne i haserne og udstille magtmisbrug, hykleri og skære gennem populisme og tågesnak.</p>
+          <p>Philip Ytournel: En satiretegning skal sætte aktuelle emner på spidsen for at understrege et hykleri eller en tendens, som er latterlig. I 2014 ville jeg sikkert fokusere på vores brug af sociale medier. Især journalisternes.</p>
+          <p>StineStregen I 2014 skal satiretegningen kende sit publikum, da vi har færre og færre ting tilfælles på tværs af alder, bopæl, segment og andet.</p>
+      
+          <cite>- dr.dk</cite>
+        </blockquate>
+      </section>
+
+      <section class="content">
+        <div id="ECA_1" class="__chapter_menu_subheader_1">
+          <h3>Hvilke forskellige slags satire findes?</h3>
+        </div> 
+        <ul>
+          <li>politik</li>
+          <li>sociale forhold</li>
+          <li>regigion</li>
+          <li>nationalitet</li>
+          <li>køn</li>
+          <li>seksualitet</li>
+          <li>racisme</li>
+        </ul>
+
+      </section>
+
+      
+      <section>
+        <p>En af de første vigtige</p>
+        <img class="center-image" src="images/kanslergade.jpg" alt="Satire image" width=100%>
+      </section>
+
+      <section>
+        <p>Charlie Hebdo og "at gå over stregen"</p>
+        <div style="display:flex;">
+          <img src="images/charlie_hebdo.jpg" width="100%">
+          <img src="images/charlie_hebdo2.jpg" width="100%">
+        </div>
+      </section>
+
+      <section class="content">
+        <div id="ECA_2" class="__chapter_menu_subheader_1">
+          <h3>Hvad retter satiretegninger sig på</h3>
+        </div> 
+        <p>Det nemme offer</p>
+        <img class="center-image" src="images/trump.webp" alt="Satire image" width=100%>
+      </section>
+
+      <section>
+        <p>Vinder af 2020 European Cartoon Award</p>
+          <img class="center-image" src="images/winner.jpg" alt="Satire image" width=100%>
+      </section>
+    </section>
+  </article>
+<!-- PART TWO END -->
+
+<!-- PART THREE START -->
+
+<!-- PART THREE END -->
+
+
+  <section class="content new-chapter">
+    <div id="REGLER" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Regler</h2>
+    </div>
+    <p>Regler for vores interne konkurrence</p>
+    <ul>
+      <li>Keep it simple</li>
+      <li>Sort/hvid - eller farve</li>
+      <li>Der skal være en overskrift</li>
+      <li>Der må være en tekst under - eller talebobler</li>
+      <li>Helst tegnes i hånden</li>
+      <li>Gerne bruge clipart - kopiere billeder ind ex i skraldespand</li>
+      <li>Husk - klicher - symboler - ikoner - baggrund</li>
+      <li>Man må være én eller 2 sammen</li>
+      <li>Der må laves max 3 tegninger, min 1</li>
+    </ul>
+  </section>
+
+
+
+  
+  
+  <!-- WRAPPER FOR "HOVEDDEL START-->
+  <section id="del4" class="main-content-right">
+    <h1>Tema</h1>
+
+    <div id="satire-tema" class="main-menu-content-text chapter-text">
+      <p>TEMA: Frihed</p>  
+    </div>
+
+
+    <div class="spacer"> 
+      <!-- SPACER -->
+    </div> 
+      <div class="normalsider"> 1.6</div>
+    </section>
   <!-- WRAPPER FOR "HOVEDDEL END-->
 
 
-  <!-- WRAPPER FOR "HOVEDDEL START-->
-        <div id="del2" class="main-content-right">
-          <h4 class="menu-chapter-number menu-chapter-number-style">Del 2</h4>
-
-          <h1>Hvad er European Cartoon Award</h1>
+  <!-- FOOTER START --> 
+  <footer>
+    <a class="svglink" target="_blank" href="https://github.com/AleksHolland84">
+      <svg arole="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+        </path>
+      </svg>
+    </a>
+    <br><br>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </footer>
+  <!-- FOOTER END --> 
   
-          <div id="indhold" class="main-menu-content-text chapter-text" style="margin-bottom: 20px;">
-            <blockquate cite="https://europeancartoonaward.com/">"The European Cartoon Award was founded by the European Press Prize and Studio Europa Maastricht in 2019 – the year in which the New York Times decided to stop running editorial cartoons altogether. We award courage and quality in the field of cartooning and foster conversation on the topic of Europe." - <span class="kilde">https://europeancartoonaward.com/</span></blockquate>
-          </div>
 
-          <div class="task-wrapper"> <!-- START OF TASK WRAPPER-->
-            <div class="task-number-wrapper">
-              <h4 class="task-number"></h4>
-            </div>
-            <div class="task-container">
-              <p>Vinder af 2020 European Cartoon Award</p>
-              <a href="https://europeancartoonaward.com/">
-                <img src="images/winner.jpg" width="100%">
-              </a>
-              <li>En konkurrence der startede for 8 år siden under navnet "Cartoon Awards Viborg".</li>
-              <li>Fego</li>
-              <li>Junior konkurrence startede i 2016 – er desværre stoppet</li>
-              <div class="normalsider"> 9.3</div>
-            </div>
-          </div> <!-- END OF TASK-WRAPPER -->
-
-
-          <div class="task-wrapper"> <!-- START OF TASK WRAPPER-->
-            <div class="task-number-wrapper">
-              <h4 class="task-number"></h4>
-            </div>
-            <div class="task-container">
-              <p class="task-description">Billeder fra konkurrencen</p>
-              <div style="display:flex;">
-                <a href="https://europeancartoonaward.com/wp-content/uploads/2021/08/2020-0038-scaled.jpg" style="flex: 2"><img src="https://europeancartoonaward.com/wp-content/uploads/2021/08/2020-0038-scaled.jpg" width="100%"></a>
-                <a href="https://europeancartoonaward.com/wp-content/uploads/2021/08/2020-0177.png" style="flex: 1" ><img src="https://europeancartoonaward.com/wp-content/uploads/2021/08/2020-0177.png" width="100%"></a>
-              </div>
-              <p></p>
-              <div class="normalsider"> 9.3</div>
-            </div>
-          </div> <!-- END OF TASK-WRAPPER -->
-
-
-
-
-        <div class="spacer"> 
-          <!-- SPACER -->
-        </div> 
-          <div class="normalsider"> 1.6</div>
-        </div>
-        <!-- WRAPPER FOR "HOVEDDEL END-->
-
-
-
-        <!-- WRAPPER FOR "HOVEDDEL START-->
-        <div id="del3" class="main-content-right">
-          <h4 class="menu-chapter-number menu-chapter-number-style">Del 3</h4>
-
-          <h1>Regler</h1>
-  
-          <div id="indhold" class="main-menu-content-text chapter-text">
-            <p>Regler for vores interne konkurrence:</p>  
-          </div>
-
-          <div class="task-wrapper"> <!-- START OF TASK WRAPPER-->
-            <div class="task-number-wrapper">
-              <h4 class="task-number"></h4>
-            </div>
-            <div class="task-container">
-              <p class="task-description">Regler:</p>
-              <li>Keep it simple</li>
-              <li>Sort/hvid - eller farve</li>
-              <li>Der skal være en overskrift</li>
-              <li>Der må være en tekst under - eller talebobler</li>
-              <li>Helst tegnes i hånden</li>
-              <li>Gerne bruge clipart - kopiere billeder ind ex i skraldespand</li>
-              <li>Husk - klicher - symboler - ikoner - baggrund</li>
-              <li>Man må være én eller 2 sammen</li>
-              <li>Der må laves max 3 tegninger, min 1</li>
-              <div class="normalsider"> 9.3</div>
-            </div>
-          </div> <!-- END OF TASK-WRAPPER -->
-
-
-        <div class="spacer"> 
-          <!-- SPACER -->
-        </div> 
-          <div class="normalsider"> 1.6</div>
-        </div>
-        <!-- WRAPPER FOR "HOVEDDEL END-->
-
-
-
-        <!-- WRAPPER FOR "HOVEDDEL START-->
-        <div id="del4" class="main-content-right">
-          <h4 class="menu-chapter-number menu-chapter-number-style">Del 4</h4>
-
-          <h1>Tema</h1>
-  
-          <div id="indhold" class="main-menu-content-text chapter-text">
-            <p>TEMA: Frihed</p>  
-          </div>
-
-
-
-        <div class="spacer"> 
-          <!-- SPACER -->
-        </div> 
-          <div class="normalsider"> 1.6</div>
-        </div>
-        <!-- WRAPPER FOR "HOVEDDEL END-->
-
-        </div>
-
-      </div>
-
-    </div>  
- 
-
-
-  </div><!-- main-content-wrapper end-->
-  <script src='scripts/script.js'></script>
-  <script src='scripts/menu.js'></script>
-  
+</div><!-- main-content-wrapper end-->
+</div>
+<script src='scripts/script.js'></script>
+<script src='scripts/menu.js'></script>
 </body>
 </html>
