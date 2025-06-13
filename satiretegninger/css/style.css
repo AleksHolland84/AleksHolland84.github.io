@@ -42,6 +42,10 @@ h1{
   font-weight: 400;
  }
 
+ h4{
+  font-weight: 400;
+ }
+
 .main-content-container{
   margin: 50px 20px 50px 20px;
 }
@@ -312,4 +316,12 @@ blockquote{
   display: block;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.spacer{
+  margin: 100px auto 10px auto;
+  text-align: center;
+  font-style: italic;
+  color:#6a676b
 }
