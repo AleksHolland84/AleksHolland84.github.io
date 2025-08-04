@@ -1,0 +1,52 @@
+.math {
+  color:rgb(105, 105, 105);
+}
+
+.math_variables {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 350px;
+}
+
+.math_varialbes div,p {
+  align-self: flex-start;
+  font-size: 1.15em;
+}
+
+table{
+    padding: 0px 0px 0px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    font-size: 0.9em;
+    font-weight: 200;
+    text-align: left;
+    padding: 8px;
+  }
+
+th {
+  color: #7e7d7d;
+}
+
+.my_table_class h4{
+  margin: 2px;
+}
+
+.exceleks{
+    margin-bottom: 50px;
+}
+
+.clean_table{
+    display: flex;
+    gap: 40px;
+}

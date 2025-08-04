@@ -1,0 +1,38 @@
+.image-wrapper{
+    position: relative;
+    display: inline-block;
+    margin: auto;
+}
+
+.copyright-image{
+    padding: .625rem .9375rem;
+    position:absolute;
+    right: 0;
+    bottom: 0.375rem;
+    background-color: rgba(0,0,0,.5);
+    font-size: 0.75em;;
+    color: #fff;
+}
+
+.center-image img{
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.icon {
+  margin: 0px 4px 0px 4px;
+  width: 120px;
+  vertical-align: middle; /* Aligns with text */
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.flexbox{
+  display: flex;
+}
+
+.flexbox_item{
+  width: 50%;
+}
