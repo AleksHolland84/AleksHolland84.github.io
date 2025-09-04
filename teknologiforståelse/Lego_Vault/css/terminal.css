@@ -1,0 +1,176 @@
+/* TERMINALS */
+
+/* Terminal Window */
+.terminal {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    font-family: "Courier New", monospace;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Linux Terminal Style */
+  .terminal.linux {
+    background-color: rgb(29, 4, 24);
+    color: #ffffff;
+  }
+  
+  /* Terminal Header */
+  .terminal-header {
+    background-color: #2b2b2b;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Terminal Header (Mac-style buttons) */
+  .terminal-header-linux{
+    background-color: #200120;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .red { background-color: #e20084; }
+  .yellow { background-color: #ffbd2e; }
+  .green { background-color: #27c93f; }
+  
+  .title {
+    margin-left: auto;
+    color: #cccccc;
+    font-size: 14px;
+  }
+  
+  /* Command Line Styling */
+  pre {
+    margin: 0;
+    padding: 15px;
+    font-size: 1rem;
+    white-space: pre-wrap;
+  }
+  
+  code {
+    display: block;
+    color: #dddddd;
+    white-space: pre;
+    overflow: auto;
+  }
+  
+  .terminal-display{
+    background-color: rgb(29, 4, 24);
+    color: #ffffff;
+    font-family: "Courier New", monospace;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 900px;
+    margin: 10px auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .rpi {
+    display: block;
+    color: #94ff94;
+  }
+  .rpi::before {
+    color: #ff28bf;
+    content: "pi@raspberry:";
+  }
+
+  .venv::after {
+    color: #ff28bf;
+    content: "pi@raspberry:";
+  }
+  .venv::before{
+    color:  #94ff94;
+    content: "(venv) ";
+
+  }
+
+
+  .dir{
+    color: #10c1f7;
+  }
+  .command::before{
+    color: #94ff94;
+    content: "$ "
+  }
+
+
+
+
+/* Nano Terminal Styles */
+.nano-terminal {
+    background-color: black;
+    color: white;
+    font-family: "Courier New", monospace;
+    width: 90%;
+    max-width: 900px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* Nano Title Bar */
+.nano-header {
+    background-color: #ccc;
+    color: black;
+    padding: 2px 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+/* Nano Content (Editor Area) */
+.nano-content {
+    padding: 10px;
+    white-space: pre-wrap;
+    font-size: 16px;
+}
+
+/* Nano Footer */
+.nano-footer {
+    background-color: black;
+    padding: 5px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nano Help Commands */
+.nano-help {
+    display: flex;
+    justify-content: space-between;
+    color: #ccc;
+    padding: 2px 10px;
+    
+}
+
+/* Nano Status Bar */
+.nano-status {
+    text-align: center;
+    color: black;
+    padding: 2px;
+    font-weight: bold;
+}
+
+.nano-status p{
+    margin: auto;
+    width: fit-content;
+    background-color: #dddddd;
+}

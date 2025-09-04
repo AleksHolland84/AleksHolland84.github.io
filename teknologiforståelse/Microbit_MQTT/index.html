@@ -61,7 +61,7 @@
             </svg>
           </a>
         </div>
-        <p class="updated">31.03.2025</p>
+        <p class="updated">01.09.2025</p>
 
       </div>
     </div>
@@ -145,11 +145,23 @@
                 </div>
 
                 <div class="download-chapter-container">
-                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Websocket</h4>
                   <a class="file" href="livestream.html" download>
                   <button class="download-file">
                       <img src="images/icon_html.png" style="width:22px;">
                       <span class="file-name">Livestream webpage</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                  </button>
+                  </a>
+                </div>
+
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Mosquitto docker file</h4>
+                  <a class="file" href="uploads/dockerfile" download>
+                  <button class="download-file">
+                      <img src="images/docker-mark-blue.svg" style="width:22px;">
+                      <span class="file-name">dockerfile</span>
                       <i class="fa fa-download"></i>
                       <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
                   </button>
@@ -185,6 +197,7 @@
                       <h4>Software</h4>
                       <ul>
                         <li>MQTT (Message Queue Telemetry Transport)</li>
+                        <li>MQTT-broker (Server der viderfordeler beskeder til klienter, eks. Mosquitto)</li>
                         <li>Websockets (Webbrowser)</li>
                         <li>Makecode.microbit.org (<a href="https://makecode.microbit.org/" target="_blank">link</a>)</li>
                         <li>Mulighed for at tilkoble til et WiFi (det er ikke nødvendigt med internetadgang, enhederne skal blot have WiFi forbindelse mellem hinanden)</li>
@@ -192,9 +205,96 @@
                       </ul>
                     </section>
                 </div>
-              </div>          
+              </div>  
+              
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">Alternativ opsætning med Docker Desktop<span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
+                <div class="collapsible-content">
+                    <h3>Mosquitto Docker Image</h3>
+                    <section>
+                      <p>Hvis du ikke ønsker at køre din MQTT-broker på en Raspberry Pi, kan du i stedet bruge Docker Desktop på din egen computer. Med Docker kan du hurtigt opsætte en container med Mosquitto uden at skulle installere alt direkte på systemet.</p>
+                    </section>
+
+            <section class="content">
+                      <h4>Fordelene ved at bruge Docker er:</h4>
+                        <ul>
+                          <li>Du undgår at rode med konfiguration på tværs af forskellige styresystemer.</li>
+                          <li>Du kan nemt starte, stoppe eller slette din broker uden at påvirke resten af din computer.</li>
+                          <li>Det er hurtigt at genskabe miljøet på en ny maskine.</li>
+                      </ul>
+
+                      <h4>Sådan gør du:</h4>
+                      <ol>
+                        <li>Sørg for at <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> er installeret og kører på din computer.</li>
+                        <li>Download dockerfilen under resourcer i en mappe (<a href="uploads/dockerfile" download>dockerfile</a>).</li>
+                        <li>Åben en terminal i samme mappe og byg et image</li>
+                      </ol>
+                      <p>Download Docker Desktop fra linket her <a href="https://www.docker.com/products/docker-desktop/" target="_blank">link</a>.</p>
+                        <img class="center-image" src="images/docker_download.png" alt="Makecode søg efter extentions image" width=100%>
+                        
+                        <p>Byg et docker image:</p>
+                          <div class="terminal" style="width: 100%;">
+                            <div class="terminal-header">
+                              <span class="terminal-title">C:\Users\user\mosquitto-docker></span>
+                              <span class="title"></span>
+                            </div>
+                            <pre><code>docker build -t mosquitto-websocket .</code></pre>
+                          </div>
+
+                          <p>Når buildet er færdigt, kan du starte din broker:</p>
+
+                          <div class="terminal" style="width: 100%;">
+                            <div class="terminal-header">
+                              <span class="terminal-title">C:\Users\user\mosquitto-docker></span>
+                              <span class="title"></span>
+                            </div>
+                            <pre><code>docker run -d --name mosquitto -p 1883:1883 -p 9001:9001 mosquitto-websocket</code></pre>
+                          </div>
+
+                          <p>Her betyder -p 1883:1883 -p 9001:9001, at port 1883 og 9001 på din computer (host) videresendes direkte til port 1883 og 9001 i containeren.</p>
+                          <ul>
+                            <li>1883 bruges til almindelige MQTT-forbindelser.</li>
+                            <li>9001 bruges typisk til WebSocket-forbindelser.</li>
+                          </ul>
+                          
+                          <h4>Sådan finder du din IP-adresse</h4>
+                          <p>Når du forbinder andre enheder (f.eks. micro:bit eller html sidem med livestream) til din broker, skal de bruge IP-adressen på din computer.</p>
+
+                          <h4>Windows</h4>
+                          <p>Åbn Kommandoprompt og skriv: <i>ipconfig</i></p>
+                          <div class="terminal" style="width: 100%;">
+                            <div class="terminal-header">
+                              <span class="terminal-title">C:\Users\user</span>
+                              <span class="title"></span>
+                            </div>
+                            <pre><code>ipconfig</code></pre>
+
+                            <pre><code>
+  ...
+  ...
+  Wireless LAN adapter Wi-Fi:
+
+    Connection-specific DNS Suffix  . : My_net
+    Link-local IPv6 Address . . . . . : fe80::1fee:212a:245f3:932d%16
+    IPv4 Address. . . . . . . . . . . : 192.168.0.116
+    Subnet Mask . . . . . . . . . . . : 255.255.255.0
+    Default Gateway . . . . . . . . . : 192.168.0.1
+   ...
+   ...
+  </code></pre>
+                          </div>
+                          <p>Kig efter feltet IPv4-adresse under den netværksadapter, du er forbundet med (typisk Wi-Fi eller Ethernet).</p>
+                          <p>Her kan vi se en ipaddresse på 192.168.0.116.</p>
+                          <p>Sørg for docker containeren kører og indtast ip-addressen i input feltet på livestream siden - tryk connect.</p>
+                          <img class="center-image" src="images/livestream_screenshot.png" alt="Makecode søg efter extentions image" width=100%>
+                    </section>
+
+
+                </div>
+              </div> 
             </div>
 
+            <!-- #### FÆLLES MÅL #### -->
             <div id="fælles-mål" class="menu_text main-menu-content-text" ><h2>Fælles Mål</h2>
               <div>
                 <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>

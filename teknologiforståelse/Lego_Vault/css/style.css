@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "menu.css";
+@import "colors.css";
+
+
+body {
+  background-color: var(--background-color);
+
+}
+
+.updated{
+  font-size: 0.7em;
+}
+.updated::before{
+  content: "Sidst opdateret: ";
+ }
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+  font-family: "Kanit", serif;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--font-color);
+}
+
+
+h1{
+  font-size: 60px;
+  font-weight: 500;
+ }
+
+
+ h2{
+  font-size: 30px;
+  font-weight: 500;
+ }
+
+ h3{
+  font-size:20px;
+  font-weight: 400;
+ }
+
+.main-content-container{
+  margin: 50px 20px 50px 20px;
+}
+
+header {
+ display: flex;
+ justify-content: flex-end;
+ align-items: baseline;
+}
+
+header a {
+ width: 25px;
+ height:25px;
+ fill: var(--font-color);
+ margin-left: 2px;
+}
+header a:hover{
+ fill: var(--link-hover-color);
+ stroke: var(--link-hover-color);
+}
+
+.nav {
+ flex: 1;
+}
+
+.nav a{
+ color: var(--font-color);
+ text-decoration: none;
+ font-family: monospace;
+ font-weight: 400;
+}
+
+.intro-header {
+ align-items: baseline;
+ margin-bottom: 50px;
+}
+
+.intro-header h1 {
+ margin-top: 120px;
+ margin-bottom: 0px;
+}
+
+.contact {
+ display: flex;
+}
+
+.intro-header p {
+ margin-top: 0px;
+ flex:16;
+}
+
+.intro-header a {
+ width: 25px;
+ height:25px;
+ fill: black;
+}
+
+.intro-header a:hover{
+ fill: var(--link-hover-color);
+ stroke: var(--link-hover-color);
+}
+
+.content {
+ text-align: justify;
+}
+
+.content a {
+ color: var(--link-color);
+ text-decoration: none;
+}
+
+.content a:hover{
+ color: var(--link-hover-color);
+}
+
+.content .center-image{
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.new-chapter{
+    margin-top: 80px;
+}
+
+
+.info {
+  font-weight: 500;
+  color:#2e0420;
+  font-style: italic;
+}
+
+.icon {
+  margin: 0px 4px 0px 4px;
+  width: 120px;
+  vertical-align: middle; /* Aligns with text */
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.small{
+  width: 30px;
+}
+
+._red{
+  color:#cf0000;
+  font-weight: 500;
+}
+
+
+
+
+
+footer {
+   color: var(--font-color);
+   font-size: 12px;
+   padding-top:2rem;
+   padding-bottom: 8rem;
+   text-align: center;
+}
+
+footer a {
+ color: var(--font-color);
+ text-decoration: none;
+}
+
+footer a:hover{
+ color: var(--link-hover-color);
+}
+
+footer svg {
+   fill: black;
+   width: 20px;
+}
+
+footer svg:hover {
+ fill: var(--link-hover-color);
+ stroke: var(--link-hover-color);
+}
+
+input {
+    margin: .4rem;
+}
+
+.ressourcer a {
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 20px;
+}
+#xls:hover{
+    color: green;
+}
+
+table{
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  
+button {
+    border: none;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.task button {
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+/* MENU STYLE */
+
+/* FLEX CONTAINER */
+.flex-container{
+  display: flex;
+  gap: 10px;
+}
+
+
+/* RESOURCE DOOWNLOAD */
+.file-name  {
+  color: var(--file-name-color);
+}
+
+
+/* Code By Webdevtrick ( https://webdevtrick.com/header-underline-active-item/) */
+  .top {
+    margin-bottom:  30px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .top li {
+    position: relative;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    color:grey;
+    font-size: 0.85em;
+  }
+  .top li::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--menu-underline-color);
+    transform: scaleX(0);
+  }
+  .top li.active::after {
+    transform: scaleX(1);
+  }
+  .top li.active{
+      color: var(--menu-color);
+      font-weight: 400;
+  }
+  .top li:hover{
+      color: var(--menu-hover-color);
+      font-weight: 400;
+  }
+
+
+  .frame-container-center{
+    margin: auto;
+}
+  .frame-container-center iframe{
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
+/* The margin text (the "button") */
+.margin-text {
+  position: absolute;
+  top: 500px; /* distance from the top */
+  left: calc(50% - 400px - 400px);
+  cursor: pointer;
+  font-family: "Kanit", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--font-color);
+  transition: color 0.3s;
+  transform: rotate(-20deg); /* rotate 45° CCW */
+  transform-origin: left top; /* optional: control pivot point */
+}
+
+.margin-text:hover {
+  color: #ff4444;
+}
+
+/* The chicken (hidden initially) */
+.chicken {
+  position: fixed;
+  left: -1100px; /* start off-screen */
+  bottom: -200px;
+  width: 800px; /* adjust size */
+  transition: left 0.2s ease;
+  z-index: 1000;
+}
+
+.chicken.active {
+  left: 0; /* slides in */
+}
+
+.margin-text.active{
+  display: none;
+}

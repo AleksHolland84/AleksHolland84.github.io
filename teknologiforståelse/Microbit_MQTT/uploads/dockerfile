@@ -1,0 +1,27 @@
+# Start from official Eclipse Mosquitto image
+FROM eclipse-mosquitto:2
+
+# Create config directory (if it doesn’t exist)
+RUN mkdir -p /mosquitto/config
+
+# Add custom config
+RUN echo "listener 1883 0.0.0.0"   >>  /mosquitto/config/mosquitto.conf && \
+    echo "listener 9001 0.0.0.0"   >> /mosquitto/config/mosquitto.conf && \
+    echo "protocol websockets"     >> /mosquitto/config/mosquitto.conf && \
+    echo "allow_anonymous true"    >> /mosquitto/config/mosquitto.conf
+
+# Expose MQTT and WebSocket ports
+EXPOSE 1883 9001
+
+### NOT NEEDED ###
+# THE BELOW CMD COMMAND IS NOT NEEDED SINCE THE CONTAINER LOADS THE CONFIG FILE
+# Run mosquitto with the custom config
+#CMD ["mosquitto", "-c", "/mosquitto/config/mosquitto.conf"]
+
+
+### USE DOCKER TO BUILD AND RUN THE IMAGE ###
+# Build the image from the docker file by using the command below in cmd or ps:
+# docker build -t mosquitto-websocket .
+
+# Ceate a container from the image and map the ports with the command below:
+# docker run -d --name mosquitto -p 1883:1883 -p 9001:9001 mosquitto-websocket
