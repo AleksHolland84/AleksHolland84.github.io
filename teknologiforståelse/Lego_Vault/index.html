@@ -299,7 +299,7 @@
       <div id="Opsætning_rpi" class="__chapter_menu_subheader_1">
         <h3>Log ind på RPi'en</h3>
       </div>
-      <p>Efter opsætningen og klargøreingen af Raspberry Pi’en, skal vi oprette et virtuelt miljø</p>
+      <p>Efter opsætningen og klargøreingen af Raspberry Pi’en, skal vi oprette et virtuelt miljø.</p>
       <p>Log ind på RPi’en - enten med SSH eller tilslut skræm, tastatur og mus. Jeg vælger at bruge SSH til at logge ind og arbejde med RPi’en igennem en terminal.</p>
 
       <div class="terminal">
@@ -360,7 +360,7 @@ Last login: Tue Mar 25 20:20:58 2025
         <h3>Oprettelse af virtuelt miljø</h3>
       </div>
 
-      <p>Først opretter vi en mappe vi vil samle vores filer i og oprette vores virtuelle miljø.<br>
+      <p>Først opretter vi en mappe, hvor vi vil samle vores filer i og oprette vores virtuelle miljø.<br>
         Derefter skal vi <i>cd</i> <i>(change directory)</i> ind i mappen</p>
 
       <div class="terminal linux">
@@ -439,8 +439,19 @@ Last login: Tue Mar 25 20:20:58 2025
           </div>
           <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">pip install flask buildhat requests python-dotenv</span>
           </code></pre>
+        </div>
+        <div class="forklaring">
+          <p>Forklaring</p>
+          <ul>
+            <li>pip → Python’s pakkehåndtering (ligner en “app store” for Python).</li>
+            <li>install → kommandoen til at installere en pakke.</li>
+            <li>flask, buildhat, requests, python-dotenv → navnene på de pakker vi skal bruge.</li>
+          </ul>
+          <p>Flask = webserver, BuildHAT = styring af LEGO-motorer, Requests = sende/modtage data over netværk, Python-dotenv = læse vores PIN fra .env-filen.</p>
         </div>      
       </section>
+
+
 
 
       <div class="terminal linux">
@@ -502,22 +513,12 @@ Collecting requests
 </code></pre>
       </div>
 
-      <div class="forklaring">
-        <p>Forklaring</p>
-        <ul>
-          <li>pip → Python’s pakkehåndtering (ligner en “app store” for Python).</li>
-          <li>install → kommandoen til at installere en pakke.</li>
-          <li>flask, buildhat, requests, python-dotenv → navnene på de pakker vi skal bruge.</li>
-        </ul>
-        <p>Flask = webserver, BuildHAT = styring af LEGO-motorer, Requests = sende/modtage data over netværk, Python-dotenv = læse vores PIN fra .env-filen.</p>
-      </div>
-
 
     <section>
       <div id="Opsætning_unzip" class="__chapter_menu_subheader_1">
         <h3>Download filer og unzip</h3>
       </div>
-      <p>Download eller overfør zip filen under <a href="uploads/lego_vault.zip">Resourcer</a>. </p>
+      <p>Download eller overfør zip filen under <a href="uploads/lego_vault.zip">Resourcer</a> og unzip derefter den komprimerede zip-fil.</p>
       <div class="terminal linux">
         <div class="terminal-header-linux">
           <span class="dot red"></span>
@@ -527,6 +528,28 @@ Collecting requests
           <span class="title">ssh</span>
         </div>
         <pre><code class="rpi"><span class="dir">~/LEGO_Vault</span><span class="command">unzip lego_vault.zip</span></code></pre>
+      </div>
+
+            <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="terminal-title-output">Output</span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">unzip lego_vault.zip</span>
+Archive:  lego_vault.zip
+  inflating: .env
+  inflating: app.py
+  creating: templates/
+  inflating: templates/numpad.html
+<span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command"></span>  
+</code></pre>
+    </div>
+      <div class="forklaring">
+        <p>Forklaring</p>
+        <ul>
+          <li>unzip → Et program/kommando der pakker .zip-filer ud.</li>
+          <li>lego_vault.zip → Navnet på den zip-fil, du vil pakke ud.</li>
+        </ul>
       </div>
 
       <p>List mappens indhold med <i>ls</i></p>
@@ -546,14 +569,7 @@ Collecting requests
           <span class="terminal-title-output">Output</span>
           <span class="title">ssh</span>
         </div>
-        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">unzip lego_vault.zip</span>
-Archive:  lego_vault.zip
-  inflating: .env
-  inflating: app.py
-  creating: templates/
-  inflating: templates/numpad.html
-
-<span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">ls -la</span>  
+        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">ls -la</span>  
 total 28
 drwxr-xr-x  4 pi pi 4096 Sep  2 10:14 .
 drwxr-x--- 31 pi pi 4096 Sep  2 09:23 ..
@@ -570,8 +586,6 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
       <div class="forklaring">
         <p>Forklaring</p>
         <ul>
-          <li>unzip → Et program/kommando der pakker .zip-filer ud.</li>
-          <li>lego_vault.zip → Navnet på den zip-fil, du vil pakke ud.</li>
           <li>ls → Viser indholdet af en mappe (filer og mapper).</li>
           <li>-l (long format) → Viser detaljeret information om hver fil, bl.a.:</li>
           <li>-a (all) → Viser alle filer, også skjulte filer (de der starter med punktum).</li>
@@ -699,7 +713,7 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
       <p>Eks. 192.162.0.79:5000</p>
       <p>Såfremt alt kører som det skal, vil I blive prsæenteret for en key-pad, som vist nedenfor:</p>
 
-      <img class="center-image" src="images/flask_tester2.png" alt="Makecode get_moisture() image" width=66%>
+      <img class="center-image" src="images/flask_tester2.png" alt="image of pin-kode" width=66%>
 
       <p>Test eventuelt din pin-kode og se hvad du får adgang.</p>
       <p>Du kan låse boksen igen ved at taste 0000#.</p>
@@ -742,12 +756,44 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
         <li>curl → Et værktøj i terminalen til at lave HTTP-anmodninger (GET, POST osv.).</li>
         <li>-d "pincode=2121" → d (eller --data) betyder “send dette data i anmodningens body”.</li>
         <li>X POST → Angiver HTTP-metoden POST eksplicit.</li>
-        <li>http://<flask-server-ip>:5000/process → URL’en til serveren.</li>
+        <li>http://&lt;flask-server-ip&gt;:5000/process → URL’en til serveren.</li>
       </ul>
     </div>
     
-    <p>Hvis I har cURL installeret (formentlig), kan I prøve at sende en korrekt PIN og en forkert PIN — observer serverens svar og hvad der sker med LEGO-låsen.</p>  
+    <p>Hvis I har cURL installeret (formentlig), kan I prøve at sende en korrekt PIN og en forkert PIN — observer serverens respons og hvad der sker med LEGO-låsen.</p>  
     <p>Sammenlign de to outputs - hvad ser I?</p>
+
+    
+    <div id="hack_output" class="__chapter_menu_subheader_1">
+      <h3>Undersøg server respons</h3>
+    </div>
+    <p>Vi kan prøve at sende et request og derefter kigge reqsponsen igennem. Vi kan evt. benytte os af browserens <i>udviklerværktøjer</i> eller Burp Suite - jeg benytter mig af <i>Burp Suit</i> - forklaringen og opsætningen af <i>Burp Suit</i> falder dog uden for, hvad dette forløb dækker.</p>
+    <p>Nedenfor kan ses et udsnit af responset set i Chromes udviklerværktøj og Burp Suit:</p>
+
+    <img class="center-image" src="images/developer-tools-request-response.png" alt="image of Burp Suite request" width=100%>
+    <figcaption>Chromes uddviklerværktøjer: Request & Response</figcaption>
+    
+    <br>
+    <img class="center-image" src="images/burpSuit-request-response.png" alt="image of Burp Suite request" width=100%>
+    <figcaption>Burp Suit: Request & Response</figcaption>
+
+  
+    <p>Til venstre i vores Burp Suit eksempel, ser vi vores request. Her kan vi se, at vi sender et <i>POST</i> request til <i>/process</i> med <i>pincode=1234</i> som data.</p>
+    <p>På højre side kan vi se serverens respons. Vi kan bl.a. se at vi får <i>DENIED</i> tilbage i html-tekste.
+    <br>
+    Dette kan vi bruge til at skrive et python script.</p>
+
+    <div id="hack_python" class="__chapter_menu_subheader_1">
+      <h3>Send requests med python</h3>
+    </div>
+    <p>Vi kan skrive et script i <i>python</i> der sender et <i>request</i> magen til vi sendte med cURL.</p>
+    <p>I kan prøve at skrive jeres eget script, eller hente det viste script nedenfor her: <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/basic-requests.py" target="_blank">github.io</a></p>
+    <img class="center-image" src="images/github-basic.png" alt="image of Burp Suite request" width=100%>
+    <p class="info">OBS: Pythons<i>requests</i>-modulet er ikke installeret som standard på Windows og skal derfor installeres med <i>pip</i></p>
+    <p>Prøv at benytte python-scriptet til at sende et request med en pinkode til serveren. Test derefter responsen for, om det indeholder "DENIED". Hvis responsens tekst indeholder "DENIED" printes pinkoden til terminalen sammen med det DENIED.</i>.
+    Såfremt responsens tekst ikke indeholder "DENIED" printes pinkoden til terminalen sammen med et ACCESS WITH PIN:...</p>
+
+
   </section>
 
 
@@ -830,11 +876,11 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
   </div><!-- main-content-wrapper end-->
 
 
-  <!-- CHICKEN -->
+  <!-- CHICKEN 
   <div class="margin-text" id="chickenTrigger">don't click</div>
     <img src="images/chicken.png" alt="Chicken" class="chicken" id="chicken">
   </div>
-
+-->
   <script src='scripts/script.js'></script>
   <script src='scripts/menu.js'></script>
   <script src='scripts/dont_click.js'></script>

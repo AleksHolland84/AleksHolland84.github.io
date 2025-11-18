@@ -131,11 +131,15 @@ header a:hover{
 
 .content a {
  color: var(--link-color);
- text-decoration: none;
+ text-decoration: underline;
 }
 
 .content a:hover{
  color: var(--link-hover-color);
+}
+
+.content figure img{
+  margin: 0px;
 }
 
 .content .center-image{
@@ -250,6 +254,7 @@ button {
 .flex-container{
   display: flex;
   gap: 10px;
+  max-width: 100%;
 }
 
 
