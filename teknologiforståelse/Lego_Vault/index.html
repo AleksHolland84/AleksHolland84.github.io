@@ -349,7 +349,7 @@ Last login: Tue Mar 25 20:20:58 2025
           <span class="terminal-title"></span>
           <span class="title">ssh</span>
         </div>
-        <pre><code class="rpi"><span class="command">sudo apt update && sudo apt upgrade -y</span></code></pre>
+        <pre><code class="rpi"><span class="dir">~</span><span class="command">sudo apt update && sudo apt upgrade -y</span></code></pre>
       </div>
 
       <p>Vi har nu klargjort vores system.</p>
@@ -371,8 +371,8 @@ Last login: Tue Mar 25 20:20:58 2025
           <span class="terminal-title"></span>
           <span class="title">ssh</span>
         </div>
-        <pre><code class="rpi"><span class="command">mkdir LEGO_Vault</span></code></pre>
-        <pre><code class="rpi"><span class="command">cd LEGO_Vault</span></code></pre>
+        <pre><code class="rpi"><span class="dir">~</span><span class="command">mkdir LEGO_Vault</span></code></pre>
+        <pre><code class="rpi"><span class="dir">~</span><span class="command">cd LEGO_Vault</span></code></pre>
       </div>
 
       <p>Opret nu et virtuelt miljø med python-modulet: <i>venv</i>. </p>
@@ -527,7 +527,7 @@ Collecting requests
           <span class="terminal-title"></span>
           <span class="title">ssh</span>
         </div>
-        <pre><code class="rpi"><span class="dir">~/LEGO_Vault</span><span class="command">unzip lego_vault.zip</span></code></pre>
+        <pre><code class="venv"><span class="dir">~/LEGO_Vault</span><span class="command">unzip lego_vault.zip</span></code></pre>
       </div>
 
             <div class="terminal linux">
@@ -561,7 +561,7 @@ Archive:  lego_vault.zip
           <span class="terminal-title"></span>
           <span class="title">ssh</span>
         </div>
-        <pre><code class="rpi"><span class="dir">~/LEGO_Vault</span><span class="command">ls -la</span></code></pre>
+        <pre><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">ls -la</span></code></pre>
       </div>
 
       <div class="terminal linux">
@@ -681,7 +681,7 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
       File "/home/pi/LEGO_Vault/venv/lib/python3.10/site-packages/buildhat/serinterface.py", line 114, in __init__
         if device == "/dev/serial0" and os.readlink(device) == "ttyAMA10":
     FileNotFoundError: [Errno 2] No such file or directory: '/dev/serial0'  
-  <span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command"></span>  
+<span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command"></span>  
           </code></pre>
         </div>
         <p>Hvis outputtet ser ud som ovenfor, er der sket en fejl. Det er svært at guide med fejlsøgning, men prøv at læs/forstå fejlmeldingen. Det er selvfølgelig vigtigt at det er den korrekte motorport der bliver brugt.
@@ -713,7 +713,9 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
       <p>Eks. 192.162.0.79:5000</p>
       <p>Såfremt alt kører som det skal, vil I blive prsæenteret for en key-pad, som vist nedenfor:</p>
 
-      <img class="center-image" src="images/flask_tester2.png" alt="image of pin-kode" width=66%>
+      <img class="center-image" src="images/keypad.png" alt="image of keypad" width=100%>
+      <figcaption>Flask app hosting keypad.</figcaption>
+
 
       <p>Test eventuelt din pin-kode og se hvad du får adgang.</p>
       <p>Du kan låse boksen igen ved at taste 0000#.</p>
@@ -786,15 +788,153 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
     <div id="hack_python" class="__chapter_menu_subheader_1">
       <h3>Send requests med python</h3>
     </div>
-    <p>Vi kan skrive et script i <i>python</i> der sender et <i>request</i> magen til vi sendte med cURL.</p>
+    <p>Vi kan skrive et script i <i>python</i> der sender et <i>request</i> magen til det vi sendte med cURL.</p>
     <p>I kan prøve at skrive jeres eget script, eller hente det viste script nedenfor her: <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/basic-requests.py" target="_blank">github.io</a></p>
     <img class="center-image" src="images/github-basic.png" alt="image of Burp Suite request" width=100%>
     <p class="info">OBS: Pythons<i>requests</i>-modulet er ikke installeret som standard på Windows og skal derfor installeres med <i>pip</i></p>
     <p>Prøv at benytte python-scriptet til at sende et request med en pinkode til serveren. Test derefter responsen for, om det indeholder "DENIED". Hvis responsens tekst indeholder "DENIED" printes pinkoden til terminalen sammen med det DENIED.</i>.
     Såfremt responsens tekst ikke indeholder "DENIED" printes pinkoden til terminalen sammen med et ACCESS WITH PIN:...</p>
-
-
   </section>
+
+  <section class="content new-chapter">
+    <p>Hvis vi vil, kan vi opsætte et virtuelt miljø til at køre vores python script.</p>
+    <p>Først opretter jeg en mappe, der skal indeholde mine filer osv.<br>
+    Derefter opretter jeg et virtuelt miljø, aktiverer det og installer python-modulet.</p>
+
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title"></span>
+        <span class="title">ssh</span>
+      </div>
+      <pre><code class="rpi"><span class="dir">~</span><span class="command">mkdir BruteForceLegoVault</span></code></pre>
+      <pre><code class="rpi"><span class="dir">~</span><span class="command">cd BruteForceLegoVault</span></code></pre>
+      <pre><code class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 -m venv bruteForceVenv</span></code></pre>
+      <pre><code class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">. ./bruteForceVenv/bin/activate</span></code></pre>
+      <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">pip install requests</span></code></pre>
+    </div>
+
+    <div class="forklaring">
+      <p>Forklaring</p>
+      <ul>
+        <li>mkdir → “make directory” - laver en ny mappe med navn <i>BruteForceLegoVault</i></li>
+        <li>cd → "change directory”; bruges til navigerer. Her går vi ind i vores nylig lavet mappe.</li>
+        <br>
+        <li>python3 → vi bruger Python version 3.</li>
+        <li>-m venv → beder Python om at bruge modulet venv (virtual environment).</li>
+        <li>bruteForceVenv → navnet på det nye miljø (en mappe, der oprettes).</li>
+        <br>
+        <li>. → betyder “kør denne fil i den nuværende terminal”.</li>
+        <li>./bruteForceVenv/bin/activate → aktiverer det virtuelle miljø.</li>
+        <li>pip → Python’s pakkehåndtering (ligner en “app store” for Python).</li>
+        <li>install → kommandoen til at installere en pakke.</li>
+        <li>requests → navnene på de pakker vi skal bruge.</li>
+      </ul>
+    </div>
+
+
+    <p>Inden vi tester vores script, skal vi have ændret ip-addressen og pinkoden i scriptet. Her bruger vi igen nano.<br>
+    Sæt &lt;IP-ADDRESS&gt; til den ip addresse I noterede i starten (serveres ip addresse). Ændre også pinkoden til den 4-cifret pinkode I vil teste (husk: 0000 læser boksen)</p>
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title"></span>
+        <span class="title">ssh</span>
+      </div>
+        <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">nano basic-requests.py</span></code></pre>
+      </code></pre>
+    </div> 
+    
+    <div class="nano-terminal">
+        <div class="nano-header">
+            <span>GNU nano 6.2</span> <span class="file-path">basic-requests.py</span> <span> </span> <span></span>
+        </div>
+        <div class="nano-content"><code>#---------------------------------------------------------#
+#                        MODULER                        #
+#---------------------------------------------------------#
+import requests #importerer requests modulet
+
+
+#---------------------------------------------------------#
+#                        VARIABLER                        #
+#---------------------------------------------------------#
+# URL'ens opbygning: Protocol (http://),  IP/DOMÆNENAVN (e.g. 192.168.0.79), Port (:5000) og Sti (/process)
+url = "http://&lt;IP-ADDRESS&gt;:5000/process" # ændre IP-ADDRESSE 
+pin = "0001" # Vi sætter vores pinkode til "0001" # 
+payload = {"pincode": pin} # data der skal sendes der 
+
+
+# Sæt response-objektet til at være "response". 
+# Response-objektet sender et POST request til vres url med vores payload.
+response = requests.post(f"{url}", data = payload)
+
+# Hvis respons attributten (.text) indeholder "DENIED" skal terminale printe PIN + vores pinkode + DENIED
+if "DENIED"  in response.text:
+    print(f"PIN {pin} DENIED")
+# Ellers skal den printe ACCESS WITH PIN: vores pinkode
+else:
+    print(f"""################### ACCESS WITH PIN: {pin} ####################""")
+      </code>
+    </div>
+    <div class="nano-footer">
+      <div class="nano-status"><p>[ Read 1 line ]</p></div>
+        <div class="nano-help">
+            <span>^G Help</span> <span>^O Write Out</span> <span>^W Where Is</span> 
+            <span>^K Cut</span> <span>^T Execute</span> <span>^C Location</span> <span>M-U Undo</span>
+        </div>
+        <div class="nano-help">
+            <span>^X Exit</span> <span>^R Read File</span> <span>^\ Replace</span> 
+            <span>^U Paste</span> <span>^J Justify</span> <span>^/ Go To Line</span> <span>M-E Redo</span>
+        </div>
+      </div>
+    </div>
+    <p>Gem med CTRL+O herefter Enter.</p>
+    <p>Exit nano med CTRL+X</p>
+
+    <p>Vi kan nu prøve at eksikver scriptet:</p>
+        <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title"></span>
+        <span class="title">ssh</span>
+      </div>
+        <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 basic-requests.py</span></code></pre>
+      </code></pre>
+    </div> 
+
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="terminal-title-output">Output</span>
+        <span class="title">ssh</span>
+      </div>
+        <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 basic-requests.py</span>
+PIN 0001 DENIED</code></pre>
+    </div>
+  </section>
+
+  <section class="content new-chapter">
+    <p>Vi har nu testet vores python script og lært at sende ét enkelt request.</p>
+    <div id="hack_sikkerhed2" class="__chapter_menu_subheader_1">
+      <h3>Problemstillinger (Python)</h3>
+    </div>
+    <p>Overvej følgende problemstillinger:</p>
+    <ul>
+      <li>Hvordan kan vi bruge python til at sende et nyt request, hver gang vi modtager "DENIED"?</li>
+      <li>Hvor lang tid ville det mon tage at sende alle 9999 mulige kombinationer?</li>
+      <li>Hvordan kan man gøre LEGO-vault systemet mere sikkert?</li>
+    </ul>
+    <p>Snak om de ovenstående problematikker.</p>
+    <p>Efterfølgende kan I prøve at udvikle scriptet så det automatisk sender et nyt request, indtil den korrekte pin findes.</p>
+
+    
+  </section>
+
 
 
 

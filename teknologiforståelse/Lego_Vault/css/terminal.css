@@ -111,6 +111,17 @@
 
   }
 
+  .bruteForceVenv::after {
+    color: #ff28bf;
+    content: "pi@raspberry:";
+  }
+  .bruteForceVenv::before{
+    color:  #94ff94;
+    content: "(bruteForceVenv) ";
+
+  }
+
+
 
   .dir{
     color: #10c1f7;

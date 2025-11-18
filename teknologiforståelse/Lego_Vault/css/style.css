@@ -142,6 +142,10 @@ header a:hover{
   margin: 0px;
 }
 
+figcaption{
+  font-style: italic;
+}
+
 .content .center-image{
   display: block;
   margin: auto;
