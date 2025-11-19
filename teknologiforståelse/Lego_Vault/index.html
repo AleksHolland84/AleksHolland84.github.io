@@ -61,7 +61,7 @@
             </svg>
           </a>
         </div>
-        <p class="updated">01.09.2025</p>
+        <p class="updated">19.11.2025</p>
 
       </div>
     </div>
@@ -699,8 +699,124 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
         <p>Gem med CTRL+O herefter Enter.</p>
         <p>Exit nano med CTRL+X</p>
 
-        <p class="info">OBS: Flask-serveren skal genstartes hvis pin-koden ændres imens flask-serveren kører.</p>
+        <p class="info">OBS: Flask-serveren skal genstartes hvis pin-koden ændres imens flask-serveren kører.</p>  
+    </section>
 
+    <section>
+      <div id="Opsætning_systemctl" class="__chapter_menu_subheader_1">
+        <h3>Oprettelse af en Systemd-tjeneste</h3>
+      </div>
+      <p class="info">OBS: Dette er ikke strængt nødvendigt, men kan lette vores arbejde med at holde LEGO-Vault serveren kørende.</p>  
+
+      <p>Vores Flask-server vil lukke, selv hvis den er detacheret fra terminalen, når brugeren logger ud eller lukker SSH-forbindelsen.</p>
+      <p>Vi kan med fordel oprette en systemd-tjeneste til lego_vault-scriptet, som starter hver gang vi booter Pi’en.</p>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span><span class="command">sudo nano /etc/systemd/system/lego_vault.service</span></span>
+        </code></pre>
+      </div>   
+
+      <p>Her skal vi bruge <i>systemd</i>, som er et system- og servicehåndteringsværktøj, der bruges i de fleste moderne Linux-distributioner (f.eks. Ubuntu, Debian, Raspberry Pi OS). Vi opretter filen lego_vault.service med <i>nano-editoren</i> med administrationsrettigheder (sudo), og skriver en konfiguration til systemd-service.</p>
+      <p>Kopier teksten nedenfor og gem:</p>
+
+      <div class="terminal nano-terminal">
+        <div class="nano-header">
+            <span>GNU nano 6.2</span> <span class="file-path">/etc/systemd/system/lego_vault.service</span> <span> </span> <span></span>
+        </div>
+        <div class=" nano-flex">
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="nano-content"><code class="command">[Unit]
+Description=uWSGI instance to server LEGO Vault Project
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/LEGO_Vault/
+Environment="PATH=/home/pi/LEGO_Vault/venv/bin"
+ExecStart=/home/pi/LEGO_Vault/venv/bin/python3 /home/pi/LEGO_Vault/app.py
+
+[Install]
+WantedBy=multi-user.target
+</code>
+        </div>
+        <div class="nano-footer">
+          <div class="nano-status"><p>[ Read 1 line ]</p></div>
+          <div class="nano-help">
+              <span>^G Help</span> <span>^O Write Out</span> <span>^W Where Is</span> 
+              <span>^K Cut</span> <span>^T Execute</span> <span>^C Location</span> <span>M-U Undo</span>
+          </div>
+          <div class="nano-help">
+              <span>^X Exit</span> <span>^R Read File</span> <span>^\ Replace</span> 
+              <span>^U Paste</span> <span>^J Justify</span> <span>^/ Go To Line</span> <span>M-E Redo</span>
+          </div>
+        </div>
+      </div>
+
+      <p>Gem med CTRL+O herefter Enter.</p>
+      <p>Exit nano med CTRL+X</p>
+
+      <div class="forklaring">
+        <p>Forklaring</p>
+        <ul>
+          <li>[Unit] → sektionen der beskriver hvad servicen er, og hvornår den skal starte.</li>
+          <li>Description → en kort tekst der forklarer formålet med servicen.</li>
+          <li>After=network.target → servicen starter først når netværket er klar.</li>
+          <br>
+          <li>[Service] → sektionen der fortæller hvordan servicen skal køre.</li>
+          <li>Type=simple → servicen kører som et almindeligt program i baggrunden.</li>
+          <li>User=pi → servicen kører som brugeren “pi”.</li>
+          <li>WorkingDirectory=/home/pi/LEGO_Vault/ → den mappe programmet starter i.</li>
+          <li>Environment="PATH=/home/pi/LEGO_Vault/venv/bin" → angiver hvor virtualenv-Python ligger.</li>
+          <li>ExecStart=… → kommandoen systemd skal køre for at starte programmet.</li>
+          <br>
+          <li>[Install] → sektionen der styrer installation og autostart.</li>
+          <li>WantedBy=multi-user.target → gør at servicen automatisk starter ved boot.</li>
+        </ul>
+      </div>
+
+      <p>Aktivér tjenesten med:</p>
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span><span class="command">sudo systmectl start lego_vault.service</span></span>
+        </code></pre>
+      </div>  
+
+      <p>Eller aktiver den permanent – så den starter automatisk, når Pi’en booter:</p>
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span><span class="command">sudo systemctl enable lego_vault.service</span></span>
+        </code></pre>
+      </div>  
     </section>
   </section>
 
@@ -856,7 +972,7 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
     <p>Vi kan skrive et script i <i>python</i> der sender et <i>request</i> magen til det vi sendte med cURL.</p>
     <p>I kan prøve at skrive jeres eget script, eller hente det viste script nedenfor her: <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/basic-requests.py" target="_blank">github.io</a></p>
     <img class="center-image" src="images/github-basic.png" alt="image of Burp Suite request" width=100%>
-    <p class="info">OBS: Pythons<i>requests</i>-modulet er ikke installeret som standard på Windows og skal derfor installeres med <i>pip</i></p>
+    <p class="info">OBS: Pythons requests-modul er ikke installeret som standard på Windows og skal derfor installeres med <i>pip</i></p>
     <p>Prøv at benytte python-scriptet til at sende et request med en pinkode til serveren. Test derefter responsen for, om det indeholder "DENIED". Hvis responsens tekst indeholder "DENIED" printes pinkoden til terminalen sammen med det DENIED.</i>.
     Såfremt responsens tekst ikke indeholder "DENIED" printes pinkoden til terminalen sammen med et ACCESS WITH PIN:...</p>
   </section>
@@ -877,15 +993,13 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
           <button class="copy-btn">Copy</button>
         </div>
       </div>
-<pre><code><span class="rpi"><span class="dir">~</span><span class="command">mkdir BruteForceLegoVault</span></span>
-<span class="rpi"><span class="dir">~</span><span class="command">cd BruteForceLegoVault</span></span>
-<span class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 -m venv bruteForceVenv</span></span>
-<span class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">. ./bruteForceVenv/bin/activate</span></span>
-<span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">pip install requests</span>
-
+<pre><code><span class="rpi"><span class="dir">~</span><span class="command">mkdir BruteForceLegoVault</span>
+<span class="rpi"><span class="dir">~</span><span class="command">cd BruteForceLegoVault</span>
+<span class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 -m venv bruteForceVenv</span>
+<span class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">. ./bruteForceVenv/bin/activate</span>
+<span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">pip install requests</span></span></span></span></span>
 </code></pre>
     </div>
-
 
     <div class="forklaring">
       <p>Forklaring</p>

@@ -122,15 +122,14 @@
   }
 
 
-
   .dir{
     color: #10c1f7;
   }
-  .command::before{
+
+  .linux .command::before{
     color: #94ff94;
     content: "$ "
   }
-
 
 
 
@@ -168,39 +167,44 @@
 /* Nano Footer */
 .nano-footer {
     background-color: black;
-    padding: 5px;
+    padding: 5px 10px;
     font-size: 14px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* stack vertically */
+    gap: 2px; /* space between status and help rows */
+    font-family: monospace;
 }
 
-/* Nano Help Commands */
-.nano-help {
-    display: flex;
-    justify-content: space-between;
-    color: #ccc;
-    padding: 2px 10px;
-    
-}
-
-/* Nano Status Bar */
 .nano-status {
     text-align: center;
     color: black;
-    padding: 2px;
     font-weight: bold;
 }
 
-.nano-status p{
+.nano-status p {
     margin: auto;
     width: fit-content;
     background-color: #dddddd;
 }
 
+.nano-help {
+    display: flex;
+    flex-wrap: nowrap;  /* prevent wrapping */
+    gap: 15px;          /* space between commands */
+    color: #ccc;
+    white-space: nowrap; /* prevent text from wrapping to next line */
+}
+
+.nano-flex {
+    padding: 8px 10px;
+    display: flex;
+    gap: 5px;
+}
+
 /* COPY COMMAND */
 .copy-btn {
   margin-left: auto;
-  background: #44444483;
+  background: #111111c7;
   color: white;
   padding: 4px 10px;
   border: none;
@@ -210,5 +214,6 @@
 }
 
 .copy-btn:hover {
-  background: #666;
+  background: #ffffff;
+  color:#200120
 }
