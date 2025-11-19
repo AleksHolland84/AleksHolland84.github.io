@@ -36,6 +36,11 @@
     outline: none;
     font-size: 0.9em;
   }
+
+  .no-line {    
+    border: 0px;
+    padding: 0px;
+}
   
   .collapsible:hover {
     padding-left: 25px;
@@ -70,6 +75,7 @@
     transition: max-height 0.2s ease-out;
     background-color: none;
   }
+
   
   
   #indhold p{

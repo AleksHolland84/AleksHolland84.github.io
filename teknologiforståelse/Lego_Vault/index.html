@@ -331,8 +331,7 @@ individual files in /usr/share/doc/*/copyright.
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
 Last login: Tue Mar 25 20:20:58 2025
-<span class=rpi>
-
+<span class=rpi></span>
 </code></pre>
       </div>
 
@@ -347,9 +346,13 @@ Last login: Tue Mar 25 20:20:58 2025
           <span class="dot yellow"></span>
           <span class="dot green"></span>
           <span class="terminal-title"></span>
-          <span class="title">ssh</span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
         </div>
-        <pre><code class="rpi"><span class="dir">~</span><span class="command">sudo apt update && sudo apt upgrade -y</span></code></pre>
+        <pre><code class="rpi"><span class="dir">~</span><span class="command">sudo apt update && sudo apt upgrade -y</span>
+        </code></pre>
       </div>
 
       <p>Vi har nu klargjort vores system.</p>
@@ -369,10 +372,14 @@ Last login: Tue Mar 25 20:20:58 2025
           <span class="dot yellow"></span>
           <span class="dot green"></span>
           <span class="terminal-title"></span>
-          <span class="title">ssh</span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
         </div>
-        <pre><code class="rpi"><span class="dir">~</span><span class="command">mkdir LEGO_Vault</span></code></pre>
-        <pre><code class="rpi"><span class="dir">~</span><span class="command">cd LEGO_Vault</span></code></pre>
+        <pre><code class="rpi"><span class="dir">~</span><span class="command">mkdir LEGO_Vault</span>
+<span class="rpi"><span class="dir">~</span><span class="command">cd LEGO_Vault</span></span></code>
+</pre>
       </div>
 
       <p>Opret nu et virtuelt miljø med python-modulet: <i>venv</i>. </p>
@@ -382,9 +389,13 @@ Last login: Tue Mar 25 20:20:58 2025
           <span class="dot yellow"></span>
           <span class="dot green"></span>
           <span class="terminal-title"></span>
-          <span class="title">ssh</span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
         </div>
-        <pre><code class="rpi"><span class="dir">~/LEGO_Vault</span><span class="command">python3 -m venv venv</span></code></pre>
+        <pre><code class="rpi"><span class="dir">~/LEGO_Vault</span><span class="command">python3 -m venv venv</span>
+        </code></pre>
       </div>
 
       <div class="forklaring">
@@ -405,9 +416,13 @@ Last login: Tue Mar 25 20:20:58 2025
             <span class="dot yellow"></span>
             <span class="dot green"></span>
             <span class="terminal-title"></span>
-            <span class="title">ssh</span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
           </div>
-          <pre><code class="rpi"><span class="dir">~/LEGO_Vault</span><span class="command">. ./venv/bin/activate</span></code></pre>
+          </div>
+          <pre><code class="rpi"><span class="dir">~/LEGO_Vault</span><span class="command">. ./venv/bin/activate</span>
+          </code></pre>
         </div>
 
         <div class="forklaring">
@@ -423,7 +438,8 @@ Last login: Tue Mar 25 20:20:58 2025
             <span class="terminal-title-output">Output</span>
             <span class="title">ssh</span>
           </div>
-            <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command"></span></code></pre>
+            <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command"></span>
+            </code></pre>
         </div>
       </section>
 
@@ -435,7 +451,10 @@ Last login: Tue Mar 25 20:20:58 2025
             <span class="dot yellow"></span>
             <span class="dot green"></span>
             <span class="terminal-title"></span>
-            <span class="title">ssh</span>
+            <div class="title">
+              <span>ssh</span>
+              <button class="copy-btn">Copy</button>
+            </div>
           </div>
           <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">pip install flask buildhat requests python-dotenv</span>
           </code></pre>
@@ -518,19 +537,49 @@ Collecting requests
       <div id="Opsætning_unzip" class="__chapter_menu_subheader_1">
         <h3>Download filer og unzip</h3>
       </div>
-      <p>Download eller overfør zip filen under <a href="uploads/lego_vault.zip">Resourcer</a> og unzip derefter den komprimerede zip-fil.</p>
+      <p>Download med wget fra <a href="https://github.com/AleksHolland84/lego_vault_undervisning/archive/refs/heads/main.zip">github.io</a> eller overfør zip filen under <a href="uploads/lego_vault.zip">Resourcer</a> og unzip derefter den komprimerede zip-fil.</p>
+      <p>Nedenunder bruger jeg wget til at hente filerne:</p>
       <div class="terminal linux">
         <div class="terminal-header-linux">
           <span class="dot red"></span>
           <span class="dot yellow"></span>
           <span class="dot green"></span>
           <span class="terminal-title"></span>
-          <span class="title">ssh</span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
         </div>
-        <pre><code class="venv"><span class="dir">~/LEGO_Vault</span><span class="command">unzip lego_vault.zip</span></code></pre>
+        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">wget https://github.com/AleksHolland84/lego_vault_undervisning/archive/refs/heads/main.zip</span>
+        </code></pre>
       </div>
 
-            <div class="terminal linux">
+      <div class="forklaring">
+        <p>Forklaring</p>
+        <ul>
+          <li>wget → et værktøj til at hente/downloade filer fra internettet via kommandolinjen.</li>
+        </ul>
+      </div>
+      
+      <div>
+        <button class="collapsible no-line"><span style="color:rgb(105, 105, 105)">Download zip.fil</span></button>
+        <div class="collapsible-content content-route">        
+          <div class="terminal linux">
+            <div class="terminal-header-linux">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title"></span>
+              <div class="title">
+                <span>ssh</span>
+                <button class="copy-btn">Copy</button>
+              </div>
+            </div>
+            <pre><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">unzip lego_vault.zip</span>
+            </code></pre>
+          </div>
+
+      <div class="terminal linux">
         <div class="terminal-header-linux">
           <span class="terminal-title-output">Output</span>
           <span class="title">ssh</span>
@@ -552,6 +601,12 @@ Archive:  lego_vault.zip
         </ul>
       </div>
 
+
+        </div>
+      </div>
+
+
+
       <p>List mappens indhold med <i>ls</i></p>
       <div class="terminal linux">
         <div class="terminal-header-linux">
@@ -559,9 +614,13 @@ Archive:  lego_vault.zip
           <span class="dot yellow"></span>
           <span class="dot green"></span>
           <span class="terminal-title"></span>
-          <span class="title">ssh</span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
         </div>
-        <pre><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">ls -la</span></code></pre>
+        <pre><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">ls -la</span>
+        </code></pre>
       </div>
 
       <div class="terminal linux">
@@ -609,7 +668,10 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
           <span class="dot yellow"></span>
           <span class="dot green"></span>
           <span class="terminal-title"></span>
-          <span class="title">ssh</span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
         </div>
         <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">nano .env</span>
         </code></pre>
@@ -660,7 +722,10 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
           <span class="dot yellow"></span>
           <span class="dot green"></span>
           <span class="terminal-title"></span>
-          <span class="title">ssh</span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
         </div>
         <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">flask --app app run --host=0.0.0.0</span>
         </code></pre>
@@ -696,7 +761,7 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
           <span class="terminal-title-output">Output</span>
           <span class="title">ssh</span>
         </div>
-        <pre><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">flask --app app run --host=0.0.0.0</span>  
+        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">flask --app app run --host=0.0.0.0</span>  
  * Serving Flask app 'app_webtester.py'
  * Debug mode: off
 2025-09-12 15:36:31,391 - werkzeug - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
@@ -807,14 +872,20 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
         <span class="dot yellow"></span>
         <span class="dot green"></span>
         <span class="terminal-title"></span>
-        <span class="title">ssh</span>
+        <div class="title">
+          <span>ssh</span>
+          <button class="copy-btn">Copy</button>
+        </div>
       </div>
-      <pre><code class="rpi"><span class="dir">~</span><span class="command">mkdir BruteForceLegoVault</span></code></pre>
-      <pre><code class="rpi"><span class="dir">~</span><span class="command">cd BruteForceLegoVault</span></code></pre>
-      <pre><code class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 -m venv bruteForceVenv</span></code></pre>
-      <pre><code class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">. ./bruteForceVenv/bin/activate</span></code></pre>
-      <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">pip install requests</span></code></pre>
+<pre><code><span class="rpi"><span class="dir">~</span><span class="command">mkdir BruteForceLegoVault</span></span>
+<span class="rpi"><span class="dir">~</span><span class="command">cd BruteForceLegoVault</span></span>
+<span class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 -m venv bruteForceVenv</span></span>
+<span class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">. ./bruteForceVenv/bin/activate</span></span>
+<span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">pip install requests</span>
+
+</code></pre>
     </div>
+
 
     <div class="forklaring">
       <p>Forklaring</p>
@@ -843,10 +914,13 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
         <span class="dot yellow"></span>
         <span class="dot green"></span>
         <span class="terminal-title"></span>
-        <span class="title">ssh</span>
+        <div class="title">
+          <span>ssh</span>
+          <button class="copy-btn">Copy</button>
+        </div>
       </div>
-        <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">nano basic-requests.py</span></code></pre>
-      </code></pre>
+        <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">nano basic-requests.py</span>
+        </code></pre>
     </div> 
     
     <div class="nano-terminal">
@@ -902,9 +976,12 @@ else:
         <span class="dot yellow"></span>
         <span class="dot green"></span>
         <span class="terminal-title"></span>
-        <span class="title">ssh</span>
+        <div class="title">
+          <span>ssh</span>
+          <button class="copy-btn">Copy</button>
+        </div>
       </div>
-        <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 basic-requests.py</span></code></pre>
+        <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 basic-requests.py</span>
       </code></pre>
     </div> 
 
@@ -914,7 +991,9 @@ else:
         <span class="title">ssh</span>
       </div>
         <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 basic-requests.py</span>
-PIN 0001 DENIED</code></pre>
+PIN 0001 DENIED
+
+</code></pre>
     </div>
   </section>
 
@@ -937,62 +1016,6 @@ PIN 0001 DENIED</code></pre>
 
 
 
-
-
-
-
-
-
-  
-<!--    OLD OLD OLD OLD OLD OLD OLD -->
-
-<!--
-
-      <div class="terminal linux">
-        <div class="terminal-header-linux">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="terminal-title"></span>
-          <span class="title">ssh</span>
-        </div>
-        <pre><code class="rpi">systemctl status mosquitto</code></pre>
-      </div>
-
-      <div class="terminal linux">
-        <div class="terminal-header-linux">
-          <span class="terminal-title-output">Output</span>
-          <span class="title">ssh</span>
-        </div>
-        <pre><code class="rpi">systemctl status mosquitto
-  ● mosquitto.service - Mosquitto MQTT Broker
-          Loaded: loaded (/lib/systemd/system/mosquitto.service; enabled; vendor preset: enabled)
-          Active: <span style="color:rgb(11, 128, 0);">active (running)</span> since Tue 2025-03-25 23:49:26 CET; 7min ago
-            Docs: man:mosquitto.conf(5)
-                  man:mosquitto(8)
-         Process: 933 ExecStartPre=/bin/mkdir -m 740 -p /var/log/mosquitto (code=exited, status=0/SUCCESS)
-         Process: 934 ExecStartPre=/bin/chown mosquitto /var/log/mosquitto (code=exited, status=0/SUCCESS)
-         Process: 935 ExecStartPre=/bin/mkdir -m 740 -p /run/mosquitto (code=exited, status=0/SUCCESS)
-         Process: 936 ExecStartPre=/bin/chown mosquitto /run/mosquitto (code=exited, status=0/SUCCESS)
-        Main PID: 937 (mosquitto)
-           Tasks: 1 (limit: 9108)
-          Memory: 1.9M
-          CGroup: /system.slice/mosquitto.service
-                  └─937 /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
-     
-     Mar 25 23:49:26 raspberry systemd[1]: Starting Mosquitto MQTT Broker...
-     <span style="background-color: rgba(255, 0, 0, 0.815);">Mar 25 23:49:26 raspberry mosquitto[937]: 1742942966: Loading config file /etc/mosquitto/conf.d/websock.conf</span>
-     Mar 25 23:49:26 raspberry systemd[1]: Started Mosquitto MQTT Broker.
-    
-<span class=rpi>
-
-</code></pre>
-      </div>
-      <p>På anden sidste linje kan vi se, at vores <i>websock.conf</i> fil bliver loaded korrekt.</p>
-    </section> 
-  </section>
-
-  -->
 
 
 

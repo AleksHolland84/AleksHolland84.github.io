@@ -66,6 +66,21 @@ function getFileName() {
   }
 }
 
+// FUNCTION TO COPY COMMANDS
+document.querySelectorAll('.copy-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    // Find the command span in the same terminal block
+    const terminal = button.closest('.terminal');
+    const command = terminal.querySelector('.command').innerText.trim();
+
+    navigator.clipboard.writeText(command).then(() => {
+      button.textContent = "Copied!";
+      setTimeout(() => button.textContent = "Copy", 1500);
+    });
+  });
+});
+
+
 
 
 
