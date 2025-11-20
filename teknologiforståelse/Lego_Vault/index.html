@@ -535,7 +535,7 @@ Collecting requests
 
     <section>
       <div id="Opsætning_unzip" class="__chapter_menu_subheader_1">
-        <h3>Download filer og unzip</h3>
+        <h3>Download filer</h3>
       </div>
       <p>Download med wget fra <a href="https://github.com/AleksHolland84/lego_vault_undervisning/archive/refs/heads/main.zip">github.io</a> eller overfør zip filen under <a href="uploads/lego_vault.zip">Resourcer</a> og unzip derefter den komprimerede zip-fil.</p>
       <p>Nedenunder bruger jeg wget til at hente filerne:</p>
@@ -1037,11 +1037,14 @@ WantedBy=multi-user.target
         </code></pre>
     </div> 
     
-    <div class="nano-terminal">
+    <div class="terminal nano-terminal">
         <div class="nano-header">
             <span>GNU nano 6.2</span> <span class="file-path">basic-requests.py</span> <span> </span> <span></span>
         </div>
-        <div class="nano-content"><code>#---------------------------------------------------------#
+        <div class=" nano-flex">
+          <button class="copy-btn">Copy</button>
+        </div>
+        <div class="nano-content"><code class="command">#---------------------------------------------------------#
 #                        MODULER                        #
 #---------------------------------------------------------#
 import requests #importerer requests modulet
