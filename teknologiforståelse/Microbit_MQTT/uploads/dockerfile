@@ -6,6 +6,7 @@ RUN mkdir -p /mosquitto/config
 
 # Add custom config
 RUN echo "listener 1883 0.0.0.0"   >>  /mosquitto/config/mosquitto.conf && \
+    echo "protocol mqtt"           >> /mosquitto/config/mosquitto.conf && \
     echo "listener 9001 0.0.0.0"   >> /mosquitto/config/mosquitto.conf && \
     echo "protocol websockets"     >> /mosquitto/config/mosquitto.conf && \
     echo "allow_anonymous true"    >> /mosquitto/config/mosquitto.conf
