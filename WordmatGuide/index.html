@@ -241,6 +241,27 @@
         </div> 
       </div>
 
+      <div class="exceleks">
+        <p>Vi kan også generere en ny list us fra 2 andre lister: </p>
+        <div class="math">
+          $$ { intervalgennemsnit := [12,5;13,5;14,5;15,5;16,5;17,5;18,5;19,5;20,5;21,5;22,5;23,5;24,5] } $$
+
+          $$ { hyppighed := [0;0;2;4;4;3;6;1;2;3;0;0;0] } $$
+
+          $$ { {tider_{map} := map(lambda([x,y];\ x \cdot y),intervalgennemsnit, hyppighed)} } $$
+        </div> 
+        <p>Eller</p>
+        <div class="math">
+          $$ { {tider :=makelist(intervalgennemsnit[i] \cdot hyppighed[i], i, 1, length(intervalgennemsnit))} } $$
+        </div>
+
+        <p>Vi kand erefter summere en liste med:</p>
+        <div class="math">
+          $$ { \sum\nolimits_{i = 1}^{length(tider)} {} tider[i]} $$
+        </div>
+        
+      </div>
+
       <div id="lister_eksempler2" class="__chapter_menu_subheader_1">
         <h3>Sorter en liste</h3>
       </div> 
@@ -317,6 +338,7 @@
           $$ { \text{newListTwo=[8;9;5;2] } } $$
         </div>
       </div>
+
     </div>
 
     <div class="content">
