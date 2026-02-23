@@ -211,7 +211,11 @@
         <div class="math">
           $$ { \text{eksList := [ 8 ; 9 ; 5 ; 3 ; 2 ; 3 ] } } $$
         </div>  
-        <p>Men vi kan også skrive et udtryk som generere en liste</p>
+
+      <div id="lister_eksempler2" class="__chapter_menu_subheader_1">
+        <h3>Genererer lister med <i>makelist</i> og <i>map</i></h3>
+      </div> 
+        <p>Vi kan bruge <i>makelist</i> til at generere en liste</p>
         <p>Udtrykket vil være formuleret således:</p>
         <div class="math">
           $$ { \text{listeNavn := makelist(ligning; variabel navn; antal) } } $$
@@ -239,6 +243,11 @@
         <div class="math">
           $$ { \text{makelist(concat(x;i),i,6)=[x1;x2;x3;x4;x5;x6] } } $$
         </div> 
+
+        <p>Brug listen in en funktion i en "one-liner":</p>
+        <div class="math">
+          $$ { x≔[1;2;3;4;5;6;7;8;9;10];h(x)=89,5 \cdot (1-0,35)·x+200  } $$
+        </div> 
       </div>
 
       <div class="exceleks">
@@ -255,7 +264,7 @@
           $$ { {tider :=makelist(intervalgennemsnit[i] \cdot hyppighed[i], i, 1, length(intervalgennemsnit))} } $$
         </div>
 
-        <p>Vi kand erefter summere en liste med:</p>
+        <p>Vi kan herefter summere en liste med:</p>
         <div class="math">
           $$ { \sum\nolimits_{i = 1}^{length(tider)} {} tider[i]} $$
         </div>
@@ -583,7 +592,7 @@
 
         <p>Sammenlign med <i>is og evaul</i></p>
         <div class="math">
-          $$ { \text{is(equal(2*4 ; 8))} = true} $$
+          $$ { {is(equal(2 \cdot 4 ; 8))} = true} $$
         </div>        
       </article>
 
