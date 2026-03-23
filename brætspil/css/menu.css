@@ -1,0 +1,167 @@
+@import "colors.css";
+
+#chapter-headers-container a {
+    text-decoration: none;
+    color: var(--menu-color);
+    font-weight: 300;
+  }
+  
+  .menu_text{
+    padding: 20px;
+    padding-right:20px;
+    max-height: 80vh; /* Adjust to fit within the viewport */
+    overflow-y: auto; /* Enables scrolling inside */
+  }
+  .menu-chapter-number-style{
+    margin: 0px;
+    color: var(--font-chapter-color);
+  }
+  
+  #chapter-headers-container a:hover {
+    text-decoration: none;
+    color: #4e4e4e;
+    font-weight: 700;
+  }
+  
+  .collapsible {
+    background-color:  var(--menu-background-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid #d3d3d3;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    text-align: left;
+    outline: none;
+    font-size: 0.9em;
+  }
+  
+  .collapsible:hover {
+    padding-left: 25px;
+    
+  }
+  
+  .collapsible:after {
+    /*content: '\002B';*/
+    -ms-transform:rotate(90deg);     /* Internet Explorer 9 */
+    -webkit-transform:rotate(90deg); /* Chrome, Safari, Opera */
+    transform:rotate(90deg);  
+    content: "\0276F";
+    color: rgb(163, 163, 163);
+    font-weight: bold;
+    float: right;
+    text-align: center;
+    margin-left: 5px;
+  }
+  
+  .active2:after {
+    /*content: "\2212";*/
+    -ms-transform:rotate(90deg);     /* Internet Explorer 9 */
+    -webkit-transform:rotate(90deg); /* Chrome, Safari, Opera */
+    transform:rotate(90deg);  
+    content: "\0276E";
+  }
+  
+  .collapsible-content {
+    padding: 0 19px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: none;
+  }
+  
+  
+  #indhold p{
+    font-size: 1.3em;
+    font-weight: 100;
+  
+  }
+
+  .vidensmaal{
+    margin-left: 40px;
+  }
+  
+  
+  /* DOWNLOAD FILE*/
+  .download-file {
+    background-color: var(--menu-background-color);
+    cursor: pointer;
+    padding: 2px;
+    width: 100%;
+    border: 1px solid #d3d3d3;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    text-align: left;
+    outline: none;
+    font-size: 0.85em;
+  }
+  
+  .download-chapter-container{
+  margin-bottom: 30px;
+  }
+  
+  .download-file:hover {
+    padding-left: 5px;
+  }
+  
+  .download-file p{
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    color:rgb(160, 160, 160);
+  }
+  
+  .main-content-menu{
+    position: sticky; top:0;
+    background-color:var(--menu-background-color);
+    /*width: 100%;*/
+    z-index: 1000; /* Make sure it's above other elements */
+  }
+  
+  .anchor {
+      scroll-margin-top: 60px;
+  }
+  
+  
+  
+  .NXQeT {
+      display: flex;
+      flex-direction: row;
+      -moz-box-pack: justify;
+      justify-content: space-between;
+      -moz-box-align: center;
+      align-items: center;
+      color: rgb(85, 85, 85);
+  }
+  
+  
+  .NXQeT > svg {
+      fill: rgb(85, 85, 85);
+  }
+  
+  .dbQSpJ {
+      height: 20px;
+      width: 20px;
+      flex: 0 0 auto;
+  }
+  
+  .hBvBcu {
+      display: flex;
+      padding: 10px 0px 0px;
+  }
+  
+  .sc-1hav87h-4 {
+    margin-right: 40px;
+  }
+  
+  .sc-1hav87h-4 > svg {
+      margin-right: 10px;
+  }
+  
+  .borderline{
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+

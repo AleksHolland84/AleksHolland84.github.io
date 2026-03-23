@@ -92,17 +92,6 @@
 
 
 
-  /* VENV */
-  .venv_windows::after {
-    color: #ff28bf;
-    content: " ";
-  }
-  .venv_windows::before{
-    color:  #cacaca;
-    content: "(.venv) ";
-
-  }
-
 
 /* Nano Terminal Styles */
 .nano-terminal {

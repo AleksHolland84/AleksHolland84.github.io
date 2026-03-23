@@ -11,13 +11,14 @@
     <!-- link to style.css --> 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/terminal.css">
+    <link rel="stylesheet" type="text/css" href="css/mediaA4.css">
 
 </head>
 <body onload="runOnLoad(); showChapterHeaders();">
   <div class="content-wrapper">
 
     <header>
-      <div class="nav">
+      <div class="nav a4-noprint">
         <a href="index.html" title="Home directory">
           /home
         </a>
@@ -74,7 +75,7 @@
     <div class="main-content-menu">
       <div class="content-wrapper">
 
-        <div class="main-content-right-wrapper">
+        <div class="main-content-right-wrapper a4-noprint">
             <div id="nav" class="main-content-right">
             <ul class="top">
                 <li class="menu_side">Indhold</li>
@@ -231,15 +232,13 @@
 <!-- ########################MAIN CONTENT###################################-->
 <!-- ########################MAIN CONTENT###################################-->
 <div class="content-wrapper">
-  <article>
+  <article class="print-a4">
     <section class="content borderline">
-      <h1 id="microbit">Lego Vault</h1 >
-        <h2>Hacking og sikkerhed med LEGO og Raspberry Pi</h2>
-      <p>Byg, programmere og hack!</p>
-    
+      <h1 id="intropage">Lego Vault</h1>
+      <p>I dette forløb skal vi bygge og programmere en Lego Vault – en digital bankboks, der kombinerer LEGO, Raspberry Pi og Python. Vi bruger en lille Flask-webserver til at lave en PIN-baseret lås, som styres via en browser og åbner en fysisk LEGO-model, når koden er korrekt. I den sidste del af forløbet skifter fokus til hacking, hvor vi undersøger, hvordan systemet kan brydes, og hvad det fortæller os om sikkerhed, svagheder og digital beskyttelse.</p>
       <div class="hBvBcu">
         <div data-testid="lesson_duration" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>CLOCK</title><path d="M24.5 24.5H35v3H21.5V11h3v13.5zm18-.5c0-10.217-8.282-18.5-18.5-18.5S5.5 13.783 5.5 24 13.782 42.5 24 42.5 42.5 34.217 42.5 24zm3 0c0 11.874-9.626 21.5-21.5 21.5S2.5 35.874 2.5 24 12.126 2.5 24 2.5 45.5 12.126 45.5 24z"></path></svg>
-          ca. 4 lek.</div> 
+          ca. 5 lek.</div> 
         <div data-testid="lesson_level" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>BRICK</title><path d="M15.575 10.229l-4.22 1.738 12.481 5.14 12.482-5.14-4.22-1.738v.359c0 2.581-3.732 3.914-8.262 3.914s-8.261-1.333-8.261-3.914v-.36zm16.522-3.96v.715l9.66 3.979v27.605l-17.92 7.38-17.921-7.38V10.963l9.659-3.979v-.743c0-2.582 3.73-3.915 8.261-3.915 4.53 0 8.262 1.333 8.262 3.915v.028zm-3 3.122c-1.433.507-3.27.765-5.26.765-1.992 0-3.829-.258-5.262-.766v.992c.186.157.525.336.985.5 1.087.388 2.622.62 4.276.62 1.655 0 3.19-.232 4.276-.62.46-.164.799-.343.985-.5V9.39zm-3.76 32.694l13.42-5.526V14.207l-13.42 5.526v22.352zm-3 0V19.733L8.915 14.207V36.56l13.42 5.525zm5.776-36.139c-1.087-.388-2.622-.62-4.277-.62-1.655 0-3.19.232-4.276.62a4.732 4.732 0 0 0-.674.295c.18.098.406.2.674.295 1.086.388 2.621.62 4.276.62 1.655 0 3.19-.232 4.277-.62.267-.096.494-.197.674-.295-.18-.099-.407-.2-.674-.295z"></path></svg>
           Ekspert</div>
         <div data-testid="lesson_grade" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>GRADUATE</title><path d="M9.917 22.292l-6.715-4.666c-.977-.621-.937-2.107.135-2.64l20.48-10.548.687.354 19.742 10.17c1.122.51 1.178 2.033.236 2.63l-1.805 1.255v11.278h-3V20.93l-1.96 1.362v14.332l-.3.4c-.571.762-1.675 1.821-3.359 2.857-2.75 1.693-6.16 2.703-10.241 2.703-4.082 0-7.491-1.01-10.241-2.703-1.684-1.036-2.788-2.095-3.36-2.857l-.3-.4V22.292zm3 2.085v11.186c.073.076.158.161.255.255.531.51 1.188 1.025 1.976 1.51 2.288 1.407 5.156 2.257 8.669 2.257 3.513 0 6.381-.85 8.669-2.258.788-.484 1.445-1 1.976-1.51.097-.093.183-.178.256-.254V24.378l-10.9 7.574-.856-.595-10.045-6.98zm10.9 3.921L40.75 16.534 23.817 7.812 6.885 16.534l16.932 11.764zM42.94 17.661a1.42 1.42 0 0 1-.13-.066l.13.066zm-.118-2.565l-.102.07c.033-.024.067-.048.102-.07z"></path></svg>
@@ -249,24 +248,8 @@
     
     <section class="content">
       <img src="images/Vault_header.png" alt="img" width=100%>
-      <h2>Design, programmere og skab.</h2>
+      <h2>Byg, programmere og hack.</h2>
       <p><b>Lego Vault</b> er et undervisnings- og hobbyprojekt, der kombinerer LEGO SPIKE, Raspberry Pi og Python for at illustrere hacking-koncepter på en interaktiv og fysisk måde.</p>    
-    </section>
-
-    <section class="content">
-      <p>Forud for dette forløb, skal eleverne have arbejdet med LEGOs SPIKE&trade; Prime-sæt og LEGOs lektion 4 og 5 fra KICKSTART DIN VIRKSOHED undervisningsforløb:</p>
-      <div class="flex-container">
-        <div class="flex-item">
-          <a href="https://education.lego.com/da-dk/lessons/prime-kickstart-a-business/keep-it-safe/" target="_blank">
-            <img class="center-image" src="images/fåstyrpåsikkerheden.png" alt="Få styr på sikkerheden img" width=100%>
-          </a>
-        </div>
-        <div class="flex-item">
-          <a href="https://education.lego.com/da-dk/lessons/prime-kickstart-a-business/keep-it-really-safe/" target="_blank">
-            <img class="center-image" src="images/fårigtigstyrpåsikkerheden.png" alt="Få styr på sikkerheden img" width=100%>
-          </a>
-        </div>
-      </div>
     </section>
   </article>
 
@@ -276,6 +259,22 @@
     </div>
 
     <div>
+      <section class="content">
+        <p>Forud for dette forløb, skal eleverne have arbejdet med LEGOs SPIKE&trade; Prime-sæt og LEGOs lektion 4 og 5 fra KICKSTART DIN VIRKSOHED undervisningsforløb:</p>
+        <div class="flex-container">
+          <div class="flex-item">
+            <a href="https://education.lego.com/da-dk/lessons/prime-kickstart-a-business/keep-it-safe/" target="_blank">
+              <img class="center-image" src="images/fåstyrpåsikkerheden.png" alt="Få styr på sikkerheden img" width=100%>
+            </a>
+          </div>
+          <div class="flex-item">
+            <a href="https://education.lego.com/da-dk/lessons/prime-kickstart-a-business/keep-it-really-safe/" target="_blank">
+              <img class="center-image" src="images/fårigtigstyrpåsikkerheden.png" alt="Få styr på sikkerheden img" width=100%>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <p>Forestil dig, at du er sikkerhedschef i en bank. Din opgave er at beskytte bankboksen mod uautoriseret adgang. Kun folk med den rigtige kode kan åbne boksen. Men hvordan kan vi bygge sådan et system selv?</p>
       <p>I dette forløb bruger vi LEGO SPIKE, en Raspberry Pi og lidt programmering i Python. I bygger en lille bankboks af LEGO, som kun kan åbnes, hvis man indtaster den rigtige PIN-kode på en webside. På den måde lærer vi, hvordan digitale sikkerhedssystemer fungerer i praksis – men på en sjov og kreativ måde.</p>
       <div class="frame-container-center">
