@@ -69,9 +69,9 @@
     </div>
   </div>
 
-    <!-- ########################MAIN CONTENT###################################-->
-    <!-- ########################MAIN CONTENT###################################-->
-    <!-- ########################MAIN CONTENT###################################-->
+    <!-- ######################## MENU CONTENT ###################################-->
+    <!-- ######################## MENU CONTENT ###################################-->
+    <!-- ######################## MENU CONTENT ###################################-->
   
     <div class="main-content-menu">
       <div class="content-wrapper">
@@ -212,7 +212,7 @@
     <div class="chapter-text">
       <p>For at sætte en basic-hjemmeside op med Flask og Python, skal du først være sikker på, at du har Python 3 på din computer.</p>
       <p>Dete kan du hurtig tjekke, ved at skrive følgende kommando i en kommando prompt eller terminal.</p>
-      <p>Åben kommandoprompten ved at trykke <b>Windows Key + R</b>, som åbner "Kør" dialog boxen i Windows, og efterfølgende skrive "<b>cmd</b>" - tryk derefter "OK".</p>
+      <p>Åben kommandoprompten ved at trykke <kbd>Windows Key </kbd> + <kbd>R</kbd>, som åbner "Kør" dialog boxen i Windows, og efterfølgende skrive "<b>cmd</b>" - tryk derefter "OK".</p>
 
       <div class="terminal">
         <div class="terminal-header">
@@ -250,7 +250,7 @@ Python 3.14.2
       </div>
       <p>Download Python 3 (seneste udgave i skrivende stund er Python 3.14) ved evt. at benytte linket under Ressourcer. 
         Python3 kan også installeres igennem Microsoft Store:</p>
-        <img class="center-image" src="images/windows_store.png" alt="Microsfot store" width=100%>
+        <img class="center-image" src="images/windows_store_light.png" alt="Microsfot store" width=100%>
     </section> 
 
     <section>
@@ -261,9 +261,10 @@ Python 3.14.2
       <p>Dette gør du som vist på billedet nedenfor, ved at vinge benet af ved tilvalg: <i>Add python.exe to PATH</i> . </p>
       <img class="center-image" src="images/python_3.14.3_64_installer_1.png" alt="Python install" width=90%>
 
-      <p>Efter installationen af Python, er du nu klar til installere/hente Flask modulet via pip.</p>
-        
-    </section> 
+      <p>Efter installationen af Python, er du nu klar til installere/hente Flask modulet via pip.</p>    
+    </section>
+    
+
     <section>
       <div id="Opsætning_flask" class="__chapter_menu_subheader_1">
         <h3>Installation af Flask pakken i et virtuelt miljø</span></i> </h3>
@@ -307,9 +308,10 @@ py -3 -m venv .venv</code></pre>
         </div>
         <pre><code>.venv\Scripts\activate</code></pre>
       </div>
+      <p>Din shell-prompt vil ændre sig, så den viser navnet på det aktiverede miljø.</p>
 
       <h4>Installerer Flask</h4>
-      <p>Før du arbejder på dit projekt, skal du aktivere det tilhørende miljø:</p>
+      <p>Inde i det aktiverede miljø skal du bruge følgende kommando til at installere Flask:</p>
       <div class="terminal">
         <div class="terminal-header">
           <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
@@ -356,119 +358,201 @@ Successfully installed Flask-3.1.3 blinker-1.9.0 click-8.3.1 colorama-0.4.6 itsd
 <span style="color:rgb(49, 121, 255)">[notice]</span> A new release of pip is available: <span style="color:red">25.3</span> -> <span style="color:greenyellow">26.0.1</span>
 <span style="color:rgb(49, 121, 255)">[notice]</span> To update, run: <span style="color:greenyellow">python.exe -m pip install --upgrade pip</span>
 
-(.venv) C:\Users\alek1024\Documents\virtualenv>
+(.venv) C:\Users\user\Documents\FlaskServer>
 
 </code></pre>
       </div> 
+      <p>Flask er nu installeret.</p>
     </div>
-  </section>
 
-
-
-
-
-
-
-  <section>
     <section>
-      <div id="Opsætning_find_ip" class="__chapter_menu_subheader_1">
-        <h3>Find IP addressen på MQTT Brokeren</h3>
+      <div id="Opsætning_IDLE" class="__chapter_menu_subheader_1">
+        <h3>Installation af IDLE</h3>
       </div>
-      <div class="terminal linux">
-        <div class="terminal-header-linux">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="terminal-title"></span>
-          <span class="title">ssh</span>
-        </div>
-        <pre><code class="rpi">hostname -i</code></pre>
-      </div>
+      <p>Sidste del af opsætningen. Vi skal kontrollere om vi har et IDE, vi kan bruge til at skrive vores Python kode - her bruger vi IDLE.</p>
+      <p>IDLE er et 'standart interactive development environment' (IDE) til at skrive og køre Python kode, som ofte bliver installeret sammen med Python.</p>
+      <p>Kontrollerer at IDLE er installeret ved at trykke <kbd>Windows Key</kbd>, efterfulgt med teksten "idle".</p>
+      <img class="center-image" src="images/windows_search.png" alt="Python install" width=90%>
+      <p>Åben IDLE:</p>
+      <img class="center-image" src="images/IDLE.png" alt="IDLE" width=90%>
 
-      <div class="terminal linux">
-        <div class="terminal-header-linux">
-          <span class="terminal-title-output">Output</span>
-          <span class="title">ssh</span>
-        </div>
-        <pre><code class="rpi">hostname -i
-192.168.0.79
-<span class=rpi>
-
-</code></pre>
-      </div>
-    </section> 
-    <p>IP addressen skal I notere jer, da I skal bruge den til at oprette forbindelse til MQTT Brokeren.</p>
-  </section>
-
-
-  <section>
-    <div id="Opsætning_mqttPUB" class="__chapter_menu_subheader_1">
-      <h3>MQTT publish & MQTT subscribe</h3>
-    </div> 
-    <section>
-      <p>Vi kan også benytte os af Mosquitto til at sende og modtage data fra en MQTT Broker.</p>
-      <p>Først skal vi dog installere Mosquitto clients:</p>
-
-      <div class="terminal linux">
-        <div class="terminal-header-linux">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="terminal-title"></span>
-          <span class="title">ssh</span>
-        </div>
-        <pre><code class="rpi">sudo apt install mosquitto-clients -y</code></pre>
-      </div>
-
-      <p>Efterfølgende kan vi sende (publish) data med et <i>topic</i> og en meddelelse:</p>
-      <div class="terminal linux">
-        <div class="terminal-header-linux">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="terminal-title"></span>
-          <span class="title">ssh</span>
-        </div>
-        <pre><code class="rpi">mosquitto_pub -h 192.168.0.79 -t "topic/1" -m "Hello World"</code></pre>
-      </div>
-
-      <p>Vi kan også lytte (subscribe) til data på et <i>topic</i>:</p>
-      <div class="terminal linux">
-        <div class="terminal-header-linux">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="terminal-title"></span>
-          <span class="title">ssh</span>
-        </div>
-        <pre><code class="rpi">mosquitto_sub -h 192.168.0.79 -t "topic/1" </code></pre>
-      </div>
     </section>
   </section>
 
+
+
+<!-- ######################## NEW CHAPTER ###################################-->
+<!-- ######################## NEW CHAPTER ###################################-->
+<!-- ######################## NEW CHAPTER ###################################-->
 
   <section class="content new-chapter">
-    <div id="Micro_bit" class="__chapter_menu_container">
-      <h2 class="menu-chapter-title chapter-title">Micro:bit</h2>
+    <div id="Application" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Flask Application</h2>
     </div>
 
-    <section class="content">
-      <img class="center-image" src="images/Elecf_iot_board.png" alt="Micro:bit Elecfreaks IoT image" width=50%>
-      <p>Vi skal nu arbejde med vores Micro:bit. Vores første opgave er at tilslutte Micro:bit’en et WiFi og derefter teste forbindelsen til MQTT Brokeren. </p>
-      <p>I denne guide har jeg valgt at benytte <a href="https://shop.elecfreaks.com/products/elecfreaks-micro-bit-smart-science-iot-kit-without-micro-bit-board" target="_blank">Elecfreaks IoT board</a>, som giver vores Micro:bit adgang til et esp8266 WiFi modul.</p>
-      <p>Vi benytter os a blok programmeringen på <a href="https://makecode.microbit.org/" target="_blank">makecode.microbit.org</a>.<br>
-      Hvis I ikke allerede har gjort det, så opret en bruger på makecode.microbit.org.</p>
-
-      <img class="center-image" src="images/makecode_main.png" alt="Makecode create image" width=100%>
-      <p>Tryk på <i>New Project</i> <img class="icon small" src="images/add_project.png">og giv dit projekt et navn. Eks. Plant irrigation system:</p>
-      <img class="center-image" src="images/makecode_create.png" alt="Makecode create" width=50%>
-    </section>
-
     <section>
-      <div id="Micro_bit_mqtt" class="__chapter_menu_subheader_1">
-        <h3>Micro:bit Programmering</h3>
+      <div id="Application_byg" class="__chapter_menu_subheader_1">
+        <h3>Byg applikationen</h3>
       </div> 
+      <p>Efter du har installeret Flask, kan du starte med at bygge din applikation.</p>
+      <p>I din kommandoprompt skulle du gerne være i den oprettede projektmappe: "FlaskServer", med det virtuelle miljø aktiveret, som vist nedenfor:</p>
       
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
+          <span class="title"></span>
+        </div>
+        <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command"></span></code></pre>
+      </div>
+
+      <p>Vi kan kontrollere, om Flask, sammen med andre moduler, er blevet installeret i det virtuelle miljø med følgende prompt:</p>
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
+          <span class="title"></span>
+        </div>
+        <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">pip list</span></code></pre>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">Output</span>
+          <span class="title"></span>
+        </div>
+
+        <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">pip list</span>
+Package      Version
+------------ -------
+blinker      1.9.0
+click        8.3.1
+colorama     0.4.6
+Flask        3.1.3
+itsdangerous 2.2.0
+Jinja2       3.1.6
+MarkupSafe   3.0.3
+pip          25.3
+Werkzeug     3.1.6
+(.venv) C:\Users\user\Documents\FlaskServer>
+
+</code></pre>
+      </div> 
+
+
+      <p>Hvis ikke du allerede har IDLE kørende, åben nu Python 3 IDLE. Dette ses ved de tre >>> i venstre side af IDLE vinduet:</p>
+      <img class="center-image" src="images/windows_search.png" alt="Python install" width=90%>
+
+      <P>Til at starte med åbnes IDLE i en REPL (Read-Eval-Print Loop). Da vi gerne vil skrive et script, og gemme koden, skal vi oprette en fil.</P>
+      <p>Klik <kbd>File</kbd> - <kbd>New file</kbd>. I det ny-åbnede vindue, klik igen <kbd>File</kbd> - <kbd>New file</kbd> - <kbd>Save as</kbd>. Gem som <i>app.py</i> inde i din FlaskServer mappe (samme sted som din <i>.venv</i> virtuelle miljø.</p>
+      
+      <p>Skriv nu koden som vist nedenfor og gem.</p>
+      <div class="idle-terminal">
+          <div class="idle-header">
+              <img src="images/idle_doc.png" style="width:22px;">
+              <span> app.py - C:/Users/user/Documents/FlaskServer/app.py</span>
+              <span class="py-version">(3.14.2)</span>
+          </div>
+
+          <!-- Menu Bar -->
+          <div class="idle-menubar">
+              <span>File</span>
+              <span>Edit</span>
+              <span>Format</span>
+              <span>Run</span>
+              <span>Options</span>
+              <span>Window</span>
+              <span>Help</span>
+          </div>
+
+          <div class="idle-content">
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+      return 'Hello world' 
+
+if __name__ == '__main__':
+      app.run(debug=True, host='0.0.0.0')
+          </div>
+      </div>
+
+      <p>Betydningen af koden gennemgår vi senere.</p>
+      <p>Gem dine ændringer ved at trykke File og derefter Save.</p>
+      <p>Du har nu lavet en applikation der oploader et indhold til din browser. Da applikationen ikke har en grafisk brugerflade er det nødvendigt at benytte terminalen/kommando promten til at køre dit program </p>
+      <p>I din terminal, med det aktiverede virtuelle miljø, kan du nu eksekverer scriptet:</p>
+
+
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
+          <span class="title"></span>
+        </div>
+        <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">python app.py</span></code></pre>
+      </div>
+
+      <p>Vi skulle gerne se output som vist nedenfor:</p>
+
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">Output</span>
+          <span class="title"></span>
+        </div>
+
+        <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">python app.py</span>
+ * Serving Flask app 'app'
+ * Debug mode: on
+<span style="color:rgb(173, 29, 29)">WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.</span>
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.121:5000
+<span style="color:rgb(248, 211, 0)">Press CTRL+C to quit</span>
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 121-948-503
+(.venv) C:\Users\user\Documents\FlaskServer>
+
+</code></pre>
+      </div> 
+      <p>Dette betyder, at vi hoster en Flask web applications server på to følgende addresser:</p>
+      <ul>
+        <li>http://127.0.0.1:5000</li>
+        <li>http://192.168.0.121:5000</li>
+      </ul>
+      <p>Åben en browser og skriv 'http://127.0.0.1:5000' eller 'http://localhost:5000' i input-feltet:</p>
+      <img class="center-image" src="images/localhost_1.png" alt="Makecode søg efter extentions image" width=100%>
+
+
+
+
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">C:\Users\user\Documents></span>
+          <span class="title"></span>
+        </div>
+        <pre><code>mkdir FlaskServer
+cd FlaskServer
+py -3 -m venv .venv</code></pre>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
       <p>Vi er nu i gang med vores projekt i Makeocode.</p>
       <p>Først skal vi importere det bibliotek vi vil bruge til at arbejde med vores WiFi modul. Hvis vi bruger ELECFREAKS IoT kit, kan Ifølge guiden her:</p>
       <img class="center-image" src="images/makecode_import.png" alt="Makecode import extentions image" width=26%>

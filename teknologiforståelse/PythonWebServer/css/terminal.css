@@ -104,64 +104,67 @@
   }
 
 
-/* Nano Terminal Styles */
-.nano-terminal {
-    background-color: black;
+/* IDLE Terminal Styles */
+.idle-terminal {
+    background-color: rgb(255, 255, 255);
     color: white;
     font-family: "Courier New", monospace;
     width: 90%;
     max-width: 900px;
-    border: 2px solid gray;
+    border: 2px solid rgb(179, 179, 179);
     border-radius: 5px;
     margin: 20px auto;
     overflow: hidden;
 }
 
-/* Nano Title Bar */
-.nano-header {
-    background-color: #ccc;
-    color: black;
-    padding: 2px 10px;
-    font-size: 16px;
+/* IDLE Title Bar */
+.idle-header {
+    background-color: #dfdfdf;
+    color: rgb(85, 85, 85);
+
+    /* Vertical centering */
     display: flex;
-    justify-content: space-between;
-    font-weight: bold;
+    align-items: center;
+
+    /* Equal spacing top & bottom */
+    padding: 6px 10px;
+
+    font-size: 12px;
+    font-weight: normal;
+}
+ 
+/* IDLE Menu Bar */
+.idle-menubar {
+    display: flex;
+    gap: 16px;
+    padding: 2px 10px;
+    background-color: #f5f3f3;
+    color:#5e5e5e;
+    border-bottom: 1px solid #b3b3b3;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    user-select: none;
 }
 
-/* Nano Content (Editor Area) */
-.nano-content {
+.idle-menubar span {
+    cursor: default;
+    padding: 2px 6px;
+}
+
+.idle-menubar span:hover {
+    background-color: #f5f5f5;
+    border-radius: 3px;
+}
+
+/* IDLE Content (Editor Area) */
+.idle-content {
+  color:#200120;
     padding: 10px;
     white-space: pre-wrap;
     font-size: 16px;
 }
 
-/* Nano Footer */
-.nano-footer {
-    background-color: black;
-    padding: 5px;
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Nano Help Commands */
-.nano-help {
-    display: flex;
-    justify-content: space-between;
-    color: #ccc;
-    padding: 2px 10px;
-    
-}
-
-/* Nano Status Bar */
-.nano-status {
-    text-align: center;
-    color: black;
-    padding: 2px;
-    font-weight: bold;
-}
-
-.nano-status p{
+.idle-status p{
     margin: auto;
     width: fit-content;
     background-color: #dddddd;
