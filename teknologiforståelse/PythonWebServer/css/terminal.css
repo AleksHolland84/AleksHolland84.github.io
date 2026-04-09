@@ -169,3 +169,21 @@
     width: fit-content;
     background-color: #dddddd;
 }
+
+
+/* COPY COMMAND */
+.copy-btn {
+  margin-left: auto;
+  background: #111111c7;
+  color: white;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.copy-btn:hover {
+  background: #ffffff;
+  color:#200120
+}

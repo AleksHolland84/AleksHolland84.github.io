@@ -63,7 +63,7 @@
             </svg>
           </a>
         </div>
-        <p class="updated">20.03.2026</p>
+        <p class="updated">09.04.2026</p>
 
       </div>
     </div>
@@ -200,7 +200,17 @@
     <section class="content">
       <img src="images/header.png" alt="Rooter" width=100%>
       <h2>Programmere, design og skab.</h2>
-      <p>I dette forløb skal I bruge Python 3 og Flask modulet</p>    
+      <div class="flex-container">
+        <p>I dette forløb skal I bruge Python 3 og Flask modulet</p> 
+        <div class="main-box">
+          <div class="details">
+            <h1>Link til forløb</h1>
+            <p>Scan QR-koden for at se forløbet og tage dine hackingevner til det næste niveau.</p>
+          </div>
+          <img class="qr-img" src="images/image-qr-code.png" alt="QR code image">
+        </div>
+      </div> 
+  
     </section>
   </article>
 
@@ -218,8 +228,9 @@
         <div class="terminal-header">
           <span class="terminal-title">C:\Users\user></span>
           <span class="title"></span>
+          <button class="copy-btn">Copy</button>
         </div>
-        <pre><code>python --version</code></pre>
+        <pre><code><span class="command">python --version</span></code></pre>
       </div>
 
     
@@ -305,8 +316,9 @@ py -3 -m venv .venv</code></pre>
         <div class="terminal-header">
           <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
           <span class="title"></span>
+          <button class="copy-btn">Copy</button>
         </div>
-        <pre><code>.venv\Scripts\activate</code></pre>
+        <pre><code><span class="command">.venv\Scripts\activate</span></code></pre>
       </div>
       <p>Din shell-prompt vil ændre sig, så den viser navnet på det aktiverede miljø.</p>
 
@@ -316,6 +328,8 @@ py -3 -m venv .venv</code></pre>
         <div class="terminal-header">
           <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
           <span class="title"></span>
+          <button class="copy-btn">Copy</button>
+
         </div>
         <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">pip install Flask</span></code></pre>
       </div>
@@ -410,6 +424,7 @@ Successfully installed Flask-3.1.3 blinker-1.9.0 click-8.3.1 colorama-0.4.6 itsd
         <div class="terminal-header">
           <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
           <span class="title"></span>
+          <button class="copy-btn">Copy</button>
         </div>
         <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">pip list</span></code></pre>
       </div>
@@ -445,11 +460,13 @@ Werkzeug     3.1.6
       <p>Klik <kbd>File</kbd> - <kbd>New file</kbd>. I det ny-åbnede vindue, klik igen <kbd>File</kbd> - <kbd>New file</kbd> - <kbd>Save as</kbd>. Gem som <i>app.py</i> inde i din FlaskServer mappe (samme sted som din <i>.venv</i> virtuelle miljø.</p>
       
       <p>Skriv nu koden som vist nedenfor og gem.</p>
-      <div class="idle-terminal">
+      <div class="idle-terminal terminal">
           <div class="idle-header">
               <img src="images/idle_doc.png" style="width:22px;">
               <span> app.py - C:/Users/user/Documents/FlaskServer/app.py</span>
               <span class="py-version">(3.14.2)</span>
+              <button class="copy-btn">Copy</button>
+
           </div>
 
           <!-- Menu Bar -->
@@ -463,7 +480,7 @@ Werkzeug     3.1.6
               <span>Help</span>
           </div>
 
-          <div class="idle-content">
+          <div class="idle-content command">
 from flask import Flask
 
 app = Flask(__name__)
@@ -476,6 +493,22 @@ if __name__ == '__main__':
       app.run(debug=True, host='0.0.0.0')
           </div>
       </div>
+      <div class="forklaring">
+        <p>Forklaring</p>
+        <ul>
+          <li>from flask import Flask → importerer Flask-klassen, som bruges til at oprette webapplikationen.</li>
+          <li>app = Flask(__name__) → opretter en Flask-applikation.</li>
+          <li>__name__ → fortæller Flask hvor applikationen er placeret.</li>
+          <li>@app.route('/') → definerer en URL-rute for webapplikationen.</li>
+          <li>'/' → angiver forsiden (root URL).</li>
+          <li>def index(): → funktion der håndterer forespørgsler til denne rute.</li>
+          <li>return 'Hello world' → teksten der vises i browseren.</li>
+          <li>if __name__ == '__main__': → sikrer at appen kun startes direkte og ikke ved import.</li>
+          <li>app.run(...) → starter Flask-udviklingsserveren.</li>
+          <li>debug=True → aktiverer debug-tilstand med fejlmeddelelser.</li>
+          <li>host='0.0.0.0' → gør applikationen tilgængelig fra andre enheder på netværket.</li>
+        </ul>
+      </div>
 
       <p>Betydningen af koden gennemgår vi senere.</p>
       <p>Gem dine ændringer ved at trykke File og derefter Save.</p>
@@ -487,6 +520,7 @@ if __name__ == '__main__':
         <div class="terminal-header">
           <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
           <span class="title"></span>
+          <button class="copy-btn">Copy</button>
         </div>
         <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">python app.py</span></code></pre>
       </div>
