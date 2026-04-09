@@ -494,7 +494,7 @@ if __name__ == '__main__':
           </div>
       </div>
       <div class="forklaring">
-        <p>Forklaring</p>
+        <p>Forklaring:</p>
         <ul>
           <li>from flask import Flask → importerer Flask-klassen, som bruges til at oprette webapplikationen.</li>
           <li>app = Flask(__name__) → opretter en Flask-applikation.</li>
@@ -557,95 +557,72 @@ if __name__ == '__main__':
       <img class="center-image" src="images/localhost_1.png" alt="Makecode søg efter extentions image" width=100%>
 
 
-
-
-      <div class="terminal">
-        <div class="terminal-header">
-          <span class="terminal-title">C:\Users\user\Documents></span>
-          <span class="title"></span>
-        </div>
-        <pre><code>mkdir FlaskServer
-cd FlaskServer
-py -3 -m venv .venv</code></pre>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-      <p>Vi er nu i gang med vores projekt i Makeocode.</p>
-      <p>Først skal vi importere det bibliotek vi vil bruge til at arbejde med vores WiFi modul. Hvis vi bruger ELECFREAKS IoT kit, kan Ifølge guiden her:</p>
-      <img class="center-image" src="images/makecode_import.png" alt="Makecode import extentions image" width=26%>
-      <p>I søgefeltet, søg efter <i>iot</i>. Efterfølgende kan Vi vælge <i>iot-environment-kit</i></p>
-      <img class="center-image" src="images/makecode_search.png" alt="Makecode søg efter extentions image" width=100%>
-      <p>Importerer biblioteket ved at trykke på iot-environment-kit.</p>
-      <p>Vi vil nu have mulighed for at arbejde med ESP8266_IoT modulet, samt MQTT</p>
-      <img class="center-image" src="images/makecode_esp8266.png" alt="Makecode søg efter extentions image" width=80%>
     </section>
   </section>
 
+
+
+
   <section class="content new-chapter">
-    <div id="Programmering_v1" class="__chapter_menu_container">
-      <h2 class="menu-chapter-title chapter-title">Programmering Version 1.0</h2>
+    <div id="routes" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Tilføj en ny side</h2>
     </div>
     <section>
-      <p>I denne version skal vi programmere vores Micro:bit og teste forbindelsen til vores MQTT broker.</p>
+      <p>Du skal nu tilføje endnu en side til din web-applikation ved at oprette en ny rute <i>"route"</i>.</p>
     </section>
 
     <section>
-      <div id="Programmering_v1_version1" class="__chapter_menu_subheader_1">
-        <h3>Programmering: Version1 - <span>MQTT tilslutning</span></h3>
+      <div id="routes_opbygning" class="__chapter_menu_subheader_1">
+        <h3>Opbygning af en <span class="frase">route</span></h3>
       </div>
       <section>
-        <p>Micro:bits skal altid have en <i>on start</i> funktion og en <i>forever</i> funktion.<br>
-          Her bliver <i>on start”</i> kørt først, én enkelt gang, efterfulgt af <i>forever</i>, som bliver kørt gentagende gange indtil lykken brydes.</p>
+        <p>I en web-applikation er en route en bestemt sti ind i din hjemmeside, som bestemmes af URL'en som brugeren skriver i sin web-browser addresse bar. Det er op til dig hvilke ruter der er aktiverede og hvad de hver i sær gør.</p>
+        <p>I dit "Hello world" eksempel, brugte vi en simel rute:</p>
+          <div class="idle-terminal terminal">
+            <div class="idle-header">
+                <img src="images/idle_doc.png" style="width:22px;">
+                <span> app.py - C:/Users/user/Documents/FlaskServer/app.py</span>
+                <span class="py-version">(3.14.2)</span>
+                <button class="copy-btn">Copy</button>
+            </div>
+
+            <div class="idle-content command">
+...
+@app.route('/')
+def index():
+      return 'Hello world' 
+...
+          </div>
+        </div>
+        <p>Denne rute blev dannet af tre enheder:</p>
+        <div class="forklaring">
+          <ul>
+            <li>@app.route('/') → som bestemmer indgangs punktet. / betyder roden af hjemmesiden, altså http://127.0.0.1:5000/</li>
+            <li>def index(): → som er navnet der gives til ruten. Denne kaldes index fordi hjemmesidens index - den primære side, eller hjem.</li>
+            <li>return 'Hello world' → er indholdet af websiden, som bliver returneret når en bruger går til URL'en.</li>
+          </ul>
+        </div>
       </section>
+
       <section>
-        <p>Vi er nu klar til at programmere vores Micro:bit.</p>
-        <p>Det første vi skal gøre er at sørge for, at vores micro:bit kan snakke sammen med vores esp8266 (WiFi modul). 
-          Det ger micro:bit’en (hvis vi bruger IoT boarded fra Elecfreaks) ved at sende data på P8 og modtage på P12. 
-          Omvendt modtager esp8266’en data på P8 og sender data på P12. Dette skal sættes til en baud rate på 115200 (hastigheden data sendes og læses med).</p>
-        <p>Under ESP8266_IoT modulet <img class="icon" src="images/icon_esp8266_iot.png" width=100px;> finder vi blokken hvor vi kan sætte vores RX til <i>P8</i>, TX til <i>P12</i> og Baud rate til <i>115200</i>:</p>
+        <div id="routes_informationsteknologi" class="__chapter_menu_subheader_1">
+          <h3>Tilføj en rute /informationsteknologi</h3>
+        </div>
+        <p>Den følgende vejledning vil vise dig hvordan du opretter en ny rute ved navn 'informationsteknologi' - du kan dog kalde din side hvad du har lyst til. </p>
 
-        <img class="center-image" src="images/makecode_esp8266_RX_TX.png" alt="Makecode esp8266 RX TX" width=55%>
-        <p>Derefter skal vi tilslutte vores Micro:bit WiFi.<br>Benyt ESP8266_IoT modulet og udfyld <i>SSID</i> og <i>KEY</i> med navnet på WiFi og koden.</p>
-       
-        <p>Jeg benytter <i>device name</i> som <i>clientID</i> da det er unikt for alle Micro:bits.</p>
-        <p>I finder <i>Device name</i> under: <i>Advanced</i> -> <i>Control</i> -> <i>... more</i></p>
-        <p><img class="icon" src="images/icon_advanced.png"><br>
-          <img class="icon" src="images/icon_Control.png"><br>
-          <img class="icon" src="images/icon_Control_more.png"></p>
 
-        <p>Nedenfor er et eksemple på en simpel <i>on start</i> der forbinder Micro:bit'en til WiFi med visuel feedback.</p>
-        <img class="center-image" src="images/makecode_wifi_v1.png" alt="Makecode esp8266 wifi connect image" width=80%>
 
-      </section>
-      <section>
-        <p>Hvis vores Micro:bit tilslutter sig WiFi uden fejl, kan vi nu forsøge at publicerer noget data på et <i>topic</i>.</p>
-        <p>Dette gør vi når vi trykker på <i>button A</i>.</p>
-        <p><i>publish</i> funktionen findes under <img class="icon" src="images/icon_esp8266_iot.png" width=100px;> -> <img class="icon" src="images/icon_mqtt.png" width=100px;></p>
-        <img class="center-image" src="images/makecode_mqtt_pub_v1.png" alt="Makecode mqtt pub connect image" width=65%>
 
-        <p>Koden skulle gerne ligne følgende nu:</p>
-        <img class="center-image" src="images/microbit_mqtt_v1.png" alt="Micro:bit v1 image" width=100%>
-        <p>Overfør programmet til Micro:bit'en og test om den tilslutter sig WiFi.</p>
-        <p class="info">Husk at udfylde: 'your_ssid', 'your_pwd' og ændre broaker host til den noterede IP tidligere (Til MQTT Brokeren)</p>
 
-      </section>
+
+
+
+
+
+
+
+
+
 
       <section>
         <p>Som nævnt tidligere kan vi lytte (subscribe) på et <i>topic</i>.</p>
