@@ -99,6 +99,18 @@
 
                 <div class="download-chapter-container">
                   <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
+                  <a class="file" href="https://www.python.org/downloads/" target="_blank">
+                    <button class="download-file">
+                      <img src="images/python_logo.png" style="width:22px;">
+                      <span class="file-name">Python3</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 1</h4>
                   <a class="file" href="uploads/lego_vault.zip" download>
                     <button class="download-file">
                       <img src="images/zip.svg" style="width:22px;">
@@ -913,7 +925,7 @@ WantedBy=multi-user.target
   </section>
 
   <!-- ###   HACK DIG IND    ###-->
-  <section class="content new-chapter">
+  <section class="content new-chapter content">
     <div id="hack" class="__chapter_menu_container">
       <h2 class="menu-chapter-title chapter-title">Hack dig ind</h2>
     </div>
@@ -934,12 +946,24 @@ WantedBy=multi-user.target
       <h3>Send requests med cURL</h3>
     </div>
     <p>De fleste styresystemer har installeret cURL som standard. Vi kan prøve at sende et HTTP POST request med cURL i kommandoprompten:</p>
+    <p>Åben en kommandoprompt ved at trykke <kbd>Win</kbd> + <kbd>R</kbd> og skriv <i>cmd</i> i dialogboksen.</p>
+    <div class="frame-container-center" style="width: 50%">
+      <img class="center-image" src="images/dialogboks.png" alt="dialogboks" width=100%>
+      <figcaption>Windows-kør (Run) dialogboks</figcaption>
+    </div>
+
+
+
+    <p>Skriv følgende commando i kommandoprompten:</p>
+    <p class="info">OBS: Husk at ændre ipaddressen</p>
+
     <div class="terminal">
       <div class="terminal-header">
         <span class="terminal-title">Kommandoprompt</span>
         <span class="title"></span>
+        <button class="copy-btn">Copy</button>
       </div>
-      <pre><code class="dos">curl -d "pincode=2121" -X POST http://&ltflask-server-ip&gt:5000/process
+      <pre><code class="dos command">curl -d "pincode=2121" -X POST http://192.162.0.79:5000/process
       </code></pre>
     </div>
     <div class="forklaring">
@@ -980,13 +1004,84 @@ WantedBy=multi-user.target
     </div>
     <p>Vi kan skrive et script i <i>python</i> der sender et <i>request</i> magen til det vi sendte med cURL.</p>
     <p>I kan prøve at skrive jeres eget script, eller hente det viste script nedenfor her: <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/basic-requests.py" target="_blank">github.io</a></p>
-    <img class="center-image" src="images/github-basic.png" alt="image of Burp Suite request" width=100%>
+    <img class="center-image" src="images/github-basic.png" alt="image of python script" width=100%>
     <p class="info">OBS: Pythons requests-modul er ikke installeret som standard på Windows og skal derfor installeres med <i>pip</i></p>
     <p>Prøv at benytte python-scriptet til at sende et request med en pinkode til serveren. Test derefter responsen for, om det indeholder "DENIED". Hvis responsens tekst indeholder "DENIED" printes pinkoden til terminalen sammen med det DENIED.</i>.
     Såfremt responsens tekst ikke indeholder "DENIED" printes pinkoden til terminalen sammen med et ACCESS WITH PIN:...</p>
   </section>
 
   <section class="content new-chapter">
+    <section>
+      <div id="hack_python_store" class="__chapter_menu_subheader_1">
+        <h3>Installation af Python3 igennem Microsoft Store</h3>
+      </div>
+      <p>Download Python 3 (seneste udgave i skrivende stund er Python 3.14) ved evt. at benytte linket under Ressourcer. 
+        Python3 kan også installeres igennem Microsoft Store:</p>
+        <img class="center-image" src="images/windows_store_light.png" alt="Microsfot store" width=100%>
+    </section> 
+
+    <section>
+      <div id="hack_python_web" class="__chapter_menu_subheader_1">
+        <h3>Installation af Python3 med <i>standalone installer for <span style="text-decoration: underline; text-decoration-color:rgb(255, 187, 0)">Python 3.14.3</span></i> </h3>
+      </div>
+      <p>Hvis du vælger at installere Python fra Pythons officelle hjemmeside, skal du huske at tilføje Python til PATH variablen.</p>
+      <p>Dette gør du som vist på billedet nedenfor, ved at vinge benet af ved tilvalg: <i>Add python.exe to PATH</i> . </p>
+      <img class="center-image" src="images/python_3.14.3_64_installer_1.png" alt="Python install" width=90%>
+
+      <p>Efter installationen af Python, er du nu klar til installere/hente Flask modulet via pip.</p>    
+    </section>
+    
+
+    <section>
+      <div id="Opsætning_flask" class="__chapter_menu_subheader_1">
+        <h3>Installation af Flask pakken i et virtuelt miljø</span></i> </h3>
+      </div>
+
+      <p>Efter installationen af Python, er du nu klar til installere/hente Flask modulet via pip.</p>
+      <p>pip eller pip3 er et "package-management system" som anvendes i en kommando linje (Command Prompt eller evt. Bash shell) . Pip/pip3 anvendes til at installere og administrere software-pakker skrevet i Python. </p>
+
+      <p>Følg eventuelt den officelle guide til at installere Flask: <a href="https://flask.palletsprojects.com/en/stable/installation/" target="_blank">https://flask.palletsprojects.com</a></p>
+      <img class="center-image" src="images/flask-image.svg" alt="Flask Logo" width=50% style="padding-right: 30px;">
+      <p>For at installere et modul, skal man benytte  pip3 install modul_navn.<br>Erstat modul_navn med navnet på det modul du ønsker at installere.</p>
+    </section> 
+
+
+    <div class="chapter-text">
+      <h4>Virtuel miljøer</h4>
+
+      <p>Brug et virtuelt miljø til at administrere afhængighederne for dit projekt, både under udvikling og i produktion.</p>
+      <p>Hvilket problem løser et virtuelt miljø? Jo flere Python-projekter du har, desto større er sandsynligheden for, at du skal arbejde med forskellige versioner af Python-biblioteker – eller endda Python selv. Nyere versioner af biblioteker til ét projekt kan bryde kompatibiliteten i et andet projekt.</p>
+      <p>Virtuelle miljøer er uafhængige samlinger af Python-biblioteker, ét for hvert projekt. Pakker, der installeres til ét projekt, påvirker ikke andre projekter eller operativsystemets pakker.</p>
+      <p>Python leveres med modulet venv, som bruges til at oprette virtuelle miljøer.</p>
+
+
+    <p>Opret en projektmappe og en mappe kaldet .venv indeni:</p>
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">C:\Users\user\Documents></span>
+          <span class="title"></span>
+        </div>
+        <pre><code>mkdir FlaskServer
+cd FlaskServer
+py -3 -m venv .venv</code></pre>
+      </div>
+
+      <h4>Aktiverer miljøet</h4>
+      <p>Før du arbejder på dit projekt, skal du aktivere det tilhørende miljø:</p>
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
+          <span class="title"></span>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <pre><code><span class="command">.venv\Scripts\activate</span></code></pre>
+      </div>
+      <p>Din shell-prompt vil ændre sig, så den viser navnet på det aktiverede miljø.</p>
+    </div>
+  </section>
+  
+
+  <section class="content">
     <p>Hvis vi vil, kan vi opsætte et virtuelt miljø til at køre vores python script.</p>
     <p>Først opretter jeg en mappe, der skal indeholde mine filer osv.<br>
     Derefter opretter jeg et virtuelt miljø, aktiverer det og installer python-modulet.</p>
@@ -1054,7 +1149,7 @@ WantedBy=multi-user.target
           <button class="copy-btn">Copy</button>
         </div>
         <div class="nano-content"><code class="command">#---------------------------------------------------------#
-#                        MODULER                        #
+#                        MODULER                          #
 #---------------------------------------------------------#
 import requests #importerer requests modulet
 
@@ -1137,6 +1232,8 @@ PIN 0001 DENIED
     <p>Snak om de ovenstående problematikker.</p>
     <p>Efterfølgende kan I prøve at udvikle scriptet så det automatisk sender et nyt request, indtil den korrekte pin findes.</p>
 
+    <p>Find evt. inspiration på <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/bruteforce.py" target="_blank">github.io</a></p>
+    <img class="center-image" src="images/github-brute.png" alt="image of python script" width=100%>
     
   </section>
 
