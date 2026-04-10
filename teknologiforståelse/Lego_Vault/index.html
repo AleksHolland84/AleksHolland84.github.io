@@ -911,7 +911,7 @@ WantedBy=multi-user.target
         </code></pre>
       </div>
 
-      <p>Hvis outputtet ser ud som ovenfor, kører <i>Flask</i> serveren korrekt og I burde nu kunne tilgå hjemmesiden på port 5000 ved at indtaste ipaddressen på pi'en: &lt;pi-idaddresse&gt;<b>:</b>5000/</p>
+      <p>Hvis outputtet ser ud som ovenfor, kører <i>Flask</i> serveren korrekt og I burde nu kunne tilgå hjemmesiden på port 5000 ved at indtaste ip-addressen på pi'en: &lt;pi-idaddresse&gt;<b>:</b>5000/</p>
       <p>Eks. 192.162.0.79:5000</p>
       <p>Såfremt alt kører som det skal, vil I blive prsæenteret for en key-pad, som vist nedenfor:</p>
 
@@ -955,7 +955,7 @@ WantedBy=multi-user.target
 
 
     <p>Skriv følgende commando i kommandoprompten:</p>
-    <p class="info">OBS: Husk at ændre ipaddressen</p>
+    <p class="info">OBS: Husk at ændre ip-addressen</p>
 
     <div class="terminal">
       <div class="terminal-header">
@@ -1010,7 +1010,39 @@ WantedBy=multi-user.target
     Såfremt responsens tekst ikke indeholder "DENIED" printes pinkoden til terminalen sammen med et ACCESS WITH PIN:...</p>
   </section>
 
+  <section class="content">
+    <p>Vi har nu testet vores python script og lært at sende ét enkelt request.</p>
+    <div id="hack_sikkerhed2" class="__chapter_menu_subheader_1">
+      <h3>Problemstillinger (Python)</h3>
+    </div>
+    <p>Overvej følgende problemstillinger:</p>
+    <ul>
+      <li>Hvordan kan vi bruge python til at sende et nyt request, hver gang vi modtager "DENIED"?</li>
+      <li>Hvor lang tid ville det mon tage at sende alle 9999 mulige kombinationer?</li>
+      <li>Hvordan kan man gøre LEGO-vault systemet mere sikkert?</li>
+    </ul>
+    <p>Snak om de ovenstående problematikker.</p>
+    <p>Efterfølgende kan I prøve at udvikle scriptet så det automatisk sender et nyt request, indtil den korrekte pin findes.</p>
+
+    <p>Find evt. inspiration på <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/bruteforce.py" target="_blank">github.io</a></p>
+    <img class="center-image" src="images/github-brute.png" alt="image of python script" width=100%>
+    
+  </section>
+
+
+
+
+
+
+
+
+
   <section class="content new-chapter">
+    <div id="hack_python" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Bruteforce med python</h2>
+    </div>
+    <p>Guiden nedenfor viser hvordan du installerer python og benytter python til at bruteforce web-applicationen. </p>
+    <p>Vælg enten at installerer python ved hjælp af Microsfot Store eller med pythons standalone installer.</p>
     <section>
       <div id="hack_python_store" class="__chapter_menu_subheader_1">
         <h3>Installation af Python3 igennem Microsoft Store</h3>
@@ -1033,15 +1065,15 @@ WantedBy=multi-user.target
     
 
     <section>
-      <div id="Opsætning_flask" class="__chapter_menu_subheader_1">
-        <h3>Installation af Flask pakken i et virtuelt miljø</span></i> </h3>
+      <div id="hack_python_requests" class="__chapter_menu_subheader_1">
+        <h3>Installation af <i>requests</i> pakken i et virtuelt miljø</span></i> </h3>
       </div>
 
-      <p>Efter installationen af Python, er du nu klar til installere/hente Flask modulet via pip.</p>
-      <p>pip eller pip3 er et "package-management system" som anvendes i en kommando linje (Command Prompt eller evt. Bash shell) . Pip/pip3 anvendes til at installere og administrere software-pakker skrevet i Python. </p>
+      <p>Efter installationen af Python, er du nu klar til installere/hente requests modulet via pip.</p>
+      <p>pip eller pip3 er et "package-management system" som anvendes i en kommando linje (Commandprompt). Pip/pip3 anvendes til at installere og administrere software-pakker skrevet i Python. </p>
 
-      <p>Følg eventuelt den officelle guide til at installere Flask: <a href="https://flask.palletsprojects.com/en/stable/installation/" target="_blank">https://flask.palletsprojects.com</a></p>
-      <img class="center-image" src="images/flask-image.svg" alt="Flask Logo" width=50% style="padding-right: 30px;">
+      <p>Følg eventuelt den officelle guide til at installere requests: <a href="https://pypi.org/project/requests/" target="_blank">https://pypi.org/project/requests/</a>.</p>
+      <img class="center-image" src="images/pypi_requests.png" alt="pypi.org requests" width=100% style="padding-right: 30px;">
       <p>For at installere et modul, skal man benytte  pip3 install modul_navn.<br>Erstat modul_navn med navnet på det modul du ønsker at installere.</p>
     </section> 
 
@@ -1061,94 +1093,111 @@ WantedBy=multi-user.target
           <span class="terminal-title">C:\Users\user\Documents></span>
           <span class="title"></span>
         </div>
-        <pre><code>mkdir FlaskServer
-cd FlaskServer
+        <pre><code>mkdir bruteforce
+cd bruteforce
 py -3 -m venv .venv</code></pre>
       </div>
+
+      <div class="forklaring">
+        <p>Forklaring</p>
+        <ul>
+          <li>mkdir → “make directory” - laver en ny mappe med navn <i>bruteforce</i></li>
+          <li>cd → "change directory”; bruges til navigerer. Her går vi ind i vores nylig lavet mappe.</li>
+          <li>py -3 → vi bruger Python version 3.</li>
+          <li>-m venv → beder Python om at bruge modulet venv (virtual environment).</li>
+          <li>.venv → navnet på det nye miljø (en mappe, der oprettes).</li>
+        </ul>
+      </div>
+
 
       <h4>Aktiverer miljøet</h4>
       <p>Før du arbejder på dit projekt, skal du aktivere det tilhørende miljø:</p>
       <div class="terminal">
         <div class="terminal-header">
-          <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
+          <span class="terminal-title">C:\Users\user\Documents\bruteforce></span>
           <span class="title"></span>
           <button class="copy-btn">Copy</button>
         </div>
-        <pre><code><span class="command">.venv\Scripts\activate</span></code></pre>
+        <pre><code><span class="dir">C:\Users\user\Documents\bruteforce></span><span class="command">.venv\Scripts\activate</span></code></pre>
       </div>
-      <p>Din shell-prompt vil ændre sig, så den viser navnet på det aktiverede miljø.</p>
+      <p>Din kommandoprompt vil ændre sig, så den viser navnet på det aktiverede miljø.</p>
     </div>
+
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">C:\Users\user\Documents\bruteforce></span>
+          <span class="title"></span>
+          <button class="copy-btn">Copy</button>
+
+        </div>
+        <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\bruteforce></span><span class="command">pip install requests</span></code></pre>
+      </div>
+      <div class="forklaring">
+        <p>Forklaring</p>
+        <ul>
+          <li>pip → Python’s pakkehåndtering (ligner en “app store” for Python).</li>
+          <li>install → kommandoen til at installere en pakke.</li>
+          <li>requests → navnene på de pakker vi skal bruge.</li>
+        </ul>
+      </div>
+
+    
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">Output</span>
+          <span class="title"></span>
+        </div>
+
+        <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\bruteforce></span><span class="command">pip install requests</span>
+...
+...
+...
+<span style="color:rgb(49, 121, 255)">[notice]</span> A new release of pip is available: <span style="color:red">25.3</span> -> <span style="color:greenyellow">26.0.1</span>
+<span style="color:rgb(49, 121, 255)">[notice]</span> To update, run: <span style="color:greenyellow">python.exe -m pip install --upgrade pip</span>
+
+(.venv) C:\Users\user\Documents\bruteforce>
+
+</code></pre>
+      </div> 
+      <p>Requests er nu installeret.</p>
+    
   </section>
   
 
+
+
+
   <section class="content">
-    <p>Hvis vi vil, kan vi opsætte et virtuelt miljø til at køre vores python script.</p>
-    <p>Først opretter jeg en mappe, der skal indeholde mine filer osv.<br>
-    Derefter opretter jeg et virtuelt miljø, aktiverer det og installer python-modulet.</p>
+    <p>Åben Python 3 IDLE (IDLE skulle gerne være installeret sammen med Python).</p>
+    <img class="center-image" src="images/windows_search.png" alt="Python install" width=90%>
 
-    <div class="terminal linux">
-      <div class="terminal-header-linux">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="terminal-title"></span>
-        <div class="title">
-          <span>ssh</span>
-          <button class="copy-btn">Copy</button>
-        </div>
-      </div>
-<pre><code><span class="rpi"><span class="dir">~</span><span class="command">mkdir BruteForceLegoVault</span>
-<span class="rpi"><span class="dir">~</span><span class="command">cd BruteForceLegoVault</span>
-<span class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 -m venv bruteForceVenv</span>
-<span class="rpi"><span class="dir">~/BruteForceLegoVault</span><span class="command">. ./bruteForceVenv/bin/activate</span>
-<span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">pip install requests</span></span></span></span></span>
-</code></pre>
-    </div>
-
-    <div class="forklaring">
-      <p>Forklaring</p>
-      <ul>
-        <li>mkdir → “make directory” - laver en ny mappe med navn <i>BruteForceLegoVault</i></li>
-        <li>cd → "change directory”; bruges til navigerer. Her går vi ind i vores nylig lavet mappe.</li>
-        <br>
-        <li>python3 → vi bruger Python version 3.</li>
-        <li>-m venv → beder Python om at bruge modulet venv (virtual environment).</li>
-        <li>bruteForceVenv → navnet på det nye miljø (en mappe, der oprettes).</li>
-        <br>
-        <li>. → betyder “kør denne fil i den nuværende terminal”.</li>
-        <li>./bruteForceVenv/bin/activate → aktiverer det virtuelle miljø.</li>
-        <li>pip → Python’s pakkehåndtering (ligner en “app store” for Python).</li>
-        <li>install → kommandoen til at installere en pakke.</li>
-        <li>requests → navnene på de pakker vi skal bruge.</li>
-      </ul>
-    </div>
-
-
-    <p>Inden vi tester vores script, skal vi have ændret ip-addressen og pinkoden i scriptet. Her bruger vi igen nano.<br>
-    Sæt &lt;IP-ADDRESS&gt; til den ip addresse I noterede i starten (serveres ip addresse). Ændre også pinkoden til den 4-cifret pinkode I vil teste (husk: 0000 læser boksen)</p>
-    <div class="terminal linux">
-      <div class="terminal-header-linux">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="terminal-title"></span>
-        <div class="title">
-          <span>ssh</span>
-          <button class="copy-btn">Copy</button>
-        </div>
-      </div>
-        <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">nano basic-requests.py</span>
-        </code></pre>
-    </div> 
+    <P>Til at starte med åbnes IDLE i en REPL (Read-Eval-Print Loop). Da vi gerne vil skrive et script, og gemme koden, skal vi oprette en fil.</P>
+    <p>Klik <kbd>File</kbd> - <kbd>New file</kbd>. I det ny-åbnede vindue, klik igen <kbd>File</kbd> - <kbd>Save as</kbd>. Gem som <i>bruteforce.py</i> inde i din bruteforce mappe (samme sted som din <i>.venv</i> virtuelle miljø).</p>
     
-    <div class="terminal nano-terminal">
-        <div class="nano-header">
-            <span>GNU nano 6.2</span> <span class="file-path">basic-requests.py</span> <span> </span> <span></span>
+    <p>Skriv nu koden som vist nedenfor og gem.</p>
+
+    <div class="idle-terminal terminal">
+        <div class="idle-header">
+            <img src="images/idle_doc.png" style="width:22px;">
+            <span> bruteforce.py - C:/Users/user/Documents/bruteforce/bruteforce.py</span>
+            <span class="py-version">(3.14.2)</span>
+            <button class="copy-btn">Copy</button>
+
         </div>
-        <div class=" nano-flex">
-          <button class="copy-btn">Copy</button>
+
+        <!-- Menu Bar -->
+        <div class="idle-menubar">
+            <span>File</span>
+            <span>Edit</span>
+            <span>Format</span>
+            <span>Run</span>
+            <span>Options</span>
+            <span>Window</span>
+            <span>Help</span>
         </div>
-        <div class="nano-content"><code class="command">#---------------------------------------------------------#
+
+        <div><code class="idle-content command">
+#---------------------------------------------------------#
 #                        MODULER                          #
 #---------------------------------------------------------#
 import requests #importerer requests modulet
@@ -1172,26 +1221,40 @@ if "DENIED"  in response.text:
     print(f"PIN {pin} DENIED")
 # Ellers skal den printe ACCESS WITH PIN: vores pinkode
 else:
-    print(f"""################### ACCESS WITH PIN: {pin} ####################""")
-      </code>
-    </div>
-    <div class="nano-footer">
-      <div class="nano-status"><p>[ Read 1 line ]</p></div>
-        <div class="nano-help">
-            <span>^G Help</span> <span>^O Write Out</span> <span>^W Where Is</span> 
-            <span>^K Cut</span> <span>^T Execute</span> <span>^C Location</span> <span>M-U Undo</span>
-        </div>
-        <div class="nano-help">
-            <span>^X Exit</span> <span>^R Read File</span> <span>^\ Replace</span> 
-            <span>^U Paste</span> <span>^J Justify</span> <span>^/ Go To Line</span> <span>M-E Redo</span>
-        </div>
+    print(f"""#### ACCESS WITH PIN: {pin} ####""")
+
+</code>  
       </div>
     </div>
-    <p>Gem med CTRL+O herefter Enter.</p>
-    <p>Exit nano med CTRL+X</p>
+    
+    <p>Inden vi tester vores script, skal vi have ændret ip-addressen og pinkoden i scriptet. Her bruger vi igen nano.<br>
+    Sæt &lt;IP-ADDRESS&gt; til den ip addresse I noterede i starten (serveres ip addresse). Ændre også pinkoden til den 4-cifret pinkode I vil teste (husk: 0000 læser boksen)</p>
 
     <p>Vi kan nu prøve at eksikver scriptet:</p>
-        <div class="terminal linux">
+
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="terminal-title">C:\Users\user\Documents></span>
+        <span class="title"></span>
+      </div>
+      <pre><code>mkdir bruteforce
+cd bruteforce
+py -3 -m venv .venv</code></pre>
+    </div>
+
+    <div class="forklaring">
+      <p>Forklaring</p>
+      <ul>
+        <li>mkdir → “make directory” - laver en ny mappe med navn <i>bruteforce</i></li>
+        <li>cd → "change directory”; bruges til navigerer. Her går vi ind i vores nylig lavet mappe.</li>
+        <li>py -3 → vi bruger Python version 3.</li>
+        <li>-m venv → beder Python om at bruge modulet venv (virtual environment).</li>
+        <li>.venv → navnet på det nye miljø (en mappe, der oprettes).</li>
+      </ul>
+    </div>
+
+
+    <div class="terminal linux">
       <div class="terminal-header-linux">
         <span class="dot red"></span>
         <span class="dot yellow"></span>
@@ -1218,24 +1281,10 @@ PIN 0001 DENIED
     </div>
   </section>
 
-  <section class="content new-chapter">
-    <p>Vi har nu testet vores python script og lært at sende ét enkelt request.</p>
-    <div id="hack_sikkerhed2" class="__chapter_menu_subheader_1">
-      <h3>Problemstillinger (Python)</h3>
-    </div>
-    <p>Overvej følgende problemstillinger:</p>
-    <ul>
-      <li>Hvordan kan vi bruge python til at sende et nyt request, hver gang vi modtager "DENIED"?</li>
-      <li>Hvor lang tid ville det mon tage at sende alle 9999 mulige kombinationer?</li>
-      <li>Hvordan kan man gøre LEGO-vault systemet mere sikkert?</li>
-    </ul>
-    <p>Snak om de ovenstående problematikker.</p>
-    <p>Efterfølgende kan I prøve at udvikle scriptet så det automatisk sender et nyt request, indtil den korrekte pin findes.</p>
 
-    <p>Find evt. inspiration på <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/bruteforce.py" target="_blank">github.io</a></p>
-    <img class="center-image" src="images/github-brute.png" alt="image of python script" width=100%>
-    
-  </section>
+
+
+
 
 
 
