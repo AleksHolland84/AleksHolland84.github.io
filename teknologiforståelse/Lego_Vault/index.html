@@ -1022,11 +1022,6 @@ WantedBy=multi-user.target
       <li>Hvordan kan man gøre LEGO-vault systemet mere sikkert?</li>
     </ul>
     <p>Snak om de ovenstående problematikker.</p>
-    <p>Efterfølgende kan I prøve at udvikle scriptet så det automatisk sender et nyt request, indtil den korrekte pin findes.</p>
-
-    <p>Find evt. inspiration på <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/bruteforce.py" target="_blank">github.io</a></p>
-    <img class="center-image" src="images/github-brute.png" alt="image of python script" width=100%>
-    
   </section>
 
 
@@ -1149,9 +1144,23 @@ py -3 -m venv .venv</code></pre>
         </div>
 
         <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\bruteforce></span><span class="command">pip install requests</span>
-...
-...
-...
+Collecting requests
+  Downloading requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+Collecting charset_normalizer<4,>=2 (from requests)
+  Downloading charset_normalizer-3.4.7-cp314-cp314-win_amd64.whl.metadata (41 kB)
+Collecting idna<4,>=2.5 (from requests)
+  Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting urllib3<3,>=1.26 (from requests)
+  Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2023.5.7 (from requests)
+  Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+Downloading requests-2.33.1-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.7-cp314-cp314-win_amd64.whl (159 kB)
+Using cached idna-3.11-py3-none-any.whl (71 kB)
+Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+Successfully installed certifi-2026.2.25 charset_normalizer-3.4.7 idna-3.11 requests-2.33.1 urllib3-2.6.3
 <span style="color:rgb(49, 121, 255)">[notice]</span> A new release of pip is available: <span style="color:red">25.3</span> -> <span style="color:greenyellow">26.0.1</span>
 <span style="color:rgb(49, 121, 255)">[notice]</span> To update, run: <span style="color:greenyellow">python.exe -m pip install --upgrade pip</span>
 
@@ -1231,54 +1240,34 @@ else:
     Sæt &lt;IP-ADDRESS&gt; til den ip addresse I noterede i starten (serveres ip addresse). Ændre også pinkoden til den 4-cifret pinkode I vil teste (husk: 0000 læser boksen)</p>
 
     <p>Vi kan nu prøve at eksikver scriptet:</p>
-
     <div class="terminal">
       <div class="terminal-header">
-        <span class="terminal-title">C:\Users\user\Documents></span>
+        <span class="terminal-title">C:\Users\user\Documents\bruteforce></span>
         <span class="title"></span>
+        <button class="copy-btn">Copy</button>
       </div>
-      <pre><code>mkdir bruteforce
-cd bruteforce
-py -3 -m venv .venv</code></pre>
+      <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\bruteforce></span><span class="command">py bruteforce.py</span></code></pre>
     </div>
 
-    <div class="forklaring">
-      <p>Forklaring</p>
-      <ul>
-        <li>mkdir → “make directory” - laver en ny mappe med navn <i>bruteforce</i></li>
-        <li>cd → "change directory”; bruges til navigerer. Her går vi ind i vores nylig lavet mappe.</li>
-        <li>py -3 → vi bruger Python version 3.</li>
-        <li>-m venv → beder Python om at bruge modulet venv (virtual environment).</li>
-        <li>.venv → navnet på det nye miljø (en mappe, der oprettes).</li>
-      </ul>
-    </div>
-
-
-    <div class="terminal linux">
-      <div class="terminal-header-linux">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="terminal-title"></span>
-        <div class="title">
-          <span>ssh</span>
-          <button class="copy-btn">Copy</button>
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">Output</span>
+          <span class="title"></span>
         </div>
-      </div>
-        <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 basic-requests.py</span>
-      </code></pre>
-    </div> 
 
-    <div class="terminal linux">
-      <div class="terminal-header-linux">
-        <span class="terminal-title-output">Output</span>
-        <span class="title">ssh</span>
-      </div>
-        <pre><code><span class="bruteForceVenv"></span><span class="dir">~/BruteForceLegoVault</span><span class="command">python3 basic-requests.py</span>
+        <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\bruteforce></span><span class="command">py bruteforce.py</span>
+
 PIN 0001 DENIED
 
 </code></pre>
-    </div>
+    </div> 
+    
+    <p>Efterfølgende kan I prøve at udvikle scriptet så det automatisk sender et nyt request, indtil den korrekte pin findes.</p>
+
+    <p>Find evt. inspiration på <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/bruteforce.py" target="_blank">github.io</a></p>
+    <img class="center-image" src="images/github-brute.png" alt="image of python script" width=100%>
+    
+
   </section>
 
 
