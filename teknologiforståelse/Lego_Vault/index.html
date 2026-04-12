@@ -722,9 +722,95 @@ drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
 
         <p class="info">OBS: Flask-serveren skal genstartes hvis pin-koden ændres imens flask-serveren kører.</p>  
     </section>
+  </section>  
 
+    
+
+
+  <!-- ### FLASK WEBSERVER ###-->
+  <section class="content new-chapter">
+    <div id="flask" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Flask Webserver</h2>
+    </div>
+    <div id="flask_start" class="__chapter_menu_subheader_1">
+      <h3>Start webserveren</h3>
+    </div>
+
+    <p>Efter vi har aktiveret vores virtuelle miljø, udpakket zip-filen og ændret vores pin-kode, kan vi starte vores Flask server:</p>
     <section>
-      <div id="Opsætning_systemctl" class="__chapter_menu_subheader_1">
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">flask --app app run --host=0.0.0.0</span>
+        </code></pre>
+      </div>      
+    </section>
+
+    <div class="chapter-text">
+      <section class="highlight_attention">
+        <p class="info">OBS: Hvis I starter webserveren uden at have tilsluttet <i>Build HAT'en</i> lukker appen med en fejl<br>
+          Kontrollerer også om Build HAT'en er påsat korrekt og at motor er isat den korrekte port (default er port C).</p>
+
+        <div class="terminal linux">
+          <div class="terminal-header-linux">
+            <span class="terminal-title-output">Output</span>
+            <span class="title">ssh</span>
+          </div>
+          <pre><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">flask --app app run --host=0.0.0.0</span>  
+      File "/home/pi/LEGO_Vault/venv/lib/python3.10/site-packages/buildhat/serinterface.py", line 114, in __init__
+        if device == "/dev/serial0" and os.readlink(device) == "ttyAMA10":
+    FileNotFoundError: [Errno 2] No such file or directory: '/dev/serial0'  
+<span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command"></span>  
+          </code></pre>
+        </div>
+        <p>Hvis outputtet ser ud som ovenfor, er der sket en fejl. Det er svært at guide med fejlsøgning, men prøv at læs/forstå fejlmeldingen. Det er selvfølgelig vigtigt at det er den korrekte motorport der bliver brugt.
+        Derudover benyttes der også en seriel port <i>"device"</i> til at overføre og modtage data fra motoren.
+      
+        <p>I zip-filen findes filen; <i>flask_tester.py</i>. I den er alt med LEGO modulet fjernet og der oprettes kun en Flask webserver. Forsøg evt. at starte den med: <i>flask --app flask_tester.py run --host=0.0.0.0</i></p>
+
+      </section>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="terminal-title-output">Output</span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">flask --app app run --host=0.0.0.0</span>  
+ * Serving Flask app 'app_webtester.py'
+ * Debug mode: off
+2025-09-12 15:36:31,391 - werkzeug - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.79:5000
+2025-09-12 15:36:31,392 - werkzeug - INFO - Press CTRL+C to quit
+
+<span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command"></span>  
+        </code></pre>
+      </div>
+
+      <p>Hvis outputtet ser ud som ovenfor, kører <i>Flask</i> serveren korrekt og I burde nu kunne tilgå hjemmesiden på port 5000 ved at indtaste ip-addressen på pi'en: &lt;pi-idaddresse&gt;<b>:</b>5000/</p>
+      <p>Eks. 192.162.0.79:5000</p>
+      <p>Såfremt alt kører som det skal, vil I blive prsæenteret for en key-pad, som vist nedenfor:</p>
+
+      <img class="center-image" src="images/keypad.png" alt="image of keypad" width=100%>
+      <figcaption>Flask app hosting keypad.</figcaption>
+
+
+      <p>Test eventuelt din pin-kode og se hvad du får adgang.</p>
+      <p>Du kan låse boksen igen ved at taste 0000#.</p>
+    </div>
+
+
+    <section class="content new-chapter">
+      <div id="flask_systemctl" class="__chapter_menu_subheader_1">
         <h3>Oprettelse af en Systemd-tjeneste</h3>
       </div>
       <p class="info">OBS: Dette er ikke strængt nødvendigt, men kan lette vores arbejde med at holde LEGO-Vault serveren kørende.</p>  
@@ -840,89 +926,9 @@ WantedBy=multi-user.target
       </div>  
     </section>
   </section>
+    
 
 
-  <!-- ### FLASK WEBSERVER ###-->
-  <section class="content new-chapter">
-    <div id="flask" class="__chapter_menu_container">
-      <h2 class="menu-chapter-title chapter-title">Flask Webserver</h2>
-    </div>
-    <div id="flask_start" class="__chapter_menu_subheader_1">
-      <h3>Start webserveren</h3>
-    </div>
-
-    <p>Efter vi har aktiveret vores virtuelle miljø, udpakket zip-filen og ændret vores pin-kode, kan vi starte vores Flask server:</p>
-    <section>
-      <div class="terminal linux">
-        <div class="terminal-header-linux">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="terminal-title"></span>
-          <div class="title">
-            <span>ssh</span>
-            <button class="copy-btn">Copy</button>
-          </div>
-        </div>
-        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">flask --app app run --host=0.0.0.0</span>
-        </code></pre>
-      </div>      
-    </section>
-
-    <div class="chapter-text">
-      <section class="highlight_attention">
-        <p class="info">OBS: Hvis I starter webserveren uden at have tilsluttet <i>Build HAT'en</i> lukker appen med en fejl<br>
-          Kontrollerer også om Build HAT'en er påsat korrekt og at motor er isat den korrekte port (default er port C).</p>
-
-        <div class="terminal linux">
-          <div class="terminal-header-linux">
-            <span class="terminal-title-output">Output</span>
-            <span class="title">ssh</span>
-          </div>
-          <pre><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">flask --app app run --host=0.0.0.0</span>  
-      File "/home/pi/LEGO_Vault/venv/lib/python3.10/site-packages/buildhat/serinterface.py", line 114, in __init__
-        if device == "/dev/serial0" and os.readlink(device) == "ttyAMA10":
-    FileNotFoundError: [Errno 2] No such file or directory: '/dev/serial0'  
-<span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command"></span>  
-          </code></pre>
-        </div>
-        <p>Hvis outputtet ser ud som ovenfor, er der sket en fejl. Det er svært at guide med fejlsøgning, men prøv at læs/forstå fejlmeldingen. Det er selvfølgelig vigtigt at det er den korrekte motorport der bliver brugt.
-        Derudover benyttes der også en seriel port <i>"device"</i> til at overføre og modtage data fra motoren.
-      
-        <p>I zip-filen findes filen; <i>flask_tester.py</i>. I den er alt med LEGO modulet fjernet og der oprettes kun en Flask webserver. Forsøg evt. at starte den med: <i>flask --app flask_tester.py run --host=0.0.0.0</i></p>
-
-      </section>
-
-      <div class="terminal linux">
-        <div class="terminal-header-linux">
-          <span class="terminal-title-output">Output</span>
-          <span class="title">ssh</span>
-        </div>
-        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">flask --app app run --host=0.0.0.0</span>  
- * Serving Flask app 'app_webtester.py'
- * Debug mode: off
-2025-09-12 15:36:31,391 - werkzeug - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.0.79:5000
-2025-09-12 15:36:31,392 - werkzeug - INFO - Press CTRL+C to quit
-
-<span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command"></span>  
-        </code></pre>
-      </div>
-
-      <p>Hvis outputtet ser ud som ovenfor, kører <i>Flask</i> serveren korrekt og I burde nu kunne tilgå hjemmesiden på port 5000 ved at indtaste ip-addressen på pi'en: &lt;pi-idaddresse&gt;<b>:</b>5000/</p>
-      <p>Eks. 192.162.0.79:5000</p>
-      <p>Såfremt alt kører som det skal, vil I blive prsæenteret for en key-pad, som vist nedenfor:</p>
-
-      <img class="center-image" src="images/keypad.png" alt="image of keypad" width=100%>
-      <figcaption>Flask app hosting keypad.</figcaption>
-
-
-      <p>Test eventuelt din pin-kode og se hvad du får adgang.</p>
-      <p>Du kan låse boksen igen ved at taste 0000#.</p>
-    </div>
-  </section>
 
   <!-- ###   HACK DIG IND    ###-->
   <section class="content new-chapter content">
@@ -1010,19 +1016,7 @@ WantedBy=multi-user.target
     Såfremt responsens tekst ikke indeholder "DENIED" printes pinkoden til terminalen sammen med et ACCESS WITH PIN:...</p>
   </section>
 
-  <section class="content">
-    <p>Vi har nu testet vores python script og lært at sende ét enkelt request.</p>
-    <div id="hack_sikkerhed2" class="__chapter_menu_subheader_1">
-      <h3>Problemstillinger (Python)</h3>
-    </div>
-    <p>Overvej følgende problemstillinger:</p>
-    <ul>
-      <li>Hvordan kan vi bruge python til at sende et nyt request, hver gang vi modtager "DENIED"?</li>
-      <li>Hvor lang tid ville det mon tage at sende alle 9999 mulige kombinationer?</li>
-      <li>Hvordan kan man gøre LEGO-vault systemet mere sikkert?</li>
-    </ul>
-    <p>Snak om de ovenstående problematikker.</p>
-  </section>
+
 
 
 
@@ -1261,14 +1255,35 @@ PIN 0001 DENIED
 
 </code></pre>
     </div> 
-    
-    <p>Efterfølgende kan I prøve at udvikle scriptet så det automatisk sender et nyt request, indtil den korrekte pin findes.</p>
+ </section>
 
-    <p>Find evt. inspiration på <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/bruteforce.py" target="_blank">github.io</a></p>
-    <img class="center-image" src="images/github-brute.png" alt="image of python script" width=100%>
-    
-
+  <section class="content">
+    <p>Vi har nu testet vores python script og lært at sende ét enkelt request.</p>
+    <div id="hack_python_problemstillinger" class="__chapter_menu_subheader_1">
+      <h3>Problemstillinger (Python)</h3>
+    </div>
+    <p>Overvej følgende problemstillinger:</p>
+    <ul>
+      <li>Hvordan kan vi bruge python til at sende et nyt request, hver gang vi modtager "DENIED"?</li>
+      <li>Hvor lang tid ville det mon tage at sende alle 9999 mulige kombinationer?</li>
+      <li>Hvordan kan man gøre LEGO-vault systemet mere sikkert?</li>
+    </ul>
+    <p>Snak om de ovenstående problematikker.</p>
   </section>
+    
+  <section class="content">
+    <div id="hack_python_udfordring" class="__chapter_menu_subheader_1">
+      <h3>Udfordring (Python)</h3>
+    </div>
+      <p>Hvem kan hurtist <i>bruteforce</i> den korrekte pinkode?</p>
+      <p>Prøv at udvikle et script som automatisk sender et nyt request, indtil den korrekte pin er fundet.</p>
+
+      <p>Find evt. inspiration på <a href="https://github.com/AleksHolland84/lego_vault_undervisning/blob/main/bruteforce.py" target="_blank">github.io</a></p>
+      <img class="center-image" src="images/github-brute.png" alt="image of python script" width=100%>
+      
+  </section>
+
+ 
 
 
 
