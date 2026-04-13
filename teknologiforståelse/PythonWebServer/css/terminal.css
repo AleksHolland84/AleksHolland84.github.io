@@ -187,3 +187,11 @@
   background: #ffffff;
   color:#200120
 }
+
+
+/* FILE-structure*/
+.file-structure {
+    background-color: rgb(0, 0, 0);
+    white-space: pre-wrap;
+    font-size: 16px;
+}

@@ -283,3 +283,20 @@ button {
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   }
+
+
+.image-wrapper{
+    position: relative;
+    display: inline-block;
+    margin: auto;
+}
+
+.copyright-image{
+    padding: .625rem .9375rem;
+    position:absolute;
+    right: 0;
+    bottom: 0.375rem;
+    background-color: rgba(0,0,0,.5);
+    font-size: 0.75em;;
+    color: #fff;
+}

@@ -198,7 +198,10 @@
     </section>   
     
     <section class="content">
-      <img src="images/header.png" alt="Rooter" width=100%>
+      <div class="image-wrapper">
+        <img src="images/header.png" alt="Rooter" width=100%>
+        <span class="copyright-image">© Foto: Unsplash</span> 
+      </div>
       <h2>Programmere, design og skab.</h2>
       <div class="flex-container">
         <p>I dette forløb skal I bruge Python 3 og Flask modulet</p> 
@@ -221,7 +224,7 @@
 
     <div class="chapter-text">
       <p>For at sætte en basic-hjemmeside op med Flask og Python, skal du først være sikker på, at du har Python 3 på din computer.</p>
-      <p>Dete kan du hurtig tjekke, ved at skrive følgende kommando i en kommando prompt eller terminal.</p>
+      <p>Dete kan du hurtig tjekke, ved at skrive følgende kommando i en kommandoprompt eller terminal.</p>
       <p>Åben kommandoprompten ved at trykke <kbd>Win</kbd> + <kbd>R</kbd>, som åbner "Kør" dialog boxen i Windows, og efterfølgende skrive "<b>cmd</b>" - tryk derefter "OK".</p>
 
       <div class="terminal">
@@ -513,8 +516,8 @@ if __name__ == '__main__':
 
       <p>Betydningen af koden gennemgår vi senere.</p>
       <p>Gem dine ændringer ved at trykke File og derefter Save.</p>
-      <p>Du har nu lavet en applikation der oploader et indhold til din browser. Da applikationen ikke har en grafisk brugerflade er det nødvendigt at benytte terminalen/kommando promten til at køre dit program </p>
-      <p>I din terminal, med det aktiverede virtuelle miljø, kan du nu eksekverer scriptet:</p>
+      <p>Du har nu lavet en applikation der oploader et indhold til din browser. Da applikationen ikke har en grafisk brugerflade er det nødvendigt at benytte terminalen/kommandopromten til at køre dit program </p>
+      <p>I din terminal, med det aktiverede virtuelle miljø, kan du nu eksekvere scriptet:</p>
 
 
       <div class="terminal">
@@ -556,9 +559,9 @@ if __name__ == '__main__':
       </ul>
       <p>Åben en browser og skriv 'http://127.0.0.1:5000' eller 'http://localhost:5000' i input-feltet:</p>
       <img class="center-image" src="images/localhost_1.png" alt="Makecode søg efter extentions image" width=100%>
-
-
     </section>
+    <p>Tryk <kbd>CTRL</kbd>+<kbd>C</kbd> for at stoppe appen.</p>
+
   </section>
 
 
@@ -579,22 +582,25 @@ if __name__ == '__main__':
       <section>
         <p>I en web-applikation er en route en bestemt sti ind i din hjemmeside, som bestemmes af URL'en som brugeren skriver i sin web-browser addresse bar. Det er op til dig hvilke ruter der er aktiverede og hvad de hver i sær gør.</p>
         <p>I dit "Hello world" eksempel, brugte vi en simel rute:</p>
-          <div class="idle-terminal terminal">
-            <div class="idle-header">
-                <img src="images/idle_doc.png" style="width:22px;">
-                <span> app.py - C:/Users/user/Documents/FlaskServer/app.py</span>
-                <span class="py-version">(3.14.2)</span>
-                <button class="copy-btn">Copy</button>
-            </div>
+        
+        <div class="idle-terminal terminal">
+          <div class="idle-header">
+            <img src="images/idle_doc.png" style="width:22px;">
+            <span class="py-version">(3.14.2)</span>
+            <button class="copy-btn">Copy</button>
+        </div>
 
-            <div class="idle-content command">
+        <div class="idle-content">
 ...
+<div class="command">
 @app.route('/')
 def index():
-      return 'Hello world' 
+      return 'Hello world'   
+</div>
 ...
-          </div>
         </div>
+      </div>
+
         <p>Denne rute blev dannet af tre enheder:</p>
         <div class="forklaring">
           <ul>
@@ -610,52 +616,139 @@ def index():
           <h3>Tilføj en rute /informationsteknologi</h3>
         </div>
         <p>Den følgende vejledning vil vise dig hvordan du opretter en ny rute ved navn 'informationsteknologi' - du kan dog kalde din side hvad du har lyst til. </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <section>
-        <p>Som nævnt tidligere kan vi lytte (subscribe) på et <i>topic</i>.</p>
-      
-        <p>Vi kan benytte <i>Mosquitto Clients</i> til at lytte. Foreksempel kan vi lytte på det <i>topic</i> som vores Micro:bit sender på:</p>
-        <div class="terminal linux">
-          <div class="terminal-header-linux">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="terminal-title"></span>
-            <span class="title">ssh</span>
+        <p>Opret en ny rute ved at tilføje disse linjer af kode under din første rute.</p>
+        <div class="idle-terminal terminal">
+          <div class="idle-header">
+              <img src="images/idle_doc.png" style="width:22px;">
+              <span class="py-version">(3.14.2)</span>
+              <button class="copy-btn">Copy</button>
           </div>
-          <pre><code class="rpi">mosquitto_sub -h 192.168.0.79 -t "topic/1" </code></pre>
+
+          <div class="idle-content">
+...
+<div class="command">
+@app.route('/informationsteknologi')
+def informationsteknologi():
+      return 'Informationsteknologi er det fedeste fag!'  
+</div>
+...
         </div>
+      </div>
+      <p>Komplet applikation kan nu ses nedenfor:</p>
+      <div class="idle-terminal terminal">
+          <div class="idle-header">
+              <img src="images/idle_doc.png" style="width:22px;">
+              <span> app.py - C:/Users/user/Documents/FlaskServer/app.py</span>
+              <span class="py-version">(3.14.2)</span>
+              <button class="copy-btn">Copy</button>
+
+          </div>
+
+          <!-- Menu Bar -->
+          <div class="idle-menubar">
+              <span>File</span>
+              <span>Edit</span>
+              <span>Format</span>
+              <span>Run</span>
+              <span>Options</span>
+              <span>Window</span>
+              <span>Help</span>
+          </div>
+
+          <div class="idle-content command">
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+      return 'Hello world' 
+
+
+@app.route('/informationsteknologi')
+def informationsteknologi():
+      return 'Informationsteknologi er det fedeste fag!'
+
+
+if __name__ == '__main__':
+      app.run(debug=True, host='0.0.0.0')
+          </div>
+        </div>
+        <p>Gem dine ændringer og eksekver scriptet</p>
+
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
+            <span class="title"></span>
+            <button class="copy-btn">Copy</button>
+          </div>
+          <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">python app.py</span></code></pre>
+        </div>
+
+        <p>Efterfølgende kan du navigere til "informationsteknologi" side i din browser</p>
+        <img class="center-image" src="images/informationsteknologi.png" alt="/informationsteknologi route png" width=100%>
+
       </section>
     </section>
+  </section>
 
 
     
-    <section>
-      <div id="Programmering_v2" class="__chapter_menu_container">
-        <h2 class="menu-chapter-title chapter-title">Programmering Version 2.0</h2>
+
+
+    <section class="content new-chapter">
+      <div id="html" class="__chapter_menu_container">
+        <h2 class="menu-chapter-title chapter-title">Returner HTML side</h2>
       </div>
-      <p>I version 2 skal vi forbinde vores sensor til vores Micro:bit og publicerer dataen til MQTT brokeren.</p>
-      <div id="Programmering_v2_version2" class="__chapter_menu_subheader_1">
-        <h3>Programmering: Version2 - <span>Sensorinput</span></h3>
+      <p>Du skal nu modificere din kode, så den i stedet for at returnere en kedelig tekst, returnerer en fuld HTML web-side.</p>
+      <div id="html_skabelon" class="__chapter_menu_subheader_1">
+        <h3>Templates</h3>
       </div>
-      <p>Vi skal i denne del benytte os af en fugtighedssensoren og sende data til MQTT brokeren, som efterfølgende kan læses live på en Webbrowser. </p>
-      <img class="center-image" src="images/ElecfreaksIotBit.png" alt="Rooter" width=80%>
-      <p>Tilslut sensoren til <i>P1</i> som vist ovenfor.</p>
-      <p>Vi vil nu skrive en funktion til at måle fugtigheden. Funktionen kalder vi <i>get_moisture</i>. Da det er en analog sensor, skal vi bruge <i>analg read pin</i> til at læse sensores indput.</p>
+      <p>Din HTML web-side vil blive genereret fra en skabelon (template) som indeholder det statiske indhold på siden. Vi skal senere se på, hvordan man indsætter data som gør siden dynamisk. </p>
+      <p>Først skal du oprette en ny mappe med navnet <i>templates</i> under <i>FlaskServer</i> mappen.<br> 
+        Hvis du benytter terminalen/kommandprompten skal du sørge for du befinder dig i din projektmappe (FlaskServer):</p>
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
+          <span class="title"></span>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">mkdir templates</span></code></pre>
+      </div>
+      <p>I IDLE, Klik <kbd>File</kbd> - <kbd>New file</kbd>. Den nye fil skal gemmes som <i>index.html</i> - i IDLE, klik<kbd>File</kbd> - <kbd>Save as</kbd>. Gem som <i>index.html</i> inde i din templates mappen.</p>
+      <p>På nuværende tidspunkt skulle din filstruktur gerne se således ud:</p>
+      <div class="terminal">
+        <div class="file-structure">
+.
+└── FlaskServer
+      ├── app.py
+      │  
+      ├── templates
+      │    └── index.html
+      │    
+      └── .venv
+        </div>
+      </div>
+    </section>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <section>
         <h3>Opret en funktion</h3>
