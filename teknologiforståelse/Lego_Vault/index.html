@@ -571,7 +571,7 @@ Collecting requests
             <button class="copy-btn">Copy</button>
           </div>
         </div>
-        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">wget https://github.com/AleksHolland84/lego_vault_undervisning/archive/refs/heads/main.zip</span>
+        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">wget https://github.com/AleksHolland84/lego_vault_undervisning/archive/refs/heads/main.tar.gz</span>
         </code></pre>
       </div>
 
@@ -581,9 +581,39 @@ Collecting requests
           <li>wget → et værktøj til at hente/downloade filer fra internettet via kommandolinjen.</li>
         </ul>
       </div>
+
+      <p>Efterfølgende kan vi udpakke tar-filen</p>
+      <p>En .tar.gz-fil (eller “tarball”) er et komprimeret arkivformat, som er almindeligt på Linux/Unix. Det kombinerer flere filer i én fil (.tar) og komprimerer dem med Gzip (.gz) for at reducere størrelsen.</p>
       
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">tar -xzf main.tar.gz --strip-components=1</span>
+        </code></pre>
+      </div>
+      <div class="forklaring">
+  <p>Forklaring</p>
+  <ul>
+    <li>tar → et arkivværktøj til at samle og udpakke filer (almindeligt på Linux/Unix).</li>
+    <li>-x → betyder “extract” (udpak arkivet).</li>
+    <li>-z → fortæller at arkivet er gzip-komprimeret (.gz).</li>
+    <li>-f → angiver at der arbejdes med en fil (her: main.tar.gz).</li>
+    <li>main.tar.gz → arkivfilen, der skal udpakkes.</li>
+    <li>--strip-components=1 → fjerner det øverste mappeniveau i arkivet, så filerne udpakkes direkte i den aktuelle mappe.</li>
+  </ul>
+</div>
+
+
       <div>
-        <button class="collapsible no-line"><span style="color:rgb(105, 105, 105)">Download zip.fil</span></button>
+        <button class="collapsible no-line"><span style="color:rgb(105, 105, 105)">ALTERNATIV: Download zip.fil</span></button>
         <div class="collapsible-content content-route">        
           <div class="terminal linux">
             <div class="terminal-header-linux">
@@ -651,14 +681,17 @@ Archive:  lego_vault.zip
         </div>
         <pre><code><span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command">ls -la</span>  
 total 28
-drwxr-xr-x  4 pi pi 4096 Sep  2 10:14 .
-drwxr-x--- 31 pi pi 4096 Sep  2 09:23 ..
--rw-rw-rw-  1 pi pi   11 Sep  2 09:47 .env
--rw-rw-rw-  1 pi pi 1950 Sep  2 09:47 app.py
--rw-rw-rw-  1 pi pi 1586 Sep  2 09:47 flask_tester.py
--rwxr-xr-x  1 pi pi 2522 Sep  2 09:41 lego_vault.zip
-drwxrwxrwx  2 pi pi 4096 Sep  2 09:48 templates
-drwxr-xr-x  5 pi pi 4096 Sep  2 09:24 venv
+drwxr-xr-x  4 pi pi  4096 Apr 14 16:53 .
+drwx------ 19 pi pi  4096 Apr 14 16:32 ..
+-rw-r--r--  1 pi pi  1950 Apr 10 11:01 app.py
+-rw-r--r--  1 pi pi  1178 Apr 10 11:01 basic-requests.py
+-rw-r--r--  1 pi pi  2085 Apr 10 11:01 bruteforce.py
+-rw-r--r--  1 pi pi    11 Apr 10 11:01 .env
+-rw-r--r--  1 pi pi  1586 Apr 10 11:01 flask_tester.py
+-rw-r--r--  1 pi pi 25381 Apr 14 16:53 <span style="color:#830901">main.tar.gz</span>
+-rw-r--r--  1 pi pi 50000 Apr 10 11:01 pins.txt
+drwxr-xr-x  2 pi pi  4096 Apr 10 11:01 <span style="color:#10c1f7">templates</span>
+drwxr-xr-x  5 pi pi  4096 Apr 14 16:29 <span style="color:#10c1f7">venv</span>
 <span class="venv"></span><span class="dir">~/LEGO_Vault</span><span class="command"></span>  
 </code></pre>
     </div>
