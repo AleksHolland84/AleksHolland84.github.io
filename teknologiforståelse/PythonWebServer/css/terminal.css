@@ -68,6 +68,13 @@
     white-space: pre;
     overflow: auto;
   }
+
+  .code-idle-html{
+    display: block;
+    color: #252525;
+    white-space: pre;
+    overflow: auto;
+  }
   
   .terminal-display{
     background-color: rgb(29, 4, 24);
