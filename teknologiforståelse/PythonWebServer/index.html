@@ -716,6 +716,9 @@ if __name__ == '__main__':
         <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">mkdir templates</span></code></pre>
       </div>
       <p>I IDLE, Klik <kbd>File</kbd> - <kbd>New file</kbd>. Den nye fil skal gemmes som <i>index.html</i> - i IDLE, klik<kbd>File</kbd> - <kbd>Save as</kbd>. Gem som <i>index.html</i> inde i din templates mappen.</p>
+      <p>For at kunne gemme som en bestemt "file extension", skal du vælge "All files" under "Filetype:" når du gemmer.</p>
+      <img class="center-image" src="images/file_html.png" alt="/informationsteknologi route png" width=80%>
+
       <p>På nuværende tidspunkt skulle din filstruktur gerne se således ud:</p>
       <div class="terminal">
         <div class="file-structure">
@@ -734,7 +737,7 @@ if __name__ == '__main__':
         <div class="idle-header">
             <img src="images/idle_doc.png" style="width:22px;">
             <span> index.html - C:/Users/user/Documents/FlaskServer/templates/index.html</span>
-            <span class="py-version">(3.14.2)</span>
+            <span class="py-version"></span>
             <button class="copy-btn">Copy</button>
 
         </div>
@@ -845,6 +848,134 @@ if __name__ == '__main__':
       <div id="CSS_style" class="__chapter_menu_subheader_1">
         <h3>Cascading Style Sheets</h3>
       </div>
+      <div>
+        <p>Du skal nu tilføje farver til din hjemmeside med Cascading Style Sheets (CSS). Cascading Style Sheets er instrukser for hvordan en browser skal vise HTML indhold. </p>
+        <p>Åben først terminal-/kommandoprompt-vinduet og navigerer til din projektmappe.</p>
+        <p>I din kommandoprompt skulle du gerne være i den oprettede projektmappe: "FlaskServer", med det virtuelle miljø aktiveret, som vist nedenfor:</p>
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="terminal-title">C:\Users\user\Documents\FlaskServer\></span>
+            <span class="title"></span>
+          </div>
+          <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command"></span></code></pre>
+        </div>
+
+        <p>Når du befinder dig i projektmakken (FlaskServer), skal du oprette en ny mappe med navn <i>static</i>.</p>
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="terminal-title">C:\Users\user\Documents\FlaskServer></span>
+            <span class="title"></span>
+            <button class="copy-btn">Copy</button>
+          </div>
+          <pre><code><span class="venv_windows"></span><span class="dir">C:\Users\user\Documents\FlaskServer></span><span class="command">mkdir static</span></code></pre>
+        </div>
+
+        <p>I IDLE, Klik <kbd>File</kbd> - <kbd>New file</kbd>. Den nye fil skal gemmes som <i>style.css</i> i <i>static</i> mappen, som du lige har oprettet.</p>
+        <p>Klik<kbd>File</kbd> - <kbd>Save as</kbd> og gem <i>style.css</i> inde i din templates mappen.</p>
+
+        <p>For at kunne gemme som en bestemt "file extension", skal du vælge "All files" under "Filetype:" når du gemmer.</p>
+        <img class="center-image" src="images/save_files.png" alt="/informationsteknologi route png" width=80%>
+        <p>På nuværende tidspunkt skulle din filstruktur gerne se således ud:</p>
+        <div class="terminal">
+          <div class="file-structure">
+  .
+  └── FlaskServer
+        ├── app.py
+        │  
+        ├── static
+        │    └── style.css
+        │   
+        ├── templates
+        │    └── index.html
+        │ 
+        └── .venv
+          </div>
+        </div>
+
+        <p>Tilføj følgende CSS instrukser/regler i filen:</p>
+
+
+        <div class="idle-terminal terminal">
+          <div class="idle-header">
+              <img src="images/idle_doc.png" style="width:22px;">
+              <span> style.css - C:/Users/user/Documents/FlaskServer/static/style.css</span>
+              <span class="py-version"></span>
+              <button class="copy-btn">Copy</button>
+
+          </div>
+
+          <!-- Menu Bar -->
+          <div class="idle-menubar">
+              <span>File</span>
+              <span>Edit</span>
+              <span>Format</span>
+              <span>Run</span>
+              <span>Options</span>
+              <span>Window</span>
+              <span>Help</span>
+          </div>
+
+          <div class="idle-content command"><pre><code class="code-idle-html">body {
+      background: orange;
+      color: gray;
+}</code></pre>
+          </div>
+        </div>
+        <p>Gem dine ændringer ved at klikk <kbd>File</kbd> - <kbd>Save</kbd>.</p>
+
+      </div>
+
+
+
+      <div id="CSS_pythonstyle" class="__chapter_menu_subheader_1">
+        <h3>Tilføj style.css til appen</h3>
+      </div>
+
+      <div>
+        <p>Du skal nu redigere din <i>index.html</i> skabelon så den ved at den skal inkluderer CSS reglerne. Dette gør du ved at tilføje en <i>tag</i>, som indeholder en <i>link</i>, der referere til din style sheet fil:</p>
+      
+        <div class="idle-terminal terminal">
+          <div class="idle-header">
+              <img src="images/idle_doc.png" style="width:22px;">
+              <span> index.html - C:/Users/user/Documents/FlaskServer/templates/index.html</span>
+              <span class="py-version"></span>
+              <button class="copy-btn">Copy</button>
+
+          </div>
+
+          <!-- Menu Bar -->
+          <div class="idle-menubar">
+              <span>File</span>
+              <span>Edit</span>
+              <span>Format</span>
+              <span>Run</span>
+              <span>Options</span>
+              <span>Window</span>
+              <span>Help</span>
+          </div>
+
+          <div class="idle-content command"><pre><code class="code-idle-html">&lt!DOCTYPE html>
+&lthtml lang="en">
+  &lthead>
+      &ltmeta charset="UTF-8">
+      &ltmeta name="viewport" content="width=device-width, initial-scale=1.0">
+      <span style="color:brown">&ltlink rel="stylesheet" href='/static/style.css'\></span>
+      &lttitle>Document&lt/title>
+  &lt/head>
+  &ltbody>
+    &lth1>My Website&lt/h1>
+  &lt/body>
+&lt/html></code></pre>
+          </div>
+        </div>
+        <p>Gem dine ændringer ved at klikk <kbd>File</kbd> - <kbd>Save</kbd>.</p>
+        
+        <p>Du skulle gerne se en mere farverig version af din app!</p>
+        <p>Åben en browser og skriv <a href="http://127.0.0.1:5000/" target="_blank">http://127.0.0.1:5000/</a>  i input-feltet:</p>
+        <img class="center-image" src="images/myWebsite_with_styles.png" alt="Makecode søg efter extentions image" width=100%>
+
+      </div>
+      
     </section>
 
 
