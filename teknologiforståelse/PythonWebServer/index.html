@@ -63,7 +63,7 @@
             </svg>
           </a>
         </div>
-        <p class="updated">19.05.2026</p>
+        <p class="updated">21.05.2026</p>
 
       </div>
     </div>
@@ -972,12 +972,214 @@ if __name__ == '__main__':
         
         <p>Du skulle gerne se en mere farverig version af din app!</p>
         <p>Åben en browser og skriv <a href="http://127.0.0.1:5000/" target="_blank">http://127.0.0.1:5000/</a>  i input-feltet:</p>
-        <img class="center-image" src="images/myWebsite_with_styles.png" alt="Makecode søg efter extentions image" width=100%>
+        <img class="center-image" src="images/myWebsite_with_styles.png" alt="My website with CSS image" width=100%>
 
       </div>
       
     </section>
 
+
+    <section class="content new-chapter">
+      <div id="CSS" class="__chapter_menu_container">
+        <h2 class="menu-chapter-title chapter-title">Dynamisk indhold med Jinja</h2>
+      </div>
+      <div id="CSS_style" class="__chapter_menu_subheader_1">
+        <h3>Jinja 2</h3>
+      </div>
+      <p>Jinja er den template-engine, som Flask bruger til at generere HTML dynamisk.</p>
+      <p>Den gør det muligt at:</p>
+      <ul>
+        <li>indsætte Python-variabler i HTML</li>
+        <li>bruge if- og for-logik</li>
+        <li>genbruge layouts (templates)</li>
+      </ul>
+
+
+        <div class="idle-terminal terminal">
+          <div class="idle-header">
+              <img src="images/idle_doc.png" style="width:22px;">
+              <span> eksempel</span>
+              <span class="py-version"></span>
+              <button class="copy-btn">Copy</button>
+
+          </div>
+
+          <!-- Menu Bar -->
+          <div class="idle-menubar">
+              <span>File</span>
+              <span>Edit</span>
+              <span>Format</span>
+              <span>Run</span>
+              <span>Options</span>
+              <span>Window</span>
+              <span>Help</span>
+          </div>
+
+          <div class="idle-content command"><pre><code class="code-idle-html">&lth1>Hej {{ navn }}&lt/h1>
+
+{% if logged_in %}
+  <p>Velkommen tilbage</p>
+{% endif %}</code></pre>
+          </div>
+        </div>
+
+    
+      <div class="forklaring">
+        <p>Forklaring:</p>
+        <ul>
+          <li>{{ }} → bruges til variabler</li>
+          <li>{% %} → bruges til logik</li>
+        </ul>
+      </div>
+
+      <p>Du har nu lært at lave en statisk HTML web side ved brug af skabeloner (templates). Du skal nu lære at tilføje dynamisk indhold til dine sider.</p>
+      <p>Du skal nu oprette en ny rute (route) på din webside. Så når du går til http://127.0.0.1/hello/name, vil den printe "hello name!", en udskifte <i>name</i> med det du vælger.<br>Så /hello/Rick/ vil vise <i>Hello Rick!</i>.</p>
+      <p>Opret en ny rute i din applikation således:</p>
+
+      <div class="idle-terminal terminal">
+        <div class="idle-header">
+          <img src="images/idle_doc.png" style="width:22px;">
+          <span class="py-version">(3.14.2)</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+
+        <div class="idle-content">...
+          <div class="command">@app.route('/hello/<name>')
+def hello(name):
+      return render_template('page.html', name=name)
+          </div>...
+        </div>
+      </div>
+
+      <div class="forklaring">
+        <p>Forklaring</p>
+        <ul>
+          <li>@app.route('/hello/&lt;name&gt;') → definerer en dynamisk URL-rute.</li>
+          <li>/hello/ → den faste del af URL’en.</li>
+          <li>&lt;name&gt; → en variabel i URL’en, som modtager en værdi fra brugeren.</li>
+          <br>
+          <li>def hello(name): → funktionen der håndterer forespørgsler til ruten.</li>
+          <li>name → parameteren indeholder værdien fra URL’en.</li>
+          <br>
+          <li>return render_template('page.html', name=name) → returnerer en HTML-skabelon.</li>
+          <li>page.html → HTML-filen der vises i browseren.</li>
+          <li>name=name → sender variablen <i>name</i> videre til skabelonen.</li>
+        </ul>
+      </div>
+
+
+      <p>Din app.py fil skulle gerne se ud som nedenfor nu:</p>
+      <div class="idle-terminal terminal">
+          <div class="idle-header">
+              <img src="images/idle_doc.png" style="width:22px;">
+              <span> app.py - C:/Users/user/Documents/FlaskServer/app.py</span>
+              <span class="py-version">(3.14.2)</span>
+              <button class="copy-btn">Copy</button>
+
+          </div>
+
+          <!-- Menu Bar -->
+          <div class="idle-menubar">
+              <span>File</span>
+              <span>Edit</span>
+              <span>Format</span>
+              <span>Run</span>
+              <span>Options</span>
+              <span>Window</span>
+              <span>Help</span>
+          </div>
+
+          <div class="idle-content command">
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+      return render_template('index.html')
+
+
+@app.route('/informationsteknologi')
+def informationsteknologi():
+      return 'Informationsteknologi er det fedeste fag!'
+
+
+@app.route('/hello/<name>')
+def hello(name):
+      return render_template('page.html', name=name)
+
+    
+if __name__ == '__main__':
+      app.run(debug=True, host='0.0.0.0')
+
+          </div>
+        </div>
+
+        <p>Vi har nu tilføjet en rute til vores app, som returnerer en HTML side ved vavn <i>page.html</i>.</p>
+        <p>Opret en ny HTML skabelon kaldet page.html og tilføj følgende HTML kode:</p>
+
+        <p>I IDLE, Klik <kbd>File</kbd> - <kbd>New file</kbd>. Den nye fil skal gemmes som <i>page.html</i> - i IDLE, klik<kbd>File</kbd> - <kbd>Save as</kbd>. Gem som <i>page.html</i> inde i din templates mappen.</p>
+
+        <div class="idle-terminal terminal">
+          <div class="idle-header">
+              <img src="images/idle_doc.png" style="width:22px;">
+              <span> page.html - C:/Users/user/Documents/FlaskServer/templates/page.html</span>
+              <span class="py-version"></span>
+              <button class="copy-btn">Copy</button>
+
+          </div>
+
+          <!-- Menu Bar -->
+          <div class="idle-menubar">
+              <span>File</span>
+              <span>Edit</span>
+              <span>Format</span>
+              <span>Run</span>
+              <span>Options</span>
+              <span>Window</span>
+              <span>Help</span>
+          </div>
+
+          <div class="idle-content command"><pre><code class="code-idle-html">&lt!DOCTYPE html>
+&lthtml lang="en">
+  &lthead>
+      &ltmeta charset="UTF-8">
+      &ltmeta name="viewport" content="width=device-width, initial-scale=1.0">
+      &lttitle>Username&lt/title>
+  &lt/head>
+  &ltbody>
+    &lth1>Hello {{ name }}!&lt/h1>
+  &lt/body>
+&lt/html></code></pre>
+          </div>
+        </div>
+        <p>Gem dine ændringer ved at klikk <kbd>File</kbd> - <kbd>Save</kbd>.</p>
+
+        <p>På nuværende tidspunkt skulle din filstruktur gerne se således ud:</p>
+        <div class="terminal">
+          <div class="file-structure">
+  .
+  └── FlaskServer
+        ├── app.py
+        │  
+        ├── static
+        │    └── style.css
+        │   
+        ├── templates
+        │    ├── index.html
+        │    │
+        │    └── page.html
+        │ 
+        │ 
+        └── .venv
+          </div>
+        </div>
+
+        <p>Hvis du besøger <a href="http://127.0.0.1:5000/hello/Rick">http://127.0.0.1:5000/hello/Rick</a>, skulle du nu gerne blive præsenteret med følende:</p>
+        <img class="center-image" src="images/page_name.png" alt="page.html image" width=100%>
+        <p>Prøv at ændre navnet i URL'en og se hvad der sker.</p>
+
+    </section>
 
 
 
