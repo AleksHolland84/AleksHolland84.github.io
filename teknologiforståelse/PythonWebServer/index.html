@@ -980,10 +980,10 @@ if __name__ == '__main__':
 
 
     <section class="content new-chapter">
-      <div id="CSS" class="__chapter_menu_container">
+      <div id="JINJA" class="__chapter_menu_container">
         <h2 class="menu-chapter-title chapter-title">Dynamisk indhold med Jinja</h2>
       </div>
-      <div id="CSS_style" class="__chapter_menu_subheader_1">
+      <div id="JINJA_2" class="__chapter_menu_subheader_1">
         <h3>Jinja 2</h3>
       </div>
       <p>Jinja er den template-engine, som Flask bruger til at generere HTML dynamisk.</p>
@@ -1044,7 +1044,7 @@ if __name__ == '__main__':
         </div>
 
         <div class="idle-content">...
-          <div class="command">@app.route('/hello/<name>')
+          <div class="command">@app.route('/hello/&ltname>')
 def hello(name):
       return render_template('page.html', name=name)
           </div>...
@@ -1104,7 +1104,7 @@ def informationsteknologi():
       return 'Informationsteknologi er det fedeste fag!'
 
 
-@app.route('/hello/<name>')
+@app.route('/hello/&ltname>')
 def hello(name):
       return render_template('page.html', name=name)
 
