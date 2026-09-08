@@ -264,8 +264,8 @@
     <section class="content">
       <img src="images/lite_header.png" alt="Rooter" width=100%>
       <h2>Design, programmere og skab.</h2>
-      <p>I dette forløb skal I bruge Micro:bit til at måle fugtigheden i plantejord for derefter at vise målingen ved hjælp af Micro:bit’ens LED-matrix. Bagefter skal I forsøge at forbinde Micro:bit’en til WiFi, hvorefter I skal prøve at sende den målte fugtighed til en server ved hjælp af MQTT-protokollen. Fugtighedsdataene skal sendes til en MQTT Broker og derefter vises live i en webbrowser via en WebSocket-forbindelse (findes under Resourcer). 
-        Igennem forløbet skal I arbejde med både hardware og software, eksperimentere med sensorer og netværksteknologier og opleve, hvordan IoT (Internet of Things) kan bruges til at overvåge og optimere pleje af planter.
+      <p>I dette forløb skal I bruge Micro:bit til at måle fugtigheden i plantejord for derefter at vise målingen ved hjælp af Micro:bit’ens LED-matrix. 
+        Igennem forløbet skal I arbejde med både hardware og software, eksperimentere med sensorer og opleve, hvordan smarte sensore kan bruges til at overvåge og optimere pleje af planter.
         </p>    </section>
   </article>
 
@@ -282,10 +282,9 @@
     </div>
 
     <section class="content">
-      <img class="center-image" src="images/Elecf_iot_board.png" alt="Micro:bit Elecfreaks IoT image" width=50%>
-      <p>Vi skal nu arbejde med vores Micro:bit og et <i>Expansion Board</i>. Jeg har valgt her at arbejde <a href="https://shop.elecfreaks.com/products/elecfreaks-micro-bit-smart-science-iot-kit-without-micro-bit-board" target="_blank">Elecfreaks IoT board</a>, som bl.a. giver vores Micro:bit adgang til et esp8266 WiFi modul.</p>
-      <p class="info">I denne udgave af forløbet, er det dog ikke nødvendigt med WiFi, derfor ville <a href="https://www.elecfreaks.com/learn-en/microbitKit/Tinker_Kit/index.html" target="_blank">Tinker Kit fra Elecfreaks</a>, eller tilsvarende, også være tilstrækelig.</p>
-      <p>Vi benytter os a blok programmeringen på <a href="https://makecode.microbit.org/" target="_blank">makecode.microbit.org</a>.<br>
+      <img class="center-image" src="images/tinkerkit.png" alt="Micro:bit Elecfreaks IoT image" width=50%>
+      <p>Vi skal nu arbejde med vores Micro:bit og et <i>Expansion Board</i>. Jeg har valgt her at arbejde <a href="https://wiki.elecfreaks.com/en/microbit/getting-started/microbit-tinker-kit/octopus_bit" target="_blank">Elecfreaks Tinker Kits Octopus:bit </a> udvidelseskort.</p>
+      <p>Vi benytter os af blok programmeringen på <a href="https://makecode.microbit.org/" target="_blank">makecode.microbit.org</a>.<br>
       Hvis I ikke allerede har gjort det, så opret en bruger på makecode.microbit.org.</p>
 
       <img class="center-image" src="images/makecode_main.png" alt="Makecode create image" width=100%>
@@ -304,7 +303,7 @@
 
   <section class="content">
     <p>Vi skal i denne del benytte os af en fugtighedssensoren og en Micro:bit og et udvidelseskort. Vi bruger her ELECFREAKS IOT:bit board (Internet WiFi Extension Board for micro:bit), som vist herunder:</p>
-    <img class="center-image" src="images/ElecfreaksIotBit.png" alt="Rooter" width=80%>
+    <img class="center-image" src="images/tinkerkit_moist.png" alt="TinkerKit moistore sensor img" width=60%>
     <p>Tilslut sensoren til <i>P1</i> som vist ovenfor.</p>
     <p>Som det første, skriver vi en funktion til at måle fugtigheden. Funktionen kalder vi <i>get_moisture</i> da man anbefaler, at navngive funktioner logisk. Da det er en analog sensor, skal vi bruge <i>analg read pin</i> til at læse sensores indput.</p>
 
