@@ -1,0 +1,150 @@
+/* Python IDLE-lignende editor */
+.idle-terminal {
+background: #ffffff;
+color: #000000;
+font-family: Consolas, "Courier New", monospace;
+font-size: 13px;
+border: 1px solid #b8b8b8;
+overflow: hidden;
+}
+
+
+.idle-header {
+display: flex;
+align-items: center;
+gap: 8px;
+padding: 5px 8px;
+background: #f2f2f2;
+border-bottom: 1px solid #c8c8c8;
+color: #222;
+font-family: Arial, sans-serif;
+font-size: 12px;
+}
+
+.idle-header .py-version {
+margin-left: auto;
+color: #555;
+}
+
+/* Menulinje */
+.idle-menubar {
+display: flex;
+gap: 16px;
+padding: 5px 9px;
+background: #f7f7f7;
+border-bottom: 1px solid #ddd;
+font-family: Arial, sans-serif;
+font-size: 12px;
+color: #222;
+}
+
+/* Kodefelt */
+.idle-terminal pre.idle-content {
+margin: 0;
+padding: 8px 0;
+background: #ffffff;
+color: #000000;
+font-family: Consolas, "Courier New", monospace;
+font-size: 13px;
+line-height: 1.55;
+white-space: pre;
+overflow-x: auto;
+tab-size: 4;
+}
+
+/* Nulstil standardformatering fra Prism */
+.idle-terminal pre code {
+font-family: inherit;
+font-size: inherit;
+text-shadow: none;
+background: transparent;
+}
+
+/* Python IDLE-farver */
+.idle-terminal .token.comment {
+color: #007f00;
+}
+
+.idle-terminal .token.keyword {
+color: #ff00ff;
+font-weight: normal;
+}
+
+.idle-terminal .token.string {
+color: #ff0000;
+}
+
+.idle-terminal .token.number {
+color: #0000ff;
+}
+
+.idle-terminal .token.function {
+color: #0000ff;
+}
+
+.idle-terminal .token.builtin {
+color: #900090;
+}
+
+.idle-terminal .token.operator {
+color: #000000;
+}
+
+.idle-terminal .token.punctuation {
+color: #000000;
+}
+
+.idle-terminal .token.boolean {
+color: #0000ff;
+}
+
+/* Linjenumre */
+.idle-terminal pre.line-numbers {
+position: relative;
+counter-reset: linenumber;
+}
+
+.idle-terminal pre.line-numbers > code {
+position: relative;
+white-space: inherit;
+}
+
+.idle-terminal .line-numbers-rows {
+position: absolute;
+pointer-events: none;
+top: 8px;
+left: 0;
+width: 3em;
+border-right: 1px solid #e5e5e5;
+user-select: none;
+letter-spacing: -1px;
+}
+
+.idle-terminal .line-numbers-rows > span {
+display: block;
+counter-increment: linenumber;
+height: 1.55em;
+}
+
+.idle-terminal .line-numbers-rows > span::before {
+content: counter(linenumber);
+display: block;
+padding-right: 0.7em;
+color: #888;
+text-align: right;
+}
+
+/* Copy-knap */
+.idle-header .copy-btn {
+cursor: pointer;
+padding: 3px 9px;
+border: 1px solid #bbb;
+border-radius: 3px;
+background: #fff;
+color: #222;
+font-size: 12px;
+}
+
+.idle-header .copy-btn {
+background: #e9e9e9;
+}
