@@ -471,7 +471,7 @@
       <div id="afrund_eksempler_round" class="__chapter_menu_subheader_1">
         <h3>Round funktionen</h3>
       </div> 
-      <p><i>roud(x)</i> bruges til at afrunde til det nærmeste heltal.</p>
+      <p><i>round(x)</i> bruges til at afrunde til det nærmeste heltal.</p>
       <p>Dette returnerer det heltal, hvis der afrundes matematisk korrekt.</p>
 
       <div class="exceleks">
@@ -481,9 +481,29 @@
         <p>Dette vil runde ned til 629</p>
       </div>
 
-      <div>
-        <h4>Løsningseksempel på opgave 1 i FSA maj 2011</h4>
+
+    </div>
+
+    <div class="content">
+      <div id="afrund_eksempler_myround" class="__chapter_menu_subheader_1">
+        <h3>Afrund til bestemt decimal - funktionen</h3>
       </div> 
+      <p>For at afrunde til et bestemt decimal <i>(x)</i>, kan vi skrive vores egen funktion.</p>
+
+      <div class="exceleks">
+        <div class="math">
+          $$ {myround(x ; n)\ :=\ {round(x \cdot 10^n) \over 10^n}}  $$
+        </div>
+        <p><i>x</i> er det tal vi vil afrunde, hvor <i>n</i> er antal decimaler.</p>
+
+        <p>Dette kunne ekempelt være:</p>
+        <div class="math">
+          $$ {myround(6,86; 1) = 6,9 }  $$
+        </div> 
+      </div>
+      
+
+
     </div>
 
     
